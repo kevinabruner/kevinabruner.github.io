@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|[%=System.LinkedTitle%]|Déploiement">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Configuration de GC.GCCF</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor87"></a>
+                                                    <MadCap:concept term="Portal" />Configuration de GC.GCCF</h1>
+                                                <p>Un environnement qui charge <code>GC.GCCF</code> solution are stored as .NET settings in the GCFF Library project. Any environment which loads <code>GC.GCCF.Library.dll</code> doit aussi charger les paramètres de configuration du&#160;DLL, sans quoi le code de la &#160;FJGC rétablira les paramètres compilés par défaut, qui seront presque certainement incorrects.</p>
+                                                <ul>
+                                                    <li value="1">La configuration est typiquement chargée de <code>web.config</code>, or a .<code>config </code>file for the executable which references the <code>GC.GCCF.Library.dll</code>.</li>
+                                                    <li value="2">Dans la plupart des cas, le fichier .<code>config </code>file will contain a reference to <code>GC.GCCF.Properties.Settings</code>&#160;:</li>
+                                                </ul>
+                                                <p>&lt;<code>configSections</code>&gt;</p>
+                                                <p style="text-indent: 0.5in;">&lt;<code>sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"</code> &gt;</p>
+                                                <p style="text-indent: 1in;">&lt;<code>section name="GC.GCCF.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" /</code>&gt;</p>
+                                                <p style="text-indent: 0.5in;">&lt;/<code>sectionGroup</code>&gt;</p>
+                                                <p>&lt;/<code>configSections</code>&gt;</p>
+                                                <p>An exception to the above is the case of the GCCF Attribute Store, a DLL loaded by ADFS and which loads <code>GC.GCCF.Library.dll</code>. In this case there is no .<code>config</code> file. When GCCF Attribute Store is registered with ADFS, a limited number of settings are also registered with ADFS and used in place of a .<code>config</code> file. These settings relate to the database connection for the GCCF database and logging. The GCCF attribute store uses a carefully-chosen subset of functions in <code>GC.GCCF.Library.dll</code> which does not require other settings.</p>
+                                                <p>Les paramètres sont stockés dans le format XML. Ils sont considérés comme statiques. Ils sont chargés lorsqu'un environnement d'exécution utilisant <code>GC.GCCF.Library.dll </code> est initialisé, et ils ne changent pas pendant la durée de vie de l'exécution. L'environnement d'exécution doit être rechargé pour lire les nouveaux paramètres. Il s'agit donc d'exécuter la fonction IISRESET, de recharger le pool d'applications ou d'arrêter ou redémarrer un service ou un exécutable.</p>
+                                                <h2>Installation</h2>
+                                                <p><code>GC.GCCF</code> les paramètres de configuration sont déployés par un script PowerShell. Le script copie les paramètres dans tous les emplacements du serveur actuel qui en a besoin, et il réinitialise ou recharge toutes les applications dépendantes.</p>
+                                                <p>L'installation de la configuration <code>GC.GCCF</code> configuration requires a build of the <code>GC.GCCF</code> nécessite une version de la solution , dont on suppose qu'elle est disponible dans un répertoire «&#160;_Build&#160;».</p>
+                                                <ol>
+                                                    <li value="1">Installer <code>GC.GCCF</code> configuration, and specify the configuration file to be loaded:<p><code>.\_Build\Scripts\Install-GCCF_Config.ps1</code></p></li>
+                                                    <li value="2">Le fichier de configuration déploie ce qui suit&#160;:</li>
+                                                </ol>
+                                                <ul>
+                                                    <li value="1">Application Web&#160;SharePoint pour le portail. Modifications are written to <code>web.config</code> for the web application, all zones. The portal web application is recycled in IIS.<p>Files: <br /><code>C:\inetpub\wwwroot\wss\VirtualDirectories\&lt;folder&gt;\web.config</code></p></li>
+                                                </ul>
+                                                <ul>
+                                                    <li value="1">L'application Web des domaines communs de la FJGC <p>Recycle le pool d'applications.</p><p>Fichier&#160;: <code>C:\inetpub\wwwroot_gccf_commondomain\cdc</code></p></li>
+                                                </ul>
+                                                <ul>
+                                                    <li value="1">L'application Web des extensions&#160;ADFS&#160;: <p>Recycle le pool d'applications.</p><p>Fichier&#160;: <code>C:\inetpub\wwwroot_gccf_adfs\AdfsExtensions</code></p></li>
+                                                    <li value="2">Le service Windows de gestion de documents.<p>Redémarrage le service.</p><p>Fichier&#160;: <code>C:\Program Files\EGCS\EGCS.Portal.Service.DocumentManagement\gccf.config</code></p></li>
+                                                    <li value="3">Le service Windows de création de sites.<p>Redémarrage le service.</p><p>Fichier&#160;: <code>C:\Program Files\EGCS\EGCS.Portal.Service.SiteCreation\ gccf.config</code></p></li>
+                                                    <li value="4">Le service&#160;Web de portail.<p>Recycle le pool d'applications.</p><p>Fichier&#160;: <code>C:\inetpub\wwwroot-webservice-http\EGCS.Portal.WebService.Portal\gccf.config</code></p></li>
+                                                </ul>
+                                                <h2>Configuration – Fichier de configuration maître</h2>
+                                                <p>Le fichier maître de configuration associe les serveurs à des noms d'environnement. Il permet aux scripts d'installation de PowerShell de sélectionner le bon environnement au moment d'installer les composantes <code>GC.GCCF</code>. Le fichier se trouve&#160;:</p>
+                                                <p><code>GC.GCF\Configuration EGCS-SESC\Config\config.xml</code>
+                                                </p>
+                                                <p>Ajoutez des lignes à ce fichier pour associer des serveurs ou des domaines à un nom d'environnement. Les lignes sont testées par ordre; le premier nom de serveur ou de domaine correspondant sélectionne l'environnement</p>
+                                                <p>Par exemple :</p>
+                                                <p>&lt;Map Server="<span style="color: #00008b;">PWHITE-SPS4</span>" Environment="<span style="color: #00008b;">phillip</span>" /&gt;</p>
+                                                <p>&lt;Map Domain="<span style="color: #00008b;">GsCs.local</span>" Environment="<span style="color: #00008b;">integration</span>" /&gt;</p>
+                                                <p>&lt;Map Domain="<span style="color: #00008b;">ACOA-APECA.GC.CA</span>" Environment="<span style="color: #00008b;">integration</span>" /&gt;</p>
+                                                <p>Un script d'installation <code>GC.GCCF</code> exécuté sur le serveur <b>«&#160;PWHITE-SPS4&#160;»</b> sélectionnera l'environnement <b>«&#160;phillip&#160;</b>».</p>
+                                                <p>Un script d'installation exécuté sur un serveur dans le domaine «&#160;<code>GSCS.LOCAL</code>” or “<code>ACOA-APECA.GC.CA</code>&#160;» sélectionnera l'environnement «&#160;intégration&#160;».</p>
+                                                <h2>Configuration – Fichier de configuration de l'environnement</h2>
+                                                <p>The environment configuration file is loaded when a PowerShell installer reads <code>config.xml</code> and selects an environment. The Environment Configuration File defines most of the settings needed to install <code>GC.GCCF</code> components for a specific environment.</p>
+                                                <p>Le fichier de configuration de l'environnement se situe dans l'emplacement suivant&#160;:</p>
+                                                <p><code>GC.GCF\Configuration EGCS-SESC\Config\&lt;environment&gt;.config.xml</code>
+                                                </p>
+                                                <p>La section des jetons («&#160;Token&#160;») définit la plupart des valeurs de configuration qui doivent être changées pour un portail. La section des jetons comprend des paires de noms et de valeurs qui sont substituées dans le reste du fichier, et dans d'autres fichiers de configuration. Le modèle de substitution est <code>%Token%</code>, e.g.: <code>%PortalName%.</code>.</p>
+                                                <p>De nouveaux jetons peuvent être ajoutés à la section des jetons si on le souhaite.</p>
+                                                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Jetons</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 289px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Jeton</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>PortalName	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom du portail au moment de créer une partie de confiance d'ADFS. Ce nom est réservé à un usage interne dans ADFS et n'est pas affiché publiquement.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>SharePointServer	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom DNS public du portail.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>SharePointServerMaintenance	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom DNS du portail à utiliser pour les opérations de maintenance. Cette zone d'application&#160;Web doit utiliser l'authentification Windows. Cela n'a pas à être un nom DNS public.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>AdfsServer	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom DNS public du serveur ADFS pour l'authentification dans la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>AdfsServerRDA	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom DNS public du serveur ADFS pour l'authentification de l'agence de développement régional (ADR).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>MemcachedServer</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom DNS ou adresse&#160;IP du serveur de la cache en mémoire servant à enregistrer les notifications de fermeture de session utilisant le canal arrière.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>GccfCommonDomain</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom public attribué au portail dans le domaine<code>fjgc-gccf.gc.ca</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>CertificateSubjectIcm</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de sujet du certificat de gestion des justificatifs internes (GJI) attribué au portail.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>CertificateSubjectSsl</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de sujet du certificat SSL attribué au portail pour ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>CertificateSubjectCommonDomain</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de sujet du certificat SSL attribué au portail pour le domaine commun de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>AdfsServiceAccount</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Compte de service utilisé par ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>AdfsClaimsDomain</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de type DNS d'un domaine à utiliser pour les revendications émises d'ADFS. Probablement nommé par le ministère. Il ne s'agit pas du véritable nom DNS, mais d'un nom unique choisi par le ministère Les utilisateurs ne voient jamais cette valeur, mais une fois qu'ADFS et le portail sont installés, la valeur ne peut être changée.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>WebAppIpAddress</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Adresse&#160;IP servant à lier des applications Web au serveur ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>AdfsDatabaseConnection</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Chaîne de connexion pour la base de données ADFS</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>GccfDatabaseConnection</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Chaîne de connexion pour la base de données de la FJGC</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>IcmEnvironment</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nomme dans <code>Config\ADFS Metadata\</code> un dossier qui contient des certificats et des fichiers de métadonnées pour l'environnement de la&#160;FJGC.</p>
+                                                                <ul>
+                                                                    <li value="1">«&#160;CATE&#160;» pour les environnements de développement ou de pré-production.</li>
+                                                                    <li value="2">«&#160;Production&#160;» pour les environnements de production.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>MetadataFileGCKey</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom du fichier de métadonnées de la CléGC. Doit exister dans <code>Config\ADFS Metadata\&lt;IcmEnvironment&gt;\</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>MetadataFileSecureKey</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom du fichier de métadonnées de SecureKey. Doit exister dans <code> Config\ADFS Metadata\&lt;IcmEnvironment&gt;</code>\.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows"><code>MetadataFileAdfs</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Fichier de métadonnées pour le portail. Facultatif. Lorsqu'on le règle, cela devrait exister dans <code>Config\ADFS Metadata\</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>La section «&#160;Path&#160;» du fichier de configuration de l'environnement définit où sont installés certains services du projet EGCS.Portal. Ces valeurs doivent correspondre aux valeurs de configuration de EGCS.Portal.</p>
+                                                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Chemins</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Chemins</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>WindowsServiceDocumentManagement	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Emplacement du service Windows de gestion de documents.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><code>WindowsServiceSiteCreation	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Emplacement du service Windows de création de sites.</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows"><code>WebServicePortal	</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Emplacement du service Web de portail.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>Le reste du fichier de configuration de l'environnement définit les paramètres de configuration pour ADFS,&#160; SharePoint et les applications &#160;Web, qui sont en grande partie fondés sur les jetons. Ces paramètres ne devraient être changés qu'en cas de nécessité absolue.</p>
+                                                <h2>Configuration – Paramètres d'application gccf.config</h2>
+                                                <p>Application settings are the .NET settings for the <code>GC.GCCF.Library </code>application. Effectively this is the contents of <code>app.config</code>. This configuration data is copied into SharePoint’s <code>web.config</code>, or becomes the <code>gccf.config </code>file for other executables or web applications.</p>
+                                                <p>Ces paramètres définissent les valeurs d'exécution utilisées par le code <code>GC.GCCF</code></p>
+                                                <p>The <code>gccf.config</code> file is located here: <code>GC.GCF\Configuration EGCS-SESC\Config\GccfLibrary\&lt;environment&gt;.gccf.config</code></p>
+                                                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Paramètres de configuration de GC.GCCF</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 338px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Nom du paramètre</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>AuthTypeDefault</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">The default type of authentication which will be automatically selected for a user, if that type of authentication is available for them. If default authentication triggers, a user will not be sent to the Chooser page.</p>
+                                                                <p class="tabletext">Valid choices: <code>AdfsGccf</code> (all users will be sent to the Chooser page, always), <code>AdfsRda</code> (send RDA users for authentication via ADFS), "Windows" (send RDA users for authentication via domain credentials)</p>
+                                                                <ul>
+                                                                    <li value="1">Remove row <code>AuthTypeTrustedHttpHeader</code></li>
+                                                                    <li value="2">Remove row <code>AuthTypeTrustedIpAddress</code></li>
+                                                                    <li value="3">Row <code>AuthTypeTrustedRDAIpAddress</code> replace text:</li>
+                                                                </ul>
+                                                                <p class="tabletext">A comma-separated list of IPv4 addresses or address ranges from which a user may initiate RDA authentication via ADFS. Only applies if setting <code>ChooserEnableRDAAuthentication </code>is true.</p>
+                                                                <p class="tabletext">Note:&#160;this setting cannot prevent SharePoint from accepting RDA authentication if the web request presents an ADFS token, it only prevents the <code>GC.GCCF</code> code from offering RDA authentication as an option. This is not a security setting, a user with enough knowledge can bypass this restriction. The RDA ADFS server should not be available to the Internet.</p>
+                                                                <p class="tabletext">Format: <code>a.b.c.d, a.b.c.d/e</code></p>
+                                                                <p class="tabletext">Par exemple: <code>10.0.0.0/8, 192.168.2.0/24</code></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>AuthTypeTrustedHttpHeader</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom d'un en-tête HTTP. Au moment de choisir entre des fournisseurs d'authentification, la présence de cet en-tête HTTP fera en sorte que le code de GC.GCCF choisisse un fournisseur «&#160;approuvé&#160;» (CléGC ou&#160;SecureKey). La valeur de l'en-tête n'a pas d'importance; seule importe la présence de l'en-tête dans une requête Web.<br />Par exemp&#160;le : «&#160;X-ARR-LOG-ID&#160;» – Un en-tête ajouté par Microsoft ARR. Si la requête Web est transmise par le serveur de proxy inverse public, supposez que l'ouverture de session de fait par l'entremise d'un fournisseur approuvé (CléGC ou SecureKey).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>AuthTypeTrustedIpAddress</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Plage d'adresses IPv4. Au moment de choisir entre des fournisseurs d'authentification possibles, si la demande &#160;Web vient de cette plage d'adresses IP, le code GC.GCCF choisira un fournisseur «&#160;approuvé&#160;» (CléGC ou SecureKey).<br />Format: a.b.c.d/e<br />Par exemple : 192.168.2.0/24</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>AuthTypeTrustedRDAHttpHeader</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p>Nom d'un en-tête HTTP. Au moment de choisir entre des fournisseurs d'authentification, la présence de cet en-tête HTTP fera en sorte que le code GC.GCCF choisisse l'authentification d'ADR au moyen d'ADFS. La valeur de l'en-tête n'a pas d'importance; seule importe la présence de l'en-tête dans une requête Web.</p>
+                                                                <p class="tabletext">Par exemple&#160;: «&#160;X-RDA&#160;» – Si la requête Web contient l'en-tête «&#160;X-RDA&#160;», supposez qu'il y a une authentification d'ADR.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>AuthTypeTrustedRDAIpAddress</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Plage d'adresses IPv4. Au moment de choisir entre des fournisseurs d'authentification possibles, si la requête Web vient de cette plage d'adresses&#160;IP, le code GC.GCCF choisira l'authentification d'ADR au moyen d'ADFS.</p>
+                                                                <p class="tabletext">Format: a.b.c.d/e</p>
+                                                                <p class="tabletext">Par exemple : 192.168.2.0/24</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>AuthTypeWindowsIpAddress</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">A comma-separated list of IPv4 addresses or address ranges from which a user may initiate Windows authentication. Only applies if setting <code>ChooserEnableRDAAuthentication</code> is true.</p>
+                                                                <p class="tabletext">Note that this setting cannot prevent SharePoint from performing Windows authentication. It only prevents the <code>GC.GCCF</code> code from offering Windows authentication as an option. This is not a security setting, a user with enough knowledge can bypass this restriction. The portal's firewall or reverse proxy should block Windows authentication from the Internet.</p>
+                                                                <p class="tabletext">Format: <code>a.b.c.d, a.b.c.d/e</code></p>
+                                                                <p class="tabletext">Par exemple: <code>10.0.0.0/8, 192.168.2.0/24</code></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>BackChannelLogoutIgnoreUrl</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Une liste d'expressions régulières. Au moment d'inspecter des requêtes&#160; Web pour déterminer s'il faut invoquer une fermeture de session utilisant le canal arrière, ignorer les &#160;URL qui correspondent à une de ces expressions.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ChooserEnableRDAAuthentication</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Permettre le choix de l'authentification de l'ADR sur la page de sélecteur de la référence.</p>
+                                                                <p class="tabletext"><b>Production :&#160; La valeur recommandée est «&#160;faux&#160;»</b>
+                                                                </p>
+                                                                <p class="tabletext">Si l'authentification de l'ADR est activée dans le portail, elle devrait automatiquement être sélectionnée par adresse IP ou en-tête HTTP.</p>
+                                                                <p class="tabletext"><b>Important&#160;:&#160;Le fait de régler la valeur à «&#160;faux&#160;» ne désactive pas l'authentification de l'ADR dans le portail. Cela empêche seulement que la page de sélecteur offre l'option de l'authentification de l'ADR. Ce n'est pas un élément de sécurité.</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ChooserEnableWindowsAuthentication</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Permettre le choix de l'authentification Windows sur la page de sélecteur de la référence.</p>
+                                                                <p class="tabletext"><b>Production :&#160; La valeur recommandée est «&#160;faux&#160;»</b>
+                                                                </p>
+                                                                <p class="tabletext">Si l'authentification &#160;Windows est activée dans le portail, elle devrait automatiquement être sélectionnée par adresse IP ou en-tête HTTP.</p>
+                                                                <p class="tabletext"><b>Important&#160;:&#160;Le fait de régler la valeur à «&#160;faux&#160;» ne désactive pas l'authentification Windows dans le portail. Cela empêche seulement que la page de sélecteur offre l'option de l'authentification Windows. Ce n'est pas un élément de sécurité.</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ClaimsProvider</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Document XML contenant les métadonnées qui décrivent les fournisseurs de FJGC disponibles dans ADFS.<br /><br /><code>CLAIMS_PROVIDER_ID</code> = A unique name for the GCCF Provider.<br /><br /><code>ENTITY_ID</code> = entityID from the provider’s metadata.<br /><br /><code>SHAREPOINT_TRUSTED_LOGIN_PROVIDER</code> = Name of the trusted token issuer in SharePoint.<br /><br /><code>ADFS_WAUTH = CATS2</code> level of assurance to request.<br /><br /><code>ADFS_SAML_SESSION_COOKIE_COPY_ENABLED</code> = Should the login process copy the ADFS session cookie to monitor for back-channel logout?<br /><br /><code>COMMON_DOMAIN_COOKIE_ENABLED</code> = Should the login process set the GCCF Common Domain cookie?<br /><br /><code>SOAP_LOGOUT_BINDING_ENABLED </code>= Should the logout process use the SOAP binding via ADFS Extensions web app? “False” = use ADFS HTTP-Redirect logout.<br /><br /><code>ENABLED_IND</code> = Active ou désactive ce fournisseur de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ClaimUrlGccfEntityId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de la revendication d'ADFS qui contient l'entityID du fournisseur de la FJGC qui a authentifié l'utilisateur. Ne s'applique qu'aux utilisateurs de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ClaimUrlGccfPai</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de la revendication ADFS qui contient la PAI&#160;(P-Asserted-Identity) de l'utilisateur. Ne s'applique qu'aux utilisateurs de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ClaimUrlHasAcceptedTermsAndConditions</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de la revendication ADFS qui indique si l'utilisateur a accepté les conditions. Ne s'applique qu'aux utilisateurs de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ClaimUrlHasUserProfile</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de la revendication &#160;ADFS qui indique si l'utilisateur a un profil dans le portail. Ne s'applique qu'aux utilisateurs de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ClaimUrlIsTwoFactorAuthenticated</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de la revendication  ADFS qui indique si l'utilisateur a été authentifié à deux facteurs. Ne s'applique qu'aux utilisateurs de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ClaimUrlPortalUserId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de la revendication ADFS qui contient le PortalUserId de l'utilisateur. Ne s'applique qu'aux utilisateurs de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieCryptoKey</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Clé de chiffrement AES256 avec encodage Base64. Cette clé sert à chiffrer et à déchiffrer les cookies que le portail émet à un utilisateur. Génère de nouvelles clés à l'aide du script PowerShell <code>_Build\Scripts\enerate-CookieCryptoKey.ps1</code>.<br /><b>Production&#160;: Utiliser une valeur unique</b></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieDomainCommonDomainLanguage</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Le domaine établira le cookie du nom de domaine de la&#160;FJGC. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieDomainSharePointLanguage</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Le domaine établira le cookie de langue de SharePoint. Si la valeur est vide, ne pas préciser de domaine au moment d'établir le cookie de langue.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieDurationDaysSharePointLangage</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Durée de validité du cookie de langue de SharePoint.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieDurationMinutesRecoverAccount</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Durée de validité d'un cookie d'authentification à deux&#160;facteurs pour récupérer un compte d'utilisateur de la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieDurationDaysTwoFactorAuthenticationToken</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Durée de validité d'un cookie d'authentification à deux&#160;&#160;facteurs pour une ouverture de session par un utilisateur.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieDurationDaysTwoFactorDeviceId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Durée de validité d'un cookie d'authentification à deux&#160;facteurs identifiant le navigateur de l'utilisateur.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieNameCommonDomainLanguage</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom du cookie de langue du domaine commun de la FJGC. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieNameGccfSamlSession</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom du cookie servant à mettre en cache la session ADFS de l'utilisateur.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieNameGccfSession</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom d'un cookie servant à conserver de l'information temporaire pendant une ouverture ou une fermeture de session.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieNameGccfSessionId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom d'un cookie qui conserve un identificateur de session unique&#160; (à des fins de journalisation).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieNameRecoverAccount</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom d'un cookie servant à l'authentification à deux&#160;facteurs pendant une requête de récupération de compte.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieNameSharePointLangauge</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom d'un cookie qui renferme la langue sélectionnée par l'utilisateur.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieNameTwoFactorAuthenticationToken</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom d'un cookie qui renferme le jeton d'authentification à deux&#160;facteurs de l'utilisateur.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieNameTwoFactorDeviceId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom d'un cookie qui identifie de façon unique le navigateur de l'utilisateur pour l'authentification à deux&#160;facteurs.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookiePathAdfs</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de chemin des cookies ADFS. Doit correspondre au chemin qu'utilise ADFS. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>CookieValueSharePointLanguageEnglish</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Valeur de <code>CookieNameSharePointLangauge</code> servant à désigner l'anglais comme la langue de l'utilisateur. Doit correspondre à la valeur LCID de l'interface utilisateur anglaise de SharePoint.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>CookieValueSharePointLanguageFrench</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Valeur de <code>CookieNameSharePointLangauge</code> servant à désigner le français comme la langue de l'utilisateur. Doit correspondre à la valeur LCID de l'interface utilisateur française de SharePoint</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>DatabaseConnection</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Chaîne de connexion pour la base de données de la FJGC</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>Debug</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Débogage – Fait en sorte que les pages&#160; Web et les modules HTTP vident de l'information de débogage dans la page &#160;Web actuelle en cas de défaillance.</p>
+                                                                <p class="tabletext"><b>Tous les environnements&#160;:&#160;La valeur recommandée est «&#160;faux&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>DebugLogoutForceFailure</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Débogage – Fait en sorte que les composantes de fermeture de session échouent automatiquement afin de tester la gestion des erreurs.</p>
+                                                                <p class="tabletext"><b>Tous les environnements&#160;:&#160;La valeur recommandée est «&#160;faux&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>DebugManualRedirect</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Débogage – Code qui redirige le fureteur de l'utilisateur et produit un lien HTML sur lequel il faut cliquer manuellement, au lieu d'utiliser une redirection HTTP 302 du côté du serveur.</p>
+                                                                <p class="tabletext"><b>Tous les environnements&#160;:&#160;La valeur recommandée est «&#160;faux&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>DebugPageEnabled</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Débogage – Activer la page /_layouts/15/gccf/debug.aspx afin de vider de l'information de session sur l'utilisateur actuel.<br /><b>Production&#160;: la valeur recommandée est «&#160;faux&#160;»</b><br style="font-weight: bold;" /><b>Développement/essai &#160;:&#160;la valeur recommandée est «&#160;vrai&#160;»</b></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>DebugServerDnsNamePortalOverride</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Débogage –&#160; Dans un environnement de développement ou d'essai, de multiples serveurs &#160;SharePoint peuvent être configurés pour utiliser le même serveur ADFS pour la FJGC. Si ce paramètre est réglé à «&#160;vrai&#160;», le code GC.GCCF vérifiera la chaîne de requête de la requête de la page actuelle pour y trouver une unité po variable. Si une erreur se produit, le navigateur sera redirigé vers une page d'erreur sur le serveur po plutôt sur le serveur de portail configuré dans <code>gccf.config</code>. Cela ne devrait pas être utilisé pour la production.<br /><b>Production&#160;: La valeur recommandée est «&#160;faux&#160;»</b></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>EventLogSource</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Source appliquée aux entrées du journal des événements de Windows. La source doit être définie dans le registre de Windows. Par exemple: <code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\Application\GCCF</code></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>EventLogLog</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom du journal des événements Windows où les événements devraient être écrits.<br /><b>Production&#160;: «&#160;Application&#160;» recommandée</b></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>LogClaims</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Devrait-on journaliser les revendications de l'utilisateur devrait-il pour la requête Web actuelle?</p>
+                                                                <p class="tabletext"><b>Production : La valeur recommandée est «&#160;vrai&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>LogCookies</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Devrait-on journaliser les cookies pour la requête Web actuelle?</p>
+                                                                <p class="tabletext"><b>Production : La valeur recommandée est «&#160;vrai&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>LogExceptionOnFailure</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Le <code>LogManager </code>devrait-il lever une exception s'il ne parvient pas à écrire une entrée de journal?</p>
+                                                                <p class="tabletext"><b>Production : La valeur recommandée est «&#160;vrai&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>LogHttpHeaders</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Devrait-on journaliser les en-têtes &#160;HTTP pour la requête Web actuelle?</p>
+                                                                <p class="tabletext"><b>Production : La valeur recommandée est «&#160;vrai&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>LogServerVariables</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Devrait-on journaliser les variables de serveur pour la requête Web actuelle?</p>
+                                                                <p class="tabletext"><b>Production : La valeur recommandée est «&#160;vrai&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>LogToDatabase</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Les entrées de journal devraient-elles être écrites dans <code>GCCF.dbo.GccfLog</code>?</p>
+                                                                <p class="tabletext"><b>Production : La valeur recommandée est «&#160;vrai&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>LogToEventLog</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Les entrées de journal devraient-elles être écrites dans le journal des événements de Windows?</p>
+                                                                <p class="tabletext"><b>Production :&#160; La valeur recommandée est «&#160;faux&#160;»</b>
+                                                                </p>
+                                                                <p class="tabletext">Veuillez noter que les exceptions sont toujours journalisées dans le journal des événements de &#160;Windows, peu importe ce paramètre.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>MemcachedConnectionRead</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur du cache en mémoire duquel il faut lire au moment de vérifier les sessions d'utilisateur à terminer.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>MemcachedConnectionWrite</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Liste de serveurs du cache en mémoire à aviser des sessions d'utilisateurs à terminer.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>MemcachedTimespan</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Durée pendant laquelle les registres de fin de session devraient être mis en cache en mémoire. Cela devrait correspondre à la durée d'une session de la&#160;FJGC, selon ce qui est configuré dans &#160;ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>QueryStringClaimsProviderId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de la variable de la chaîne de requête – le fournisseur de revendications de la FJGC transféré de la page de sélecteur à la page d'ouverture de session.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>QueryStringLanguage</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p>Nom de la variable de la chaîne de recherche – langue sélectionnée par l'utilisateur</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>QueryStringRedirect</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de la variable de la chaîne de recherche – &#160;URL servant à rediriger le navigateur après que la requête de la page actuelle est terminée.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>QueryStringReturnUrl</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de la variable de la chaîne de recherche – URL servant à rediriger le navigateur après que la fermeture de session est terminée.</p>
+                                                                <p class="tabletext"><b>Production : Valeur recommandée :&#160;«&#160;ReturnUrl&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>QueryStringSamlSession</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de la variable de la chaîne de recherche – information sur la séance &#160;ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>QueryStringSource</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de la variable de la chaîne de recherche – Paramètre «&#160;source&#160;» de SharePoint utilisé dans divers URL d'authentification de SharePoint.</p>
+                                                                <p class="tabletext"><b>Production :&#160;&#160;a valeur recommandée est «&#160;source&#160;»</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>RecoverAccountCodeLength</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nombre de chiffres générés dans le code d'authentification à deux facteurs lorsqu'un utilisateur récupère son compte.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>RecoverAccountMaxRetryCount</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nombre de tentatives pour permettre à un utilisateur de saisir son code d'authentification à deux&#160;facteurs au moment de récupérer son compte.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ServerDnsNameAdfs</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom DNS public du serveur ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ServerDnsNameGccfCommonDomain</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom DNS public attribué au portail dans <code>fjgc-gccf.gc.ca domain</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ServerDnsNamePortal</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom DNS public du portail.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ServerDnsNamePortalMaintenance</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom DNS du portail à utiliser pour les opérations de maintenance. Cette zone d'application&#160;Web doit utiliser l'authentification Windows. Cela n'a pas à être un nom DNS public.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ServerDnsNamePortalMaintenanceIsHttps</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Le protocole HTTPS est-il exigé par <code>ServerDnsNamePortalMaintenance </code>?</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>ServerDnsNamePortalMaintenancePort</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Numéro de port à utiliser pour <code>ServerDnsNamePortalMaintenance</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>TermsAndConditionsEnabled</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Les conditions sont-elles activées pour le portail?</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>TermsAndConditionsIgnoreUrl</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Une liste d'expressions régulières. Le module HTTP qui redirige les utilisateurs vers les modalités ignorera les requêtes Web qui correspondent à une entrée de cette liste.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>TrustedLoginProviderGccf</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Nom de l'émetteur de jetons de confiance de SharePoint pour la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>TrustedLoginProviderRda</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Nom de l'émetteur de jetons de confiance de SharePoint pour l'authentification de l'ADR. Facultatif. Nécessaire seulement si les utilisateurs de l'ADR sont authentifiés au moyen d'ADFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlAdfsSamlSessionCookieCopy</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page &#160;Web qui copie le cookie de session d'ADFS. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlAuthenticate</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page &#160;Web servant à authentifier un utilisateur dans SharePoint. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlCommonDomainCookieReader</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page Web du lecteur de cookies du domaine commun de la &#160;FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlCommonDomainCookieWriter</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page Web de l'enregistreur de cookies du domaine commun de la &#160;FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlError</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL of the generic error page for <code>GC.GCCF</code> code. This is a static web page of the department’s choosing. A reference web page is included in the <code>GC.GCCF</code> solution.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlErrorRedirector</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page&#160;de redirection d'erreur pour <code>GC.GCCF</code> code. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLoginAdfs</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page du gestionnaire d'ouverture de session <code>GC.GCCF</code>. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLoginAdfsPostAuthentication</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL&#160;de la page du gestionnaire d'ouverture de session <code>GC.GCCF</code> qui est lancée après l'authentification dans la FJGC. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLoginAdfsPostGccfProcessing</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL&#160;de la page du gestionnaire d'ouverture de session <code>GC.GCCF</code> qui est lancée après la copie du cookie pour le domaine commun et ADFS. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLoginFailed</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page d'«&#160;échec de l'ouverture de session&#160;» pour le portail. Il s'agit d'une page statique choisie par le ministère. Une page &#160;Web de référence est incluse dans la solution <code>GC.GCCF</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLoginWindows</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page d'authentification Windows de SharePoint. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLogout</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page de fermeture de session <code>GC.GCCF</code>. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLogoutAdfs</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page de fermeture de session ADFS de la FJGC. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLogoutAdfsRDA</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page de fermeture de session ADFS de l'ADR. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <div class="top-bar"><code>UrlLogoutBackchannel</code>
+                                                                </div>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL&#160;de la page de fermeture de session utilisant le canal arrière dans l'application &#160;Web des extensions &#160;ADFS. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLogoutBackchannelFailed</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page de «&#160;réussite de la fermeture de session&#160;» pour la fermeture de session utilisant le canal arrière. Il s'agit d'une page statique choisie par le ministère. Une page &#160;Web de référence est incluse dans la solution <code>GC.GCCF</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLogoutBackchannelSuccess</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page de «&#160;réussite de la fermeture de session&#160;» pour la fermeture de session utilisant le canal arrière. Il s'agit d'une page statique choisie par le ministère. Une page &#160;Web de référence est incluse dans la solution <code>GC.GCCF</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLogoutFailed</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page d'«&#160;échec de l'ouverture de session&#160;» Il s'agit d'une page statique choisie par le ministère. Une page &#160;Web de référence est incluse dans la solution GC.GCCF.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLogoutSharePoint</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page de fermeture de session de SharePoint pour les utilisateurs authentifiés par ADFS. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLogoutSoap</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page de fermeture de session avec lien SOAP dans l'application&#160; Web des extensio&#160;ns ADFS. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlLogoutSuccess</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL of the “Logout succeeded” page. Il s'agit d'une page statique choisie par le ministère. Une page &#160;Web de référence est incluse dans la solution <code>GC.GCCF</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlLogoutWindows</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page de «&#160;réussite de la fermeture de session&#160;»  pour les utilisateurs authentifiés par Windows. Ne devrait pas être changé.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlPortalRootAnonymous</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL du site racine anonyme du portail.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlPortalRootAuthenticated</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL où les utilisateurs authentifiés devraient être redirigés après une ouverture de session (si aucun &#160;URL de redirection n'était présent dans la requête d'ouverture de session). Dans la plupart des cas, ce devrait être l'URL du centre de bienvenue.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlReauthenticate</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Non utilisé actuellement.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlReenrolment</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Non utilisé actuellement.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlTermsAndConditions</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL d'une page où un utilisateur peut accepter les conditions du portail. Ce devrait être une page sur le site racine anonyme.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlTrustedLoginChooser</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page «&#160;sélecteur&#160;» de la FJGC. Il s'agit d'une page&#160; Web statique où l'utilisateur sélectionne la &#160;CléGC ou&#160; SecureKey pour l'authentification. Une page &#160;Web de référence est incluse dans la solution <code>GC.GCCF</code>.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>UrlTwoFactorAuthentication</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">URL de la page où un utilisateur peut effectuer une authentification à deux&#160;facteurs. Ce devrait être une page sur le site racine anonyme.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>UrlUserProfile</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">URL de la page où un utilisateur peut enregistrer un profil pour le portail. Ce devrait être une page sur le site racine anonyme.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>TwoFactorAuthenticationEnabled</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Liste des méthodes d'authentification à deux&#160;facteurs, séparés par une virgule, qui sont activées pour le portail Choix valides :&#160;Courriel,&#160; SMS. Veuillez noter que l'option SMS&#160;ne sera offerte qu'aux utilisateurs qui auront saisi un numéro de téléphone mobile dans leur profil. Si cette liste est vide, l'authentification à deux&#160;facteurs est désactivée pour le portail.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>TwoFactorAuthenticationCodeDurationMinutes</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Pendant combien de temps un code d'authentification à deux&#160;facteurs envoyé dans un courriel ou par message SMS&#160;devrait-il rester valide?</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>TwoFactorAuthenticationCodeLength</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Combien de chiffres devrait-on utiliser dans un code d'authentification à deux&#160;facteurs?</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>TwoFactorAuthenticationMaxRetryCount</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Combien de fois un utilisateur peut-il tenter de saisir un code d'authentification à deux&#160;facteurs avant que son compte soit gelé?</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p><code>TwoFactorAuthenticationMaxRequestCount</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Combien de fois un utilisateur peut-il demander un nouveau code d'authentification à deux&#160;facteurs, sans terminer l'authentification, avant que son compte soit gelé?</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="À propos de la FJGC|GCCFAbout.htm#aanchor308||À propos du portail|AboutPortal.htm#aanchor146||À propos du portail|AboutPortal.htm#aanchor147||Aperçu du service Web FormManager|WebServicePortalFormMgr.htm#aanchor75||Application Web des extensions des services ADFS (Active Directory Federation Services)|ADFSExtensionswebApp.htm#aanchor268||Application&#160;Web de domaine commun de la fédération des justificatifs du gouvernement du &#160;Canada (FJGC)|GCCFCommonDomainWebApp.htm#aanchor0||Applications SPFx pour le portail|SPFxAppsPortal.htm#aanchor102||Authentification du GPSC|GCPMAuthentication.htm#aanchor274||Authentification pour les utilisateurs de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFAuthentication.htm#aanchor203||Authentification pour les utilisateurs des agences de développement régional (ADR)|AuthenticationRDA.htm#aanchor386||Base de données de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFDatabase.htm#aanchor402||Bâtir et déployer des applications SharePoint Framework (SPFx)|SPFxAppsBuildDeploy.htm#aanchor161||Certificat de SSL|Cert-SSL.htm#aanchor247||Certificats de la FJGC|Cert-GCCF.htm#aanchor12||Certificats de service Web d'agences régionales de développement (ADR)&#160;et de service Web de portail|Cert-RDAWebService.htm#aanchor267||Conception de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDev.htm#aanchor418||Configuration de GC.GCCF|#aanchor87||Configuration du portail – courriel d'invitation|PortalConfigInviteEmail.htm#aanchor133||Configuration du portail de la Solution d'entreprise pour les subventions et les contributions&#160;(SESC)|EGCSPortalConfig.htm#aanchor164||Configurer des formulaires pour le portail|SmartGuide/ConfigureApplic on portal.htm#aanchor30||Créer de nouveaux formulaires|SmartGuide/CreateNewForms.htm#aanchor108||Déploiement de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor69||Développement de composants WebPart SPFx|SPFxAppsProjectFolders.htm#aanchor56||Diagramme de relation d'entité de portail|../Modules/ERDs/ERD Portal.htm#aanchor290||Documentation de SmartGuide d'Alphinat|SmartGuide/AlphinatDoc.htm#aanchor114||Documents dans le portail|PortalDocs.htm#aanchor172||Élaborer des formulaires de portail - connexions|SmartGuide/PortalFormDevConnections.htm#aanchor428||Intégration de documents du portail au GPSC|PortalDocIntegGCPM.htm#aanchor13||Intégration du portail avec GPSC|Portal-GCPMIntegration.htm#aanchor405||Inviter un client SC sur le portail|UsingPortal/InviteClient.htm#aanchor186||Les formulaires dynamiques du portail|SmartGuide/PortalFormDynamic.htm#aanchor60||Métadonnées FPGC|GCCFMetadata.htm#aanchor166||Naviguer dans le portail|UsingPortal/NavigatePortal.htm#aanchor1||Notes de la version 1.0 du portail|PortalReleaseNotes1.0.htm#aanchor16||Personnalisation du portail|PortalBranding.htm#aanchor162||Portail - aperçu de la page maître|PortalMasterPage.htm#aanchor410||Sécurité du portail|PortalSecurity.htm#aanchor91||Serveur proxy inverse pou le portail|PortalReverseProxy.htm#aanchor394||Service de Windows : création de site|WindowsSiteCreation.htm#aanchor388||Service Web des ADR|WebServiceRDA.htm#aanchor97||Service Web FormManager|WebServiceFormMgr.htm#aanchor366||Service Web SharePoint|WebserviceSharePoint.htm#aanchor154||Service Web WebAPI|WebServiceWebAPI.htm#aanchor437||Services Web pour l'intégration de portails|WebServicesPortal.htm#aanchor420||SharePoint - structure du site du portail|PortalSharepointSiteStructure.htm#aanchor229||Solution GC.GCCF de  Visual Studio|VSSolutionGCCF.htm#aanchor295||Solution Visual Studio pour le EGCS.Portal|VSSolutionEGCSPortal.htm#aanchor88||Soumettre des données en tableaux avec un formulaire|UsingPortal/SubmitFormTable.htm#aanchor179||Soumettre des formulaires sur le portail|UsingPortal/SubmitForms.htm#aanchor215||Structure du&#160;Smartlet du GPSC|SmartGuide/PortalFormSmartletStructure.htm#aanchor385||Transfert de données du portail au &#160;GPSC|DataTransfer.htm#aanchor429"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

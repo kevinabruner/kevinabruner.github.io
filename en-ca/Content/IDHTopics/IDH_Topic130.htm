@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configuration Tools|Crowe EditAble CRM Grid|Getting Started with EditAble CRM Grid|Installing the EditAble CRM Grid solution|Troubleshooting">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Issues related to the CRM Sandbox service</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>html
+{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body
+{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#non-scrolling-area
+{
+	padding: 0px 10px 0 10px;
+	background-color: #002050;
+}
+
+#container
+{
+	overflow: auto;
+}
+
+#content
+{
+	padding: 0 10px 5px 10px;
+}
+
+</style>
+        <link href="CHMstyles.css" rel="stylesheet" />
+        <script src="../js/jquery-1.11.1.min.js">
+        </script>
+        <script src="../js/nsa.js">
+        </script>
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>All Files</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Change language">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Print">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Search is based on keyword.</p>
+                                                        <p><samp>Ex:&#160;"Procedures"</samp>
+                                                        </p>
+                                                        <p>Do not search with natural language</p>
+                                                        <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                        </div>
+                                        <div>
+                                            <div id="non-scrolling-area">
+                                                <p class="ps10"><a href="IDH_Topic120.htm" class="hs2">Crowe EditAble CRM Grid</a><span class="ts8">&#160;| </span><a href="IDH_Topic10.htm" class="hs2">Getting Started with EditAble CRM Grid</a><span class="ts8">&#160;| </span><a href="IDH_Topic20.htm" class="hs2">Installing the EditAble CRM Grid solution</a><span class="ts8">&#160;| </span><a href="IDH_Topic90.htm" class="hs2">Troubleshooting</a>
+                                                    <br />
+                                                    <br /><span class="ts5">Issues related to the CRM Sandbox service</span>
+                                                </p>
+                                            </div>
+                                            <div id="container">
+                                                <div id="content-background">
+                                                    <div id="content">
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">EditAble CRM Grid uses several plug-ins that leverage Dynamics CRM's sandbox service.&#160; If you are seeing errors installing the solution, creating or publishing grid configurations, or when an EditAble CRM Grid is initializing, you may need to verify that your organization's sandbox service is running and configured correctly.&#160; </p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">Some common causes for errors related to Dynamics CRM's sandbox processing service:</p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span>The service is not running</p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span>The service is configured to use service account that does not have appropriate privileges</p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span>The sandbox service ports are blocked</p>
+                                                        <p>&#160;</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">Refer to the following information from the Microsoft Dynamics CRM 2013 Implementation Guide for information about configuring the sandbox processing service:</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><a href="http://technet.microsoft.com/en-us/library/hh699655.aspx" target="_blank" class="hs0">MSDN - Microsoft Dynamics CRM server roles</a>
+                                                        </p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><a href="http://technet.microsoft.com/en-us/library/hh699825.aspx" target="_blank" class="hs0">MSDN - Security considerations for Microsoft Dynamics CRM 2013</a>
+                                                        </p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><span class="ts14">MSDN - Network ports for Microsoft Dynamics CRM</span>
+                                                        </p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps12">&#160;</p>
+                                                        <p class="ps12">&#160;</p>
+                                                        <p class="ps12">&#160;</p>
+                                                        <div>
+                                                            <div class="hline0">
+                                                            </div>
+                                                        </div>
+                                                        <div align="center">
+                                                            <table style="width: 100%;border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="100%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: none;border-right: none;border-bottom: none;border-left: none;">
+                                                                    <td style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" valign="top">
+                                                                        <p class="ps8">Crowe EditAble CRM Grid for Microsoft Dynamics CRM™</p>
+                                                                    </td>
+                                                                    <td style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" valign="top">
+                                                                        <p class="ps9">Copyright © 2018 Crowe Horwath LLP</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p><span class="ts0">&#160;</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

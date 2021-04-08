@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers Corner|GCPM data dictionary|Features data dictionary">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Financing metadata</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/MetadataTable.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>All Files</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Change language">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Print">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Search is based on keyword.</p>
+                                                        <p><samp>Ex:&#160;"Procedures"</samp>
+                                                        </p>
+                                                        <p>Do not search with natural language</p>
+                                                        <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                        </div>
+                                        <div>
+                                            <h1><a name="aanchor142"></a>
+                                                <MadCap:concept term="Financing" />Financing metadata</h1>
+                                            <p>The first table below identifies entities in the financing feature. The remaining tables display the egcs metadata for each of these entities. </p>
+                                            <p>This metadata was generated from Workspace 9 on January 24, 2019. </p>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Financing entities </a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Entity</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Logical Name</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing Category</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing feature - A list of project financing categories, which can be linked to subcategories.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">egcs_fc_fundingsourcecategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing Element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing feature - A list of financing elements</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">egcs_fc_fundingsourceelement</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing Option | A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing feature - A list of financing options for your organization</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">egcs_fc_fundingsourcefinancingtype</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing Subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing feature - A list of project financing subcategories, which are linked to financing categories</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">egcs_fc_fundingsourcesubcategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Financing Type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Financing feature - A list of financing types</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-LightRows">egcs_fc_fundingsourcesubctgyfinancingtype</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Financing" href="javascript:void(0);" data-mc-topics="About project financing|../../Program Solution/Financing/About Financing.htm#aanchor3||About stacking|../../Program Solution/Financing/About stacking.htm#aanchor94||Assess project financing|../../Program Solution/Financing/Project financing.htm#aanchor151||Financing metadata|#aanchor142||Financing sources entity relationship diagram|../../Program Solution/Financing/ERD Funding Sources.htm#aanchor221||Key steps to configuring project financing|../../Program Solution/Financing/Key steps financing.htm#aanchor162||Project financials entity relationship diagram|../../Program Solution/Financing/ERD Project financials.htm#aanchor96"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                            </p>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Financing Category (egcs_fc_fundingsourcecategory)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fc_fundingsourcecategoryid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">FC Funding Source Category</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the financing category</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General
+Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the financing category (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the financing category (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">egcs_order</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Order</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Integer</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Determines the order that the category will appear in the lookup list.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-LightRows">Minimum value: -2147483648
+Maximum value: 2147483647</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Financing Element (egcs_fc_fundingsourceelement)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_amendmentlocked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows"><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">Amendment<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>formal change to a contribution agreement, after assessment is approved.</span></a> Locked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Boolean</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">True: Yes
+False: No
+Default Value: False</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_amount</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Amount</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Money</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Displays the amount of the assistance / contribution / financing for this element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Minimum value: -922337203685477
+Maximum value: 922337203685477
+Precision: 4</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_conf</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Confirmed</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Picklist</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Indicates if financing is confirmed for this element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Options:
+701360000: Yes
+701360001: No
+Default: N/A</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fc_amendment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Project amendment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Displays the project amendment associated to this element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_amendment</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_financingtype</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the financing type for this element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_fundingsourcesubctgyfinancingtype</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fundingsource</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing category</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Displays the financing category for this element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_fundingsourcecategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fundingsourcesubcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the financing subcategory for this element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_fundingsourcesubcategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_locked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Locked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Boolean</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Indicates if the element is locked.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">True: Yes
+False: No
+Default Value: False</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_sourcename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Source name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Identifies the source of the financing</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_stacking</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Stacking %</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Decimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Indicates the % of stacking for this element.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Minimum value: -100000000000
+Maximum value: 100000000000
+Precision: 2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the financing element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General
+Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fcprofile</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Displays the project associated with this financing element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/Header</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_profile</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_amendmentlockedname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_amendmentsource</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Amendment source</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Hidden field</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_fundingsourceelement</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_amendmentsourcename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_amount_base</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Amount (Base)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Money</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Value of the Amount in base currency.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Minimum value: -922337203685477
+Maximum value: 922337203685477
+Precision: 4</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_amtstackingamount</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Stacking amount</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Money</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Hidden field</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Minimum value: -922337203685477
+Maximum value: 922337203685477
+Precision: 4</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_amtstackingamount_base</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Stacking Amount (Base)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Money</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Value of the StackingAmount in base currency.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Minimum value: -922337203685477
+Maximum value: 922337203685477
+Precision: 4</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_confname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fc_amendmentname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fc_fundingsourceelementid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">FC Funding Source Element</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fcprofilename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_financingtypename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fundingsourcename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fundingsourcesubcategoryname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_lockedname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Financing Option | A&#160;(egcs_fc_fundingsourcefinancingtype)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fc_fundingsourcefinancingtypeid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">FC Funding Source Financing Type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fcfundingsourcesubcategoryfinancingtype</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Hidden field</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_fundingsourcesubctgyfinancingtype</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fcfundingsourcesubcategoryfinancingtypename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fundingsourcesubcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing source subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Hidden field</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_fundingsourcesubcategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fundingsourcesubcategoryname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the financing option</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General
+Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the financing option (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">The name of the financing option (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Financing Subcategory (egcs_fc_fundingsourcesubcategory)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the financing subcategory (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the financing subcategory (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_account</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Account</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the account associated with this subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General
+EGCS Base - Quick/Tab/section</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+account</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the financing subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General
+EGCS Base - Quick/Tab/section
+Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fcfundingsourcecategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing category</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the financing source category associated to this subcategory.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/Header
+EGCS Base - Quick/Tab/section</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_fundingsourcecategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_accountname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_accountyominame</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fc_fundingsourcesubcategoryid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">FC Funding Source Sub-Category</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">egcs_fcfundingsourcecategoryname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Financing Type (egcs_fc_fundingsourcesubctgyfinancingtype)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_financingtype</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Financing type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the financing types</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_fundingsourcefinancingtype</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the financing type (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the financing type (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fundingsourcesubcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Financing subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Displays the financing subcategory</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/Header</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_fundingsourcesubcategory</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the financing type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Information/General/General
+EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fc_fundingsourcesubctgyfinancingtypeid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">FC Funding Source Sub-Category Financing Type</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_financingtypename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_fundingsourcesubcategoryname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

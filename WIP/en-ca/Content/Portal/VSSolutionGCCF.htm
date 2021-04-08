@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|[%=System.LinkedTitle%]|SharePoint-Development, localization and branding">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>GC.GCCF Visual Studio Solution</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor428"></a>
+                                                    <MadCap:concept term="Portal" />GC.GCCF Visual Studio Solution</h1>
+                                                <p>The <code>GC.GCCF</code> solution deals with connectivity to the GCCF environment and user identity. In includes code to extend both SharePoint and ADFS to meet the requirements of the CATS2 specification.</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Prerequisites:</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ul>
+                                                            <li value="1">Visual Studio 2017<ul><li value="1">.NET desktop development </li><li value="2">ASP.NET and web development</li><li value="3">Data storage and processing </li><li value="4">Office/SharePoint development</li></ul></li>
+                                                            <li value="2">A SharePoint installation is not required to build the solution</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <p>To build the <code>GC.GCCF</code> solution:</p>
+                                                <ol>
+                                                    <li value="1">Retrieve the latest version from TFS.<br /></li>
+                                                    <li value="2">Clean previous build output:<ul><li value="1">Open a PowerShell windows as Administrator.</li><li value="2">CD to the directory for the GC.GCCF solution.</li><li value="3">Run <code>Clean-Solution.ps1</code>.</li></ul></li>
+                                                    <li value="3">Build the solution:<ul><li value="1">In Visual Studio right-click the solution node (top of the Solutions Explorer tree)</li><li value="2">Select <b>Deploy</b>.</li><li value="3">A successful build will report:<br /><p>========== Build: 10 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========</p><p>========== Deploy: 2 succeeded, 0 failed, 0 skipped ==========</p></li></ul></li>
+                                                </ol>
+                                                <p>Note: </p>
+                                                <ul>
+                                                    <li value="1">Occasionally Visual Studio may not build one of the SharePoint solutions, claiming that the “project was not built because it is a dependent project”. This appears to be a Visual Studio bug. Retry the build, it should succeed.</li>
+                                                    <li value="2">A folder named <code>_Build</code> will hold all of the build output. This folder is created by steps in the “<b>Build Events</b>” section of each project.</li>
+                                                    <li value="3">If code in GCCF Library or GCCF Connector projects has changed, copy the output DLLs to the <code>EGCS.Porta</code>l project. This process can be automated by putting a file name <code>_Refresh_EGCS_DLL.txt</code> into the <code>GC.GCCF</code> solution folder.</li>
+                                                    <li value="4">Check “Build Events” of those two projects for an example of how to configure this.</li>
+                                                </ul>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>GC.GCCF Project and Folders</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 198px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 164px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Project</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Project Type</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Notes</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>GCCF ADFS Extensions</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">IIS Web Application</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">A web application which extends the services offered by ADFS to include SAML SOAP binding logout and back-channel logout.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Usually installed on the ADFS server.</li>
+                                                                    <li style="list-style-type: disc;" value="3">The reverse proxy server makes this web application appear under in URL space of ADFS. Traffic for<code> /adfs/ls/gccf/*</code> is routed to this web application instead of being processed by ADFS.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Uses <code>OpenAM community Edition</code> to send and receive SAML SOAP messages.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>GccfAttributeStore</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">An ADFS attribute store.</li>
+                                                                    <li style="list-style-type: disc;" value="2">This is a custom DLL which is loaded by ADFS. It is invoked during user login to map the user’s GCCF Persistent Anonymous Identifier to their <code>PortalUserId</code>.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Stores data in the database table <code>GCCF.dbo.GccfPai</code>.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>OpenAM Community Edition</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">An open source library for SAML, written in C#.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Has been extended and customized for the requirements of the Portal.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Based on the ForgeRock OpenAM Community Edition Fedlet</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>DLLs</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Visual Studio Solution Folder</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">This contains SharePoint and ADFS DLLs required to build all components of the <code>GC.GCCF</code> solution.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>GCCF Connector</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">SharePoint 2016 Farm Solution</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Web pages to manage the chain of redirects during user authentication for <code>GCCF </code>to ensure that Common Domain Cookie processing occurs, that the ADFS session cookie is copied, and that ADFS is invoked with the correct arguments to log into GCKey or SecureKey.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Adds several pages to the server path<code> /_layouts/15/gccf/</code>. Most of these pages do not have a user interface. They perform server-side processing and then redirect the browser.</li>
+                                                                    <li style="list-style-type: disc;" value="3">HTTP Module Language reads the portal’s language cookie and sets the SharePoint user interface language.</li>
+                                                                    <li style="list-style-type: disc;" value="4"><code>HTTP Module SLO</code> monitors web requests for user sessions which need to be terminated because a back channel logout notification has been received.</li>
+                                                                    <li style="list-style-type: disc;" value="5"><code>HTTP Module UserRegistration</code> monitors web requests to ensure that all users have accepted portal Terms and Conditions, have registered a profile, and have performed two-factor authentication. Any web request which does not meet these conditions is redirected to the appropriate web page to complete the task.</li>
+                                                                    <li style="list-style-type: disc;" value="6">Library code to encrypt cookies.</li>
+                                                                    <li style="list-style-type: disc;" value="7">Library code to identify the type of user (GCCF User vs. RDA User).</li>
+                                                                    <li style="list-style-type: disc;" value="8">The DLL output from the project is referenced in the <code>EGCS.Portal solution</code>.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>GCCF Web Pages</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>SharePoint 2016 Farm Solution</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Reference implementations of simple pages to display log in, log out, and error messages.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Translation files (.NET RESX files) for the <code>GC.GCCF</code> components.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Reference implementation of the <code>GCCF</code> Chooser pages, which allows users to select between GCKey and SecureKey.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Reference implementations of the user re-enrolment page. This allows users to request recovery of their portal account when they have lost or forgotten their GCKey/SecureKey, or when they wish to transfer their account to a different GCKey/SecureKey.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>Entrust 9.3</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>Solution Folder</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Installed files for Entrust 9.3.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Entrust is used to perform CRL checking for ADFS on ICM certificates.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Includes Entrust installer configuration files for ICM CATE (pre-production) and production environments.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>Microsoft ARR</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>Solution Folder</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Installer files for Microsoft ARR.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>Metadata Rewriter for ADFS</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>Windows Forms Application</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Read ADFS metadata and produce a signed metadata package suitable for GCCF.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Another alternative is to use the PowerShell script<code> Update-AdfsMetadata.ps1 </code>to re-sign (and optionally change the DNS name of) an existing portal metadata package.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>SAML Decrypt Utility</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>Windows Forms Application</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Decrypt SAML responses from GCKey and SecureKey. These responses are typically captured from Fiddler, or a similar utility.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Requires the ICM Encryption certificate, with private key, to be on the local computer and accessible to the user running the utility.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Very old and ugly code with several hacks. Not a formal, supported part of the package. Use at your own risk.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>Configuration EGCS-SESC</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">DLL project</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p>The DLL from this project is not used. The Project is a container to hold configuration files.</p>
+                                                                <ul>
+                                                                    <li value="1">Configuration files for installing the Portal.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Configuration settings for various <code>GC.GCCF </code>components.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Configuration settings for multiple Portals are kept under separate environment names.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Current metadata for GCKey and SecureKey, both pre-production and production.</li>
+                                                                    <li style="list-style-type: disc;" value="5">The root 1CA-AC1 certificate for pre-production and production.</li>
+                                                                    <li style="list-style-type: disc;" value="6">Microsoft ARR ruleset extracts.</li>
+                                                                    <li style="list-style-type: disc;" value="7">The portal’s ICM signing certificate (public key only).</li>
+                                                                    <li style="list-style-type: disc;" value="8">ADFS web theme to support the Portal.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>GCCF Common Domain Cookie</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">IIS Web Application</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Writes the GCCF Common Domain language cookie during login to communicate the user’s desired language to GCKey / SecureKey.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Reads the <code>GCCF </code>Common Domain language cookie after login to communicate the user’s desired language back to the portal (in case it has changed).</li>
+                                                                    <li style="list-style-type: disc;" value="3">Published under the DNS name assigned to the portal in the fjgc-gccf.gc.ca domain.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Typically installed on the ADFS server.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>GCCF Library</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">A library DLL which is used by most other components of<code> GC.GCCF</code> and <code>EGCS.Portal.</code></li>
+                                                                    <li style="list-style-type: disc;" value="2">Contains all .NET settings used in other <code>GC.GCCF</code> code.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Includes a third-party zip compression library and a third-party library for accessing Memcached servers.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Centralized logging methods</li>
+                                                                    <li style="list-style-type: disc;" value="5">Centralized database access methods</li>
+                                                                    <li style="list-style-type: disc;" value="6">The DLL output from the project is referenced in the <code>EGCS.Portal</code> solution.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="About GCCF|GCCFAbout.htm#aanchor166||About the portal|AboutPortal.htm#aanchor395||About the portal|AboutPortal.htm#aanchor396||ADFS extensions web application|ADFSExtensionswebApp.htm#aanchor217||Alphinat SmartGuide documentation|SmartGuide/AlphinatDoc.htm#aanchor44||Authentication for GCCF users|GCCFAuthentication.htm#aanchor22||Authentication for RDA users|AuthenticationRDA.htm#aanchor214||Build and deploy SPFx apps|SPFxAppsBuildDeploy.htm#aanchor140||Configure forms for the portal|SmartGuide/ConfigureApplic on portal.htm#aanchor442||Create new forms|SmartGuide/CreateNewForms.htm#aanchor242||Data transfer from the portal to GCPM|DataTransfer.htm#aanchor256||Deploying forms for the portal with SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor0||Developing forms for the portal with SmartGuide|SmartGuide/PortalFormDev.htm#aanchor203||Developing portal forms - connections|SmartGuide/PortalFormDevConnections.htm#aanchor106||Developing SPFx Web Parts|SPFxAppsProjectFolders.htm#aanchor145||Documents on the portal |PortalDocs.htm#aanchor422||Dynamic portal forms|SmartGuide/PortalFormDynamic.htm#aanchor394||EGCS.Portal configuration|EGCSPortalConfig.htm#aanchor368||EGCS.Portal Visual Studio Solution|VSSolutionEGCSPortal.htm#aanchor321||FormManager web service overview|WebServicePortalFormMgr.htm#aanchor10||FormManager web service|WebServiceFormMgr.htm#aanchor127||GC.GCCF configuration|GCCFConfig.htm#aanchor388||GC.GCCF Visual Studio Solution|#aanchor428||GCCF certificates|Cert-GCCF.htm#aanchor18||GCCF common domain web application|GCCFCommonDomainWebApp.htm#aanchor320||GCCF database|GCCFDatabase.htm#aanchor205||GCCF metadata|GCCFMetadata.htm#aanchor267||GCPM authentication|GCPMAuthentication.htm#aanchor8||GCPM&#160;Smartlet Structure |SmartGuide/PortalFormSmartletStructure.htm#aanchor213||Invite a GC&#160;Client to the portal|UsingPortal/InviteClient.htm#aanchor191||Navigate the portal|UsingPortal/NavigatePortal.htm#aanchor144||Portal - master page overview|PortalMasterPage.htm#aanchor25||Portal branding|PortalBranding.htm#aanchor261||Portal configuration - invitation email|PortalConfigInviteEmail.htm#aanchor227||Portal document integration with GCPM&#160;|PortalDocIntegGCPM.htm#aanchor231||Portal entity relationship diagram|../Modules/ERDs/ERD Portal.htm#aanchor131||Portal integration with GCPM|Portal-GCPMIntegration.htm#aanchor2||Portal release notes 1.0|PortalReleaseNotes1.0.htm#aanchor38||Portal security|PortalSecurity.htm#aanchor263||RDA web service and portal web service certificates|Cert-RDAWebService.htm#aanchor215||RDA web service|WebServiceRDA.htm#aanchor123||Reverse proxy server for the portal|PortalReverseProxy.htm#aanchor212||SharePoint - portal site structure|PortalSharepointSiteStructure.htm#aanchor156||SharePoint web service|WebserviceSharePoint.htm#aanchor313||SPFx apps for the portal|SPFxAppsPortal.htm#aanchor208||SSL certificate|Cert-SSL.htm#aanchor310||Submit forms on the portal|UsingPortal/SubmitForms.htm#aanchor357||Submit tabular data with a form|UsingPortal/SubmitFormTable.htm#aanchor162||Web services for portal integration|WebServicesPortal.htm#aanchor238||WebAPI&#160;web service|WebServiceWebAPI.htm#aanchor362||Windows service - document management|WindowsDocMgt.htm#aanchor184||Windows service - site creation|WindowsSiteCreation.htm#aanchor255"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

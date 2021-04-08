@@ -1,0 +1,1 @@
+define({'Addresses':{c:'Stakeholder - address', cm:'', o:0},'Stakeholder relationships':{c:'Stakeholder relationship management', cm:'', o:6},'Business identity':{c:'Business identity', cm:'', o:1},'Proactive disclosure':{c:'', cm:'', o:5},'Risk assessment':{c:'', cm:'', o:4},'Program configuration':{c:'', cm:'', o:3},'Financial statements':{c:'', cm:'', o:2},})

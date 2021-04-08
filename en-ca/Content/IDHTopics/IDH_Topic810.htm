@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configuration Tools|Crowe EditAble CRM Grid|Getting Started with EditAble CRM Grid|Creating EditAble CRM Grids|Creating a new EditAble CRM Grid">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Configuration Options</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <style>html
+{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body
+{
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#non-scrolling-area
+{
+	padding: 0px 10px 0 10px;
+	background-color: #002050;
+}
+
+#container
+{
+	overflow: auto;
+}
+
+#content
+{
+	padding: 0 10px 5px 10px;
+}
+
+</style>
+        <link href="CHMstyles.css" rel="stylesheet" />
+        <script src="../js/jquery-1.11.1.min.js">
+        </script>
+        <script src="../js/nsa.js">
+        </script>
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>All Files</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Change language">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Print">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                    <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Search is based on keyword.</p>
+                                                        <p><samp>Ex:&#160;"Procedures"</samp>
+                                                        </p>
+                                                        <p>Do not search with natural language</p>
+                                                        <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                        </div>
+                                        <div>
+                                            <div id="non-scrolling-area">
+                                                <p class="ps10"><a href="IDH_Topic120.htm" class="hs2">Crowe EditAble CRM Grid</a><span class="ts8">&#160;| </span><a href="IDH_Topic10.htm" class="hs2">Getting Started with EditAble CRM Grid</a><span class="ts8">&#160;| </span><a href="IDH_Topic140.htm" class="hs2">Creating EditAble CRM Grids</a><span class="ts8">&#160;| </span><a href="IDH_Topic150.htm" class="hs2">Creating a new EditAble CRM Grid</a>
+                                                    <br />
+                                                    <br /><span class="ts5"><a name="kanchor76"></a>Configuration Options</span>
+                                                </p>
+                                            </div>
+                                            <div id="container">
+                                                <div id="content-background">
+                                                    <div id="content">
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">The EditAble CRM Grid configuration options are grouped into several areas.</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p><a name="General"></a><span class="ts7">General</span>
+                                                        </p>
+                                                        <p><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <div align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="433" valign="top">
+                                                                        <p>
+                                                                            <img width="428" height="176" border="0" src="../Resources/Images/CroweHelp/Image(447).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p><span class="ts13">Name</span>
+                                                        </p>
+                                                        <p class="ps1">The name of the EditAble CRM Grid configuration.&#160; This is the how you will refer to the grid when adding it to CRM.&#160; The Name should be unique to ensure that CRM loads the correct configuration.</p>
+                                                        <p><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p><span class="ts13">Description</span>
+                                                        </p>
+                                                        <p class="ps1">An optional description of the EditAble CRM Grid configuration.&#160; </p>
+                                                        <p><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p><span class="ts13">Entity</span>
+                                                        </p>
+                                                        <p class="ps13">The CRM entity that the EditAble CRM Grid will represent.&#160; This gets set during the <a href="IDH_Topic150.htm#ConfigurationWizard" class="hs0">initial configuration wizard</a>&#160;and cannot be changed on an existing configuration.</p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts16">Criteria Type</span>
+                                                            <br />The criteria type allows you to specify how you want the EditAble CRM Grid to query its results.&#160; To change the type of an existing configuration, use the Grid Definition button on the command bar to open the <a href="IDH_Topic150.htm#ConfigurationWizard" class="hs0">configuration wizard</a>.</p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts16">Parent Entity Name</span>
+                                                            <br /><span class="ts6">Available only when Show Related Records is selected as the Criteria Type.&#160; This is the parent entity to use for related records and can be set or changed using the</span>&#160;Grid Definition button on the command bar to open the <a href="IDH_Topic150.htm#ConfigurationWizard" class="hs0">configuration wizard</a>.</p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts16">Parent Entity Key</span>
+                                                            <br /><span class="ts6">Available only when Show Related Records is selected as the Criteria Type.&#160; This is the lookup field to the parent entity being used for related records and can be set or changed using the</span>&#160;Grid Definition button on the command bar to open the <a href="IDH_Topic150.htm#ConfigurationWizard" class="hs0">configuration wizard</a>.</p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block1">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps17"><a name="RowFunctionality"></a><span class="ts7">Row Functionality</span>
+                                                        </p>
+                                                        <div class="block1" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="335" valign="top">
+                                                                        <p>
+                                                                            <img width="333" height="237" border="0" src="../Resources/Images/CroweHelp/Image(344).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps17"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps17"><span class="ts13">New Rows</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies how you want the EditAble CRM Grid to handle “New” record requests.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Create Inline</span><span class="ts6">&#160;– New records are created inline in the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Use CRM Form</span><span class="ts6">&#160;– New records are created using the entity’s standard CRM form.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Allow Both</span><span class="ts6">&#160;– Users will have the option of creating new records using inline editing or the entity’s standard CRM form.&#160; This is accomplished using a drop down menu when clicking the New button on the toolbar.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Disabled</span><span class="ts6">&#160;– This option will hide the “New” button and disable the ability to create new records directly from the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><span class="ts13">Enable Quick Create</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option enables the use of the CRM Quick Create form. This option is only available and displayed in CRM 2016 and later. Enabling this option will override the default behavior of opening the standard CRM form for New Rows when New Rows is set to Use CRM Form or Allow Both, and utilize the Quick Create form instead. A Quick Create form must be available for the entity, otherwise this option should be set to Disabled. </span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Edit Rows</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies how you want the EditAble CRM Grid to handle “Edit” record requests.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Edit Inline</span><span class="ts6">&#160;– Records are able to be edited inline in the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Use CRM Form</span><span class="ts6">&#160;– The entity’s standard CRM form will open to allow the user to update the record.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Allow Both</span><span class="ts6">&#160;– Users will have the option of editing records using inline editing or the entity’s standard CRM form.&#160; This is accomplished using a drop down menu when clicking the Edit button on the toolbar.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Disabled</span><span class="ts6"><a name="kanchor77"></a>&#160;– This option will hide the “Edit” button and can be used to disable the ability to edit records in the EditAble CRM Grid, depending on the Double Click Action option selected.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Delete Rows</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies how you want the EditAble CRM Grid to handle “Delete” record requests.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Use Toolbar Button</span><span class="ts6">&#160;– Shows a “Delete” button on the EditAble CRM Grid toolbar.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts12">Disabled</span>&#160;– This option will disable the ability to delete records directly from the EditAble CRM Grid.</p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Double Click Action</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option allows you to specify what the EditAble CRM Grid will do when a user double clicks a row.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Edit Inline</span><span class="ts6">&#160;– The row will enter inline edit mode.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Open CRM Form</span><span class="ts6">&#160;– The records CRM form will be opened.&#160; This would be similar to how a standard CRM view works.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Disabled</span><span class="ts6">&#160;– The double-click event will be disabled.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">New Row Location</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Available only when the New Rows option is set to Create Inline.&#160; This option specifies where you want the new blank row to be positioned in the grid.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">New Row Attribute Mappings</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Available only when the New Rows option is set to Create Inline or Allow Both, and the Grid Configuration Criteria Type is set to Show Related Records.&#160; This option, when enabled, automatically retrieves and applies the CRM Attribute Mappings for the parent-child relationship when a new record is added Inline. Previously, the use of the EditAble CRM Grid API and CRM SDK libraries were required to populate these values during the On New Event.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13"><a name="kanchor78"></a>Row Multi-Select</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Enable or disable the ability for users to select multiple rows in the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block1">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps17"><a name="DisplayOptions"></a><span class="ts7">Display Options</span>
+                                                        </p>
+                                                        <div class="block1" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="561" valign="top">
+                                                                        <p>
+                                                                            <img width="559" height="143" border="0" src="../Resources/Images/CroweHelp/Image(8).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps17"><span class="ts13">Row Checkboxes</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Toggles row checkboxes on or off.&#160; If turned on, an additional checkbox is added to the column headers that allows users to select/unselect all rows (if Row Multi-Select is enabled).</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Show Header</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Toggles the EditAble CRM Grid column headings on or off.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Show Footer</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Toggles the EditAble CRM Grid footer row on or off.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Show Title</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Toggles a title area for the EditAble CRM Grid on or off.&#160; Use the Grid Title option to specify the title you want to show.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Grid Title</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Available only when Show Title is enabled.&#160; Use this to specify the title you want to appear on the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><a name="Opt_Borders"></a><span class="ts13">Border</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option allows you to specify a border style for the EditAble CRM Grid control.&#160; Note that these options do not relate to the “Display Border” setting of CRM form’s Web Resource frames.&#160; It is recommended to always set that option to not show a border and let EditAble CRM Grid manage its own border styles.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">None</span><span class="ts6">&#160;– The EditAble CRM Grid will display without a border.&#160; This matches CRM 2013’s border-less styles.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Normal</span><span class="ts6">&#160;– A single line border</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Shadow </span><span class="ts6">– A single line border with a shadow effect, similar to some CRM 2013 control styles.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Shadow on Focus </span><span class="ts6">– A combination of the None and Shadow options.&#160; The EditAble CRM Grid will have no border until a user start using it, at which point it will switch to the Shadow border style.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Show Toolbar</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Toggles the EditAble CRM Grid toolbar on or off.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Show Status Bar</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Toggles the EditAble CRM Grid status bar on or off.&#160; The status bar is the area at the bottom of the grid that shows information like the number of records returned.</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">The status bar is also where the paging controls will appear if paging is enabled on the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block0">
+                                                            <div class="hline2">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps4"><a name="Columns"></a><span class="ts7">Columns</span>
+                                                        </p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="1039" valign="top">
+                                                                        <p>
+                                                                            <img width="1037" height="255" border="0" src="../Resources/Images/CroweGetting Started/Cfg_Columns.png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps13"><span class="ts6">The Columns area is where you can add new columns to your EditAble CRM Grid configuration or modify existing ones.&#160; See the </span><a href="IDH_Topic160.htm" class="hs0">Columns section</a><span class="ts6">&#160;for more information.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="600" valign="top">
+                                                                        <p>
+                                                                            <img width="594" height="103" border="0" src="../Resources/Images/CroweHelp/Image(448).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps4"><span class="ts13">Sort by (Primary Sort Field &amp; Sort Direction)</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Specifies the primary EditAble CRM Grid Column to sort on and direction of the sort (ascending or descending).</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Then by (Secondary Sort Field &amp; Sort Direction)</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Specifies the secondary EditAble CRM Grid Column to sort on and direction of the sort (ascending or descending).</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block0">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps4"><a name="Grouping"></a><span class="ts7">Grouping</span>
+                                                        </p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="366" valign="top">
+                                                                        <p>
+                                                                            <img width="362" height="123" border="0" src="../Resources/Images/CroweHelp/Image(431).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps4"><span class="ts13">Enable Grouping</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Enables grouping functionality in the EditAble CRM Grid.&#160; Turning this option on will enable several other grouping related options.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Dynamic Grouping</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will enable dynamic grouping on the EditAble CRM Grid, which allows the user to change the field(s) that the results are grouped by.&#160; You can specify which columns of your grid to allow for dynamic grouping in the EditAble CRM Grid Column definition.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><span class="ts13">Group Behavior</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies how you want the groups to work.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Collapsible, Expanded by Default</span><span class="ts6">&#160;– Enables collapsible groups and shows them expanded initially.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Collapsible, Collapsed by Default</span><span class="ts6">&#160;– Enables collapsible groups and shows them collapsed initially.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Not Collapsible</span><span class="ts6">&#160;– Disables collapsing groups.&#160; As such, the groups will always show as expanded</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Only Show Groups (Hide Details)</span><span class="ts6">&#160;– Only shows the group rows while hiding all the detail rows.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><span class="ts7">Group Options</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Use the Group Options area to specify details about the each group level.</span>
+                                                        </p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="838" valign="top">
+                                                                        <p>
+                                                                            <img width="836" height="114" border="0" src="../Resources/Images/CroweGetting Started/Cfg_Group1.png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps4"><span class="ts13">Column</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Specifies the column to use as the group value.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Sort Order</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Specifies the sort order of the group value.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Summary Row</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Turning this option on will enable support of summary rows (i.e. sub-totals) on the group rows.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Show Count</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Turning this option on will append a count of the grouped records to the group value.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block0">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps4"><a name="AdditionalOpts_Features"></a><span class="ts7">Features</span>
+                                                        </p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="685" valign="top">
+                                                                        <p>
+                                                                            <img width="673" height="198" border="0" src="../Resources/Images/CroweHelp/Image(449).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps19"><span class="ts17">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Quick Copy</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will enable a “Copy Record” button on the EditAble CRM Grid toolbar that will create a new inline row and pre-populate it with the values of the selected row.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><a name="Opt_QuickSearch"></a><span class="ts13">Quick Search</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will display a search box on the toolbar that can be used to quickly filter the current result set.&#160; You can define which columns gets searched against in the EditAble CRM Grid Column definition.</span>
+                                                            <br />
+                                                            <img width="454" height="64" border="0" src="../Resources/Images/CroweGetting Started/QuickSearch.png" />
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps13">
+                                                            <br /><span class="ts16">Save and New</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will add a “Save and New” button to the EditAble CRM Grid that will allow the user to save the current row and immediately show a new row.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Currency Conversion</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will enable a toolbar button that allows users to change the default currency of the EditAble CRM Grid.&#160; Any Currency that has been added to your CRM organization will be available.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Multi-Currency Support</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Use this option to specify how the EditAble CRM Grid handles displaying multiple currencies. </span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Normalize Currency for Display</span><span class="ts6">&#160;– This option will automatically normalize all currency values to the user’s default currency, or the CRM organization’s default currency if the user has not specified one.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Show Actual Currencies</span><span class="ts6">&#160;– This option displays the actual currency for each row.&#160; However, if you have configured summary totals for any Money fields, the totals will be normalized to your default currency.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Paging</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies if you want the grid to page results.&#160; This can be useful for large result sets, however since all of the records are not loaded at the same time it can have adverse effects when combined with other features of the EditAble CRM Grid, such as grouping and totaling columns.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Records Per Page</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">If Paging is enabled, you will also have the ability to specify how many records are displayed on each page of results.</span>
+                                                        </p>
+                                                        <p class="ps20"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><span class="ts9">Based on User Setting</span><span class="ts6">&#160;- This option will use the user's "Records Per Page" setting that is defined in their personal options in Dynamics CRM:</span>
+                                                            <br />
+                                                            <br />
+                                                        </p>
+                                                        <div class="block2" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="500" valign="top">
+                                                                        <p>
+                                                                            <img width="498" height="58" border="0" src="../Resources/Images/CroweHelp/Image(9).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps5"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><span class="ts9">Specific Amount</span><span class="ts6">&#160;- This option allows you to specify a specific number of records per page, regardless of what the user's personal "Records Per Page" setting is.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Pop Out</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will enable a button on the EditAble CRM Grid toolbar that will allow the grid to be “popped out” to a separate window.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Required Fields</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies how the EditAble CRM Grid will denote required fields during inline editing.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><a name="Opt_EnableExport"></a><span class="ts13">Enable Export</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will enable an Export button on the toolbar that allows the user to export the results in the EditAble CRM Grid to Excel.&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Auto-Read Only Mode</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will automatically set the grid to read only mode if it is on a CRM form that is read only.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block0">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps4"><a name="AdvancedOptions"></a><span class="ts7">Advanced Options &amp; Overrides</span>
+                                                        </p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="714" valign="top">
+                                                                        <p>
+                                                                            <img width="712" height="201" border="0" src="../Resources/Images/CroweHelp/Image(351).png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><a name="Opt_AutoPublish"></a><span class="ts13">Auto-Publish</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Enabling Auto Publish will cause the EditAble CRM Grid configuration to be published automatically whenever there is a change to the configuration.&#160; Note that some larger or more complex EditAble CRM Grid configurations can take several seconds to publish and it is not recommended to enable Auto Publish in those scenarios.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Privilege Handling</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies if you want the EditAble CRM Grid to do proactive user privilege validation during the initial load of the grid.</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">By default, the EditAble CRM Grid uses the Security Roles in your CRM organization to determine the privileges of the current user.&#160; This information is used to control various elements of the EditAble CRM Grid interface.&#160; For example, if a user does not have create privileges on the entity they will not see a “New” record button on the EditAble CRM Grid toolbar.</span>
+                                                            <br /><span class="ts6">In some scenarios, loading this information can add several seconds to the initialization time of the EditAble CRM Grid and this option is useful for debugging those cases.&#160; Turning this option off does not compromise or bypass CRM’s built-in security model in any way.&#160; Rather, the EditAble CRM Grid will handle security passively.&#160; In the example above, a user that does not have create privileges on an entity would still see the New button on the toolbar.&#160; However, if they try to add a new record they will receive an error message explaining that they do not have privileges to do so.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><a name="Opt_InitialQuery"></a><span class="ts13">Initial Query</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies when the EditAble CRM Grid should execute its initial query.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Load Immediately</span><span class="ts6">&#160;– The EditAble CRM Grid will execute its initial query as soon as all required dependencies have been initialized.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Partial Delay</span><span class="ts6">&#160;– The EditAble CRM Grid will delay briefly before executing its initial query.&#160; This can allow other non-EditAble CRM Grid resources to load.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Wait for Filter </span><span class="ts6">– If a Filter Panel has been configured, the EditAble CRM Grid will not execute a query until the filter has been committed.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><a name="Opt_InitialMessage"></a><span class="ts13">Initial Message</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This allows you to change the default message in an empty inactive EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Empty Results Message</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This allows you to change the message that appears in the EditAble CRM Grid when no records are returned from its query.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><a name="IsDependentGrid"></a><span class="ts13">Is Dependent Grid</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Set this to Yes if the current EditAble CRM Grid is intended to be dependent on another EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Open Forms In</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies how the EditAble CRM Grid should open CRM forms.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">New Window </span><span class="ts6">– CRM forms launched from the EditAble CRM Grid will open in a new/separate browser window. This option also enables the “Refresh After Forms Close” option.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Same Window </span><span class="ts6">– CRM forms launched from the EditAble CRM Grid will open in the same browser window.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><span class="ts13">Refresh After Forms Close</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option will enable or disable the EditAble CRM Grid from automatically refreshing when a CRM form that was launched from the EditAble CRM Grid is closed.&#160; For example, if you have New Rows set to Use CRM Form, when a new record is created the EditAble CRM Grid will automatically refresh to show the new record that was created.</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option only works when the “Open Forms In” option is set to New Window.</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts9">Note: </span><span class="ts6">This option has no effect in the CRM for Outlook client, due to differences in how the client works.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Keyboard Shortcuts</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option enables and disables support for keyboard shortcuts when the EditAble CRM Grid is inline edit mode. Currently, this applies to the use of arrow keys to navigate between records in edit mode. In a future release, additional keyboard shortcuts will be added to augment and improve those inherent to the web browser's capabilities.</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts9">Note: </span><span class="ts6">Out of the box Web Browser (IE, Chrome, Firefox) behavior when using the keyboard up and down arrows while an option set / select control has focus is to change the value of the option set. When Keyboard Shortcuts are enabled, if a select control has focus grid will navigate between records, however, this browser behavior will continue to occur, changing the value of the control. This is currently outside the scope of the EditAble Grid. If affected, we recommend disabling Keyboard Shortcuts.</span>
+                                                        </p>
+                                                        <p class="ps4">&#160;</p>
+                                                        <div class="block0">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps4"><a name="FilterPanel"></a><span class="ts7">Filter Panel</span>
+                                                        </p>
+                                                        <div class="block0" align="left">
+                                                            <table style="border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="0%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;">
+                                                                    <td style="border-top: solid 1px Black;border-right: solid 1px Black;border-bottom: solid 1px Black;border-left: solid 1px Black;" width="652" valign="top">
+                                                                        <p>
+                                                                            <img width="650" height="117" border="0" src="../Resources/Images/CroweGetting Started/Cfg_FilterPanel.png" />
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps4"><span class="ts13">Show Filter Panel</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">Enables the use of the EditAble CRM Grid Filter Panel.&#160; The Filter Panel can be used to add real-time filters to your EditAble CRM Grid.&#160; The Filter Panel will be shown above the EditAble CRM Grid.</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">See Also:</span>
+                                                        </p>
+                                                        <p class="ps5"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><a href="IDH_Topic200.htm" class="hs0">Grid Criteria: Filters</a>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Filter Panel Visibility</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies the initial visibility of the Filter Panel.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Show by Default</span><span class="ts6">&#160;– The Filter Panel will be collapsible, but visible/expanded initially.</span>
+                                                        </p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">Hide by Default</span><span class="ts6">&#160;– The Filter Panel will be collapsible, but hidden/collapsed initially.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <div class="block1">
+                                                            <div class="hline1">
+                                                            </div>
+                                                        </div>
+                                                        <p class="ps17"><span class="ts7">Custom Events</span>
+                                                        </p>
+                                                        <p class="ps17">
+                                                            <img width="363" height="96" border="0" src="../Resources/Images/CroweHelp/Image(352).png" />
+                                                        </p>
+                                                        <p class="ps17"><span class="ts13">Custom Events</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">You can use this option to disable any custom EditAble CRM Grid Events you have added to the EditAble CRM Grid.&#160; This can be useful when troubleshooting issues that may be caused by your custom events.</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">&#160;</span>
+                                                        </p>
+                                                        <p class="ps4"><span class="ts13">Fire On Load Event</span>
+                                                        </p>
+                                                        <p class="ps13"><span class="ts6">This option specifies when the EditAble Grid will fire the On Load Event. </span>
+                                                        </p>
+                                                        <p class="ps5"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<span class="ts9">As Needed (Default)</span><span class="ts6">&#160;– The EditAble Grid will determine after which events an On Load Event is required.</span></p>
+                                                        <p class="ps18"><span style="font-family: Symbol;font-size: 11pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><span class="ts9">After Every Transaction</span><span class="ts6">&#160;– This will fire the On Load Event after every transaction occurs. This can be useful for code that modifies non-persistent grid elements e.g. code that sets the styles of EditAble Grid cells to ensure the style is applied after every save.</span>
+                                                        </p>
+                                                        <p class="ps13">&#160;</p>
+                                                        <p class="ps17"><span class="ts7">See Also</span>
+                                                        </p>
+                                                        <p class="ps15"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><a href="IDH_Topic160.htm" class="hs0">Adding columns to your EditAble CRM Grid configuration</a>
+                                                        </p>
+                                                        <p class="ps15"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><a href="IDH_Topic170.htm" class="hs0">Specifying filter criteria for your EditAble CRM Grid configuration</a>
+                                                        </p>
+                                                        <p class="ps15"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 19px;"></span><a href="IDH_Topic220.htm" class="hs0">Adding Custom Events</a>
+                                                        </p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><a href="IDH_Topic180.htm" class="hs0">Previewing an EditAble CRM Grid</a>
+                                                        </p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><a href="IDH_Topic800.htm" class="hs0">Publishing an EditAble CRM Grid</a>
+                                                            <br /><span class="ts11">&#160;</span>
+                                                        </p>
+                                                        <p class="ps7"><span style="font-family: Symbol;font-size: 10pt;color: Black;">·</span><span style="display: inline-block;width: 18px;"></span><a href="IDH_Topic250.htm" class="hs0">Displaying EditAble CRM Grids in Microsoft Dynamics CRM</a>
+                                                        </p>
+                                                        <p class="ps1">&#160;</p>
+                                                        <p class="ps4">&#160;</p>
+                                                        <p class="ps12">&#160;</p>
+                                                        <p class="ps12">&#160;</p>
+                                                        <p class="ps12">&#160;</p>
+                                                        <div>
+                                                            <div class="hline0">
+                                                            </div>
+                                                        </div>
+                                                        <div align="center">
+                                                            <table style="width: 100%;border-collapse: collapse;border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" width="100%" cellspacing="2" cellpadding="0">
+                                                                <tr style="border-top: none;border-right: none;border-bottom: none;border-left: none;">
+                                                                    <td style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" valign="top">
+                                                                        <p class="ps8">Crowe EditAble CRM Grid for Microsoft Dynamics CRM™</p>
+                                                                    </td>
+                                                                    <td style="border-top: solid 0px Black;border-right: solid 0px Black;border-bottom: solid 0px Black;border-left: solid 0px Black;" valign="top">
+                                                                        <p class="ps9">Copyright © 2018 Crowe Horwath LLP</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                        <p><span class="ts0">&#160;</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

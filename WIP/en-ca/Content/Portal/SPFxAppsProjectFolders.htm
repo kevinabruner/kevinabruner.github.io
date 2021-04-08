@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|[%=System.LinkedTitle%]|SharePoint-Development, localization and branding">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Developing SPFx Web Parts</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor145"></a>
+                                                    <MadCap:concept term="Portal" />Developing SPFx Web Parts</h1>
+                                                <p>Upon the creation of a SPFx project, the yeoman compiler creates a set of folders. Only specific folders need to be added to TFS. Other folders are auto-generated during the build process—the build and shipping commands will re-generate these folders on every run. Those folders do not need to be under source code control.<br /></p>
+                                                <h2>Project folders</h2>
+                                                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Project folders</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 402px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Folder Name</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Notes</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">TFS Status</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>_Deploy</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Created by the build process.</p>
+                                                                <p class="tabletext">All output files necessary to deploy the SPFx App.</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Should not be checked in to TFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>Bin, Obj</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Auto generated folders</p>
+                                                                <p class="tabletext">Always empty</p>
+                                                                <p class="tabletext">Visual studio SPFX project template creates this folder since they are using the library project template as a base template</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Should not be checked in to TFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>Config</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">All configuration JSON files that the gulp commands will read from to package the SPFx App</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext"><b>Must be checked into TFS</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>Src</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">App source code</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext"><b>Must be checked into TFS</b>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>node_modules</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Auto generated folder that contains all node modules downloaded by the npm install command.</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Should not be checked in to TFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>Dist</code>, <code>Lib</code>, <code>SharePoint</code>, <code>Temp</code>, <code>Typings</code></p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">Auto generated folders that contains the compiled js files and the web part package.</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <p class="tabletext">Should not be checked in to TFS.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2>Web Services</h2>
+                                                <p>Web service calls are REST operations, performed using <a href="https://docs.microsoft.com/en-us/javascript/api/sp-http/sphttpclient?view=sp-typescript-latest">SPHttpClient</a>, a Microsoft-supplied library. For the portal, SPFx Apps always call the SharePoint Web Service. </p>
+                                                <p>See <a href="WebserviceSharePoint.htm" class="MCXref xref">SharePoint web service</a>.</p>
+                                                <ul>
+                                                    <li value="1">Web service calls use the HTTP method POST for enhanced security, and to limit the opportunities for cross-site scripting attacks. </li>
+                                                    <li value="2">Every web service call must be validated with a request digest, obtained through the <a href="https://docs.microsoft.com/en-us/javascript/api/sp-http/digestcache?view=sp-typescript-latest">DigestCache</a> class and added to the call via the x-requestdigest HTTP header. </li>
+                                                </ul>
+                                                <p>In each SharePoint framework project, there is one TypeScript file, <code>src\webparts\Operations\RESTCRUDOperations.ts</code>, which is responsible for all web service calls. Methods in this file initiate web service calls and parse JSON results into typescript objects. Those objects are used by the webpart.</p>
+                                                <p>There are 2 types of web service calls: </p>
+                                                <ul>
+                                                    <li value="1"><b>Retrieval</b> calls only retrieve information from the server without posting any data. No data object is provided with the call, which means no parameters are sent to the web service.</li>
+                                                    <li value="2"><b>Operational calls</b> are those type of calls that post information to the server. A data object is sent when making the call.</li>
+                                                </ul>
+                                                <p>The only difference between the 2 previous calls is the digest cache object. Operational calls include a data object to send to the server. Retrieval calls do not supply a data object. In the following snippit, this Operation call includes JSON data in the body of the call. The highlighted line in the following example would be omitted for a retrieval call.</p>
+                                                <p><code>digestCache.fetchDigest(context.pageContext.web.serverRelativeUrl).then((digest: string) =&gt; {</code>
+                                                </p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;<code> const spOpts: ISPHttpClientOptions = {</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<code> headers: {</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<code> "Accept": "application/json;odata=verbose",</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>"Content-Type": "application/json;odata=verbose",</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>"X-RequestDigest": digest</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<code> },</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code style="background-color: #ffff00;">body: JSON.stringify(bodyJSON)</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>};</code></p>
+                                                <p>Since SPFX webparts can be tested on the virtual IIS test page (not against live SharePoint environment) all web service calls in the project have a check to prevent the call if the webpart is not hosted on actual SharePoint server. Example:</p>
+                                                <p><code>if (Environment.type === EnvironmentType.SharePoint || Environment.type === EnvironmentType.ClassicSharePoint) {</code>
+                                                </p>
+                                                <blockquote>
+                                                    <p><code>&lt;code to execute against SharePoint&gt;</code>
+                                                    </p>
+                                                </blockquote>
+                                                <p><code>}</code>
+                                                </p>
+                                                <h2>Web service error handling</h2>
+                                                <p>There are two types of errors which occur during calls to web services: web service call errors and business logic errors.</p>
+                                                <ul>
+                                                    <li value="1">Web service call errors occur when there is a communications problem between the client browser and the web server, when the web server fails, or when the web server rejects the call attempt. These errors will be signalled by a HTTP status of something other than 200 (success).</li>
+                                                    <li value="2">Business logic errors occur with HTTP status 200 (success). However, internal business logic in the web service has rejected the web service operation.</li>
+                                                </ul>
+                                                <p>Web service call errors do not include any context-specific information about what failed. They are treated as generic server errors. Often, this is not a type of error which a portal user can fix. Further investigation needs to happen on the server-side code or the network connection. E.g. a server-side exception occurred, the user’s authentication token expired, misconfiguration in SharePoint. Web service call errors indicate that something unexpected has occurred, the portal did not properly process the call. Usually the web part will display a generic error message.</p>
+                                                <p>Business logic errors are the usual type of error returned from a web service call. A business logic error means that the web service received the call, but declined to process the call because business rules were violated. Typically, the object returned from a web service operation will include a ‘Success’ flag. If the Success flag is false then a business logic error has occurred. Typically, informative error messages about the error are also included, often in the form of a <code>ValidationMessage</code> object The web part should check the returned object and display any error messages. </p>
+                                                <p>Both types of error are visually represented to the site user by adding flag and error message as parameters to the state of the React object of the SPFx web part. Changing the react object state causes the whole web part to refresh and deal with the new parameters newly added to its state. Below are code snippets that explain both operations.</p>
+                                                <h4> Successful Operation:</h4>
+                                                <p><code>this.setState({</code>
+                                                </p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>budgetSummary: this._budgetSummary,</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>columns: this._columns,</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>message: null,</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>successFlag: true</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>});</code></p>
+                                                <h4>Failed Operation:</h4>
+                                                <p><code>this.setState({</code>
+                                                </p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>budgetSummary: null,</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>columns: this._columns,</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>message: strings.BudRetServErr,</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>successFlag: false</code></p>
+                                                <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <code>});</code></p>
+                                                <h2>CSS for web parts</h2>
+                                                <p>In SharePoint Framework, you can use both CSS and Sass. Sass is a superset of CSS and offers you a number of features such as variables, nesting selectors, or mixins, all of which simplify working with and managing CSS styles over the long term.</p>
+                                                <p>For a complete set of features, see the <a href="http://sass-lang.com/">Sass website</a>. All valid CSS is also valid Sass, which is very helpful if you haven't worked with Sass before and want to gradually learn its capabilities.</p>
+                                                <p>Using SharePoint Framework, you build customizations that end-users add to SharePoint. It's impossible to tell upfront if the customization is used only once on a page or if there are multiple instances of it.</p>
+                                                <p>To avoid issues, you should always assume that there are multiple instances of your customization on the same page. With that in mind, you should avoid using any IDs in your markup. IDs are meant to be unique on a page, and if a user adds your web part to the page twice, it violates this premise, possibly leading to errors.</p>
+                                                <p>SharePoint Framework solutions are a part of the page. To ensure that CSS styles for one component don't affect other elements on the page, you should define your CSS selectors in such a way that they apply only to the DOM of your solution. It's tedious and error-prone to do this manually, but SharePoint Framework can do this automatically for you.</p>
+                                                <p>To help you avoid styling conflicts, SharePoint Framework uses CSS modules. When building the project, the SharePoint Framework tool chain processes all files with the <code>.module.scss</code> extension. For each file, it reads all class selectors and appends a unique hash value to them. After it's finished, it writes the updated selectors to intermediate CSS files that are included in the generated web part bundle.</p>
+                                                <p>Even though there was a .text class defined in both Sass files, notice how in the generated CSS files it has two different hashes appended to it, becoming a unique class name specific to each component.</p>
+                                                <p>The CSS class names in CSS modules are generated dynamically, which makes it impossible for you to refer to them in your code directly. Instead, when processing CSS modules, the SharePoint Framework toolchain generates a JavaScript file with references to the generated class names.</p>
+                                                <p>To use the generated class names in your code, you first import the styles of your component, and then use the property pointing to the particular class. Below are 2 code snippets that shows these 2 steps.</p>
+                                                <h4>Import Styles:</h4>
+                                                <p><code>import styles from './BudgetSummary.module.scss';</code>
+                                                </p>
+                                                <h4>Use Classes:</h4>
+                                                <p><code>&lt;TextField className={styles.SharedSecretTxt}/&gt;</code>
+                                                </p>
+                                                <h2>Language handling</h2>
+                                                <p>Like everything else SPFX webparts handles localization using typescript and JSON files. In each project developer can find the language file for the intended locale under the following path <code>src/webparts/greeting/loc/</code>. <b>Files should be named based on the target locale.</b></p>
+                                                <p>The loc folder also contains a TypeScript type definition file with the following extension (<code>.d.ts</code>) that informs TypeScript of the different strings included in the localized files. Using the information from this file, your code editor can provide you with IntelliSense when working with strings in code. Additionally, while building your project, TypeScript can verify that you're not referring to a string that hasn't been defined.</p>
+                                                <p>As mentioned above, for each locale supported by your web part, there is also a plain JavaScript file (not TypeScript) named in lowercase after the locale (for example&#160;<code>en-us.js</code>) that contains the translated strings.</p>
+                                                <p>The default locale used by the SharePoint Framework is en-US. If your web part is used on a site that uses a locale not supported by your web part, the SharePoint Framework uses en-US as the default locale.</p>
+                                                <p>You can override this behaviour by creating a locale file named <code>default.js</code> with the translations in your preferred language. While the name <code>default.js</code> doesn't follow the locale naming convention, it signals to the SharePoint Framework build process to use that locale file as the fallback locale instead of the standard US English locale.</p>
+                                                <p><b>You should pay extra attention to verifying that all keys specified in the TypeScript type definition file for localization have translations in all localization JavaScript files.</b>
+                                                </p>
+                                                <p>To use the localized strings in your code, you first import the localized strings class reference to your component, and then use the property pointing to the particular string. Below are 2 code snippets that shows these 2 steps.</p>
+                                                <h4>Import Language Class:</h4>
+                                                <p><code>import * as strings from "InvitationAcceptStrings";</code>
+                                                </p>
+                                                <h4>Use Language Strings:</h4>
+                                                <p><code>&lt;MessageBar messageBarType={MessageBarType.error}&gt;</code>
+                                                </p>
+                                                <p><code>{strings.InvitationExpired}</code>
+                                                </p>
+                                                <p><code>&lt;/MessageBar&gt;</code>
+                                                </p>
+                                                <h2>Common JavaScript and CSS libraries</h2>
+                                                <p>Most of the web parts in this project are using Office Fabric UI components. It is a React library that has been built by Microsoft. Using this library prevents the developer from re-inventing the same components and focus on the business logic of each of them.</p>
+                                                <p>Some of the web parts are using old school JavaScript libraries like jQuery and JQueryUI. The best practice to use these JavaScript libraries in a SPFx project is to install the types (types are the objects representation for specific JS Library) of the JavaScript library to your project. If there are no available types for a specific library, that you want to use it is probably too old and you can find better alternative.</p>
+                                                <p>Some of the web parts are using old school CSS libraries like bootstrap. Instead of translating the classic CSS into SASS, there is a simple trick to include the CSS as a submodule to the web part SASS module.</p>
+                                                <ol>
+                                                    <li value="1">Copy your needed css into new file and save it with the following naming convention <code>_{the name of your file}.SCSS” _bootstrap-combined.scss</code></li>
+                                                    <li value="2">Upload the file to your project on the same folder as the web part SASS module</li>
+                                                    <li value="3">Insert the following code under right after the import statements in your web part <code>module.scss</code> file.</li>
+                                                </ol><pre> .boostrapStyles {</pre>
+                                                <p>&#160; <code>:global{</code></p>
+                                                <p>&#160;&#160;&#160;&#160; <code>@import 'bootstrap-combined';</code></p>
+                                                <p>&#160;&#160; <code>}</code></p>
+                                                <p>A detailed example for this approach could be found on the following web part <code>GCPM-Portal\EGCS.Portal\EGCS.Portal.SharePoint.SPFX.PortalUser\src\webparts\userProfileInfo</code></p>
+                                                <h2>Adding a new web part</h2>
+                                                <p>There are 2 ways to create new SPFx web part, first by directly invoke Yeoman generator using <code>node.js</code> window. For detailed instructions how to create SPFx web parts using this approach please follow the following Microsoft documentation <a href="https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part">https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part</a>. The only drawback of this approach it is a bit complicated to add new web parts to the same project.</p>
+                                                <p>Second approach which we use in this project is to use the Visual studio 2017 SharePoint framework <a href="https://marketplace.visualstudio.com/items?itemName=SharePointPnP.SPFxProjectTemplate">extension</a>. This extension will allow you to create SPFx projects and add new SPFx items to an existing project. The creation process will take care of updating all manifest files.</p>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="About GCCF|GCCFAbout.htm#aanchor166||About the portal|AboutPortal.htm#aanchor395||About the portal|AboutPortal.htm#aanchor396||ADFS extensions web application|ADFSExtensionswebApp.htm#aanchor217||Alphinat SmartGuide documentation|SmartGuide/AlphinatDoc.htm#aanchor44||Authentication for GCCF users|GCCFAuthentication.htm#aanchor22||Authentication for RDA users|AuthenticationRDA.htm#aanchor214||Build and deploy SPFx apps|SPFxAppsBuildDeploy.htm#aanchor140||Configure forms for the portal|SmartGuide/ConfigureApplic on portal.htm#aanchor442||Create new forms|SmartGuide/CreateNewForms.htm#aanchor242||Data transfer from the portal to GCPM|DataTransfer.htm#aanchor256||Deploying forms for the portal with SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor0||Developing forms for the portal with SmartGuide|SmartGuide/PortalFormDev.htm#aanchor203||Developing portal forms - connections|SmartGuide/PortalFormDevConnections.htm#aanchor106||Developing SPFx Web Parts|#aanchor145||Documents on the portal |PortalDocs.htm#aanchor422||Dynamic portal forms|SmartGuide/PortalFormDynamic.htm#aanchor394||EGCS.Portal configuration|EGCSPortalConfig.htm#aanchor368||EGCS.Portal Visual Studio Solution|VSSolutionEGCSPortal.htm#aanchor321||FormManager web service overview|WebServicePortalFormMgr.htm#aanchor10||FormManager web service|WebServiceFormMgr.htm#aanchor127||GC.GCCF configuration|GCCFConfig.htm#aanchor388||GC.GCCF Visual Studio Solution|VSSolutionGCCF.htm#aanchor428||GCCF certificates|Cert-GCCF.htm#aanchor18||GCCF common domain web application|GCCFCommonDomainWebApp.htm#aanchor320||GCCF database|GCCFDatabase.htm#aanchor205||GCCF metadata|GCCFMetadata.htm#aanchor267||GCPM authentication|GCPMAuthentication.htm#aanchor8||GCPM&#160;Smartlet Structure |SmartGuide/PortalFormSmartletStructure.htm#aanchor213||Invite a GC&#160;Client to the portal|UsingPortal/InviteClient.htm#aanchor191||Navigate the portal|UsingPortal/NavigatePortal.htm#aanchor144||Portal - master page overview|PortalMasterPage.htm#aanchor25||Portal branding|PortalBranding.htm#aanchor261||Portal configuration - invitation email|PortalConfigInviteEmail.htm#aanchor227||Portal document integration with GCPM&#160;|PortalDocIntegGCPM.htm#aanchor231||Portal entity relationship diagram|../Modules/ERDs/ERD Portal.htm#aanchor131||Portal integration with GCPM|Portal-GCPMIntegration.htm#aanchor2||Portal release notes 1.0|PortalReleaseNotes1.0.htm#aanchor38||Portal security|PortalSecurity.htm#aanchor263||RDA web service and portal web service certificates|Cert-RDAWebService.htm#aanchor215||RDA web service|WebServiceRDA.htm#aanchor123||Reverse proxy server for the portal|PortalReverseProxy.htm#aanchor212||SharePoint - portal site structure|PortalSharepointSiteStructure.htm#aanchor156||SharePoint web service|WebserviceSharePoint.htm#aanchor313||SPFx apps for the portal|SPFxAppsPortal.htm#aanchor208||SSL certificate|Cert-SSL.htm#aanchor310||Submit forms on the portal|UsingPortal/SubmitForms.htm#aanchor357||Submit tabular data with a form|UsingPortal/SubmitFormTable.htm#aanchor162||Web services for portal integration|WebServicesPortal.htm#aanchor238||WebAPI&#160;web service|WebServiceWebAPI.htm#aanchor362||Windows service - document management|WindowsDocMgt.htm#aanchor184||Windows service - site creation|WindowsSiteCreation.htm#aanchor255"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

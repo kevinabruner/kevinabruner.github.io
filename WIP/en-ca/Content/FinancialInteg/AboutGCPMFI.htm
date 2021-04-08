@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>About financial system integration with GCPM</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor165"></a>
+                                                    <MadCap:concept term="FI" />About financial system integration with GCPM</h1>
+                                                <p>Financial Integration (FI) is a series of components that can be used to integrate financial system operations into your grants and contributions processes. These components have a flexible design, which can be used in a fully automated, fully connected scenario as well as a fully manual, fully disconnected scenario, or a combination of these. </p>
+                                                <p>This ensures that departments with varying degrees of automation and different grants and contributions systems can configure financial system integration to meet their requirements.</p>
+                                                <p>For departments and agencies that plan a fully connected scenario:&#160;</p>
+                                                <ul>
+                                                    <li value="1">The FI components can be seen as a reference implementation. </li>
+                                                    <li value="2">The list of entities will not change, but you may wish to incorporate new fields. Incorporating new fields will require changes to the code. </li>
+                                                    <li value="3">The REST API is currently submitting to a mock financial system. You need to point the API to your financial system, either directly, or by making calls to your financial system's API (using web services or otherwise).</li>
+                                                    <li value="4">
+                                                        <p>You need to implement each endpoint in the API that is responsible to read and write to your financial system for seamless integration with GCPM. GCPM relies on these endpoints in the form of workflow steps.</p>
+                                                    </li>
+                                                    <li value="5">
+                                                        <p>It is imperative to ensure that the response from your financial system call is captured in the transaction logic in the API to ensure that administrators have access to a log of what is returned from your financial system in GCPM.</p>
+                                                    </li>
+                                                </ul>
+                                                <p>See <a href="GCPM/FIPrerequisites.htm" class="MCXref xref">FI prerequisites</a></p>
+                                                <h2>GCPM&#160;Integration Points</h2>
+                                                <p>While working through the FI components you must identify the points within GCPM from which you will make calls to the FI&#160;components. Whether your organization chooses a fully manual approach or fully automated approach, there are options for automation within GCPM that do not involve the financial system. These options will make the lives of your financial officers easier. </p>
+                                                <p>Note:&#160;Coding blocks are not populated with values. This could be done using a workflow. </p>
+                                                <p>For example, there are workflows to automate the generation of FI records. Once these records are created, you can decide if the data will be submitted automatically or manually.</p>
+                                                <p>Connect the calls out to REST&#160;service to your actual financial system. Implement your own version following of REST&#160;service following this endpoint structure:&#160;<code>EGCS.CRM.Services.GCPMFinancialSystemAPI</code></p>
+                                                <h2>Entities</h2>
+                                                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>GCPM&#160;entity integration points</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 131px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Entity</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Description</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Account</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">PAD Bank Account</p>
+                                                                <p class="tabletext">DD Bank Account</p>
+                                                                <p class="tabletext">Lookup to FI VendorCustomer</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">GC&#160;Client</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Lookup to FI&#160;VendorCustomer</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Project</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Lookup to: </p>
+                                                                <p class="tabletext">FI&#160;Commitment</p>
+                                                                <p class="tabletext">FI&#160;Receivable</p>
+                                                                <p class="tabletext">FI VendorCustomer</p>
+                                                                <p class="tabletext">List of associated Coding Blocks</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">Disbursement review</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <p class="tabletext">Lookup to FI&#160;Payment</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2>Transitions</h2>
+                                                <p>In the sample transition templates  in GCPM, there are many examples of calling the financial system during the project life cycle. The main tool is the CRM workflow. All calls to the financial system, or to generate FI records, are made with <b>Custom Workflow Steps</b>. These workflow steps reduce complexity to provide a simple way to trigger aspects of financial integration.</p>
+                                                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Transition integration </caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Transition name</th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Workflow name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Project recommendation</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Create VendorCustomer</p>
+                                                                <p class="tabletext">Create soft commitment</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Project approval</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Create receivable</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Offer accepted</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Submit hard commitment</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">PAYE approval</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">OnApprove of PAYE</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Amendment approved</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Update commitment</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Amendment finalized</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Create or update receivable</p>
+                                                                <p class="tabletext">Update commitment</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext">Disbursement review approved</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Create payment</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2>Reports (word templates)</h2>
+                                                <p>Word templates have been created for the vendor customer, payment, and commitment entity to allow GCPM officers to print or send a request to finance if their instance of GCPM is not leveraging the financial system API.</p>
+                                                <p>In certain scenarios, a paper version of the request may still be required even if GCPM is integrated with  your financial system. As a result, these basic reports have been created to support this use case. The reports use the out of the box word template feature provided by Dynamics 365.</p>
+                                                <h2>Financial Integration help topics</h2>
+                                                <p>The financial integration help topics are designed to provide GCPM administrators and developers with the information required to configure, implement, and expand the financial system integration components within the GCPM platform.</p>
+                                                <div class="MCMiniTocBox_0 miniToc nocontent" data-mc-depth="3" data-mc-toc="True">
+                                                </div>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="FI" href="javascript:void(0);" data-mc-topics="About financial system integration with GCPM|#aanchor165||Commitment integration|GCPM/FICommitInteg.htm#aanchor105||FI entity states (a.k.a state machine)|GCPM/FIEntityStates.htm#aanchor437||FI prerequisites|GCPM/FIPrerequisites.htm#aanchor27||Financial integration custom workflow steps|GCPM/FICustomWorkflowSteps.htm#aanchor45||Financial integration entities|GCPM/FIEntities.htm#aanchor49||Financial integration entity relationship diagram - simplified|GCPM/ERDFIsimplified.htm#aanchor102||Financial integration module components|../Modules/Components/Tools/FIComponents.htm#aanchor30||Financial integration Rest API|GCPM/FIRestAPI.htm#aanchor132||Financial system entity models|GCPM/FIEntityModels.htm#aanchor82||PAYE integration|GCPM/FIPAYEInteg.htm#aanchor411||Payment integration|GCPM/FIPaymentIntegration.htm#aanchor55||Receivables integration|GCPM/FIReceivableIntegration.htm#aanchor354||Setting up FI user objects|GCPM/SettingUpFIUserObjects.htm#aanchor168||Update VendorCustomer records|GCPM/FIVCUpdate.htm#aanchor397||Vendor customer integration|GCPM/FIVCInteg.htm#aanchor119||Workflows for financial integration|GCPM/FIWorkflows.htm#aanchor229"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

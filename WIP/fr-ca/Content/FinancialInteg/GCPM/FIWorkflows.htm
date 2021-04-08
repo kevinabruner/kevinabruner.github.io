@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|Intégration financière">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Flux pour l'intégration financière</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor300"></a>
+                                                    <MadCap:concept term="SF" />Flux pour l'intégration financière</h1>
+                                                <p>Une série de flux facilite les transactions du système financier dans le système et crée automatiquement des enregistrements GPSC et fait la transition entre les différents états pour les enregistrements d'intégration financière (voir la section de l'appareil d'état).</p>
+                                                <p>Voir tous les flux dans ce <a href="../../Resources/PDFs/FIWorkflows.xlsx">fichier Excel</a>.</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Flux d'engagement</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Les flux pour gérer les engagements<a name="CommitmentsWorkflows"></a></caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Flux</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Il génère un engagement souple</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Il génère un enregistrement d'<b>intégration financière de l'engagement</b>.<b> </b></li>
+                                                                            <li value="2">Il génère un enregistrement d'<b>intégration financière du détail de l'engagement </b>pour chaque enregistrement de flux de trésorerie sur le projet. </li>
+                                                                            <li value="3">Il déclenche le flux enfant <b>Sync and Send Commitment to Finance</b></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">En voyer des engagements fermes au projet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Si un projet n'a pas une intégration financière de l'engagement, ce flux fait appel au flux enfant <b>Generate Soft Commitment</b> (<b>Générer un engagement souple</b>)</li>
+                                                                            <li value="2">Il met à jour le champ d'intégration financière de l'engagement à <b>Type = Hard </b>(<b>Type = Ferme</b>)</li>
+                                                                            <li value="3">Il déclenche le flux enfant <b>Sync and Send Commitment to Finance </b>(<b>Synchroniser et envoyer l'engagement à Finance</b>)</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Synchroniser et envoyer l'engagement à Finance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">S'assure que ce projet a un engagement associé, sinon il échoue.</p>
+                                                                        <ul>
+                                                                            <li value="1">Il change l'intégration financière de l'engagement associé à ébauche. <br />Consulter <a href="FIEntityStates.htm" class="MCXref xref">Intégration financière des états de l'entité (aussi appelé appareil d'état)</a>.</li>
+                                                                            <li value="2">Si cette intégration financière de l'engagement à un ID du système financier, un appel à<b> Update Commitment from Finance </b>(<b>Mettre à jour l'engagement à partir de Finance</b>) est réalisé (voir ci-dessous).</li>
+                                                                            <li value="3">Il met à jour le champ de l'intégration financière de l'utilisateur de l'intégration financière de l'engagement pour informer le système financier de la personne qui soumet la demande. Voir de plus amples détails sur la mise en place d'enregistrement d'intégration financière d'utilisateur.</li>
+                                                                            <li value="4">Il soumet l'intégration financière de l'engagement à Finance&#160;:<ul><li value="1">Si la soumission est réussie, une transaction réussie est générée et le flux est terminé.</li><li value="2">Si la soumission échoue, une erreur de transaction est générée, l'intégration financière de l'engagement est défini à un état d'erreur et le flux se termine.</li></ul></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Synchroniser le flux de trésorerie avec les détails de l'engagement -&#160;Créer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Il s'assure que l'intégration financière du détail de l'engagement n'a un flux de trésorerie en référence&#160;: </p>
+                                                                        <ul>
+                                                                            <li value="1">Il s'assure que cette intégration financière du détail de l'engagement a un projet associé, sinon il échoue.</li>
+                                                                            <li value="2">Il prend un enregistrement d'exercice financier, selon l'exercice précisé sur la nouvelle intégration financière du détail de l'engagement.</li>
+                                                                            <li value="3">Il stocke l'état actuel du signal <b>Évaluation verrouillée </b>du projet.</li>
+                                                                            <li value="4">Il définit le signal de «&#160;Évaluation verrouillée&#160;» du projet à <b>Non</b>.</li>
+                                                                            <li value="5">Il crée un enregistrement de flux de trésorerie, remplissant ces champs&#160;: Projet, Exercice financier, Montant, Montant dépensé et Référence au détail de l'engagement.</li>
+                                                                            <li value="6">Il définit le signal de l'<b>Évaluation verrouillée</b> du projet à son état original.</li>
+                                                                            <li value="7">Il définit le champ «&#160;<b>Flux de trésorerie</b>&#160;» sur l'intégration financière de l'engagement au flux de trésorerie nouvellement créé.</li>
+                                                                        </ul>
+                                                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />For these workflows:&#160;<b>Sync Cash Flow with Commitment Detail – Create, Update, Delete </b></a></span>
+                                                                            <div class="MCDropDownBody dropDownBody">
+                                                                                <ul>
+                                                                                    <li value="1">To improve performance, we recommend removing the steps that change the <b>Assessment Locked</b> flag. Instead, make a call to the action <b>Enable Lock Plugin Override</b>. This will allow the commitment detail to be <b>created / updated / deleted</b> without the expensive recursive action of unlocking the project.</li>
+                                                                                    <li value="2">Check for error status on the associated <b>FI Commitment Detail</b> so as not to update a cash flow record with invalid data.</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Synchroniser le flux de trésorerie avec les détails de l'engagement -&#160;Supprimer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">Il s'assure que l'intégration financière du détail de l'engagement a un flux de trésorerie en référence&#160;:</p>
+                                                                        <ul>
+                                                                            <li value="1">Il stocke l'état actuel du signal «&#160;Évaluation verrouillée&#160;» du projet.</li>
+                                                                            <li value="2">Il définit le signal de<b>&#160;Évaluation verrouillée</b> du projet à <b>Non</b>.</li>
+                                                                            <li value="3">Il désactive l'enregistrement de flux de trésorerie associé.</li>
+                                                                            <li value="4">Il définit le signal de l'<b>Évaluation verrouillée</b> du projet à son état original.</li>
+                                                                        </ul>
+                                                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />For these workflows:&#160;<b>Sync Cash Flow with Commitment Detail – Create, Update, Delete </b></a></span>
+                                                                            <div class="MCDropDownBody dropDownBody">
+                                                                                <ul>
+                                                                                    <li value="1">To improve performance, we recommend removing the steps that change the <b>Assessment Locked</b> flag. Instead, make a call to the action <b>Enable Lock Plugin Override</b>. This will allow the commitment detail to be <b>created / updated / deleted</b> without the expensive recursive action of unlocking the project.</li>
+                                                                                    <li value="2">Check for error status on the associated <b>FI Commitment Detail</b> so as not to update a cash flow record with invalid data.</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Synchroniser le flux de trésorerie avec les détails de l'engagement -&#160;Mettre à jour</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Il s'assure que l'intégration financière du détail de l'engagement a un flux de trésorerie en référence&#160;:</p>
+                                                                        <ul>
+                                                                            <li value="1">Il stocke l'état actuel du signal <b>Évaluation verrouillée </b>du projet.</li>
+                                                                            <li value="2">Il définit le signal de<b>&#160;Évaluation verrouillée</b> du projet à <b>Non</b>.</li>
+                                                                            <li value="3">Il met à jour les champs suivants de l'enregistrement de flux de trésorerie associé&#160;: Montant, Montant dépensé.</li>
+                                                                            <li value="4">Il remet le signal de l'<b>Évaluation verrouillée</b> du projet à son état original.</li>
+                                                                        </ul>
+                                                                        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />For these workflows:&#160;<b>Sync Cash Flow with Commitment Detail – Create, Update, Delete </b></a></span>
+                                                                            <div class="MCDropDownBody dropDownBody">
+                                                                                <ul>
+                                                                                    <li value="1">To improve performance, we recommend removing the steps that change the <b>Assessment Locked</b> flag. Instead, make a call to the action <b>Enable Lock Plugin Override</b>. This will allow the commitment detail to be <b>created / updated / deleted</b> without the expensive recursive action of unlocking the project.</li>
+                                                                                    <li value="2">Check for error status on the associated <b>FI Commitment Detail</b> so as not to update a cash flow record with invalid data.</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Mettre à jour l'engagement - Modification</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p>Il s'assure que cette modification de projet a un engagement associé, sinon il échoue.</p>
+                                                                        <ul>
+                                                                            <li value="1">Il met à jour l'intégration financière de l'engagement et ses détails selon les modifications au flux de trésorerie.<ul><li value="1">Si un flux de trésorerie à été ajouté, il déclenche <b>Sync Cash Flow with Commitment Detail – Create</b> (<b>Synchroniser le flux de trésorerie avec les détails de l'engagement - Créer).</b></li><li value="2">Si un flux de trésorerie à été mis à jour, il déclenche <b>Sync Cash Flow with Commitment Detail – Update </b>(<b>Synchroniser le flux de trésorerie avec les détails de l'engagement - Mettre à jour</b>)<b>.</b></li><li value="3">Si un flux de trésorerie à été supprimé, il déclenche <b>Sync Cash Flow with Commitment Detail – Delete </b>(<b>Synchroniser le flux de trésorerie avec les détails de l'engagement - Supprimer</b>).</li></ul></li>
+                                                                            <li value="2">Il déclenche le flux enfant <b>Sync and Send Commitment to Finance.</b></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Mettre à jour l'engagement à partir de Finance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Si l'état de l'intégration financière de l'engagement n'est pas une Ébauche, le flux échoue.</li>
+                                                                            <li value="2">Il fait un appel pour récupérer le dernier engagement et ses détails à partir du système financier, lequel met à jour l'intégration financière de l'engagement et son intégration financière des détails de l'engagement.<ul><li value="1">Si la soumission est réussie, une transaction réussie est générée et le flux est terminé.</li><li value="2">Si la soumission échoue, une erreur de transaction est générée, l'intégration financière de l'engagement est défini à un état d'erreur et le flux se termine.</li></ul></li>
+                                                                            <li value="3">L'<b>intégration financière de l'engagement</b> doit avoir le Statut - Ébauche a modifier. Si vous mettez en œuvre un mise à jour périodique de tous les objets de Finance, le changement du statut à ébauche pour tous ces objets peut prendre du temps. Si c'est le cas, vous pouvez considérer mettre à jour seulement les objets de l'intégration financière qui sont liés aux projets «&#160;actif&#160;» («&#160;actif&#160;» sera défini par votre organisation).</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Flux des CAFE</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Les flux pour gérer les CAFE<a name="PAYEWorkflows"></a></caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Flux</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Il génère l'intégration financière des CAFE pour les CAFE</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Il crée un enregistrement d'<b>intégration financière de CAFE</b> s'il n'y a pas déjà un de créé.</li>
+                                                                            <li value="2">Pré-rempli la référence Nom, Montant et Projet.</li>
+                                                                            <li value="3">Il déclenche le flux enfant <b>Sync and Send PAYE to Finance </b>(Synchroniser et envoyer le CAFE à Finance)</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Synchroniser et envoyer le CAFE à Finance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">
+                                                                                <p>Il s'assure que l'intégration financière du CAFE&#160;est un statut d'ébauche. Consulter <a href="FIEntityStates.htm" class="MCXref xref">Intégration financière des états de l'entité (aussi appelé appareil d'état)</a>.</p>
+                                                                            </li>
+                                                                            <li value="2">
+                                                                                <p>Il s'assure que le montant est plus élevé que 0 afin de ne pas soumettre un CAFE vide.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>Il définit le champ de l'intégration financière de l'utilisateur de l'intégration financière du &#160;CAFE pour informer le système financier de la personne qui soumet la demande. Consulter</p>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>Soumettre au système financier&#160;:</p>
+                                                                                <ul>
+                                                                                    <li value="1">
+                                                                                        <p>Si la soumission est réussie, une transaction réussie est générée et le flux est terminé.</p>
+                                                                                    </li>
+                                                                                    <li value="2">
+                                                                                        <p>Si la soumission échoue, une erreur de transaction est générée, l'intégration financière du&#160;CAFE est défini à un état d'erreur et le flux se termine.</p>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Flux de Fournisseur Client</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>
+                                                                <p>Flux pour gérer les Fournisseurs Clients<a name="VendorCustomerWorkflows"></a></p>
+                                                            </caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Flux</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Il génère un&#160;FournisseurClient à partir d'un projet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Il crée un enregistrement de </li>
+                                                                            <li value="2">Il remplit les données de l'enregistrement à partir du compte du projet actuel. </li>
+                                                                            <li value="3">Il envoie l'enregistrement au système financier.</li>
+                                                                            <li value="4">Il associe l'enregistrement à ce compte de projet et aux enregistrements de Client SC.</li>
+                                                                            <li value="5">Il associe l'enregistrement à ce projet.</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Il met à jour le compte à partir du&#160; FournisseurClient</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Il est appelé sur demande par l'agent à partir du compte.</li>
+                                                                            <li value="2">Il met à jour l'enregistrement de <b>FournisseurClient </b>de ce compte à partir du système financier.</li>
+                                                                            <li value="3">Il met à jour les renseignements du compte bancaire sur ce compte à partir de l'enregistrement d'<b>intégration financière de FournisseurClient</b> nouvellement mis à jour.</li>
+                                                                            <li value="4">
+                                                                                <p>Il peut vouloir vérifier pour un état d'erreur ici, puisqu'une erreur pourrait faire en sorte que certains renseignements de l'<b>intégration financière du FournisseurClient</b> soient manquants (selon la façon dont vous mettez en œuvre) ce qui pourrait entraîner la suppression involontaire des valeurs dans votre compte.</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p class="tabletext">Mettre à jour le FournisseurClient à partir d'un compte</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Il est appelé sur demande par l'agent à partir d'un enregistrement de compte.</li>
+                                                                            <li value="2">Il met à jour l'enregistrement du FournisseurClient du compte avec les données du compte.</li>
+                                                                            <li value="3">Il soumet les changements au système financier.</li>
+                                                                            <li value="4">
+                                                                                <p>Il définit l'intégration financière du FournisseurClient à un état d'ébauche. Consulter <a href="FIEntityStates.htm" class="MCXref xref">Intégration financière des états de l'entité (aussi appelé appareil d'état)</a>.</p>
+                                                                            </li>
+                                                                            <li value="5">
+                                                                                <p>Il définit le champ de l'intégration financière de l'utilisateur pour informer le système financier de la personne qui soumet la demande. Consulter .</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Flux d'intégration des créances</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Flux pour gérer l'intégration des Créances<a name="ReceivableIntegrationWorkflows"></a></caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Flux</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Synchroniser et envoyer la Créance à Finance -&#160; Projet</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Si ce projet a déjà une créance, définir son statut à ébauche (voir <a href="FIEntityStates.htm" class="MCXref xref">Intégration financière des états de l'entité (aussi appelé appareil d'état)</a> pour une explication de l'intégration financière des états d'entité) </li>
+                                                                            <li value="2">Si l'intégration financière de la créance de ce projet se situe déjà dans le système financier, il déclenche un flux enfant «&#160;Update Receivable From Finance&#160;» (Mettre à jour la Créance à partir de Finance) (décrit ci-dessous)</li>
+                                                                            <li value="3">Il crée ou met à jour l'intégration financière de la créance avec les versements du calendrier de remboursement les plus récents</li>
+                                                                            <li value="4">Il déclenche le flux enfant «&#160;Send Receivables to Finance&#160;» (décrit ci-dessous)</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Synchroniser et envoyer la Créance à Finance -&#160; Modification</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Si le projet de cette modification a une intégration financière des créances, définir son statut à ébauche.<ul><li value="1">Si l'intégration financière de la créance de projet de cette modification se situe déjà dans le système financier, il déclenche un flux enfant «&#160;Update Receivable From Finance&#160;» (décrit ci-dessous)</li></ul></li>
+                                                                            <li value="2">Il crée ou met à jour l'intégration financière de la créance avec les versements du calendrier de remboursement modifiés.</li>
+                                                                            <li value="3">Il déclenche le flux enfant «&#160;Send Receivables to Finance&#160;» (Envoyer les Créances à Finance) (décrit ci-dessous)</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Envoyer des Créances à Finance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Il s'assure que l'intégration financière de la créance a un référence au projet, autrement il échoue</li>
+                                                                            <li value="2">Il change le statut de l'intégration financière de la créance a ébauche</li>
+                                                                            <li value="3">Il met à jour le champ de l'intégration financière de l'utilisateur de l'intégration financière de la créance pour informer le système financier de la personne qui soumet la demande.</li>
+                                                                            <li value="4">Il envoie la créance à Finance</li>
+                                                                            <li value="5">S'il réussit le statut de l'intégration financière de la créance est défini à Terminé.</li>
+                                                                            <li value="6">Autrement, il définit le statut de l'intégration financière de la créance à Erreur.</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Mettre à jour la créance à partir de Finance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Si cette intégration financière de la créance n'est pas à l'état d'ébauche, il échoue</li>
+                                                                            <li value="2">Il déverrouille le projet associé</li>
+                                                                            <li value="3">Il récupère les derniers détails de l'intégration financière de la créance à partir du système financier</li>
+                                                                            <li value="4">Il verrouille de nouveau le projet</li>
+                                                                            <li value="5">Si la récupération est réussie, il ne reste rien a faire</li>
+                                                                            <li value="6">Autrement, définissez le statut de l'intégration financière de la créance à Erreur.</li>
+                                                                            <li value="7">
+                                                                                <p>Remarque&#160;: c'est un autre endroit où vous pouvez souhaiter passer outre le verrous plutôt que de déverrouiller l'évaluation de projet <br />Pour obtenir de plus amples renseignements, consultez <a href="../../Tools/Lock/OverrideLockPlugin.htm" class="MCXref xref">Surclasser un verrou</a>.</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Flux d'intégration de paiement</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Les flux pour gérer l'intégration de paiements<a name="PaymentIntegrationWorkflows"></a></caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Flux</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Il génère un paiement</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Il crée une intégration financière du paiement</li>
+                                                                            <li value="2">Il crée une intégration financière des détails du paiement selon les montants en dollar dans l'examen de débours&#160;:<ul><li value="1">Si le montant du paiement modifié &gt; 0<ul><li value="1">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour les «&#160;Coûts encourus&#160;»</li></ul></li><li value="2">Si le nouveau paiement anticipé &gt; 0<ul><li value="1">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour le «&#160;Paiement anticipé&#160;»</li></ul></li><li value="3">Si le règlement de paiement anticipé &gt; 0<ul><li value="1">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour les «&#160;Règlement de paiement anticipé - Coûts encourus&#160;» (montant positif)</li><li value="2">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour les «&#160;Règlement de paiement anticipé - Paiement anticipé&#160;» (montant négatif)</li></ul></li><li value="4">Si la réduction du CAFE &gt; 0<ul><li value="1">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour le «&#160;CAFE&#160;»</li></ul><p>Si la retenue &gt; 0</p><ul><li value="1">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour la «&#160;Retenue » (montant négatif)</li></ul><p>Si la libération de la retenue &gt; 0</p><ul><li value="1">Il crée une intégration financière du détail du paiement avec le codage du projet associé pour la «&#160;Retenue » (montant positif)</li></ul></li></ul></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Envoyer paiement à Finance</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Il s'assure que cette intégration financière du paiement a une référence à l'examen du projet et des débours, autrement il échoue</li>
+                                                                            <li value="2">Il change le statut de l'intégration financière du paiement à ébauche</li>
+                                                                            <li value="3">Il met à jour le champ de l'intégration financière de l'utilisateur pour informer le système financier de la personne qui soumet la demande.</li>
+                                                                            <li value="4">Envoyer le paiement à Finance</li>
+                                                                            <li value="5">S'il réussit le statut de l'intégration financière du paiement est défini à Terminé.</li>
+                                                                            <li value="6">Autrement, il définit le statut de l'intégration financière du paiement à Erreur.</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="SF" href="javascript:void(0);" data-mc-topics="À propos de l'intégration du système financier avec le GPSC|../AboutGCPMFI.htm#aanchor208||Composants de la module de l'intégration financière|../../Modules/Components/Tools/FIComponents.htm#aanchor180||Diagramme relationnel de l'entité d'intégration financière - simplifié|ERDFIsimplified.htm#aanchor440||Entités d'intégration financière|FIEntities.htm#aanchor139||Financial integration custom workflow steps|FICustomWorkflowSteps.htm#aanchor296||Flux pour l'intégration financière|#aanchor300||Intégration de l'engagement|FICommitInteg.htm#aanchor217||Intégration de paiement|FIPaymentIntegration.htm#aanchor430||Intégration des créances|FIReceivableIntegration.htm#aanchor144||Intégration des Fournisseurs clients|FIVCInteg.htm#aanchor198||Intégration du&#160;CAFE|FIPAYEInteg.htm#aanchor370||Intégration financière des états de l'entité (aussi appelé appareil d'état)|FIEntityStates.htm#aanchor409||L'intégration financière &#160;API&#160;REST|FIRestAPI.htm#aanchor195||Mettre à jour les enregistrements FournisseurClient|FIVCUpdate.htm#aanchor329||Mise en place des objets pour l'intégration financière de l'utilisateur|SettingUpFIUserObjects.htm#aanchor305||Modèles d'entité du système financier|FIEntityModels.htm#aanchor218||Prérequis de l'intégration financière|FIPrerequisites.htm#aanchor85"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

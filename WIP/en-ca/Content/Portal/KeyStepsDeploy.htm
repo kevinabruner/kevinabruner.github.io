@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|[%=System.LinkedTitle%]|Deployment">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Key steps to deploy the portal</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1>Key steps to deploy the portal</h1>
+                                                <p>Deployment and installation assumes that builds of the <code>GC.GCCF</code> solution and <code>EGCS.Portal</code> solution are available in a directory <code>_Build</code>. The customized configuration files mentioned below should also be in that directory.</p>
+                                                <p>Installer scripts must be run in a PowerShell window run as administrator. On the SharePoint farm, commands should be run in a SharePoint Management Shell run as administrator (PowerShell with the SharePoint module loaded).</p>
+                                                <h2>Pre-deployment </h2>
+                                                <p>These steps must be completed before deploying the portal:&#160;</p>
+                                                <ol>
+                                                    <li value="1">
+                                                        <p>Design a topology for the portal. <br />See <a href="PortalReverseProxy.htm" class="MCXref xref">Reverse proxy server for the portal</a>.</p>
+                                                    </li>
+                                                    <li value="2">Plan reverse proxy rules to match your topology.</li>
+                                                    <li value="3">Engage with SSC’s ECM group for the onboarding process of a new GCCF portal.</li>
+                                                    <li value="4">Pick DNS names for portal, GCCF ADFS, and GCCF Common Domain web application. Ensure these names are publicly registered.</li>
+                                                    <li value="5">Ensure firewall rules have been updated to route inbound traffic to the reverse proxy server.</li>
+                                                    <li value="6">Obtain SSL certificate(s) for public DNS names. <br />See <a href="Cert-SSL.htm" class="MCXref xref">SSL certificate</a>.</li>
+                                                    <li value="7">Obtain or create certificates for the RDA web service and the portal web service. <br />See <a href="Cert-RDAWebService.htm" class="MCXref xref">RDA web service and portal web service certificates</a>.</li>
+                                                    <li value="8">Obtain ICM certificates for ADFS via SSC. <br />See <a href="Cert-GCCF.htm" class="MCXref xref">GCCF certificates</a>. </li>
+                                                    <li value="9">Generate a metadata file for the portal. <br />See <a href="GCCFMetadata.htm" class="MCXref xref">GCCF metadata</a></li>
+                                                    <li value="10">Create configuration files for the portal. Later installation steps depend on configuration files found in the EGCS.Portal and GC.GCCF solutions. Installation is not possible until this configuration work is completed.<br />See <a href="GCCFConfig.htm" class="MCXref xref">GC.GCCF configuration</a> and <a href="EGCSPortalConfig.htm" class="MCXref xref">EGCS.Portal configuration</a>. Working through these installer files will help you determine if you really understand your portal. Suggested: clone the configuration files for the Integration portal and work with those.<ul><li value="1"><b>GC.GCCF project</b>: Edit <code>config.xml</code>, create <code>&lt;environment&gt;.config.xml</code>, create <code>&lt;environment&gt;.gccf.config</code></li><li value="2"><b>EGCS.Portal project</b>: Create <code>&lt;environment&gt;.egcs.config</code>.</li></ul></li>
+                                                </ol>
+                                                <h2>Deployment</h2>
+                                                <ol>
+                                                    <li value="1">Configure rules on the reverse proxy server.<br /></li>
+                                                    <li value="2">Install SmartGuide.<br />See  <a href="SmartGuide/AlphinatDoc.htm" class="MCXref xref">Alphinat SmartGuide documentation</a>.<br />After completing the installation, ensure that write and modify permissions are granted to the <code>&lt;domain&gt;\IIS_IUSRS</code> group on the server side theme folder, to allow theme modifications:&#160;<ol style="list-style-type: lower-alpha;"><li value="1">Navigate to the installation of SmartGuide Application:&#160;<code>%SystemDrive%\inetpub\wwwroot\smartguide\x.x.x\smartlets\aspx</code></li><li value="2">Right click <b>main</b> folder, properties security.</li><li value="3">Check <b>Modify</b> and <b>Write</b>.<br /><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../Resources/Images/Portal/Permissions.png"><img class="MCPopupThumbnail img" data-mc-width="1137" data-mc-height="613" src="../Resources/Images/Portal/Permissions_thumb_0_48.png" tabindex="" /></a></li><li value="4"><p>An additional configuration needs to be made in order to support a client using multiple Smartlets per session. </p><p>In <code>%SystemDrive%\inetpub\wwwroot\smartguide\x.x.x\smartlets\web.config</code>, uncomment the following line:</p><p><code>&lt;add key="com.alphinat.sgs.MultipleSmartletsEnabled" value="true"/&gt;</code></p><p>Navigate to your Theme’s <code>default.aspx</code> file (either through the Themes tab on SmartGuide Designer or directly on the server <code>&lt;theme&gt;\default\default.aspx</code> and ensure the following two blocks of code are added:</p><p>At the top of the file:</p><p><code>&lt;%@ Import Namespace="com.alphinat.sg5" %&gt;</code></p><p>If not already there, place this code directly below the form declaration line (search for ‘&lt;form’)</p><p><code>&lt;apn:API5 runat="server" id="sg5"/&gt;</code></p><p><code>&lt;input type="hidden" name="com.alphinat.sgs.smartletcode" value="&lt;%</code></p><p> <code>ISmartlet rootSmartlet = sg5.Smartlet;</code></p><p><code>while(rootSmartlet.getParentSubSmartletField()!=null){</code></p><p><code>ISmartletField field =</code></p><p><code>(ISmartletField)rootSmartlet.getParentSubSmartletField();</code></p><p><code>rootSmartlet = field.getSmartlet();</code></p><p><code>}</code></p><p><code>Response.Write(rootSmartlet.getCode());</code></p><p><code>%&gt;"/&gt;</code></p></li></ol></li>
+                                                    <li value="3">
+                                                        <p>Edit the HOSTS file on the server hosting SmartGuide. Add an entry to resolve the DNS name of the portal to a SharePoint server (the internal IP address of the SharePoint server, without going through the reverse proxy).<br /></p>
+                                                        <p>Edit: C<code>:\Windows\System32\drivers\etc\hosts</code></p>
+                                                        <p>Add line: <code>&lt;IP Address&gt; &lt;Portal DNS Name&gt;</code></p>
+                                                        <p>E.g. <code>192.168.1.1 sp-portal.egcs-sesc.ca</code></p>
+                                                    </li>
+                                                    <li value="4">Install the GCCF database.<br />See <a href="GCCFDatabase.htm" class="MCXref xref">GCCF database</a>.<br /></li>
+                                                    <li value="5">Configure GCCF&#160;event log source. This will allow GCCF components to write events to Windows' Application Event Log. Perform the following step on the ADFS server, Alphinat SmartGuide server, and all SharePoint servers.<br />Run registry file: <br /><code>regedt32.exe .\_Build\Config\EGCS-SESC\Registry\gccf.EventLog.reg</code></li>
+                                                    <li value="6">ADFS&#160;Server - Install Entrust.<br /><code>Unzip _Build\Utility\Entrust 9.3\ESP_93_win64_install.zip</code> into a folder<p>For a development install, copy content of <code>_Build\Utility\Entrust 9.3\CATE</code> into new Entrust folder.  For a production install, copy the contents of <code>_Build\Utility\Entrust 9.3\Prod</code> into new Entrust folder. Overwrite <code>setup.ini</code> in all cases.</p><p>Run <code>setup.exe</code>, choose custom install.</p></li>
+                                                    <li value="7">ADFS&#160;Server - Load SSL&#160;certificate into local machine certificate store. <br /><code>$password =  Get-Credential -UserName "Enter password for cert" -Message "Enter Password for cert"</code><br /><code>Import-PfxCertificate -Exportable -Password $password.Password -CertStoreLocation Cert:\LocalMachine\My -FilePath .\&lt;ssl cert&gt;.pfx</code></li>
+                                                    <li value="8">ADFS&#160;Server - Load GCCF&#160;certificates into local machine certificate store<br /><code>$password = Get-Credential -UserName "Enter password for cert" -Message "Enter Password for cert"</code><br /><code>Import-PfxCertificate -Exportable -Password $password.Password -CertStoreLocation Cert:\LocalMachine\My -FilePath .\&lt;GCCF encryption cert&gt;.p12</code><br /><code>Import-PfxCertificate -Exportable -Password $password.Password -CertStoreLocation Cert:\LocalMachine\My -FilePath .\ &lt;GCCF signing cert&gt;.p12</code></li>
+                                                    <li value="9">Export GCCF&#160;signing certificate for use with SharePoint. Copy certificate file to SharePoint server. <br /><code>.\_Build\Scripts\Export-GccfSigningCertificate.ps1 -SigningCertificateFile .\&lt;certificate name&gt;.sig.cer</code></li>
+                                                    <li value="10">ADFS Server - Configure permissions for certificate private keys. This ensures that the ADFS service account can access the private keys of the SSL and GCCF certificates.<br /><code>.\_Build\Scripts\Configure-AdfsCertificatePermissions.ps1</code><br /></li>
+                                                    <li value="11">ADFS&#160;Server - Install ADFS. <b>This step must be performed by a domain administrator</b>. Administrative rights on the ADFS server are not enough.<code><br />Install-WindowsFeature Adfs-Federation –IncludeManagementTools</code><br /><code>.\_Build\Scripts\Install-Adfs.ps1</code><br /><code>&lt;Reboot server&gt;</code></li>
+                                                    <li value="12">ADFS&#160;Server - The remaining steps can be <b>performed as a server administrator</b>. <br />Set ADFS properties to match GCCF requirements. Add a reverse proxy (the portal). Add CPs for GCKey and SecureKey.<br /><code>.\_Build\Scripts\Configure-Adfs.ps1</code><br /><code>.\_Build\Scripts\Configure-AdfsRp.ps1</code><br /><code>.\_Build\Scripts\Configure-AdfsCp.ps1 -ClaimsProvider GCKey</code><br /><code>.\_Build\Scripts\Configure-AdfsCp.ps1 -ClaimsProvider SecureKey</code><br />Note that <code>Configure-AdfsCp.ps1</code> will report an warning message from ADFS when loading GCKey or SecureKey metadata. This message is expected, and can be ignored. Example: "WARNING: PS0031: Some portions of the metadata document were ignored.<br />MSIS7524: A 'SamlSingleLogoutService' endpoint was ignored because its binding <br />'<code>urn:oasis:names:tc:SAML:2.0:bindings:SOAP</code>' is not supported." </li>
+                                                    <li value="13">
+                                                        <p>ADFS Server - Install custom ADFS attribute store.<br /><code>.\_Build\Scripts\Install-GccfAttributeStore.ps1</code></p>
+                                                    </li>
+                                                    <li value="14">ADFS&#160;Server - Install ADFS Extensions web application.<br />See <a href="ADFSExtensionswebApp.htm" class="MCXref xref">ADFS extensions web application</a>.<br /></li>
+                                                    <li value="15">ADFS&#160;Server - Install GCCF Common Domain web application.<br />See <a href="GCCFCommonDomainWebApp.htm" class="MCXref xref">GCCF common domain web application</a>.<br /></li>
+                                                    <li value="16">Build the SharePoint farm.<br />Designing and installing a suitable SharePoint farm is the responsibility of the department.<br />See <a href="Sharepoint installation.htm" class="MCXref xref">Sharepoint installation</a> for the installation steps of the integration portal as a reference.</li>
+                                                    <li value="17">Ensure the SharePoint farm has a root site collection. Grant “Read” access to the Everyone claim c:0(.s|true<br />Disable minimal download for the root site collection<p><code>$web = Get-SPWeb https://&lt;portal&gt;</code></p><p><code>$web.EnableMinimalDownload = $false</code></p><p><code>$web.Update()</code></p><p>Grant all users access to the root site collection</p><p><code>$web = Get-SPWeb https://&lt;portal&gt;</code></p><p><code>$ra = New-Object Microsoft.SharePoint.SPRoleAssignment("c:0(.s|true", "", "", "")</code></p><p><code>$ra.RoleDefinitionBindings.Add($web.RoleDefinitions["Read"])</code></p><p><code>$web.RoleAssignments.Add($ra)</code></p><p><code>$web.Update()</code></p></li>
+                                                    <li value="18">Ensure the SharePoint farm has a Welcome Centre site collection (/sites/welcome-bienvenue). Grant “Read” access to the Everyone claim c:0(.s|true<br />Disable minimal download for the welcome site collection<p><code>$web = Get-SPWeb https://&lt;portal&gt;/welcome-bienvenue</code><br /><code>$web.EnableMinimalDownload = $false</code></p><p><code>$web.Update()</code></p><p>Grant all users access to the welcome site collection</p><p><code>$web = Get-SPWeb https://&lt;portal&gt;/welcome-bienvenue</code></p><p><code>$ra = New-Object Microsoft.SharePoint.SPRoleAssignment("c:0(.s|true", "", "", "")</code></p><p><code>$ra.RoleDefinitionBindings.Add($web.RoleDefinitions["Read"])</code></p><p><code>$web.RoleAssignments.Add($ra)</code></p><p><code>$web.Update()</code></p></li>
+                                                    <li value="19">Ensure that SharePoint’s App Management service is provisioned. Ensure that an App Catalog is provisioned thought Central Administration (/sites/AppCatalog).<br />See <a href="SPFxAppsBuildDeploy.htm" class="MCXref xref">Build and deploy SPFx apps</a>. <br /></li>
+                                                    <li value="20">Test Reverse Proxy rules. Verify that web requests can reach:<ul><li value="1">SharePoint</li><li value="2">SmartGuide</li><li value="3">ADFS</li><li value="4">ADFS Extensions</li><li value="5">GCCF Common Domain<br /></li></ul></li>
+                                                    <li value="21">Install the Portal web service on a SharePoint server.<br />See <a href="WebServicePortal.htm" class="MCXref xref">Portal web service </a>.<br /></li>
+                                                    <li value="22">Load the ICM CA certificate into SharePoint as a trusted root certificate.<br />Run on any SharePoint WFE.<p><code>.\_Build\Scripts\Import-IcmRootCertificateSharePoint.ps1</code><br /></p></li>
+                                                    <li value="23">Configure a SharePoint trusted token issuer to match the Relying Party configured in ADFS.<br /><p><code>.\_Build\Scripts\Configure-SharePointTrustedTokenIssuer.ps1 -CertificateFile .\&lt;certificate name&gt;.sig.cer</code></p></li>
+                                                    <li value="24">Install SharePoint solutions on the SharePoint farm.<br />Run on any SharePoint WFE.<p><code>.\_Build\Scripts\Install-GCCF_Connector.ps1</code></p><p><code>.\_Build\Scripts\Install-GCCF_Web_Pages.ps1</code><br /></p><p><code>.\_Build\Scripts\Install-EGCS.Portal.SharePoint.Library.ps1</code><br /></p><p><code>.\_Build\Scripts\Install-EGCS.Portal.WebService.SharePoint.ps1</code><br /></p><p><code>.\_Build\Scripts\Install-EGCS.Portal.SharePoint.PortalMasterPage.ps1</code><br /></p></li>
+                                                    <li value="25">Configure SharePoint web application<ul><li value="1">Use the new trusted token issuer</li><li value="2">Allow anonymous access for the web application, and the root site collection</li><li value="3">Disable client integration</li><li value="4">Configure SharePoint for session cookies<br /><p><code>.\_Build\Scripts\Configure-SharePointWebApplication.ps1</code></p></li></ul></li>
+                                                    <li value="26">Install <code>EGCS.Portal</code> and <code>GC.GCCF</code> configuration files on the SharePoint farm.<br />Run on any SharePoint WFE.<p><code>.\_Build\Scripts\Install-Egcs_Config.ps1 .\_Build\Config\&lt;portal name&gt;.egcs.config</code></p><p><code>.\_Build\Scripts\Install-GCCF_Config.ps1</code></p></li>
+                                                    <li value="27">
+                                                        <p>Install memcached. This step must be performed on all SharePoint web front end servers (WFEs).<br />Install memcached binaries.<br /><code>mkdir "C:\Program Files (x86)\memcached"</code></p>
+                                                        <p><code>copy .\_Build\Utility\memcached.exe "C:\Program Files (x86)\memcached\"</code>
+                                                        </p>
+                                                        <p><code>copy .\_Build\Utility\msvcr71.dll "C:\Program Files (x86)\memcached\"</code>
+                                                        </p>
+                                                        <p><code>cd "C:\Program Files (x86)\memcached"</code>
+                                                        </p>
+                                                        <p><code>.\memcached.exe -d install</code>
+                                                        </p>
+                                                        <p>Configure memcached<br /><code>cd &lt;location of _Build folder&gt;</code></p>
+                                                        <p><code>regedt32.exe "_Build\Utility\memcached.reg"</code>
+                                                        </p>
+                                                        <p><code>net start "memcached server"</code>
+                                                        </p>
+                                                    </li>
+                                                    <li value="28">
+                                                        <p>Import a certificate which is registered with the RDA web service to allow the portal to make calls against the RDA web service. The thumbprint of this certificate must be configured in the RDA web service <code>web.config</code> in section “<code>RDAWebServiceClientThumbprint</code>”.</p>
+                                                        <p><code>$password = Get-Credential -UserName "Enter password for cert" -Message "Enter Password for cert"</code>
+                                                        </p>
+                                                        <p><code>Import-PfxCertificate -Exportable -Password $password.Password -CertStoreLocation Cert:\LocalMachine\My -FilePath .\&lt;RDA client certificate&gt;.p12</code>
+                                                        </p>
+                                                        <p>Or</p>
+                                                        <p><code>certutil.exe -importpfx .\&lt;RDA client certificate&gt;.p12</code>
+                                                        </p>
+                                                        <p>Note: During testing, the<code> Import-PFX</code> certificate command did not properly import certificates created with OpenSSL. The certificates were imported, but the ‘PrivateKey’ property was null, making the certificate useless.</p>
+                                                        <p>However the certificate is imported, update the permissions of the private key to allow access for the SharePoint portal service account.</p>
+                                                        <p><code>$cert = Get-Item cert:\\LocalMachine\My\&lt;RDA client certificate thumbprint&gt;</code>
+                                                        </p>
+                                                        <p><code>$privateKeyContainer = $cert.PrivateKey.CspKeyContainerInfo.UniqueKeyContainerName</code>
+                                                        </p>
+                                                        <p><code>$keyPath = "C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys\$privateKeyContainer"</code>
+                                                        </p>
+                                                        <p><code>$acl = Get-Acl -Path $keyPath</code>
+                                                        </p>
+                                                        <p><code>$permission = "&lt;domain&gt;\&lt;portal service account&gt;","Read","Allow"</code>
+                                                        </p>
+                                                        <p><code>$accessRule = new-object System.Security.AccessControl.FileSystemAccessRule $permission</code>
+                                                        </p>
+                                                        <p><code>$acl.AddAccessRule($accessRule)</code>
+                                                        </p>
+                                                        <p><code>Set-Acl $keyPath $acl</code>
+                                                        </p>
+                                                    </li>
+                                                    <li value="29">If everything has gone well, you will be able to log into the SharePoint farm using GCKey or SecureKey at this point. Realistically, some debugging will be required. If any configuration information was incorrect, SharePoint or ADFS may not be able to authenticate with a GCCF server.<br /></li>
+                                                    <li value="30">Build SPFx Apps. Install into the App Catalog. <br />See <a href="SPFxAppsBuildDeploy.htm" class="MCXref xref">Build and deploy SPFx apps</a><br />See <a href="SPFxAppsPortal.htm" class="MCXref xref">SPFx apps for the portal</a>.<ul><li value="1"><code>spfx-portal-user.sppkg</code></li><li value="2"><code>spfx-message-centre.sppkg</code></li><li value="3"><code>spfx-factor-auth.sppkg</code></li><li value="4"><p style="list-style-type: disc;"><code style="list-style-type: disc;">spfx-terms.sppkg</code></p></li><li value="5"><code>egcs-portal-share-point-spfx-project.sppkg</code><br /></li></ul></li>
+                                                    <li value="31">Create cdn document library to store JavaScript for SPFx Apps. <br /><code>$web = Get-SPWeb https://&lt;portal&gt;</code><p><code>$web.Lists.Add("cdn", "cdn", [Microsoft.Sharepoint.SPListTemplateType]::DocumentLibrary)</code></p></li>
+                                                    <li value="32">Remove 'json' from the list of blocked file types. <br /><code>$wa = Get-SPWebApplication https://&lt;portal&gt;</code><p><code>$wa.BlockedFileExtensions.Remove("json")</code></p><p><code>$wa.Update()</code></p></li>
+                                                    <li value="33">
+                                                        <p>Create Portal pages to host web parts for 2FA, Terms and Conditions, User Profile, Invitation Accept. These must match page names configured in <code>gccf.config</code>.</p>
+                                                        <p><code>.\_Build\Scripts\Add-WebPartPage-SingleZone.ps1 -Url https://&lt;portal&gt; -Page 2FA.aspx</code>
+                                                        </p>
+                                                        <p><code>.\_Build\Scripts\Add-WebPartPage-SingleZone.ps1 -Url https://&lt;portal&gt; -Page ManageAccount-GererCompte.aspx</code>
+                                                        </p>
+                                                        <p><code>.\_Build\Scripts\Add-WebPartPage-SingleZone.ps1 -Url https://&lt;portal&gt; -Page Conditions.aspx</code>
+                                                        </p>
+                                                        <p><code>.\_Build\Scripts\Add-WebPartPage-SingleZone.ps1 -Url https://&lt;portal&gt;/welcome-bienvenue -Page ManageAccount-GererCompte.aspx</code>
+                                                        </p>
+                                                        <p><code>.\_Build\Scripts\Add-WebPartPage-SingleZone.ps1 -Url https://&lt;portal&gt;/welcome-bienvenue -Page Register-Enregistrer.aspx</code>
+                                                        </p>
+                                                    </li>
+                                                    <li value="34">
+                                                        <p>Deploy SPFx Apps to site collections manually, via Web UI</p>
+                                                        <p>Root site collection (<code>https://&lt;portal&gt;/</code>), add Apps:</p>
+                                                        <p><code>spfx-terms-solution</code>
+                                                        </p>
+                                                        <p><code>spfx-portal-user-solution</code>
+                                                        </p>
+                                                        <p><code>egcs-portal-share-point-spfx-factor-auth-client</code>
+                                                        </p>
+                                                        <p>Welcome centre site collection (<code>https://&lt;portal&gt;/welcome-bienvenue</code>), add App:</p>
+                                                        <p><code>spfx-portal-user-solution</code>
+                                                        </p>
+                                                    </li>
+                                                    <li value="35">
+                                                        <p>Deploy web parts onto target pages manually, via web UI<br /><code>https://&lt;portal&gt;\2FA.aspx -&gt; TwoFactorAuth</code></p>
+                                                        <p><code>https://&lt;portal&gt;\ManageAccount-GererCompte.aspx -&gt; UserProfileInfo</code>
+                                                        </p>
+                                                        <p><code>https://&lt;portal&gt;\Conditions.aspx -&gt; TermsAndConditions</code>
+                                                        </p>
+                                                        <p><code>https://&lt;portal&gt;/Welcome-Bienvenue/manageaccount-gerercompte.aspx -&gt; UserProfileInfo</code>
+                                                        </p>
+                                                        <p><code>https://&lt;portal&gt;/Welcome-Bienvenue/Register-Enregistrer.aspx -&gt; Invitation Accept</code>
+                                                        </p>
+                                                    </li>
+                                                    <li value="36">Hide web part chrome. <br /><code>.\_Build\Scripts\Disable-WebPartChrome.ps1 https://&lt;portal&gt;/2FA.aspx</code><p><code>.\_Build\Scripts\Disable-WebPartChrome.ps1 https://&lt;portal&gt;/ManageAccount-GererCompte.aspx</code></p><p><code>.\_Build\Scripts\Disable-WebPartChrome.ps1 https://&lt;portal&gt;/Conditions.aspx</code></p><p><code>.\_Build\Scripts\Disable-WebPartChrome.ps1 https://&lt;portal&gt;/Welcome-Bienvenue/manageaccount-gerercompte.aspx</code></p><p><code>.\_Build\Scripts\Disable-WebPartChrome.ps1 https://&lt;portal&gt;/Welcome-Bienvenue/Register-Enregistrer.aspx</code></p></li>
+                                                    <li value="37">Install the Document Management Windows service.<br />See <a href="WindowsDocMgt.htm" class="MCXref xref">Windows service - document management</a></li>
+                                                    <li value="38">Install the Site Creation Windows service.<br />See <a href="WindowsSiteCreation.htm" class="MCXref xref">Windows service - site creation</a>.<br /></li>
+                                                    <li value="39">Install the RDA web service.<br />See <a href="WebServiceRDA.htm" class="MCXref xref">RDA web service</a><br /></li>
+                                                    <li value="40">Install the WebAPI web service. <br />See <a href="WebServiceWebAPI.htm" class="MCXref xref">WebAPI&#160;web service</a>.</li>
+                                                </ol>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="About GCCF|GCCFAbout.htm#aanchor166||About the portal|AboutPortal.htm#aanchor395||About the portal|AboutPortal.htm#aanchor396||ADFS extensions web application|ADFSExtensionswebApp.htm#aanchor217||Alphinat SmartGuide documentation|SmartGuide/AlphinatDoc.htm#aanchor44||Authentication for GCCF users|GCCFAuthentication.htm#aanchor22||Authentication for RDA users|AuthenticationRDA.htm#aanchor214||Build and deploy SPFx apps|SPFxAppsBuildDeploy.htm#aanchor140||Configure forms for the portal|SmartGuide/ConfigureApplic on portal.htm#aanchor442||Create new forms|SmartGuide/CreateNewForms.htm#aanchor242||Data transfer from the portal to GCPM|DataTransfer.htm#aanchor256||Deploying forms for the portal with SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor0||Developing forms for the portal with SmartGuide|SmartGuide/PortalFormDev.htm#aanchor203||Developing portal forms - connections|SmartGuide/PortalFormDevConnections.htm#aanchor106||Developing SPFx Web Parts|SPFxAppsProjectFolders.htm#aanchor145||Documents on the portal |PortalDocs.htm#aanchor422||Dynamic portal forms|SmartGuide/PortalFormDynamic.htm#aanchor394||EGCS.Portal configuration|EGCSPortalConfig.htm#aanchor368||EGCS.Portal Visual Studio Solution|VSSolutionEGCSPortal.htm#aanchor321||FormManager web service overview|WebServicePortalFormMgr.htm#aanchor10||FormManager web service|WebServiceFormMgr.htm#aanchor127||GC.GCCF configuration|GCCFConfig.htm#aanchor388||GC.GCCF Visual Studio Solution|VSSolutionGCCF.htm#aanchor428||GCCF certificates|Cert-GCCF.htm#aanchor18||GCCF common domain web application|GCCFCommonDomainWebApp.htm#aanchor320||GCCF database|GCCFDatabase.htm#aanchor205||GCCF metadata|GCCFMetadata.htm#aanchor267||GCPM authentication|GCPMAuthentication.htm#aanchor8||GCPM&#160;Smartlet Structure |SmartGuide/PortalFormSmartletStructure.htm#aanchor213||Invite a GC&#160;Client to the portal|UsingPortal/InviteClient.htm#aanchor191||Navigate the portal|UsingPortal/NavigatePortal.htm#aanchor144||Portal - master page overview|PortalMasterPage.htm#aanchor25||Portal branding|PortalBranding.htm#aanchor261||Portal configuration - invitation email|PortalConfigInviteEmail.htm#aanchor227||Portal document integration with GCPM&#160;|PortalDocIntegGCPM.htm#aanchor231||Portal entity relationship diagram|../Modules/ERDs/ERD Portal.htm#aanchor131||Portal integration with GCPM|Portal-GCPMIntegration.htm#aanchor2||Portal release notes 1.0|PortalReleaseNotes1.0.htm#aanchor38||Portal security|PortalSecurity.htm#aanchor263||RDA web service and portal web service certificates|Cert-RDAWebService.htm#aanchor215||RDA web service|WebServiceRDA.htm#aanchor123||Reverse proxy server for the portal|PortalReverseProxy.htm#aanchor212||SharePoint - portal site structure|PortalSharepointSiteStructure.htm#aanchor156||SharePoint web service|WebserviceSharePoint.htm#aanchor313||SPFx apps for the portal|SPFxAppsPortal.htm#aanchor208||SSL certificate|Cert-SSL.htm#aanchor310||Submit forms on the portal|UsingPortal/SubmitForms.htm#aanchor357||Submit tabular data with a form|UsingPortal/SubmitFormTable.htm#aanchor162||Web services for portal integration|WebServicesPortal.htm#aanchor238||WebAPI&#160;web service|WebServiceWebAPI.htm#aanchor362||Windows service - document management|WindowsDocMgt.htm#aanchor184||Windows service - site creation|WindowsSiteCreation.htm#aanchor255"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

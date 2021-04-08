@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|Dev Guides|GCPM Design Standards">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Naming conventions</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1>Naming conventions</h1>
+                                                <h2>Solution Publisher Naming
+</h2>
+                                                <p>Publisher prefix for the Best Base solution will be "egcs" and "gcpm" for the GCPM implementation. This document will be updated as new standards are required.
+
+</p>
+                                                <h3>Entity Naming
+</h3>
+                                                <p>There are three names that are mandatory when creating entities in Dynamics CRM:
+
+</p>
+                                                <ol>
+                                                    <li value="1">Display Name
+</li>
+                                                    <li value="2">Plural Name
+</li>
+                                                    <li value="3">Name
+</li>
+                                                </ol>
+                                                <p>Display Name and Plural Name should describe entities and no naming convention will be enforced on these values.
+
+</p>
+                                                <p>However, for the Name (the internal name) field the following rules apply:
+
+</p>
+                                                <ol>
+                                                    <li value="1">The name of all the entities for the Best Base and GCPM solutions will be in the format "egcs_EntityName" and "gcpm_EntityName" respectively
+</li>
+                                                    <li value="2">Use Camel casing for delimiting words or abbreviations in the entity and field names.
+Camel case: Capital letter starts each word/token as in the humps on a camel. e.g. ThisLongEntityName
+</li>
+                                                    <li value="3">The first two characters of an entity name will be capital letters, depending on the functional group to which they belong:</li>
+                                                </ol>
+                                                <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Function group</th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Two character prefix</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Stakeholder function ​	
+</td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">**SH**</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">GC client function	</td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">**​SG**
+</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Funding case function	</td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">​**FC** </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">​
+Program functions (transfer payment)	​</td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">**​TP**
+</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Planning and performance measurement functions	</td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">**​PP**</td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+Agency wide functions	</td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">**​AY**</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Attributes (Fields) Naming</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Entity fields will follow these naming conventions:</p>
+                                                        <ol>
+                                                            <li value="1">Name of all fields for the Best Base and GCPM solutions will be in the format "egcs_FieldName" and "gcpm_FieldName" respectively.</li>
+                                                            <li value="2">The first several characters of the field name will represent the field type for these types only (ignore for other types)<br /></li>
+                                                            <li value="3">
+                                                                <p>Look up names should contain the prefix only once:</p>
+                                                                <p><code>gcpm_EntityName</code> instead of default <code>gcpm_gcpm_EntityName</code></p>
+                                                                <p>Display name: Related EntityName</p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p>Fields used for storing the values of the English and French translations of the entity name will have the suffix EN or FR (gcpm_Name_EN, gcpm_Name_FR)</p>
+                                                                <ul>
+                                                                    <li value="1">Every entity's name will have these additional fields</li>
+                                                                    <li value="2">Fields whose  data is human readable such as a "status" field ("Approved" / "Approve")</li>
+                                                                </ul>
+                                                                <p>Examples: g<code>cpm_LegalName</code>, <code>gcpm_YesNoSame_As_Mailing_Address</code>,<code> gcpm_DateStart</code>, <code>gcpm_AmtRepayment</code></p>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Relationship Naming</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Relationship names should contain the publisher prefix once at the beginning. <b>The default name provided by CRM will include the publisher prefix multiple times so pay careful attention.</b></p>
+                                                        <p>The basic rule is to concatenate the publisher prefix with the primary entity name and the related entity through the use of underscores:</p>
+                                                        <p>[Publisher prefix][Primary entity][Related entity]_[Optional additional Custom Name]</p>
+                                                        <p>Example 1: A relationship between <code>SG_Client</code> and <code>FC_Client_Risk</code></p>
+                                                        <ul>
+                                                            <li value="1">Name = <code>gcpm_SG_Client_FC_Client_Risk</code></li>
+                                                        </ul>
+                                                        <p>Example 2: Two relationships between Contact and FC_Profile for different purposes, thus requiring the additional naming at the end to distinguish (noted in bold):</p>
+                                                        <ul>
+                                                            <li value="1">Name: gcpm_Contact_FC_Profile_Primary_Contact</li>
+                                                            <li value="2">​​Name: gcpm_Contact_FC_Profile_Signatory</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Intersect Entities</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>An intersect entity is an entity with a 1:N relationship with entity X and an N:1 relationship with entity Y. The result is two entities with an effective N:N relationship with one another.</p>
+                                                        <ol>
+                                                            <li value="1">Intersect entities will be named [Publisher Prefix][Primary Entity 2 character prefix][Primary entity name with underscores removed][Related Entity with underscores removed] eg. intersect entity that links SG_Client with FC_Client_Risk<p>Name = gcpm_SG_SGClientFCClientRisk</p></li>
+                                                            <li value="2">
+                                                                <p>A relationship with an intersect entity follows standard naming convention:</p>
+                                                                <p>gcpm_SG_Client_SG_SGClientFCClientRisk</p>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Forms Naming</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ul>
+                                                            <li value="1">For each entity create a new main form named "EGCSBase Form" or GCPM Base Form"</li>
+                                                            <li value="2">Each entity will have a base form with the Description = "Base form for EGCS" or "Base form for GCPM"</li>
+                                                            <li value="3">Each base form will have all custom fields in alogical order as determined by the program specialist.</li>
+                                                            <li value="4">For each relationship with 1:N with the entity, add a tab with a sub-grid. Name the tab with the name of the entity it is related to</li>
+                                                            <li value="5">Sub-grids should be minimized by default - for performance reasons.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Form Elements Naming</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>It is important for the internal names of form objects to follow a standard naming because JavaScript (and possibly other things) will be clearer to read and write. The following are proposed naming conventions:</p>
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 139px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 97px;" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Form element</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Prefix</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Tab</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">tab_</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Section</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">sec_</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Sub-grid</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">grid_</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Quick view</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">qv_</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p class="tabletext">Timer</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                        <p class="tabletext">timer_</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

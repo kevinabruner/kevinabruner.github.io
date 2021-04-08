@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|Dev Guides">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Server side development guide</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1>Server side development guide</h1>
+                                                <p>Please note that any of the following can be changed, hopefully with proper notice. If you are unsure about any of the guidelines below, please ask your team lead for more information.
+
+</p>
+                                                <h2>Getting Started
+</h2>
+                                                <p>Please download and use our EGCS CRM templates as a starting point for all your development work. This will ensure that the project is adhering to the guidelines set out below.
+
+</p>
+                                                <h3>EGCS Development
+</h3>
+                                                <p>Please download the EGCS CRM templates on WD's servers and start your development from the templates installed.
+
+</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Currently available templates:
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ul>
+                                                            <li value="1">Solution Templates
+<code>EGCS.CRM.Framework</code> – load this solution first if you don't have the shared library on your machine.
+</li>
+                                                            <li value="2">Project Templates
+<ul><li value="1"><code>EGCS.CRM.Plugins.SimplePlugin</code> – this sets up a simple plugin project based on our custom plugin base, plugin context, and logging capabilities.
+</li><li value="2"><code>EGCS.CRM.Plugins.AutoPlugin</code>– this sets up the same project as the simple plugin but includes the auto plugin step registration feature installed. You will have to configure the auto plugin step registration for it to know how to create your plugin steps.
+</li><li value="3"><code>EGCS.CRM.Workflows.SimpleWorkflow</code> – this sets up a simple custom workflow activity project based on our own custom workflow base and workflow context.
+</li></ul></li>
+                                                            <li value="4">
+Item Templates
+<ul><li value="1"><code>EGCS.CRM.Items.Constant</code> – this item template adheres to our custom Constant class standard. This will prefix your file and class name with Const.
+
+</li><li value="2"><code>EGCS.CRM.Items.Enumeration</code> – this item template adheres to our custom Enumeration class standard. This will prefix your file and class name with Enum.
+
+</li><li value="3"><code>EGCS.CRM.Items.Extension</code> – this item template adheres to our custom Extension class standard. This will prefix your file and class name with Ext.
+
+</li><li value="4"><b>EGCS.CRM.Items.Entity</b> – (coming soon) this is our custom standard entity class that all entity classes should follow.
+
+</li></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Guidelines</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <h3>.NET
+</h3>
+                                                        <p>For classes, properties / fields, and methods, please provide comments for them using the XML comments built into Visual Studio. You can easily insert XML comments by typing triple slash ///.
+
+Provide as much inline comments as you think is necessary, and will help other developers read and take over your code.
+
+</p>
+                                                        <h3>JavaScript
+</h3>
+                                                        <p>JavaScript Standards (Documentation). See 
+<a href="JSDoc.htm" class="MCXref xref" xrefformat="{para}">JavaScript documentation guide</a><![CDATA[
+]]></p>
+                                                        <h3>Coding Style
+</h3>
+                                                        <p>As we do not wish to be too rigid and force developers to adopt a specific coding style, please write your code adhering to Microsoft's guidelines for .NET. There may be some conventions to follow, and more may appear in the future.
+</p>
+                                                        <h3>
+Namespace
+</h3>
+                                                        <p>A single namespace for the entire shared project, which is named after the name of the shared library. For example, <code>EGCS.CRM.Plugins</code> will have a namespace with the same name.
+
+There may be special namespaces within each shared project in the event that we want developers to explicitly reference. A common use is to not pollute existing classes with extension methods like <code>System.Linq</code> unless desired.
+
+</p>
+                                                        <h3>CRM SDK
+</h3>
+                                                        <p>When you are referencing CRM SDK's in your project, please use the NuGet packages provided by Microsoft. You can find the CRM SDK NuGet packages under the username <b>crmsdk</b>. This keeps your SDK's up to date and not lost on your local machine.
+</p>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Documentation</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>There are two types of documentation: user documentation and API (code) documentation.
+
+</p>
+                                                        <h3>User Documentation
+</h3>
+                                                        <p>This documentation is to help users install, use, and troubleshoot the CRM extensions we develop. An CRM extension can be a plugin, a custom workflow activity, a Web Resource, and many others.</p>
+                                                        <h3>API Documentation
+</h3>
+                                                        <p>This type of documentation is to ensure that our code is documented properly, so that whoever takes over can easily get on track. It is also to document the shared libraries so that developers know what code is available to them and how it works. We want to eliminate boilerplate code as much as possible.
+<p>See:&#160;<a href="../../Resources/JSDoc/out/global.html" class="MCXref xref" xrefformat="{para}">Global</a></p></p>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Code Organization
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>To ensure that every developer knows exactly where to retrieve, update, and store code, please adhere to the following organization structure of EGCS's code base.
+
+</p>
+                                                        <h3>Version Control
+</h3>
+                                                        <p>Currently at EGCS the version control used is Team Foundation Server (TFS).
+
+</p>
+                                                        <h3>Structure
+</h3>
+                                                        <p>The following is the basic structure for all server side Visual Studio projects. Add custom folders to your project as you see fit, but try to place code in these folders when appropriate.
+</p>
+                                                        <ul>
+                                                            <li value="1"><b>Actions</b>
+These are early bound classes of CRM custom actions. Name these classes using the custom action's logical name.
+</li>
+                                                            <li value="2"><![CDATA[
+]]><b>Base</b>
+These are base classes that are fundamental to the shared library.
+</li>
+                                                            <li value="3"><![CDATA[
+]]><b>Constants</b>
+They are to be prefixed with Const, as in ConstPluginMessages.
+
+</li>
+                                                            <li value="4"><b>Entities</b>
+These are early bound classes of CRM entities. Name these classes using the entity's logical name.
+</li>
+                                                            <li value="5"><![CDATA[
+]]><b>Enumerations</b>
+They are to be prefixed with Enum, as in <code>EnumPluginStages</code>.
+
+</li>
+                                                            <li value="6"><b>Exceptions</b>
+Custom exceptions are stored here. Please suffix your exception class with the word "Exception".
+
+</li>
+                                                            <li value="7"><b>Experimental</b>
+Any code in these folders are experimental and not yet officially contributed to the shared library. They will be reviewed by all members of the development team. Use at your own risk.</li>
+                                                            <li value="8"><b>Extensions</b>
+They are to be prefixed with Ext, as in "<code>ExtIOrganizationService</code>.
+
+There are two types of extensions: extension method classes and derived classes. Their have their own respective folder.
+
+For extension method classes, please declare them as partial classes so that they can be extended by others or organized into smaller files.
+
+</li>
+                                                            <li value="9">Helpers
+These are helper classes that aid another class. Sometimes we may want to extend classes but not directly, so these are intermediate helper classes.
+</li>
+                                                            <li value="10"><![CDATA[
+]]><b>Interfaces</b>
+These are custom interfaces that are prefixed with I, as in <code>IOrganizationService</code>.
+
+</li>
+                                                            <li value="11"><b>Library</b>
+These classes are usually self-contained libraries that performs a particular function, such as the concatenator class.
+</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />CRM Extensions
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Please refer to the following sections on where to store your code on TFS. Please check in your code under the following location on TFS:
+
+</p>
+                                                        <ul>
+                                                            <li value="1"><b>Plugins</b>
+As a standalone Visual Studio Project: <code>EGCS.CRM.Framework\Projects\Plugins
+</code><![CDATA[
+]]></li>
+                                                            <li value="2"><b>Custom Workflow Activities</b>
+As a standalone Visual Studio Project:<code> EGCS.CRM.Framework\Projects\Workflows
+</code><![CDATA[
+]]></li>
+                                                            <li value="3"><b>Web Resources</b>
+As web resource files, such as .html, .js, .css, etc. under the appropriate section: <code>EGCS.CRM.Framework\Projects\WebResources
+</code></li>
+                                                            <li value="4"><![CDATA[
+]]><b>Tools</b>
+As a standalone Visual Studio Project under one of the following locations:
+
+<ul><li value="1">For console applications: <code>EGCS.CRM.Framework\Projects\Tools\Console</code><![CDATA[
+
+]]></li><li value="2">For rich client applications: <code>EGCS.CRM.Framework\Projects\Tools\Client
+</code><![CDATA[
+]]></li></ul></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Shared libraries</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>To eliminate boilerplate code, promote code reuse, and maintain consistency, we have developed a shared library, the EGCS CRM Framework if you will, that is to be used, maintained, and contributed to by everyone on the development team.
+</p>
+                                                        <p>This is also to ensure that the logic behind common functionality is consistent, sound, and easy to troubleshoot. Otherwise, everyone's version of, say, AJAX works differently and some versions may be more or less efficient, more or less error prone, or handle different (edge) cases correctly / incorrectly. This makes it difficult to pinpoint errors in code.
+
+</p>
+                                                        <p>For the shared library itself, we are using Shared Projects introduced in Visual Studio 2015. Shared Projects are different from a normal Visual Studio Project. It is just a container for files (code, assets, etc.) and nothing else; however, a special property of shared project is compiling the referenced shared project directly into the project's assembly / exe file and folder. This eliminates the use of <code>ILMerge </code>on assemblies, which can sometimes cause problems.
+</p>
+                                                        <h3>EGCS.CRM.NET</h3>
+                                                        <p>
+This is the general server side shared library. Code that can be used by all server-side extensions should be placed here. The following are the components that make up this shared library. More can be added or split up as we progress.
+</p>
+                                                        <h3>
+EGCS.CRM.Plugins
+</h3>
+                                                        <p>This is the main shared library for plugin development. It contains the plugin base and context as well as some other useful classes for plugin development.
+
+</p>
+                                                        <h3>EGCS.CRM.Plugins.Extensions.Registrator</h3>
+                                                        <p>
+This shared library includes the optional auto plugin step registration feature that can be added to your plugin if desired. Use the EGCS.CRM.Plugins.AutoPlugin template to have it set up for you.
+
+</p>
+                                                        <h3>EGCS.CRM.Tools
+</h3>
+                                                        <p>This shared library includes code that is valuable to both CRM client and console applications.
+
+</p>
+                                                        <h3>EGCS.CRM.Tools.Client
+</h3>
+                                                        <p>This shared library includes code specific to CRM client applications.
+
+</p>
+                                                        <h3>EGCS.CRM.Tools.Console
+</h3>
+                                                        <p>This shared library includes code specific to CRM console applications.
+
+</p>
+                                                        <h3>EGCS.CRM.Workflows
+</h3>
+                                                        <p>This is the main shared library for custom workflow activity development. It contains the workflow base and context as well as some other useful classes for workflow development.
+</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

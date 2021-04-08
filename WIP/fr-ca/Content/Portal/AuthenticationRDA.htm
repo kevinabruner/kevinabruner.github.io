@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|[%=System.LinkedTitle%]|Authentification et sécurité">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Authentification pour les utilisateurs des agences de développement régional (ADR)</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor386"></a>
+                                                    <MadCap:concept term="Portal" />Authentification pour les utilisateurs des agences de développement régional (ADR)</h1>
+                                                <p>Un <b>utilisateur d'ADR </b>est un type de compte disponible dans le portail. Les utilisateurs d'ADR sont des membres du personnel du ministère, et non des membres du grand public. Lorsqu'un membre du personnel doit visionner le contenu d'un site de portail, il devrait ouvrir une session dans le portail à titre d'utilisateur d'ADR.</p>
+                                                <p>Un utilisateur d'ADR n'utilise pas la fédération des justificatifs du gouvernement du&#160;Canada (FJGC) (CléGC ou&#160;SecureKey) pour s'authentifier dans le portail. Un utilisateur d'ADR est authentifié d'une de deux façons&#160;:</p>
+                                                <ul>
+                                                    <li value="1"><b>Authentification Windows</b>&#160;: L'utilisateur d'ADR&#160;fournit les justificatifs de domaine pour le domaine Active Directory auquel le portail appartient, ou encore un domaine fiable du portail. Cette ouverture de session est prise directement en charge par SharePoint et IIS.</li>
+                                                    <li value="2"><b>Serveur des services ADFS</b> (Active Directory Federation Services)&#160;: Il s'agit d'un serveur ADFS qui est distinct du serveur ADFS de la FJGC. Ce serveur ADFS assure une authentification dans le domaine Active Directory choisi par le ministère.</li>
+                                                </ul>
+                                                <p>Même s'il est techniquement possible, pour un ministère, de permettre à la fois l'authentification Windows et l'authentification ADFS pour les utilisateurs d'ADR, en pratique, on s'attend à ce que chaque ministère choisisse une seule méthode pour permettre aux membres du personnel d'accéder au portail.</p>
+                                                <p>Un utilisateur d'ADR continue d'être un utilisateur de SharePoint. L'accès des utilisateurs d'ADR aux sites clients dépend des rôles de sécurité de SharePoint, comme pour tout autre utilisateur. Un utilisateur d'ADR ne peut accéder à une Zone Client pour laquelle il n'a pas de permissions.</p>
+                                                <p>De façon semblable à un utilisateur de la FJGC, les utilisateurs d'ADR peuvent appartenir à des sites clients dans l'un des rôles suivants&#160;:</p>
+                                                <ul>
+                                                    <li value="1"><b>Lecture&#160;</b>: L'utilisateur peut lire le contenu et les messages sécurisés sur le site.</li>
+                                                    <li value="2"><b>Modification&#160;</b>: Accès de lecture, EN&#160;PLUS de téléchargement et de modification de fichiers ainsi que de modification de formulaires.</li>
+                                                    <li value="3"><b>Administration&#160;</b>: Accès de modification, EN&#160;PLUS de ce qui suit&#160;:<ul><li value="1">Inviter de nouveaux utilisateurs de la FJGC&#160;dans le client à l'aide de la partie Web de l'invitation. </li><li value="2"> Utiliser la partie Web de la <b>gestion des utilisateurs </b>pour changer le rôles des utilisateurs de la FJGC&#160;dans le client, ou pour retirer des utilisateurs du client. </li><li value="3">Un utilisateur d'ADR possédant un privilège d'<b>administrateur</b> peut ajouter d'autres utilisateurs d'ADR dans le client ou en retirer.</li></ul></li>
+                                                </ul>
+                                                <p>Les utilisateurs d'ADR&#160;sont traités différemment des utilisateurs de la FJGC&#160;dans le code de portail, et ils ont d'autres privilèges et restrictions que les utilisateurs de la FJGC. Ces différences sont :</p>
+                                                <ul>
+                                                    <li value="1">Un utilisateur de la&#160;FJGC ne peut ajouter un utilisateur d'ADR à un site client ou l'en retirer. Les utilisateurs de la FJGC ne peuvent gérer les membres du personnel.</li>
+                                                    <li value="2">Il est permis à un utilisateur d'ADR&#160;de modifier des formulaires; or cet utilisateur ne peut présenter de formulaires. La présentation de formulaires est une fonction réservée aux utilisateurs de la&#160;FJGC (les clients réels du ministères).<p>Remarque : Il est possible d'écraser cette restriction dans la configuration du portail. Cela ne devrait toutefois être fait que dans un environnement de développement ou d'essai. Et non de production.</p></li>
+                                                    <li value="3">Un utilisateur d'ADR&#160;ne peut envoyer de messages sécurisés à partir du portail. Il ne peut le faire qu'à partir du GPSC.</li>
+                                                    <li value="4">Le portail ne transpose pas automatiquement dans SharePoint le profil des utilisateurs d'ADR. S'il est souhaitable que le nom d'utilisateur et l'adresse de courriel d'un utilisateur d'ADR&#160;soient disponibles dans le portail, le ministère devrait fournir le service de profil d'utilisateur de SharePoint.</li>
+                                                    <li value="5">Le portail ne présente pas aux utilisateurs d'ADR une liste des clients auxquels ils appartiennent. On s'attend à ce que le personnel utilise le GPSC pour trouver les sites clients dans le portail.</li>
+                                                    <li value="6">Les utilisateurs d'ADR&#160;ne sont pas invités à l'aide de la partie Web de l'invitation. La partie Web de la gestion des utilisateurs comporte un onglet qui permet d'ajouter directement les utilisateurs d'ADR à un site par leur adresse de courriel (le serveur du GPSC doit pouvoir résoudre cette adresse de courriel en un nom de compte).</li>
+                                                    <li value="7">Aucune restriction ne s'applique à l'utilisateur de PowerShell ou d'autres codes pour ajouter des utilisateurs d'ADR&#160;à des sites SharePoint ou les en retirer. Le portail ne suit pas les utilisateurs d'ADR&#160;de la même façon qu'il suit les utilisateurs de la FJGC.</li>
+                                                </ul>
+                                                <h2>Détails techniques</h2>
+                                                <ul>
+                                                    <li value="1">Si le portail utilise ADFS pour authentifier les utilisateurs d'ADR, un émetteur de jeton d'identité fiable sera fourni pour effectuer la connexion avec ce serveur ADFS. L'émetteur de jeton peut être récupéré au moyen de PowerShell (en supposant que le fournisseur s'appelle «&#160;rda-adfs&#160;»).<p><code>Get-SPTrustedIdentityTokenIssuer -Identity "rda-adfs"</code></p></li>
+                                                    <li value="2">Un utilisateur d'ADR aura une demande d'identité semblable (le codage exact variera d'une installation a l'autre).<p>Authentifié via l'authentification Windows:</p><p><code>i:0#.w|gscs\whitep</code></p><p>Authenticated via ADFS:</p><p><code>i:0ȃ.t|rda-adfs|whitep</code></p></li>
+                                                    <li value="3">La base de code du portail dispose de méthodes d'assistance pour identifier les utilisateurs ADR.<p><code>GC.GCCF.SharePoint.Connector.SecurityManager.PortalUserTypeGet() == PortalUserType.RDA</code></p><p>or</p><p><code>GC.GCCF.SharePoint.Connector.SecurityManager.PortalUserTypeGet() == PortalUserType.Windows</code></p><p>Those calls will check if the current user is an ADFS authenticated or Windows authenticated RDA user (suggested to always check both). À l'interne, le code de portail traitera les deux&#160;utilisateurs comme des utilisateurs d'ADR.</p></li>
+                                                    <li value="4">D'autres méthodes sont offertes pour vérifier le type d'utilisateur et le travail d'un utilisateur avec les utilisateurs d'ADR. Voir la classe <code>GC.GCCF.SharePoint.Connector.SecurityManager</code>.</li>
+                                                    <li value="5">Au moment de fournir des zones client et des zones de projet, le portail est en mesure d'accorder automatiquement l'accès a des groupes d'utilisateurs d'ADR. On n'a ainsi pas à ajouter individuellement les utilisateurs d'ADR aux sites. Ces groupes d'utilisateurs d'ADR sont identifiés selon les demandes.<p>For example: On the integration portal, a claim to identify all users who logged in via an RDA ADFS server:</p><p><code>c:0!.s|trusted%3arda-adfs</code></p><p>A claim to identify all users who logged in via an RDA ADFS server, who belong to group “gscsportaladministrators”:</p><p><code>c:0-.t|rda-adfs|gscsportaladministrators</code></p></li>
+                                                </ul>
+                                                <h2>Suggestion</h2>
+                                                <ul>
+                                                    <li value="1">Inspecter l'ensemble de demandes pour un utilisateur d'ADR. Either use log entries written to <code>GCCF.dbo.GccfLog</code>, or use the debugging web page <code>https://&lt;portal&gt;/_layouts/15/gccf/debug.aspx </code><span style="background-color: #ffff00;">&#160;</span></li>
+                                                    <li value="2">Il est à noter que le débogage soit être activé dans le fichier <code>gccf.config</code>. Consulter <a href="GCCFConfig.htm" class="MCXref xref">Configuration de GC.GCCF</a>.</li>
+                                                </ul>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="À propos de la FJGC|GCCFAbout.htm#aanchor308||À propos du portail|AboutPortal.htm#aanchor146||À propos du portail|AboutPortal.htm#aanchor147||Aperçu du service Web FormManager|WebServicePortalFormMgr.htm#aanchor75||Application Web des extensions des services ADFS (Active Directory Federation Services)|ADFSExtensionswebApp.htm#aanchor268||Application&#160;Web de domaine commun de la fédération des justificatifs du gouvernement du &#160;Canada (FJGC)|GCCFCommonDomainWebApp.htm#aanchor0||Applications SPFx pour le portail|SPFxAppsPortal.htm#aanchor102||Authentification du GPSC|GCPMAuthentication.htm#aanchor274||Authentification pour les utilisateurs de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFAuthentication.htm#aanchor203||Authentification pour les utilisateurs des agences de développement régional (ADR)|#aanchor386||Base de données de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFDatabase.htm#aanchor402||Bâtir et déployer des applications SharePoint Framework (SPFx)|SPFxAppsBuildDeploy.htm#aanchor161||Certificat de SSL|Cert-SSL.htm#aanchor247||Certificats de la FJGC|Cert-GCCF.htm#aanchor12||Certificats de service Web d'agences régionales de développement (ADR)&#160;et de service Web de portail|Cert-RDAWebService.htm#aanchor267||Conception de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDev.htm#aanchor418||Configuration de GC.GCCF|GCCFConfig.htm#aanchor87||Configuration du portail – courriel d'invitation|PortalConfigInviteEmail.htm#aanchor133||Configuration du portail de la Solution d'entreprise pour les subventions et les contributions&#160;(SESC)|EGCSPortalConfig.htm#aanchor164||Configurer des formulaires pour le portail|SmartGuide/ConfigureApplic on portal.htm#aanchor30||Créer de nouveaux formulaires|SmartGuide/CreateNewForms.htm#aanchor108||Déploiement de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor69||Développement de composants WebPart SPFx|SPFxAppsProjectFolders.htm#aanchor56||Diagramme de relation d'entité de portail|../Modules/ERDs/ERD Portal.htm#aanchor290||Documentation de SmartGuide d'Alphinat|SmartGuide/AlphinatDoc.htm#aanchor114||Documents dans le portail|PortalDocs.htm#aanchor172||Élaborer des formulaires de portail - connexions|SmartGuide/PortalFormDevConnections.htm#aanchor428||Intégration de documents du portail au GPSC|PortalDocIntegGCPM.htm#aanchor13||Intégration du portail avec GPSC|Portal-GCPMIntegration.htm#aanchor405||Inviter un client SC sur le portail|UsingPortal/InviteClient.htm#aanchor186||Les formulaires dynamiques du portail|SmartGuide/PortalFormDynamic.htm#aanchor60||Métadonnées FPGC|GCCFMetadata.htm#aanchor166||Naviguer dans le portail|UsingPortal/NavigatePortal.htm#aanchor1||Notes de la version 1.0 du portail|PortalReleaseNotes1.0.htm#aanchor16||Personnalisation du portail|PortalBranding.htm#aanchor162||Portail - aperçu de la page maître|PortalMasterPage.htm#aanchor410||Sécurité du portail|PortalSecurity.htm#aanchor91||Serveur proxy inverse pou le portail|PortalReverseProxy.htm#aanchor394||Service de Windows : création de site|WindowsSiteCreation.htm#aanchor388||Service Web des ADR|WebServiceRDA.htm#aanchor97||Service Web FormManager|WebServiceFormMgr.htm#aanchor366||Service Web SharePoint|WebserviceSharePoint.htm#aanchor154||Service Web WebAPI|WebServiceWebAPI.htm#aanchor437||Services Web pour l'intégration de portails|WebServicesPortal.htm#aanchor420||SharePoint - structure du site du portail|PortalSharepointSiteStructure.htm#aanchor229||Solution GC.GCCF de  Visual Studio|VSSolutionGCCF.htm#aanchor295||Solution Visual Studio pour le EGCS.Portal|VSSolutionEGCSPortal.htm#aanchor88||Soumettre des données en tableaux avec un formulaire|UsingPortal/SubmitFormTable.htm#aanchor179||Soumettre des formulaires sur le portail|UsingPortal/SubmitForms.htm#aanchor215||Structure du&#160;Smartlet du GPSC|SmartGuide/PortalFormSmartletStructure.htm#aanchor385||Transfert de données du portail au &#160;GPSC|DataTransfer.htm#aanchor429"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

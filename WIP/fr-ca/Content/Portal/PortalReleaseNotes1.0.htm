@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Notes de la version 1.0 du portail</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor16"></a>
+                                                    <MadCap:concept term="Portal" />Notes de la version 1.0 du portail</h1>
+                                                <p>Le portail de GPSC est plus qu'une ferme de SharePoint. Elle est composé de multiples composantes qui travaillent ensemble, de ADFS, CRM, à Alphinat SmartGuide, aux applications Web personnalisées. Il est important que chacune de ces composantes soient comprises et planifiées avant que l'installation commence. Une installation du portail n'est pas complète à moins que toutes les composantes soient présentes.</p>
+                                                <p>La planification est essentielle pour déployer avec succès un portail. Tenter d'aller directement à la phase d'installation sans comprendre les composantes, où elles sont installées et de quelle façon elles communiquent, sera frustrant.</p>
+                                                <h2>Exigences / Prérequis</h2>
+                                                <ul>
+                                                    <li value="1">Microsoft SharePoint 2016 sur place Le nombre de serveurs et la topographie de la ferme SharePoint relève du ministère. <br />Consultez <a href="Sharepoint installation.htm" class="MCXref xref">Installation de Sharepoint</a> pour une discussion plus détaillée.<br /></li>
+                                                    <li value="2">Microsoft SQL Server supporté par SharePoint 2016<br /></li>
+                                                    <li value="3">Microsoft ADFS 2016 (requiert Windows Server 2016)<br /></li>
+                                                    <li value="4">Optionnel&#160;: Microsoft Office Online Server, si le portail doit supporter la modification dans le navigateur des documents.<br /></li>
+                                                    <li value="5">Alphinat SmartGuide, version actuelle. L'équipe du portail du&#160;GPSC a travaillé avec Alphinat pour intégrer les correctifs et les améliorations dans le SmartGuide pour appuyer les formulaires comme ils sont utilisés dans le portail.<br /></li>
+                                                    <li value="6">Un serveur proxy inverse&#160;:<ul><li value="1">Si la ferme SharePoint a des multiples application frontale sur le Web (WEF), le proxy inverse doit supporter les «&#160;sessions sticky&#160;» ou les «&#160;sessions affinity&#160;». Le proxy inverse doit être capable de diriger toutes les requêtes Web d'un client à la même WFE de SharePoint.<br />SI la ferme SharePoint a seulement une seule WFE, cette exigence est levée.<br /></li></ul></li>
+                                                    <li value="7">Le proxy inverse doit être en mesure de diriger la circulation basée sur l'entête de l'hôte, ainsi que sur l'URL.<br />P. ex. les requêtes pour <code>https://&lt;portal&gt;/abc </code>can be routed to a different back-end server than <code>https://&lt;portal&gt;/123</code><p>Toutes les mises en œuvre de proxy inverse qui respectent ces restrictions sont acceptables. La fonction de proxy inverse pourrait être mise en œuvre par un appareil, un pare-feu ou un un serveur Windows ou Linux. L'équipe du portail du GPSC a utilisé l’ensemble Application Request Routing gratuit de Microsoft pendant l'élaboration du portail de GPSC.</p></li>
+                                                    <li value="8">Le ministère doit être enregistré pour utiliser l'infrastructure de FJGC (CléGc et SecureKey). Le ministère doit avoir des certificats GJI pour leur portail et ils doivent avoir fourni un ensemble de métadonnées du&#160; Portail valides au &#160;FJGC. Cela doit être organisé par SPC.<br /></li>
+                                                    <li value="9">Les noms DNS doivent être sélectionné et enregistré par le Portail,&#160;ADFS&#160;et le Domaine commun de la FJGC.</li>
+                                                    <li value="10">Les règles de pare-feu doivent être configurées pour passer la circulation entrante au serveur proxy inverse.<br /></li>
+                                                    <li value="11">Les certificats SSL pour les tous les noms DNS du portail public (Portail, ADFS, Domaine commun de la FJGC)<br />Consulter le document «&#160;Certificats SSL&#160;».<br /></li>
+                                                    <li value="12">Les certificats pour authentifier le service Web d'ADR et le service Web du portail. Ils peuvent être généré en utilisant OpenSSL, émis par un SC du ministère ou acheté comme certificats commerciaux.<br /></li>
+                                                    <li value="13">Un plan de la topographie qui identifier les serveurs qui seront utilisé pour le portail et où ils seront situés. Les canaux de communication entre les serveurs doivent être compris et pris en compte.</li>
+                                                </ul>
+                                                <h2>Composantes du portail</h2>
+                                                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Composantes du portail</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Composante</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Location de l'installation</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p>Notes</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Proxy inverse</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur proxy inverse</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Office Online Server</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur OOS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Composante optionnelle</p>
+                                                                <p class="tabletext">Permet la modification dans le navigateur des documents dans SharePoint</p>
+                                                                <p class="tabletext">Doit être hébergé sur un serveur séparé</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur SQL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur SQL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">SharePoint 2016</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Ferme SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Baser la ferme de SharePoint 2016 pour le portail</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Solutions SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Ferme SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Pages du côté serveur et code final</p>
+                                                                <p class="tabletext">Code de sécurité et d'authentification</p>
+                                                                <p class="tabletext">Services &#160;Web hébergé sur SharePoint</p>
+                                                                <p class="tabletext">Page maître</p>
+                                                                <p class="tabletext">Solutions&#160;:<br /><code>EGCS.Portal.SharePoint.Library</code></p>
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.PortalMasterPage</code>
+                                                                </p>
+                                                                <p class="tabletext"><code>EGCS.Portal.WebService.SharePoint</code>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Parties Web SPFx</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Ferme SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Les parties Web doivent être bâties au ministère avant le déploiement</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Services Windows</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Ferme SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Services&#160;:<br />Service de gestion de document<br />Service de création&#160;de site</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Service Web du portail</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Ferme SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Canal de communications du &#160;GPSC au Portail</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Alphinat SmartGuide</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur de l'application</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Application Web&#160;IIS</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Microsoft ADFS 2016</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur des ADFS de la FJGC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Partie du serveur Windows 2016</p>
+                                                                <p class="tabletext">Utilisé pour l'authentification de la FJGC (CléGC et SecureKey)</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Microsoft ADFS ou Azure ADFS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur des ADFS de l'ADR</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Composante optionnelle</p>
+                                                                <p class="tabletext">Utilisé pour authentification du personnel de l'ADR par rapport au portail</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Application&#160;Web de Domaine commun de la FJGC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur des ADFS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Application Web&#160;IIS</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Application Web des extensions des ADFS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur des ADFS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Application Web&#160;IIS</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Service Web de l'ADR</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur de l'application du&#160;GPSC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Application Web&#160;IIS</p>
+                                                                <p class="tabletext">Ce service Web devrait être situé près de installation du CRM du GPSC, mais pas nécessairement au même endroit que le Portail.</p>
+                                                                <p class="tabletext">Le portail doit être en mesure de faire des appels HTTP à ce service Web.</p>
+                                                                <p class="tabletext">Cette application Web doit être en mesure de communiquer avec le CRM du GPSC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext">Service Web de WebApi</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext">Serveur de l'application du&#160;GPSC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Application Web&#160;IIS</p>
+                                                                <p class="tabletext">Ce service Web devrait être situé près de installation du CRM du GPSC, mais pas nécessairement au même endroit que le Portail.</p>
+                                                                <p class="tabletext">Ce service Web doit être en mesure de faire des appels HTTP au service Web du Portail.</p>
+                                                                <p class="tabletext">Le CRM du GPSC doit être en mesure de communiquer avec cette application Web.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2>Topographie</h2>
+                                                <p>La topographie considère la façon dont les composantes du portail sont déployées sur les serveurs. Les règles d’acheminement de la circulation requises sur le serveur proxy inverse seront définies par ces choix.</p>
+                                                <p style="list-style-type: disc;">La mise en œuvre de la référence est la même que le portail d'intégration du&#160; GPSC a utilisé pendant l'élaboration. Cette mise en œuvre utilise des VM pour la plupart des composantes du portail.</p>
+                                                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');margin-left: 0;margin-right: auto;width: 100%;" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Composantes du serveur</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Serveur (VM)</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Composantes</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur proxy inverse</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Microsoft ARR</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur SQL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur SQL de Microsoft</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">SharePoint 2016 (ferme de serveur unique, y compris WFE, Recherche et Gestion des applications)</p>
+                                                                <p class="tabletext">Solutions SharePoint</p>
+                                                                <p class="tabletext">Parties Web SPFx</p>
+                                                                <p class="tabletext">Service Web du portail</p>
+                                                                <p class="tabletext">Services Windows</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur de l'application</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Alphinat SmartGuide</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Serveur des ADFS de la FJGC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">ADFS 2016</p>
+                                                                <p class="tabletext">Application&#160;Web de Domaine commun de la FJGC</p>
+                                                                <p class="tabletext">Application Web des extensions des ADFS</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur des ADFS du GPSC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">ADFS 2016</p>
+                                                                <p class="tabletext">Aussi utilisé pour l'authentification des utilisateurs par rapport au&#160; CRM du GPSC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Office Online Server</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Microsoft OOS</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">Serveur de l'application du&#160;GPSC</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <p class="tabletext">Service Web de l'ADR</p>
+                                                                <p class="tabletext">Service Web de WebAPI</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p>Remarques :</p>
+                                                <ul>
+                                                    <li value="1">Il est recommandé de garder le proxy inverse comme serveur séparé. Cela joute un couche supplémentaire d'isolation entre les serveurs du portail et Internet. Le proxy inverse termine et dirige toute la circulation provenant du&#160;Web.<br /></li>
+                                                    <li value="2">Le serveur des ADSF de la FJGC peut probablement être combinée avec le serveur d'application pour héberger le SmartGuide d'Alphinat. Les &#160;ADFS sont seulement accédés momentanément alors que les utilisateurs se connectent ou se déconnectent. La charge globale sur les&#160; ADFS est extrêmement légère.<br /></li>
+                                                    <li value="3">Le serveur des&#160;ADFS de la FJGC et le serveur des ADSF du&#160;GPSC doit être séparé l'un de l'autre. Il n'est pas possible de les combiner.<br /></li>
+                                                    <li value="4">Le serveur d'application du &#160;GPSC n'est pas nécessairement hébergé dans le même centre de données que les autres composantes du portail. Il devrait être hébergé logiquement «&#160;près&#160;» du CRM du&#160; GPSC afin de minimiser le temps d'attente, alors que ces services Web doivent interagir étroitement avec le CRM.<br /></li>
+                                                    <li value="5">Une production du déploiement de SharePoint devrait utiliser un serveur SQL séparé. N'installez pas le serveur SQL sur le même serveur que SharePoint.<br /></li>
+                                                    <li value="6">Un déploiement extrême pourrait se retrouver avec toutes les composantes du portail empilées sur un serveur Cette configuration n'a pas été mise à l'essai et n'est pas recommandée</li>
+                                                </ul>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="À propos de la FJGC|GCCFAbout.htm#aanchor308||À propos du portail|AboutPortal.htm#aanchor146||À propos du portail|AboutPortal.htm#aanchor147||Aperçu du service Web FormManager|WebServicePortalFormMgr.htm#aanchor75||Application Web des extensions des services ADFS (Active Directory Federation Services)|ADFSExtensionswebApp.htm#aanchor268||Application&#160;Web de domaine commun de la fédération des justificatifs du gouvernement du &#160;Canada (FJGC)|GCCFCommonDomainWebApp.htm#aanchor0||Applications SPFx pour le portail|SPFxAppsPortal.htm#aanchor102||Authentification du GPSC|GCPMAuthentication.htm#aanchor274||Authentification pour les utilisateurs de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFAuthentication.htm#aanchor203||Authentification pour les utilisateurs des agences de développement régional (ADR)|AuthenticationRDA.htm#aanchor386||Base de données de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFDatabase.htm#aanchor402||Bâtir et déployer des applications SharePoint Framework (SPFx)|SPFxAppsBuildDeploy.htm#aanchor161||Certificat de SSL|Cert-SSL.htm#aanchor247||Certificats de la FJGC|Cert-GCCF.htm#aanchor12||Certificats de service Web d'agences régionales de développement (ADR)&#160;et de service Web de portail|Cert-RDAWebService.htm#aanchor267||Conception de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDev.htm#aanchor418||Configuration de GC.GCCF|GCCFConfig.htm#aanchor87||Configuration du portail – courriel d'invitation|PortalConfigInviteEmail.htm#aanchor133||Configuration du portail de la Solution d'entreprise pour les subventions et les contributions&#160;(SESC)|EGCSPortalConfig.htm#aanchor164||Configurer des formulaires pour le portail|SmartGuide/ConfigureApplic on portal.htm#aanchor30||Créer de nouveaux formulaires|SmartGuide/CreateNewForms.htm#aanchor108||Déploiement de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor69||Développement de composants WebPart SPFx|SPFxAppsProjectFolders.htm#aanchor56||Diagramme de relation d'entité de portail|../Modules/ERDs/ERD Portal.htm#aanchor290||Documentation de SmartGuide d'Alphinat|SmartGuide/AlphinatDoc.htm#aanchor114||Documents dans le portail|PortalDocs.htm#aanchor172||Élaborer des formulaires de portail - connexions|SmartGuide/PortalFormDevConnections.htm#aanchor428||Intégration de documents du portail au GPSC|PortalDocIntegGCPM.htm#aanchor13||Intégration du portail avec GPSC|Portal-GCPMIntegration.htm#aanchor405||Inviter un client SC sur le portail|UsingPortal/InviteClient.htm#aanchor186||Les formulaires dynamiques du portail|SmartGuide/PortalFormDynamic.htm#aanchor60||Métadonnées FPGC|GCCFMetadata.htm#aanchor166||Naviguer dans le portail|UsingPortal/NavigatePortal.htm#aanchor1||Notes de la version 1.0 du portail|#aanchor16||Personnalisation du portail|PortalBranding.htm#aanchor162||Portail - aperçu de la page maître|PortalMasterPage.htm#aanchor410||Sécurité du portail|PortalSecurity.htm#aanchor91||Serveur proxy inverse pou le portail|PortalReverseProxy.htm#aanchor394||Service de Windows : création de site|WindowsSiteCreation.htm#aanchor388||Service Web des ADR|WebServiceRDA.htm#aanchor97||Service Web FormManager|WebServiceFormMgr.htm#aanchor366||Service Web SharePoint|WebserviceSharePoint.htm#aanchor154||Service Web WebAPI|WebServiceWebAPI.htm#aanchor437||Services Web pour l'intégration de portails|WebServicesPortal.htm#aanchor420||SharePoint - structure du site du portail|PortalSharepointSiteStructure.htm#aanchor229||Solution GC.GCCF de  Visual Studio|VSSolutionGCCF.htm#aanchor295||Solution Visual Studio pour le EGCS.Portal|VSSolutionEGCSPortal.htm#aanchor88||Soumettre des données en tableaux avec un formulaire|UsingPortal/SubmitFormTable.htm#aanchor179||Soumettre des formulaires sur le portail|UsingPortal/SubmitForms.htm#aanchor215||Structure du&#160;Smartlet du GPSC|SmartGuide/PortalFormSmartletStructure.htm#aanchor385||Transfert de données du portail au &#160;GPSC|DataTransfer.htm#aanchor429"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

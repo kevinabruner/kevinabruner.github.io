@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|[%=System.LinkedTitle%]|Portal applications and services">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>SharePoint web service</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor313"></a>
+                                                    <MadCap:concept term="Portal" /><a name="aanchor314"></a>
+                                                    <MadCap:concept term="WebService" />SharePoint web service</h1>
+                                                <p>The <b>SharePoint Web Service</b> is the collective name used for a series web services used to support the portal. It is implemented by the project <code>EGCS.Portal.WebService.SharePoint</code>. These web services are intended to support client-side web parts and JavaScript, such as the SPFx web parts.</p>
+                                                <ul style="list-style-type: disc;margin-left: 36pt;">
+                                                    <li style="list-style-type: disc;" value="1">These web services are hosted directly by SharePoint.</li>
+                                                    <li value="2">SharePoint web services are RESTful.</li>
+                                                    <li style="list-style-type: disc;" value="3">Web service methods are called via HTTP POST.</li>
+                                                    <li style="list-style-type: disc;" value="4">Parameters to web service methods are JSON-encoded.</li>
+                                                    <li style="list-style-type: disc;" value="5">Return results from web service methods are JSON-encoded.</li>
+                                                    <li style="list-style-type: disc;" value="6">Web services are hosted in a relative path<code> /&lt;site&gt;/_layouts/15/EgcsPortal/&lt;web service page&gt;</code>.</li>
+                                                    <li style="list-style-type: disc;" value="7">The method name for the web service is appended to the web service URL.E.g.<code>: /client/AC000922/_layouts/15/EgcsPortal/Account.svc/ApplicationStatusGet</code></li>
+                                                </ul>
+                                                <p>This example calls the web service <code>Account.svc</code> method <code>ApplicationStatusGet</code> in Client zone AC000922.</p>
+                                                <ul style="list-style-type: disc;margin-left: 36pt;">
+                                                    <li style="list-style-type: disc;" value="1">Web services are called with the security context of the SharePoint user. The web service executes using that user’s identity.</li>
+                                                </ul>
+                                                <h2 class="Heading2">Account.svc web service – Class Account.cs</h2>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Account.svc web service – Class Account.cs</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>ApplicationStatusGet</code>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">List&lt;<code>ApplicationStatus</code>&gt;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Queries the RDA web service for application status.</p>
+                                                                <p class="tabletext">Used in: Client Zone, Personal Zone</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>ClientProfileGet</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>AccountClientProfile</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <p class="tabletext">Queries the RDA web service for a client’s profile.</p>
+                                                                <p class="tabletext">Used in: Client zone</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Heading2">FormManager.svc web service – Class FormManager.cs</h2>
+                                                <p>See <a href="WebServiceFormMgr.htm" class="MCXref xref">FormManager web service</a></p>
+                                                <h2 class="Heading2">FCProfile .csv web service – Class FCProfile.cs</h2>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>FCProfile .csv web service – Class FCProfile.cs</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>BudgetSummaryGet</code>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">List&lt;<code>BudgetSummaryItem</code>&gt;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Queries the RDA web service for a project’s budget summary.</p>
+                                                                <p class="tabletext">Used in: Project Zone</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>DisbursementSummaryGet</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>AccountClientProfile</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Queries the RDA web service for a project’s disbursement summary.</p>
+                                                                <p class="tabletext">Used in: Project Zone</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>ProjectSpecificDetailsGet</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>ProjectSpecificDetails</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Not used</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>ProjectProfileGet</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>FCProfileProjectProfile</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Queries the RDA web service for a project’s profile.</p>
+                                                                <p class="tabletext">Used in: Project Zone</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>RepaymentScheduleGet</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>RepaymentScheduleInstallment[]</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Queries the RDA web service for a project’s repayment schedule.</p>
+                                                                <p class="tabletext">Used in: Project Zone</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Heading2">Invitation.svc Web Services – Class Invitation.cs</h2>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Invitation.svc Web Services – Class Invitation.cs</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 226px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Parameters</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>Accept<br /><br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>Guid InvitationId, string SharedSecret</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>InvitationAcceptResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Accepts an Invitation with the specified id and adds the current user to the site referenced in the Invitation with the role specified in the Invitation.</p>
+                                                                <p class="tabletext">Supplied shared secret must match the shared secret of the Invitation.</p>
+                                                                <p class="tabletext">Used in: Welcome Centre</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>Cancel</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>Guid InvitationId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>InvitationCancelResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Cancel an Invitation with the specified id. The Invitation can no longer be accepted.</p>
+                                                                <p class="tabletext">Used in: Client zone</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>Get</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>Guid InvitationId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>InvitationGetResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Retrieve details about the Invitation with the specified id.</p>
+                                                                <p class="tabletext">Used in: Welcome centre</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>Issue</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>string Name, string EmailAddress,&#160;&#160;&#160; PortalRoleType Role</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>InvitationIssueResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Create an Invitation for the current Client Zone. Add a row to the <code>GCCF.dbo.Invitatio</code>n table with the details about the invitation.</p>
+                                                                <p class="tabletext">Send an email to the user being invited.</p>
+                                                                <p class="tabletext">Used in: Client Zone</p>
+                                                                <p class="tabletext">Can only be called by a user who has “Admin” rights for the Client Zone.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">List</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>InvitationListResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Retrieve a list of all outstanding Invitations for the current Client zone.</p>
+                                                                <p class="tabletext">The details returned depend on the rights of the caller. For example: Admin users will see the shared secret for Invitations, while other users will not.</p>
+                                                                <p class="tabletext">Used in: Client Zones</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Reissue</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>Guid InvitationId</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>InvitationReissueResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Re-issues an active invitation, resetting the expiration date and sending a new email to the user being invited.</p>
+                                                                <p class="tabletext">Used in: Client zone</p>
+                                                                <p class="tabletext">Can only be called by a user who has “Admin” rights for the Client zone.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext">InviteRdaUser</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p><code>RdaUserType RdaUserType, string NameIdentifier, PortalRoleType Role</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p><code>InviteRdaUserResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Not used</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Heading2">PortalUser.svc Web Services – Class PortalUser.cs</h2>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>PortalUser.svc Web Services – Class PortalUser.cs</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 175px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 131px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 274px;" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p>Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p>Parameters</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p>Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p>Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>ChangeRole</code>
+                                                                    <br />
+                                                                    <br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>string<code> LoginName, PortalRoleType</code> Role</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>PortalUserChangeRoleResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Change the role of a GCCF User in a Client Zone.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Used in: Client Zone</li>
+                                                                    <li style="list-style-type: disc;" value="3">Can only be called by a user who has “Admin” rights for the Client Zone.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>Get</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>PortalUserWrapper</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Return the profile for the current GCCF User.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Can only be called by a GCCF User.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>IsPortalAdmin</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>bool</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Returns true if the current portal user has “Admin” rights to the current zone.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>List</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>SharePointPortalUserListResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Returns a list of users for the Client site. </li>
+                                                                    <li style="list-style-type: disc;" value="2">Both GCCF users and RDA users are included.</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>egcs_pt_PortalUserUpsert</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>string egcs_FirstName,&#160;&#160;&#160;&#160;&#160;&#160;&#160; string egcs_MiddleName,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; string egcs_LastName,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; string egcs_EmailAddress,&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; string egcs_MobilePhone</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>egcs_pt_PortalUserResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Allows a GCCF User to create or update their user profile on the portal.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Synchronizes a user’s profile with GCPM via the RDA web service.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Updates all SharePoint sites where the user is a member with the user’s name and email address.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Can only be called by GCCF users</li>
+                                                                    <li style="list-style-type: disc;" value="5">Used in: Welcome Centre</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>RecoverRequestBegin</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>string egcs_EmailAddress</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>RecoverRequestBeginResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Request recovery of the GCCF account which matches the supplied email address.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Can only be called by a GCCF User logged in to a GCKey or SecureKey which is not already registered.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Used in: root site</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>RecoverRequestComplete</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>string Code</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>RecoverRequestCompleteResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Complete two-factor authentication for a GCCF User account recovery request.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Can only be called by a GCCF User logged in to a GCKey or SecureKey which is not already registered.</li>
+                                                                    <li value="3">Used in: root site</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>RDAUserSearch</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>string name, string <code>emailAddress</code></p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>RdaUser[]</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Not used</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p><code>RdaUserChangeRole</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p>string <code>EmailAddress, PortalRoleType Role</code></p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p><code>RdaUserChangeRoleResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Allows an RDA user to change the access level of another RDA user to a Client Zone.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Can only be called by a RDA user.</li>
+                                                                    <li style="list-style-type: disc;" value="3">RDA User must have the “Admin” role.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Used in: Client Zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Heading2">SecureMessage.svc Web Service – Class SecureMessage.cs </h2>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>SecureMessage.svc Web Service – Class SecureMessage.cs </caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Parameters</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>GetUnread</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">List&lt;<code>egcs_pt_SecureMessageUnread</code>&gt;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Returns a list of zones with unread secure message counts for the zone.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Zones are based on the Clients which the user has been invited to, as well as their Personal Zone.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Can only be called by a GCCF user.</li>
+                                                                    <li style="list-style-type: disc;" value="4">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p><code>SetRead</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>egcs_pt_SPSecureMessage message</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>egcs_pt_UserMessagesResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Flag a secure message as read</li>
+                                                                    <li style="list-style-type: disc;" value="2">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>SetUnread</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>egcs_pt_SPSecureMessage message</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>egcs_pt_UserMessagesResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Flag a secure message as unread</li>
+                                                                    <li style="list-style-type: disc;" value="2">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>Get</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>egcs_pt_UserThreadMessages</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Return a list of secure messages for the current zone.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Add</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>egcs_pt_SPSecureMessage message</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p><code>egcs_pt_UserMessagesResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <ul>
+                                                                    <li value="1">Create a new secure message in the current zone.</li>
+                                                                    <li style="list-style-type: disc;" value="2">Can only be called by a GCCF User.</li>
+                                                                    <li style="list-style-type: disc;" value="3">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">Delete</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p><code>egcs_pt_SPSecureMessage[] messages</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p><code>egcs_pt_UserMessagesResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <ul>
+                                                                    <li value="1">Remove a Secure message</li>
+                                                                    <li style="list-style-type: disc;" value="2">Used in: any zone</li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Heading2">TermsAndConditions.svc Web Service – Class TermsAndConditions.cs</h2>
+                                                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>TermsAndConditions.svc Web Service – Class TermsAndConditions.cs</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Parameters</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Get</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">int <code>TermsAndConditionsId</code></p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>Data.TermsAndConditions.TermsAndConditions</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Retrieve the current Terms and Conditions for the portal</p>
+                                                                <p class="tabletext">When called by a GCCF User will also report if the user has accepted those Terms and Conditions.</p>
+                                                                <p class="tabletext">Used in: root site</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">Accept</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">int <code>TermsAndConditionsId</code></p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>TermsAndConditionsResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <p class="tabletext">Accept the specified Terms and Conditions.</p>
+                                                                <p class="tabletext">Caller must be a GCCF User</p>
+                                                                <p class="tabletext">Used in: root site</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h2 class="Heading2">
+                                                    <br />TwoFactorAuthentication.svc Web Services – TwoFactorAuthentication.cs</h2>
+                                                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>TwoFactorAuthentication.svc Web Services – TwoFactorAuthentication.cs</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Web service</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Parameters</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Returns</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Details</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Authenticate</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">string Code</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>AuthenticateResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Complete two-factor authentication with the supplied code</p>
+                                                                <p class="tabletext">Can only be called by a GCCF user</p>
+                                                                <p class="tabletext">Used in: root site</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">List</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p>&#160;</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>ListResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">List the available types of two-factor authentication for the current GCCF User. E.g.: email, SMS</p>
+                                                                <p class="tabletext">Can only be called by a GCCF user</p>
+                                                                <p class="tabletext">Used in: root site</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>RequestAuthentication</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>TwoFactorAuthenticationType </code>Type</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>RequestAuthenticationResult</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Begin a two-factor authentication session with the portal. Sets a 2FA cookie on the user’s browser and sends a verification code via email or SMS</p>
+                                                                <p class="tabletext">Can only be called by a GCCF user</p>
+                                                                <p class="tabletext">Used in: root site</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal;WebService" href="javascript:void(0);" data-mc-topics="About GCCF|GCCFAbout.htm#aanchor166||About the portal|AboutPortal.htm#aanchor395||About the portal|AboutPortal.htm#aanchor396||ADFS extensions web application|ADFSExtensionswebApp.htm#aanchor217||Alphinat SmartGuide documentation|SmartGuide/AlphinatDoc.htm#aanchor44||Authentication for GCCF users|GCCFAuthentication.htm#aanchor22||Authentication for RDA users|AuthenticationRDA.htm#aanchor214||Build and deploy SPFx apps|SPFxAppsBuildDeploy.htm#aanchor140||Configure forms for the portal|SmartGuide/ConfigureApplic on portal.htm#aanchor442||Create new forms|SmartGuide/CreateNewForms.htm#aanchor242||Data transfer from the portal to GCPM|DataTransfer.htm#aanchor256||Deploying forms for the portal with SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor0||Developing forms for the portal with SmartGuide|SmartGuide/PortalFormDev.htm#aanchor203||Developing portal forms - connections|SmartGuide/PortalFormDevConnections.htm#aanchor106||Developing SPFx Web Parts|SPFxAppsProjectFolders.htm#aanchor145||Documents on the portal |PortalDocs.htm#aanchor422||Dynamic portal forms|SmartGuide/PortalFormDynamic.htm#aanchor394||EGCS.Portal configuration|EGCSPortalConfig.htm#aanchor368||EGCS.Portal Visual Studio Solution|VSSolutionEGCSPortal.htm#aanchor321||FormManager web service overview|WebServicePortalFormMgr.htm#aanchor10||FormManager web service overview|WebServicePortalFormMgr.htm#aanchor9||FormManager web service|WebServiceFormMgr.htm#aanchor126||FormManager web service|WebServiceFormMgr.htm#aanchor127||GC.GCCF configuration|GCCFConfig.htm#aanchor388||GC.GCCF Visual Studio Solution|VSSolutionGCCF.htm#aanchor428||GCCF certificates|Cert-GCCF.htm#aanchor18||GCCF common domain web application|GCCFCommonDomainWebApp.htm#aanchor320||GCCF database|GCCFDatabase.htm#aanchor205||GCCF metadata|GCCFMetadata.htm#aanchor267||GCPM authentication|GCPMAuthentication.htm#aanchor8||GCPM&#160;Smartlet Structure |SmartGuide/PortalFormSmartletStructure.htm#aanchor213||Invite a GC&#160;Client to the portal|UsingPortal/InviteClient.htm#aanchor191||Navigate the portal|UsingPortal/NavigatePortal.htm#aanchor144||Portal - master page overview|PortalMasterPage.htm#aanchor25||Portal branding|PortalBranding.htm#aanchor261||Portal configuration - invitation email|PortalConfigInviteEmail.htm#aanchor227||Portal document integration with GCPM&#160;|PortalDocIntegGCPM.htm#aanchor231||Portal entity relationship diagram|../Modules/ERDs/ERD Portal.htm#aanchor131||Portal integration with GCPM|Portal-GCPMIntegration.htm#aanchor2||Portal release notes 1.0|PortalReleaseNotes1.0.htm#aanchor38||Portal security|PortalSecurity.htm#aanchor263||RDA web service and portal web service certificates|Cert-RDAWebService.htm#aanchor215||RDA web service|WebServiceRDA.htm#aanchor123||Reverse proxy server for the portal|PortalReverseProxy.htm#aanchor212||SharePoint - portal site structure|PortalSharepointSiteStructure.htm#aanchor156||SharePoint web service|#aanchor313||SharePoint web service|#aanchor314||SPFx apps for the portal|SPFxAppsPortal.htm#aanchor208||SSL certificate|Cert-SSL.htm#aanchor310||Submit forms on the portal|UsingPortal/SubmitForms.htm#aanchor357||Submit tabular data with a form|UsingPortal/SubmitFormTable.htm#aanchor162||Web services for portal integration|WebServicesPortal.htm#aanchor238||WebAPI&#160;web service|WebServiceWebAPI.htm#aanchor362||Windows service - document management|WindowsDocMgt.htm#aanchor184||Windows service - site creation|WindowsSiteCreation.htm#aanchor255"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

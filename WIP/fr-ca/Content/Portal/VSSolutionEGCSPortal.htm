@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|[%=System.LinkedTitle%]|SharePoint - Développement, localisation et branding">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Solution Visual Studio pour le EGCS.Portal</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor88"></a>
+                                                    <MadCap:concept term="Portal" />Solution Visual Studio pour le EGCS.Portal</h1>
+                                                <p>La solution <code>EGCS.Portal</code> comporte un code, une page maître, des parties Web, des services Web et d'autres composantes qui définissent l'apparence du portail et la façon dont il fonctionne et communique avec le GPSC.</p>
+                                                <p>Elle ne comporte pas le code pour connecter l'environnement de la FJGC (CléGC et SecureKey) - ce code est accessible au moyen de la solution <code>GC.GCCF</code>.</p>
+                                                <h2>Conditions préalables:</h2>
+                                                <p>Pour établir la solution <code>EGCS.Portal</code>, les éléments suivants sont nécessaires&#160;:</p>
+                                                <ul style="list-style-type: disc;margin-left: 36pt;">
+                                                    <li style="list-style-type: disc;" value="1">Visual Studio 2017</li>
+                                                </ul>
+                                                <ul style="list-style-type: circle;margin-left: 72pt;">
+                                                    <li style="list-style-type: circle;" value="1">Développement du bureau .NET</li>
+                                                    <li style="list-style-type: circle;" value="2">ASP.NET et développement&#160;Web</li>
+                                                    <li style="list-style-type: circle;" value="3">Développement Node.js</li>
+                                                    <li style="list-style-type: circle;" value="4">Entreposage et traitement des données</li>
+                                                    <li style="list-style-type: circle;" value="5">Développement d'Office / Sharepoint</li>
+                                                </ul>
+                                                <ul style="list-style-type: disc;margin-left: 36pt;">
+                                                    <li value="1">
+                                                        <p>Install the SharePoint Server 2016 Client Components SDK (<code>sharepointclientcomponents_16-4351-1000_x64_en-us.msi</code>). Download here: https://www.microsoft.com/en-us/download/details.aspx?id=51679</p>
+                                                    </li>
+                                                    <li value="2">Connect projects in the <code>EGCS.Portal</code> solution to SharePoint. Generally speaking, when developing Visual Studio projects which have a SharePoint component, SharePoint must be installed on the same PC as Visual Studio. The <code>EGCS.Portal</code> project has been configured so that SharePoint is not required. Pick the approach which is best suited to your development environment.</li>
+                                                    <li value="3">
+                                                        <p>If SharePoint is installed, connect the SharePoint projects to a SharePoint site:</p>
+                                                        <ul style="list-style-type: disc;margin-left: 36pt;">
+                                                            <li value="1">
+                                                                <p>Perform this procedure for each SharePoint project</p>
+                                                            </li>
+                                                            <li value="2">
+                                                                <p><code>EGCS.Portal.SharePoint.Library</code>
+                                                                </p>
+                                                            </li>
+                                                            <li value="3">
+                                                                <p><code>EGCS.Portal.SharePoint.PortalMasterPage</code>
+                                                                </p>
+                                                            </li>
+                                                            <li value="4">
+                                                                <p><code>EGCS.Portal.WebService.SharePoint</code>
+                                                                </p>
+                                                            </li>
+                                                            <li value="5">
+                                                                <p>In Solution Explorer, select the a SharePoint project</p>
+                                                            </li>
+                                                            <li value="6">
+                                                                <p>Fill in the “<b>Site URL</b>” in the “<b>Properties</b>” pane. This must be a valid SharePoint site URL on the server. SharePoint will deploy solutions to this site when the “<b>Deploy</b>” option is selected.<br /><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../Resources/Images/Portal/SolutionExplorer.png"><img class="MCPopupThumbnail img" data-mc-width="246" data-mc-height="416" src="../Resources/Images/Portal/SolutionExplorer_thumb_0_48.png" tabindex="" /></a></p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li value="4">If SharePoint is not installed, configure a dummy SharePoint connection:</li>
+                                                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                                                        <li value="1">
+                                                            <p>Close Visual Studio</p>
+                                                        </li>
+                                                        <li value="2">
+                                                            <p>Copy a .user file into the folder of each SharePoint project. This file will configure a fake connection to a SharePoint server. You will not be able to deploy code to the server (as it doesn’t exist) but it will keep Visual Studio from complaining.</p>
+                                                        </li>
+                                                        <li value="3">
+                                                            <p>Copy files:</p>
+                                                            <p>EGCS.Portal.SharePoint.Library.csproj.user <b>&gt;</b> <code>EGCS.Portal\EGCS.Portal.SharePoint\EGCS.Portal.SharePoint.Library</code></p>
+                                                            <p>EGCS.Portal.SharePoint.PortalMasterPage.csproj.user <b>&gt;</b> <code>EGCS.Portal\EGCS.Portal.SharePoint\EGCS.Portal.SharePoint.MasterPage</code></p>
+                                                            <p>EGCS.Portal.WebService.SharePoint.csproj.user <b>&gt;</b> <code>EGCS.Portal\EGCS.Portal.WebService\EGCS.Portal.WebService.SharePoint</code></p>
+                                                        </li>
+                                                    </ul>
+                                                </ul>
+                                                <h2>Build the EGCS.Portal solution</h2>
+                                                <p>Établir la solution <code>EGCS.Portal</code>&#160;:</p>
+                                                <ol>
+                                                    <li value="1">Récupérer la dernière version dans Microsoft TFS.<br /></li>
+                                                    <li value="2">Nettoyer les sorties tirées de construction précédentes.<ul><li value="1">Ouvrir une fenêtre dans PowerShell en tant qu'administrateur.</li><li value="2">CD to the directory for the <code>EGCS.Portal</code> solution</li><li value="3">Run <code>Clean-Solution.ps1</code></li></ul></li>
+                                                    <li value="3">Configure SharePoint deployment options.<br />If SharePoint is not installed on the PC with Visual Studio, or if you do not wish to deploy recompiled packages into SharePoint, change the SharePoint deployment options. The <code>EGCS.Portal</code> project includes a deployment configuration which will build a SharePoint WSP package, but not actually deploy the WSP to SharePoint. A custom script will copy the WSP package to the <code>_Build</code> output folder when deployment is performed. <p>Perform this procedure for each SharePoint project:</p><p><code>EGCS.Portal.SharePoint.Library</code></p><p><code>EGCS.Portal.SharePoint.PortalMasterPage</code></p><p><code>EGCS.Portal.WebService.SharePoint</code></p><ul><li value="1"><p>In Solution Explorer, select a SharePoint project. </p></li><li value="2">Right-click the project and select “Properties”</li><li value="3">Select the “SharePoint” property page<br /><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../Resources/Images/Portal/SharePoint.png"><img class="MCPopupThumbnail img" data-mc-width="479" data-mc-height="451" src="../Resources/Images/Portal/SharePoint_thumb_0_48.png" tabindex="" /></a></li><li value="4">Set “Active Deployment Configuration” to “<b>Build WSP, don’t deploy to SharePoint</b>”.</li></ul></li>
+                                                    <li value="4">To build the <code>EGCS.Portal</code> solution:<ul><li value="1">In Visual Studio right-click the solution node (top of the Solutions Explorer tree)</li><li value="2">Select “<b>Deploy</b>”</li><li value="3">It will likely be necessary to also select “<b>Deploy</b>” on <code><br />EGCS.Portal.SharePoint.PortalMasterPage<br />EGCS.Portal.WebService.SharePoint</code><p>A folder named <code>_Build</code> will hold all of the build output. Ce dossier a été créé par étapes dans la section "Build Events" (Bâtir des événements) de chacun des projets.</p></li></ul></li>
+                                                    <li value="5">Bâtir des applications SPFx<ul><li value="1"><p>Repeat this procedure for each SPFx project:</p><p><code>EGCS.Portal\EGCS.Portal.SharePoint.SPFX.Terms</code></p><p><code>EGCS.Portal\EGCS.Portal.SharePoint.SPFX.FactorAuth</code></p><p><code>EGCS.Portal\EGCS.Portal.SharePoint.SPFX.MessageCentre</code></p><p><code>EGCS.Portal\EGCS.Portal.SharePoint.SPFX.PortalUser</code></p><p><code>EGCS.Portal\EGCS.Portal.SharePoint.SPFX.Project</code></p></li><li value="2">Open a <code>Node.js</code> command window as Administrator</li><li value="3">CD to each SPFx folder</li><li value="4"><p>The first time any SPFx App is built, it is necessary to install npm packages for that App. This is not required when rebuilding an App on the same development PC. </p><p>
+Run commands <code>npm install  </code><br /><code>npm install -g yo gulp</code></p></li><li value="5">Run <code>Build.bat</code></li></ul><ul><li value="1">Output will be written to <code>_Build\SPFx</code> folder.</li></ul></li>
+                                                </ol>
+                                                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <caption>Projet et dossiers EGCS.Portal</caption>
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Projet</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Type de projet</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Notes</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">!Readme!</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Dossier de solutions</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Documents utilisés par les développeurs dans le cadre du projet portail pour leurs environnements de développement personnel.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Certificats</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Dossier de solutions</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Scripts utilisés pour générer des certificats et un AC pour le portail d'intégration.</p>
+                                                                <p class="tabletext">Certificats générés pour être utilisés dans le portail d'intégration.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Bibliothèques de liens dynamiques</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Dossier de solutions</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Des copies de <code>GC.GCCF</code>, SharePoint et des bibliothèques de liens dynamiques de SmartGuide sont nécessaire pour compiler les projets.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.Service.DocumentManagement</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Service de toile de fond pour synchroniser les documents entre le portail et la FJGC.</p>
+                                                                <p class="tabletext">Synchronisez également les messages sécurisés entre le portail et la FJGC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.Service.DocumentManagement.CommandLine</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Programme de ligne de commande</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Exécute <code>EGCS.Portal.Service.DocumentManagement</code> en tant que fichier exécutable de ligne de commande.</p>
+                                                                <p class="tabletext">Les informations de débogage sont écrites sur le terminal.</p>
+                                                                <p class="tabletext">Convient aux essais de développement, mais pas à l'utilisation en production.</p>
+                                                                <p class="tabletext">Exige une copie de <code> gccf.config</code> and <code>egcs.config</code> dans le dossier corbeille.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.Service.DocumentManagement.WindowsService</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Service Windows</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Exécute <code>EGCS.Portal.Service.DocumentManagement </code> comme un service Windows.</p>
+                                                                <p class="tabletext">Conçu pour l'utilisation en production.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.Service.SiteCreation</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Service de toile de fond pour créer des zones client, projet et personnelle, le cas échéant.</p>
+                                                                <p class="tabletext">Tâche d'entretien pour ajouter de façon périodique de nouvelles zones de projet aux zones client.</p>
+                                                                <p class="tabletext">Tâche d'entretien pour nettoyer les sites client et de projet qui ont échoué.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.Service.SiteCreation.CommandLine</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Programme de ligne de commande</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Exécute <code>EGCS.Portal.Service. SiteCreation</code> en tant que fichier exécutable de ligne de commande.</p>
+                                                                <p class="tabletext">Les informations de débogage sont écrites sur le terminal.</p>
+                                                                <p class="tabletext">Convient aux essais de développement, mais pas à l'utilisation en production.</p>
+                                                                <p class="tabletext">Exige une copie de <code>gccf.config</code> and <code>egcs.config</code> dans le dossier corbeille.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.Service.SiteCreation.WindowsService</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Service Windows</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Exécute <code>EGCS.Portal.Service</code>. <code>SiteCreation</code> comme un service Windows.</p>
+                                                                <p class="tabletext">Conçu pour l'utilisation en production.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.Library</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Solution de batterie dans SharePoint 2016</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Logique de base pour le code <code> EGCS.Portal SharePoint </code>.</p>
+                                                                <p class="tabletext">Code de bibliothèque commun pour envoyer des courriels, envoyer des messages texte, gérer le rôle des utilisateurs dans les sites, traiter les invitations et sauvegarder et soumettre des formulaires.</p>
+                                                                <p class="tabletext">La configuration des composantes de <code>EGCS.Portal SharePoint</code> est définie dans cet projet comme des paramètres .NET.</p>
+                                                                <p class="tabletext">Classe d'accès aux bases de données communes et installation d'enregistrement commun pour les composantes de SharePoint.</p>
+                                                                <p class="tabletext">Comporte des proxys de service Web autogénérés pour l'ensemble des services Web de l'ADR.</p>
+                                                                <p class="tabletext">Les chaînes de traduction pour les composantes de SharePoint sont définies dans les fichiers RESX .NET.</p>
+                                                                <p class="tabletext">Mise en oeuvre de référence d'une partie Web "Table des matières" utilisée dans le centre d'accueil du portail d'intégration.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.PortalMasterPage</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Solution de batterie dans SharePoint 2016</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Page maîtresse du portail.</p>
+                                                                <p class="tabletext">Veuillez noter que les termes nécessaires à la traduction figurent dans le <code>EGCS.Portal.SharePoint.Library</code> (à l'exception de quelques rares cas de codages en dur dans JavaScript).</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.SPFX</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Application SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Non utilisé</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.SPFX.FactorAuth</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Application SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Application SPFx pour une authentification à deux facteurs.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.SPFX.MessageCentre</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Application SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Application SPFx pour la messagerie sécurisée.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.SPFX.PortalUser</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Application SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Application SPFx pour le profil d'utilisateur, les invitations et la gestion des utilisateurs.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.SPFX.Project</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Application SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Application SPFx pour les parties Web des sites client et projet&#160;:&#160;Profil des clients, profil des projets, résumé des débours, résumé des budgets, calendrier de remboursement, ébauches et statut de l'application.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SharePoint.SPFX.Terms</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Application SharePoint</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Application SPFx pour les modalités.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.WebService.Data</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Classe commune utilisée par différentes composantes pour l'échange de données.</p>
+                                                                <p class="tabletext">Définit différents objets structurés ayant été retournés par les appels de service Web.</p>
+                                                                <p class="tabletext">La modification de cette classe signifie que l'on doit recompiler toutes lke Il pourrait être nécessaire de régénérer les proxies de service Web des services Web de l'ADR.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.WebService.Portal</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Application&#160;Web IIS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Service Web du portail Permet au GPSC d’interroger et de mettre à jour le portail.</p>
+                                                                <p class="tabletext">Service Web WCF</p>
+                                                                <p class="tabletext">Certificat authentifié.</p>
+                                                                <p class="tabletext">Accède à l'API de SharePoint et a la base de données du GPSC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.WebService.RDA</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Application&#160;Web IIS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Service Web de l'ADR. Permet au portail d'interroger et de mettre a jour le GPSC.</p>
+                                                                <p class="tabletext">Service Web WCF</p>
+                                                                <p class="tabletext">Certificat authentifié.</p>
+                                                                <p class="tabletext">Se connecte au CRM par l'intermédiaire du SDK CRM de Microsoft.</p>
+                                                                <p class="tabletext">Hébergé dans l'ADR ou près du GPSC.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.WebService.SharePoint</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Solution de batterie dans SharePoint 2016</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Service Web dans SharePoint.</p>
+                                                                <p class="tabletext">Service Web RESTful hébergé et sécurisé par&#160; SharePoint.</p>
+                                                                <p class="tabletext">Accessible dans tous les zones sous l'URL.<code> _layouts/15/EgcsPortal.</code></p>
+                                                                <p class="tabletext">Exige la présentation POST des paramètres.</p>
+                                                                <p class="tabletext">Retourne des objets formatés pour JSON.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.WebService.WebAPI</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Application&#160;Web IIS</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Application WebAPI de Microsoft.</p>
+                                                                <p class="tabletext">Appelé à partir des plugiciels du bac à sable du GPSC.</p>
+                                                                <p class="tabletext">Se connecte au service Web du portail.</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>EGCS.Portal.SmartGuide</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext">DLL</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">DLL commun pour différentes fonctionnalités personnalisées accessibles dans SmartGuide.</p>
+                                                                <p class="tabletext">Exporte les Smartlets.</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="tabletext"><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="À propos de la FJGC|GCCFAbout.htm#aanchor308||À propos du portail|AboutPortal.htm#aanchor146||À propos du portail|AboutPortal.htm#aanchor147||Aperçu du service Web FormManager|WebServicePortalFormMgr.htm#aanchor75||Application Web des extensions des services ADFS (Active Directory Federation Services)|ADFSExtensionswebApp.htm#aanchor268||Application&#160;Web de domaine commun de la fédération des justificatifs du gouvernement du &#160;Canada (FJGC)|GCCFCommonDomainWebApp.htm#aanchor0||Applications SPFx pour le portail|SPFxAppsPortal.htm#aanchor102||Authentification du GPSC|GCPMAuthentication.htm#aanchor274||Authentification pour les utilisateurs de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFAuthentication.htm#aanchor203||Authentification pour les utilisateurs des agences de développement régional (ADR)|AuthenticationRDA.htm#aanchor386||Base de données de la fédération des justificatifs du gouvernement du Canada (FJGC)|GCCFDatabase.htm#aanchor402||Bâtir et déployer des applications SharePoint Framework (SPFx)|SPFxAppsBuildDeploy.htm#aanchor161||Certificat de SSL|Cert-SSL.htm#aanchor247||Certificats de la FJGC|Cert-GCCF.htm#aanchor12||Certificats de service Web d'agences régionales de développement (ADR)&#160;et de service Web de portail|Cert-RDAWebService.htm#aanchor267||Conception de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDev.htm#aanchor418||Configuration de GC.GCCF|GCCFConfig.htm#aanchor87||Configuration du portail – courriel d'invitation|PortalConfigInviteEmail.htm#aanchor133||Configuration du portail de la Solution d'entreprise pour les subventions et les contributions&#160;(SESC)|EGCSPortalConfig.htm#aanchor164||Configurer des formulaires pour le portail|SmartGuide/ConfigureApplic on portal.htm#aanchor30||Créer de nouveaux formulaires|SmartGuide/CreateNewForms.htm#aanchor108||Déploiement de formulaires pour le portail avec SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor69||Développement de composants WebPart SPFx|SPFxAppsProjectFolders.htm#aanchor56||Diagramme de relation d'entité de portail|../Modules/ERDs/ERD Portal.htm#aanchor290||Documentation de SmartGuide d'Alphinat|SmartGuide/AlphinatDoc.htm#aanchor114||Documents dans le portail|PortalDocs.htm#aanchor172||Élaborer des formulaires de portail - connexions|SmartGuide/PortalFormDevConnections.htm#aanchor428||Intégration de documents du portail au GPSC|PortalDocIntegGCPM.htm#aanchor13||Intégration du portail avec GPSC|Portal-GCPMIntegration.htm#aanchor405||Inviter un client SC sur le portail|UsingPortal/InviteClient.htm#aanchor186||Les formulaires dynamiques du portail|SmartGuide/PortalFormDynamic.htm#aanchor60||Métadonnées FPGC|GCCFMetadata.htm#aanchor166||Naviguer dans le portail|UsingPortal/NavigatePortal.htm#aanchor1||Notes de la version 1.0 du portail|PortalReleaseNotes1.0.htm#aanchor16||Personnalisation du portail|PortalBranding.htm#aanchor162||Portail - aperçu de la page maître|PortalMasterPage.htm#aanchor410||Sécurité du portail|PortalSecurity.htm#aanchor91||Serveur proxy inverse pou le portail|PortalReverseProxy.htm#aanchor394||Service de Windows : création de site|WindowsSiteCreation.htm#aanchor388||Service Web des ADR|WebServiceRDA.htm#aanchor97||Service Web FormManager|WebServiceFormMgr.htm#aanchor366||Service Web SharePoint|WebserviceSharePoint.htm#aanchor154||Service Web WebAPI|WebServiceWebAPI.htm#aanchor437||Services Web pour l'intégration de portails|WebServicesPortal.htm#aanchor420||SharePoint - structure du site du portail|PortalSharepointSiteStructure.htm#aanchor229||Solution GC.GCCF de  Visual Studio|VSSolutionGCCF.htm#aanchor295||Solution Visual Studio pour le EGCS.Portal|#aanchor88||Soumettre des données en tableaux avec un formulaire|UsingPortal/SubmitFormTable.htm#aanchor179||Soumettre des formulaires sur le portail|UsingPortal/SubmitForms.htm#aanchor215||Structure du&#160;Smartlet du GPSC|SmartGuide/PortalFormSmartletStructure.htm#aanchor385||Transfert de données du portail au &#160;GPSC|DataTransfer.htm#aanchor429"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

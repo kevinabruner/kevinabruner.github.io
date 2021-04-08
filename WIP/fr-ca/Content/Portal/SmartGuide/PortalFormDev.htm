@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|[%=System.LinkedTitle%]|Alphinat SmartGuide-Développement, localisation et branding">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Conception de formulaires pour le portail avec SmartGuide</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor418"></a>
+                                                    <MadCap:concept term="Portal" />Conception de formulaires pour le portail avec SmartGuide</h1>
+                                                <p>Le logiciel&#160;SmartGuide Designer sert à concevoir des formulaires pour le portail. La plupart des documents dont vous pouvez avoir besoin pour SmartGuide sont inclus dans l'aide en ligne du GPSC&#160;: <a href="AlphinatDoc.htm" class="MCXref xref">Documentation de SmartGuide d'Alphinat</a></p>
+                                                <p>Utilisez l'interface de protocole d'application (API) de SmartGuide pour étendre la fonctionnalité de SmartGuide. Certaines des extensions qui sont utilisées pour le portail du GPSC sont décrites ici.</p>
+                                                <h2>SmartGuide Designer</h2>
+                                                <p>Le logiciel SmartGuide Designer sert à créer des formulaires en glissant-déplaçant des zones sur des pages, en pouvant ensuite les subdiviser (les groupes sont répétables – cela permet une fonctionnalité semblable à celles de la représentation de grilles et de tableaux CROWE). Il y a deux types de zones sérialisées sur les formulaires : les zones de saisie et les zones de métadonnées. Elles se caractérisent par les critères suivants&#160;:</p>
+                                                <ul>
+                                                    <li value="1"><b>Zones de saisie&#160;</b>: Zones dans lesquelles l'utilisateur inscrit des données que nous voulons saisir dans CRM et qui ont une zone d'entité jumelée. Lorsque le formulaire est sérialisé, ces zones sont regroupées dans le format XML, selon leur entité d'appartenance. La convention de nommage des zones qui représentent une zone d'entité de CRM ests <b>entity_name.field_name</b> dans le nom interne de la zone dans SmartGuide.<p><b>Groupes de répétition&#160;</b>: Zones qui font partie d'une relation N:1 qu'il faut saisir &#160;(par exemple, les coûts d'un projet dans le cadre d'un projet) en utilisant cette convention de nommage&#160;: <b>entity_name.field_name </b>. Dans ce cas, I'entité ‘une’ suivie du nom de relation de cette entité avec l'entité <b>Plusieurs : N</b>.</p></li>
+                                                    <li value="2"><b>Zones de métadonnées&#160;</b>: Zones qui sont incluses dans le XML sérialisé, mais qui ne sont pas mises en correspondance avec une zone d'entité dans CRM. Une zone qui est considérée comme sérialisée, mais qui ne suit pas de convention de nommage de <code>entity_name.field_name</code> sera sérialisée en tant que nœud enfant du nœud de métadonnées. Ces nœuds peuvent être importants pour stocker des renseignements entre le portail et CRM afin de réduire les aller-retour de requêtes ou l'information qu'il faut enregistrer entre sessions de formulaire, mais qui ne sont mises en correspondance avec aucun registre dans CRM.</li>
+                                                </ul>
+                                                <p>Les zones sont sérialisées en fonction de ce qui suit&#160;:</p>
+                                                <ol>
+                                                    <li value="1">Si elles sont marquées comme étant persistantes, elles sont automatiquement sérialisées. Par exemple, des zones cachées peut renfermer de l'information comme des identificateurs que nous voulons envoyer à CRM, ou des JSON pour lesquels nous avons exécuté une requête à partir de CRM au moment de lancer le premier formulaire.</li>
+                                                    <li value="2">S'ils sont un type d'entrée (texte, date, sélection, etc.), ils sont sérialisés et groupés selon leur convention d'appellation.</li>
+                                                </ol>
+                                                <p>Les champs <b>Configuration </b>ne sont pas sérialisés dans le XML. Ils sont utilisés pour stocké les renseignements dans la séance de formulaire actuelle et aident à fournir du contexte. <b>Les éléments suivants sont communs et nécessaires pour tous les formulaires&#160;:</b></p>
+                                                <ul>
+                                                    <li value="1"><b>site&#160;</b>: un champ caché par un paramètre de requête, c'est l'URL relatif a serveur Web de l'entité de zone actuelle. En d'autres mots, il dénote l'utilisateur, le projet ou le client actuel.</li>
+                                                    <li value="2"><b>referenceNumber</b>&#160;: un champ caché qui est aussi rempli par un paramètre de requête, il est un identifiant facile à utiliser pour l'instance de formulaire actuelle.</li>
+                                                    <li value="3"><b>xml</b>&#160;: un champ caché qui conserve le XML sérialisé, utilisé sur le téléchargement du XML sur le formulaire afin d'être désérialisé et le XML sérialisé après le traitement du formulaire pour enregistrer sur SharePoint (ou soumettre à CRM).</li>
+                                                    <li value="4"><b>debug</b>&#160;: un champ caché utilisé pour appuyer la pseudo connexion lorsque le formulaire a des problèmes, ce champ peut être basculé vers une zone de texte pour aider au débogage.</li>
+                                                    <li value="5"><b>isSubmit</b>&#160;: une valeur booléenne passé au service Web <code>SaveDraft</code>. Lorsque le bouton <b>Soumettre </b>est appuyé, il bascule de faux à vrai - dénotant que cet enregistrement est maintenant soumise.</li>
+                                                    <li value="6"><b>userCanEdit</b>&#160;: une valeur booléenne qui détermine si l'utilisateur a les permissions appropriées pour enregistrer / soumettre le formulaire. Si définit à faux, les boutons enregistrer et soumettre sont cachés.</li>
+                                                    <li value="7"><b>SubmissionPDF&#160;</b>: un champ caché qui contient la valeur codée base 64 des contenus PDF générés lorsque la soumission du formulaire est déclenché.</li>
+                                                    <li value="8"><b>saveResult&#160;</b>: Une valeur booléenne qui représente la valeur retourné lorsque qu'un enregistrement ou une soumission est réalisé. Important&#160;: ce champ est actuellement un champ de texte qui utilise CSS pour le cacher. Le raisonnement est qu'il a besoin d'avoir une classe CSS qui lui est attribué (élément d'enregistrement) afin de déclencher correctement un code dans le fichier Thème pour offrir une rétroaction à l'utilisateur (réussite ou échec). Ce champ doit aussi exister sur chaque page avec chaque copie qui a leur valeur par défaut défini à la valeur du champ d'origine (le champ d'origine est cartographié au résultat de l'appel au service Web <code>saveDraft</code>).</li>
+                                                    <li value="9"><b>Fc_Profile_ID</b>&#160;: sur les formulaires au niveau du projet, il est récupérer au téléchargement du formulaire et utilisé pour les requêtes au&#160;CRM.</li>
+                                                </ul>
+                                                <p><b>Currency Fields</b>&#160;: les champs qui ont pour but de refléter les valeurs de devise ont besoin d'avoir une configuration spéciale afin d'appuyer la concrétisation adéquate du caractère «&#160;$&#160;» pour l'affichage actuel. Trois pièces principales de configuration ont besoin d'être utilisées afin de l'appuyer&#160;:</p>
+                                                <ul>
+                                                    <li value="1">Avoir le préfixe du champ de la devise dans les champs de l'onglet «&#160;Apparence » assigné à «&#160;$&#160;».</li>
+                                                    <li value="2">
+                                                        <p>Avoir un classe CSS «&#160;<code>amountnumeric</code>&#160;» assignée dans l'onglet «&#160;Apparence&#160;»<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/Portal/AppearanceTab.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="624" data-mc-height="355" src="../../Resources/Images/Portal/AppearanceTab_thumb_0_48.png" tabindex="" /></a></p>
+                                                    </li>
+                                                    <li value="3">Dans le document de traduction, avoir le «&#160;$&#160;» en <b>suffixe </b>pour la colonne Français<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/Portal/Suffix.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="618" data-mc-height="94" src="../../Resources/Images/Portal/Suffix_thumb_0_48.png" tabindex="" /></a></li>
+                                                </ul>
+                                                <h2>Pièce jointe du document</h2>
+                                                <p>Chaque page a un bouton<b> Joindre / Voir documents </b>dans le cadre du thème WET_THEME. Ce bouton ouvre une boîte de dialogue qui permet aux utilisateurs de télécharger des documents (en naviguant ou en utilisant la fonction de glisser-déposer) au dossier de soumission du formulaire pour l'ébauche actuelle du formulaire.</p>
+                                                <h2>Structure du&#160;Smartlet du GPSC</h2>
+                                                <p>Les formulaires du SamrtGuide (Smartlets) suivent une structure générale&#160;:</p>
+                                                <ul>
+                                                    <li value="1">Une ou de multiples pagesà pour recueillir l'entrée par l'utilisateur. Mis à part le contenu pour recueillir l'entrée de l'utilisateur, chaque page a aussi des boutons pour&#160;:<ul><li value="1">Enregistrer - un champ de la configuration de l'enregistrement pour conserver le résultat d'une opération <code>SaveDraft</code></li><li value="2">Navigation Précédant et Suivant</li><li value="3">Joindre / &#160;Voir les documents.</li></ul></li>
+                                                    <li value="2">Page d'examen<p> &#160;La page d'examen est composé de l'outil de récapitulation des données de SmartGuide, un bouton Soumettre, un champ de la configuration du résultat de la soumission pour conserver les résultats de la soumission<code>SaveDraft</code>, un bouton Joindre / Voir les documents et un bouton Précédent. La récapitulation de données permet au concepteur du formulaire d'inclure et d'exclure les données qui n'ont pas besoin d'être reflétées à l'utilisateur dans le cadre de leur soumission. La génération de PDF est basée sur cette page ou sur l'outil de récapitulation de données. Après avoir cliqué sur soumettre et avoir généré avoir succès l'aperçu PDF et envoyé les données appropriées au CRM, le formulaire avance à la page Réussite</p></li>
+                                                    <li value="3">Page Réussite<p> Elle informe un utilisateur que le formulaire a été soumis et affiche un numéro de référence. Les utilisateurs peuvent accéder au bouton J<b>oindre / Voir les documents</b>, mais ne peuvent pas faire de changement aux documents de soumission (XML et aperçu PDF) et tous les fichiers correspondants sont en lecture seule.</p></li>
+                                                </ul>
+                                                <h2>Connexions</h2>
+                                                <p>Deux types de connexions sont configurées -&#160;les fonctions d'extension d'API et les appels de services Web de SharePoint.</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Fonctions d'extension</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Fonctions d'extension</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Fonction d'extension</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p><code>SmartletSerializer</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">Cette fonction se produit lors de l'enregistrement ou la soumission du formulaire.</p>
+                                                                        <p class="tabletext">Il évolue par le formulaire et sérialise les champs d'entrée et les métadonnées.</p>
+                                                                        <p class="tabletext">Le nœud racine est nommé d'après le nom interne du Smartlet avec ses nœuds enfants qui sont des métadonnées et toutes les entités qui existent sur le formulaire.</p>
+                                                                        <p class="tabletext">Les Métadonnées enfants sont les champs qui sont indiqué comme étant possible de sérialiser, mais qui ne suivent pas la convention d’appellation <code>entity.field</code>.</p>
+                                                                        <p class="tabletext">Les nœuds enfants ont leurs champs comme enfants directs. Le fil&#160;XML sérialisé est conservé dans le champ de configuration nommé «&#160;XML»</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p><code>GeneratePDF</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Cette fonction se produit à la Soumission du formulaire.</p>
+                                                                        <p class="tabletext">Il génère le fil codé based64 de la représentation PDF du formulaire et de l'entrée de l'utilisateur.</p>
+                                                                        <p class="tabletext">Les contenus du&#160;PDF sont déterminés par ce qui se trouve dans le champ de récapitulation des données sur la page Examen.</p>
+                                                                        <p class="tabletext">Pour les changer, dans la fonction d'extension GeneratePDF, vous pouvez changer quelles pages sont converties dans l'aperçu du&#160; PDF en utilisant la convention suivante lors de la création du tableau d'octets&#160;:</p>
+                                                                        <p class="tabletext"><code>
+byte[] bytes = smartlet.generateFile(Constants.FileType.PDF, $"P{page1Id}}:PrintOut |P{page2Id}:PrintOut");
+</code>
+                                                                        </p>
+                                                                        <p class="tabletext">Essentiellement, la convention d’appellation est ‘P’ + IdOfPageToAdd + ‘:’ + ‘NameOfTemplate’.</p>
+                                                                        <p class="tabletext">Toutes les pages additionnelles suivent la même convention d'appellation avec un caractère de pipeline «&#160;|&#160;» entre le nom du modèle et le caractère «&#160;P&#160;».</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext"><code>InitializeRequestParameters</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">Cette fonction tire les données des paramètres de requête et défini leurs champs de configuration correspondants.</p>
+                                                                        <p class="tabletext">Il se produit à l'initialisation du&#160;Smartlet.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext"><code>InitSmartlet</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Cette fonction se produit au chargement du formulaire, il appelle le service Web<code>LoadDraft </code>webservice and <code>SmartletDeserializer</code>.</p>
+                                                                        <p class="tabletext">Les autres appels à la fonction d'extension et au service Web peuvent être fait de façon à être plus dépendant du formulaire.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p class="tabletext"><code>ImportCsv</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                        <p class="tabletext">Cette fonction permet à l'utilisateur de télécharger un modèle offert, le remplier avec les données et le télécharger sur le formulaire afin de créer des rangées dans un groupe répétitif.</p>
+                                                                        <p class="tabletext">Deux paramètres, le nom du champ de téléchargement du SmartGuide et le groupe répétitif ont besoin d'être fourni.</p>
+                                                                        <p class="tabletext"><b>Important&#160;</b>: l'utilisateur doit téléverser un CSV avec les entêtes qui correspondent aux étiquettes des champs du groupe répétitif. Le formulaire ne prend pas en compte si la langue du modèle correspond à la langue actuelle de SmartGuide (peut télécharger le modèle Anglais dans le contexte du formulaire Français et vice versa).</p>
+                                                                        <p class="tabletext">Par contre, il suppose que l'entrée correspond à la langue CSV - ce qui signifie que les devises suivront les formats de devise en français dans le modèle Français s'ils utilisent un formatage de la devise. Les groupes répétitifs qui ont des champs déroulant ou à sélection ou les champs calculés seront aussi ignoré et ne seront pas nécessaire dans le modèle CSV.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Connexions SharePoint</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Elles contiennent tous les appels au service Web que le formulaire réalise. Tous les appels de service Web à CRM sont effectués par le service Web SharePoint.</p>
+                                                        <p>Pour de plus amples renseignements, consultez <a href="../WebserviceSharePoint.htm" class="MCXref xref">Service Web SharePoint</a></p>
+                                                        <ul>
+                                                            <li value="1">Lors de l'ajout de nouveaux services Web, il est important de comprendre les entêtes suivantes ainsi que leurs valeurs par défaut.</li>
+                                                            <li value="2">Lors de l'ajout de l'URL au service Web, un paramètre additionnel {Client-Site} devrait être pris en charge au préalable à l'emplacement où le service Web est conservé.</li>
+                                                            <li value="3">Lors de la création de la référence au service sur le Smartlet, il devrait être défini à la valeur de la variable de la configuration «&#160;site&#160;».</li>
+                                                        </ul>
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Connexions SharePoint</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p>Entête</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p>Valeur</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Type de contenu</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"><code>application/json;odata=verbose</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Cookie</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"><code>${requestHeader("Cookie")}$</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Référant</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows"><code>${"https://" + requestHeader("Host") + "/"}$</code>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <p>Consultez <a href="PortalFormDynamic.htm" class="MCXref xref">Les formulaires dynamiques du portail</a>.</p>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="À propos de la FJGC|../GCCFAbout.htm#aanchor308||À propos du portail|../AboutPortal.htm#aanchor146||À propos du portail|../AboutPortal.htm#aanchor147||Aperçu du service Web FormManager|../WebServicePortalFormMgr.htm#aanchor75||Application Web des extensions des services ADFS (Active Directory Federation Services)|../ADFSExtensionswebApp.htm#aanchor268||Application&#160;Web de domaine commun de la fédération des justificatifs du gouvernement du &#160;Canada (FJGC)|../GCCFCommonDomainWebApp.htm#aanchor0||Applications SPFx pour le portail|../SPFxAppsPortal.htm#aanchor102||Authentification du GPSC|../GCPMAuthentication.htm#aanchor274||Authentification pour les utilisateurs de la fédération des justificatifs du gouvernement du Canada (FJGC)|../GCCFAuthentication.htm#aanchor203||Authentification pour les utilisateurs des agences de développement régional (ADR)|../AuthenticationRDA.htm#aanchor386||Base de données de la fédération des justificatifs du gouvernement du Canada (FJGC)|../GCCFDatabase.htm#aanchor402||Bâtir et déployer des applications SharePoint Framework (SPFx)|../SPFxAppsBuildDeploy.htm#aanchor161||Certificat de SSL|../Cert-SSL.htm#aanchor247||Certificats de la FJGC|../Cert-GCCF.htm#aanchor12||Certificats de service Web d'agences régionales de développement (ADR)&#160;et de service Web de portail|../Cert-RDAWebService.htm#aanchor267||Conception de formulaires pour le portail avec SmartGuide|#aanchor418||Configuration de GC.GCCF|../GCCFConfig.htm#aanchor87||Configuration du portail – courriel d'invitation|../PortalConfigInviteEmail.htm#aanchor133||Configuration du portail de la Solution d'entreprise pour les subventions et les contributions&#160;(SESC)|../EGCSPortalConfig.htm#aanchor164||Configurer des formulaires pour le portail|ConfigureApplic on portal.htm#aanchor30||Créer de nouveaux formulaires|CreateNewForms.htm#aanchor108||Déploiement de formulaires pour le portail avec SmartGuide|PortalFormDeploy.htm#aanchor69||Développement de composants WebPart SPFx|../SPFxAppsProjectFolders.htm#aanchor56||Diagramme de relation d'entité de portail|../../Modules/ERDs/ERD Portal.htm#aanchor290||Documentation de SmartGuide d'Alphinat|AlphinatDoc.htm#aanchor114||Documents dans le portail|../PortalDocs.htm#aanchor172||Élaborer des formulaires de portail - connexions|PortalFormDevConnections.htm#aanchor428||Intégration de documents du portail au GPSC|../PortalDocIntegGCPM.htm#aanchor13||Intégration du portail avec GPSC|../Portal-GCPMIntegration.htm#aanchor405||Inviter un client SC sur le portail|../UsingPortal/InviteClient.htm#aanchor186||Les formulaires dynamiques du portail|PortalFormDynamic.htm#aanchor60||Métadonnées FPGC|../GCCFMetadata.htm#aanchor166||Naviguer dans le portail|../UsingPortal/NavigatePortal.htm#aanchor1||Notes de la version 1.0 du portail|../PortalReleaseNotes1.0.htm#aanchor16||Personnalisation du portail|../PortalBranding.htm#aanchor162||Portail - aperçu de la page maître|../PortalMasterPage.htm#aanchor410||Sécurité du portail|../PortalSecurity.htm#aanchor91||Serveur proxy inverse pou le portail|../PortalReverseProxy.htm#aanchor394||Service de Windows : création de site|../WindowsSiteCreation.htm#aanchor388||Service Web des ADR|../WebServiceRDA.htm#aanchor97||Service Web FormManager|../WebServiceFormMgr.htm#aanchor366||Service Web SharePoint|../WebserviceSharePoint.htm#aanchor154||Service Web WebAPI|../WebServiceWebAPI.htm#aanchor437||Services Web pour l'intégration de portails|../WebServicesPortal.htm#aanchor420||SharePoint - structure du site du portail|../PortalSharepointSiteStructure.htm#aanchor229||Solution GC.GCCF de  Visual Studio|../VSSolutionGCCF.htm#aanchor295||Solution Visual Studio pour le EGCS.Portal|../VSSolutionEGCSPortal.htm#aanchor88||Soumettre des données en tableaux avec un formulaire|../UsingPortal/SubmitFormTable.htm#aanchor179||Soumettre des formulaires sur le portail|../UsingPortal/SubmitForms.htm#aanchor215||Structure du&#160;Smartlet du GPSC|PortalFormSmartletStructure.htm#aanchor385||Transfert de données du portail au &#160;GPSC|../DataTransfer.htm#aanchor429"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

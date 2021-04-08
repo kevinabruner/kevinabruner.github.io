@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|Intégration financière">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Intégration des Fournisseurs clients</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor198"></a>
+                                                    <MadCap:concept term="SF" />Intégration des Fournisseurs clients</h1>
+                                                <p>Les Fournisseurs clients stockent les renseignements dans le GPSC qui sont liés au&#160;Fournisseur et aux Clients dans le système financier.</p>
+                                                <p>Le GPSC a plusieurs points qui font référence et qui interagissent avec un fournisseur client.</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conditions préalables:</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <ul>
+                                                            <li value="1">Solutions d'intégration financière</li>
+                                                            <li value="2"><a href="FIWorkflows.htm" class="MCXref xref">Flux pour l'intégration financière</a>
+                                                            </li>
+                                                            <li value="3"><a href="FICustomWorkflowSteps.htm" class="MCXref xref">Financial integration custom workflow steps</a>
+                                                            </li>
+                                                            <li value="4"><a href="FIEntityModels.htm" class="MCXref xref">Modèles d'entité du système financier</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <h3>Associer un fournisseur ou un client avec un Client SC</h3>
+                                                <p>Afin d'associer un fournisseur ou un client existant avec un Client SC&#160;:</p>
+                                                <ol>
+                                                    <li value="1">Dans un enregistrement de Client SC, naviguez vers les <b>Données du système financier</b> et cliquez sur <b>+ </b>pour créer un nouveau enregistrement FournisseurClient. <br /><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../../Resources/Images/SH/VendorCustomer.png"><img class="MCPopupThumbnail img" data-mc-width="1279" data-mc-height="229" src="../../Resources/Images/SH/VendorCustomer_thumb_0_48.png" tabindex="" /></a><br /></li>
+                                                    <li value="2">Changer le type de Founisseur Client à <b>Cartographié</b>.<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/SH/VendorCustomerNewFR.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="663" data-mc-height="651" src="../../Resources/Images/SH/VendorCustomerNewFR_thumb_0_48.png" tabindex="" /></a><br /></li>
+                                                    <li value="3">Remplissez les champs au moyen de la fonction d'aide à l'écran et les notes ci-dessous :<ul><li value="1"><b>Nom </b>: rempli automatiquement avec le nom officiel du compte. Votre organisation peut choisir si vous souhaitez verrouiller ce champ. </li><li value="2"><b>Est-ce un Fournisseur</b>&#160;: Oui / Non. <b>Oui </b>affichera les champs relatifs au fournisseur. </li><li value="3"><b>Est-ce un Client&#160;</b>: Oui / Non. <b>Oui </b>affichera les champs relatifs au client. </li><li value="4"><b>Type de carte Fournisseur Client </b>: indique si c'est un FournisseurClient nouveau ou cartographié (existant).</li><li value="5"><b>Utilisateur de l'intégration financière&#160;:</b> l'utilisateur qui soumet les données au système financier. Il sera automatiquement rempli si votre organisation décide de mettre en œuvre le remplissage automatique.</li></ul></li>
+                                                    <li value="4">Selon les signaux <b>Est-ce un Fournisseur</b>&#160;et <b>Est-ce un Client</b>, vous verrez le<b> code de Fournisseur, </b>le <b>code de Fournisseur Client </b>ou le<b> code de Client</b>.<br /></li>
+                                                    <li value="5">Entrez identifiant unique de votre système financier dans le champs approprié.</li>
+                                                    <li value="6">
+                                                        <p>Enregistrez l'enregistrements pour attirer les données.</p>
+                                                    </li>
+                                                </ol>
+                                                <h2>Automatiser la création d'intégration financière des Fournisseur Client</h2>
+                                                <p>Afin d'automatiser la création d'intégration financière des Fournisseur Client pendant le cycle de vie du projet&#160;:</p>
+                                                <ol>
+                                                    <li value="1">Naviguez vers <b>Paramètres &gt; Processus</b> et ouvrez le flux <b>Générer FournisseurClient du projet</b> (ou un autre flux que vous voulez utiliser pour générer l'enregistrement d'intégration financière de l'enregistrement du FournissseurClient à partir de votre projet).</li>
+                                                    <li value="2">Agrandir la fenêtre afin de voir son &#160;ID dans la barre d'adresse. <br /><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../../Resources/Images/SH/VendorCustomerID.png"><img class="MCPopupThumbnail img" data-mc-width="1074" data-mc-height="673" src="../../Resources/Images/SH/VendorCustomerID_thumb_0_48.png" tabindex="" /></a></li>
+                                                    <li value="3">Copiez l'ID et conservez-le pour une utilisation ultérieure. Excluez <code>%7b</code> and<code> %7d</code> lors de la copie.</li>
+                                                    <li value="4">Naviguez vers votre modèle de transition désiré&#160;: <b>Programmes &gt; </b>et sélectionnez un programme.</li>
+                                                    <li value="5">Agrandir les<b> Modèles du cycle de vie des projets</b> et cliquez sur recherche du <b>Modèle de transition</b>.<br /></li>
+                                                    <li value="6">Trouvez la transition adéquate et ouvrez son ensemble d'action.</li>
+                                                    <li value="7">Si vous avez besoin de créer une action&#160;:<ul><li value="1">Ajoutez une nouvelle action, sélectionnez la définition de <b>Déclencher flux </b>et remplissez tout autre champ désiré.<br /></li><li value="2">Défilez vers le bas et entrez l'ID du flux que vous avez copiez dans l'étape ci-dessus et cliquez sur <b>Enregistrer paramètres</b>.</li><li value="3">Enregistrez et fermez l'action.</li></ul></li>
+                                                </ol>
+                                                <h2>Importer des Fournisseurs et des Clients</h2>
+                                                <p>Si vous choisissez de faire une importation complètes des Fournisseurs et des Clients à partir de votre système financier vous devriez les éléments suivants à l'esprit&#160;:</p>
+                                                <ul>
+                                                    <li value="1">Il y a une recherche pour l'intégration financière des Fournisseurs Clients aux niveaux du Compte, du Client SC et du Projet qui devrait être remplie une fois que l'enregistrement de l'intégration financière du Fournisseur Client sont créés.</li>
+                                                    <li value="2">Chaque compte et chaque&#160;Client SC ont seulement une intégration financière du Fournisseur Client. Créez <u>un</u> enregistrement avec les données du Fournisseur et du Client qui s'y trouvent. Ne créez pas deux enregistrements pour garder un fournisseur et un client séparé.</li>
+                                                </ul>
+                                                <p>Si votre organisation ne fait pas une importation complète des objets FournisseurClient&#160;:</p>
+                                                <ul>
+                                                    <li value="1">Le flux <b>Generate VendorCustomer from Project </b>n'est pas assez intelligent pour savoir s'il existe un FournisseurClient dans votre système financier qui devrait être cartographié à un projet de Client SC plutôt que d'en créer un nouveau.</li>
+                                                    <li value="2">Afin d'atténuer ce problème, une action de validation <b>Verify Vendor does not already exist in Financial System </b>(<b>Vérifier que le Fournisseur n'existe pas dans le système financier</b>) crée un avertissement dans le cas qu'un champ de l'intégration financière du&#160;Fournisseur Client sur le Client SC soit vide.</li>
+                                                </ul>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="SF" href="javascript:void(0);" data-mc-topics="À propos de l'intégration du système financier avec le GPSC|../AboutGCPMFI.htm#aanchor208||Composants de la module de l'intégration financière|../../Modules/Components/Tools/FIComponents.htm#aanchor180||Diagramme relationnel de l'entité d'intégration financière - simplifié|ERDFIsimplified.htm#aanchor440||Entités d'intégration financière|FIEntities.htm#aanchor139||Financial integration custom workflow steps|FICustomWorkflowSteps.htm#aanchor296||Flux pour l'intégration financière|FIWorkflows.htm#aanchor300||Intégration de l'engagement|FICommitInteg.htm#aanchor217||Intégration de paiement|FIPaymentIntegration.htm#aanchor430||Intégration des créances|FIReceivableIntegration.htm#aanchor144||Intégration des Fournisseurs clients|#aanchor198||Intégration du&#160;CAFE|FIPAYEInteg.htm#aanchor370||Intégration financière des états de l'entité (aussi appelé appareil d'état)|FIEntityStates.htm#aanchor409||L'intégration financière &#160;API&#160;REST|FIRestAPI.htm#aanchor195||Mettre à jour les enregistrements FournisseurClient|FIVCUpdate.htm#aanchor329||Mise en place des objets pour l'intégration financière de l'utilisateur|SettingUpFIUserObjects.htm#aanchor305||Modèles d'entité du système financier|FIEntityModels.htm#aanchor218||Prérequis de l'intégration financière|FIPrerequisites.htm#aanchor85"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

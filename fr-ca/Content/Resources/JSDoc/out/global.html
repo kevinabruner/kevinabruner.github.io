@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développeur">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>JSDoc: Global</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="styles/prettify-tomorrow.css" rel="stylesheet" />
+        <link href="styles/jsdoc-default.css" rel="stylesheet" />
+        <script src="scripts/prettify/prettify.js">
+        </script>
+        <script src="scripts/prettify/lang-css.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Précédent" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Saisissez votre terme de recherche ici" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Rechercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Rechercher notre aide et documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>Tous les fichiers</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Rechercher">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Changer la langue">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Imprimer rubrique">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Sujet Précédent">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Sujet Suivant">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Supprimer mise en surbrillance ">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_1_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" />Conseils  recherche</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>La recherche est basée sur le mot clé.</p>
+                                                        <p><samp>Ex:&#160;&lt;&lt;Procédures&gt;&gt;</samp>
+                                                        </p>
+                                                        <p>Ne cherchez pas avec le langage naturel</p>
+                                                        <p><samp>e.g.:&#160;&lt;&lt;Comment puis-je écrire une nouvelle procédure?&gt;&gt;</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/fr-ca/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                        </div>
+                                        <div>
+                                            <div id="main">
+                                                <h1 class="page-title">Global</h1>
+                                                <section>
+                                                    <article>
+                                                        <div class="container-overview">&#160;</div>
+                                                        <h3 class="subsection-title">Methods</h3>
+                                                        <h4 class="name" id="addOnChange"><span class="type-signature"></span>addOnChange<span class="signature">(attrName:, callback:)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">The function adds a onChange event on a field</p>
+                                                        <div class="description">The function adds a onChange event on a field</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>attrName:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field to be set</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>callback:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the fumction</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line8">line 8</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>addOnChange("egcs_provincialbusinessnumber", function (context) { var execContext = context; egcs_common.validateNumberString(execContext) });
+     </code></pre>
+                                                        <h4 class="name" id="checkDateNotInFuture"><span class="type-signature"></span>checkDateNotInFuture<span class="signature">(context, attributeName)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">Check value for Date field</p>
+                                                        <div class="description">Check value for Date field</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">objet</span>
+                                                                    </td>
+                                                                    <td class="description last">Execution Context</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>attributeName</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Name of the date type field that are being checked</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line706">line 706</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>checkDateNotInFuture('egcs_ay_mydatetypefield')
+	</code></pre>
+                                                        <h4 class="name" id="FieldOnLoadSetSubmitMode"><span class="type-signature"></span>FieldOnLoadSetSubmitMode<span class="signature">(submit_mode, array_fields)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">Set Submit Mode to field(s)</p>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>submit_mode</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Submit mode value. Possible values are NEVER, ALWAYS, DIRTY.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>array_fields</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">Array.&lt;string&gt;</span>
+                                                                    </td>
+                                                                    <td class="description last">Array of fields name to set Submit Mode.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line756">line 756</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>FieldOnLoadSetSubmitMode ('always',['egcs_level2','egcs_level3','egcs_mycustom_name'])
+	 </code></pre>
+                                                        <h4 class="name" id="fireEvent"><span class="type-signature"></span>fireEvent<span class="signature">(context:, inField:)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">The function triggers onChange event</p>
+                                                        <div class="description">The function triggers onChange event</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">objet</span>
+                                                                    </td>
+                                                                    <td class="description last">execution context</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>inField:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field to trigger onChange event</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line28">line 28</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>fireEvent ("egcs_ay_country")
+     </code></pre>
+                                                        <h4 class="name" id="getAttribute"><span class="type-signature"></span>getAttribute<span class="signature">(attrName:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function gets the value of a field</p>
+                                                        <div class="description">The function gets the value of a field</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>attrName:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field to get the value</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line47">line 47</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Value of the attribute</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>getAttribute("egcs_name")
+     </code></pre>
+                                                        <h4 class="name" id="getLookup"><span class="type-signature"></span>getLookup<span class="signature">(name:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function gets the value of a loookup</p>
+                                                        <div class="description">The function gets the value of a lookup</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>name:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field to get the lookup</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line69">line 69</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Value of the lookup</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>getLookup("egcs_fcprofileid")
+     </code></pre>
+                                                        <h4 class="name" id="LookupOnChangeSetLevelUp"><span class="type-signature"></span>LookupOnChangeSetLevelUp<span class="signature">(field_name, id, entityType, fire_on_change_flag)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">Set value for Lookup Field</p>
+                                                        <div class="description">Set value for Lookup Field</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>field_name</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Name of the lookup field that are being changed</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>id</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">GUILD</span>
+                                                                    </td>
+                                                                    <td class="description last">GUID of value to be assign to lookup field</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>entityType</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Type of the entity for lookup field</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>fire_on_change_flag</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">boolean</span>
+                                                                    </td>
+                                                                    <td class="description last">Boolean to set if OnChange event will be initiated</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line817">line 817</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1"><a href="#SetFieldValueForLookup">SetFieldValueForLookup</a>
+                                                            </li>
+                                                            <li value="2">retrieveRecord</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>LookupOnChangeSetLevelUp('egcs_ay_addresscity','egcs_ay_addresscities','egcs_ay_addresssubdivision','egcs_AY_AddressSubDivision','egcs_ay_addresssubdivisions','egcs_ay_addresssubdivisionid','egcs_name',true)
+	</code></pre>
+                                                        <h4 class="name" id="maskInputField"><span class="type-signature"></span>maskInputField<span class="signature">(fieldName, formatFieldName, toUpper)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">Set mask for field</p>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>fieldName</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">A String for the name of the field to apply mask to</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>formatFieldName</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">A String represending mask</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>toUpper</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">boolean</span>
+                                                                    </td>
+                                                                    <td class="description last">Boolean to define if upper case should be apply to masked field.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Vladimir Staka</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line186">line 186</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">jQueryMaskedInputPlugin</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>MaskInputField('egcs_ay_mydatetypefield','+1(NNN)NNN-NNNN',false)
+	</code></pre>
+                                                        <h4 class="name" id="nullTransfer"><span class="type-signature"></span>nullTransfer<span class="signature">(currentfield:)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">The function resets the check box to Unchecked.</p>
+                                                        <div class="description">The function resets the check box to Unchecked.</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>currentfield:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field to be set</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line642">line 642</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>nullTransfer("egcs_sameasmailingaddress")
+     </code></pre>
+                                                        <h4 class="name" id="onValidateCRANumberCheck"><span class="type-signature"></span>onValidateCRANumberCheck<span class="signature">(context:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function validates the CRA Number format</p>
+                                                        <div class="description">The function validates the CRA Number format</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context:</code>
+                                                                    </td>
+                                                                    <td class="type" />
+                                                                    <td class="description last">CRM Context</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line489">line 489</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Boolean if the lenghth is respected</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>onValidateCRANumberCheck(context)
+     </code></pre>
+                                                        <h4 class="name" id="removeBrackets"><span class="type-signature"></span>removeBrackets<span class="signature">(str:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function removes the barckets from an ID</p>
+                                                        <div class="description">The function removes the barckets from an ID</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>str:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">the string ID to remove the backets</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line171">line 171</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Value of an ID without the brackets</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>removeBrackets(profileId)
+     </code></pre>
+                                                        <h4 class="name" id="Request"><span class="type-signature"></span>Request<span class="signature">()</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">Build Request fo JSON string</p>
+                                                        <div class="description">Build Request fo JSON string</div>
+                                                        <dl class="details">
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line94">line 94</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h4 class="name" id="Request_IFrame"><span class="type-signature"></span>Request_IFrame<span class="signature">()</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">Build Request fo JSON string</p>
+                                                        <div class="description">Build Request fo JSON string</div>
+                                                        <dl class="details">
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line133">line 133</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h4 class="name" id="sameAs"><span class="type-signature"></span>sameAs<span class="signature">(currentfield:, inarraytoFromFields:)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">The function copy values between fields on the form</p>
+                                                        <div class="description">The function copy values between fields on the form</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>currentfield:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field that are checked</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>inarraytoFromFields:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">array</span>
+                                                                    </td>
+                                                                    <td class="description last">two dimentional array of from and to fields.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line611">line 611</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>sameAs("egcs_yesnosameasprimary", [["address2_line1", "address1_line1"], ["address2_city", "address1_city"], ["address2_stateorprovince", "address1_stateorprovince"], ["address2_line2", "address1_line2"], ["address2_line3", "address1_line3"], ["egcs_address2_city", "egcs_address1_city"], ["egcs_address2_province", "egcs_address1_province"], ["egcs_address2_country", "egcs_address1_country"], ["address2_postalcode", "address1_postalcode"]]);
+     </code></pre>
+                                                        <h4 class="name" id="SetDefaultDateTimeValue"><span class="type-signature"></span>SetDefaultDateTimeValue<span class="signature">(attributeName, hour, minute-, reset_flag)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">Set value for Date field</p>
+                                                        <div class="description">Set value for Date field</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>attributeName</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Name of the date type field that are being changed</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>hour</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">int</span>
+                                                                    </td>
+                                                                    <td class="description last">int value for hour. Acceptable values between 0 and 23</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>minute-</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">int</span>
+                                                                    </td>
+                                                                    <td class="description last">int value for minutes. Acceptable values between 0 and 59</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>reset_flag</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">boolean</span>
+                                                                    </td>
+                                                                    <td class="description last">Boolean to define if value of data type field should be reset. If reset_flag=true, value of the data type field will be updated.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line682">line 682</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>SetDefaultDateTimeValue('egcs_ay_mydatetypefield',15,30,true)
+	</code></pre>
+                                                        <h4 class="name" id="setFieldToNull"><span class="type-signature"></span>setFieldToNull<span class="signature">(fieldName:)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">The function sets the value of the given field to null.</p>
+                                                        <div class="description">The function sets the value of the given field to null.</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>fieldName:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the field to be set</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Carlos Casado</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line665">line 665</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>setFieldToNull("egcs_secondaryaccount")
+     </code></pre>
+                                                        <h4 class="name" id="SetFieldValueForLookup"><span class="type-signature"></span>SetFieldValueForLookup<span class="signature">(field_name, id, entityType, fire_on_change_flag)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">Set value for Lookup Field</p>
+                                                        <div class="description">Set value for Lookup Field</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>field_name</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Name of the lookup field that are being changed</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>id</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">GUILD</span>
+                                                                    </td>
+                                                                    <td class="description last">GUID of value to be assign to lookup field</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>entityType</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">Type of the entity for lookup field (schema name)</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>fire_on_change_flag</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">boolean</span>
+                                                                    </td>
+                                                                    <td class="description last">Boolean to set if OnChange event will be initiated</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Tetyana Ryabets-Zuk</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line780">line 780</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>SetFieldValueForLookup('egcs_ay_addresssubdivision','0000-0000-0000-0000',''egcs_AY_AddressSubDivision',true)
+	</code></pre>
+                                                        <h4 class="name" id="transferValue"><span class="type-signature"></span>transferValue<span class="signature">(controlnameFROM:, controlnameTO:)</span><span class="type-signature"> → {none}</span></h4>
+                                                        <p class="summary">The function copies value between field on the form</p>
+                                                        <div class="description">The function copies value between field on the form</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>controlnameFROM:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the FROM field</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>controlnameTO:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">string</span>
+                                                                    </td>
+                                                                    <td class="description last">name of the TO field</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Vladimir Staka</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line590">line 590</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <dl>
+                                                            <dt>Type</dt>
+                                                            <dd><span class="param-type">none</span>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>transferValue("address2_line1", "address1_line1");
+     </code></pre>
+                                                        <h4 class="name" id="validateEmail"><span class="type-signature"></span>validateEmail<span class="signature">(context:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function validates the email format</p>
+                                                        <div class="description">The function validates the email format</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context:</code>
+                                                                    </td>
+                                                                    <td class="type" />
+                                                                    <td class="description last">CRM Context</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line351">line 351</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Boolean if the format is respected</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>validateEmail(context)
+     </code></pre>
+                                                        <h4 class="name" id="validateNumberString"><span class="type-signature"></span>validateNumberString<span class="signature">(context:, minLength:, maxLength:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function validates the length of field</p>
+                                                        <div class="description">The function validates the length of field. The context will capture the field that triggerred the function</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context:</code>
+                                                                    </td>
+                                                                    <td class="type" />
+                                                                    <td class="description last">CRM Context</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>minLength:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">int</span>
+                                                                    </td>
+                                                                    <td class="description last">Minimal length of a string</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>maxLength:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">int</span>
+                                                                    </td>
+                                                                    <td class="description last">Maximal length of a string</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line217">line 217</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Boolean if the lenghth is respected</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>validateNumberString(context,0,10)
+     </code></pre>
+                                                        <h4 class="name" id="validateNumberStringNoMax"><span class="type-signature"></span>validateNumberStringNoMax<span class="signature">(context:, minLength:, maxLength:)</span><span class="type-signature"></span></h4>
+                                                        <p class="summary">The function validates the length of field</p>
+                                                        <div class="description">The function validates the length of field. The context will capture the field that triggerred the function</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context:</code>
+                                                                    </td>
+                                                                    <td class="type" />
+                                                                    <td class="description last">CRM Context</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>minLength:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">int</span>
+                                                                    </td>
+                                                                    <td class="description last">Minimal length of a string</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>maxLength:</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">int</span>
+                                                                    </td>
+                                                                    <td class="description last">Maximal length of a string</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-author">Auteur</dt>
+                                                            <dd class="tag-author">
+                                                                <ul>
+                                                                    <li value="1">Inconnu</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line282">line 282</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h5>Requires:</h5>
+                                                        <ul>
+                                                            <li value="1">module:{none}</li>
+                                                        </ul>
+                                                        <h5>Returns:</h5>
+                                                        <div class="param-desc">Boolean if the lenghth is respected</div>
+                                                        <h5>Exemple</h5><pre class="prettyprint"><code>validateNumberString(context,0,10)
+     </code></pre>
+                                                        <h4 class="name" id="validatePhoneNumberByRegion"><span class="type-signature"></span>validatePhoneNumberByRegion<span class="signature">(context, fldCountry)</span><span class="type-signature"></span></h4>
+                                                        <div class="description">Validates the user input phone number and formats it using the international format.</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">objet</span>
+                                                                    </td>
+                                                                    <td class="description last">CRM Execution Context.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="name"><code>fldCountry</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">*</span>
+                                                                    </td>
+                                                                    <td class="description last">Country attribute name, used to extract region.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line395">line 395</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                        <h4 class="name" id="validatePostalCode"><span class="type-signature"></span>validatePostalCode<span class="signature">(context)</span><span class="type-signature"></span></h4>
+                                                        <div class="description">Validates the user input postal code and formats it correctly if valid.</div>
+                                                        <h5>Paramètres</h5>
+                                                        <table class="params">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Nom</th>
+                                                                    <th>Type</th>
+                                                                    <th class="last">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="name"><code>context</code>
+                                                                    </td>
+                                                                    <td class="type"><span class="param-type">objet</span>
+                                                                    </td>
+                                                                    <td class="description last">CRM Execution Context.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <dl class="details">
+                                                            <dt class="tag-source">Source</dt>
+                                                            <dd class="tag-source">
+                                                                <ul class="dummy">
+                                                                    <li value="1"><a href="egcs_common.js.html">egcs_common.js</a>, <a href="egcs_common.js.html#line540">line 540</a></li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                    </article>
+                                                </section>
+                                            </div>
+                                            <nav>
+                                                <h2>Home</h2>
+                                                <h3>Global</h3>
+                                                <ul>
+                                                    <li value="1"><a href="#addOnChange">addOnChange</a>
+                                                    </li>
+                                                    <li value="2"><a href="#checkDateNotInFuture">checkDateNotInFuture</a>
+                                                    </li>
+                                                    <li value="3"><a href="#FieldOnLoadSetSubmitMode">FieldOnLoadSetSubmitMode</a>
+                                                    </li>
+                                                    <li value="4"><a href="#fireEvent">fireEvent</a>
+                                                    </li>
+                                                    <li value="5"><a href="#getAttribute">getAttribute</a>
+                                                    </li>
+                                                    <li value="6"><a href="#getLookup">getLookup</a>
+                                                    </li>
+                                                    <li value="7"><a href="#LookupOnChangeSetLevelUp">LookupOnChangeSetLevelUp</a>
+                                                    </li>
+                                                    <li value="8"><a href="#maskInputField">maskInputField</a>
+                                                    </li>
+                                                    <li value="9"><a href="#nullTransfer">nullTransfer</a>
+                                                    </li>
+                                                    <li value="10"><a href="#onValidateCRANumberCheck">onValidateCRANumberCheck</a>
+                                                    </li>
+                                                    <li value="11"><a href="#removeBrackets">removeBrackets</a>
+                                                    </li>
+                                                    <li value="12"><a href="#Request">Request</a>
+                                                    </li>
+                                                    <li value="13"><a href="#Request_IFrame">Request_IFrame</a>
+                                                    </li>
+                                                    <li value="14"><a href="#sameAs">sameAs</a>
+                                                    </li>
+                                                    <li value="15"><a href="#SetDefaultDateTimeValue">SetDefaultDateTimeValue</a>
+                                                    </li>
+                                                    <li value="16"><a href="#setFieldToNull">setFieldToNull</a>
+                                                    </li>
+                                                    <li value="17"><a href="#SetFieldValueForLookup">SetFieldValueForLookup</a>
+                                                    </li>
+                                                    <li value="18"><a href="#transferValue">transferValue</a>
+                                                    </li>
+                                                    <li value="19"><a href="#validateEmail">validateEmail</a>
+                                                    </li>
+                                                    <li value="20"><a href="#validateNumberString">validateNumberString</a>
+                                                    </li>
+                                                    <li value="21"><a href="#validateNumberStringNoMax">validateNumberStringNoMax</a>
+                                                    </li>
+                                                    <li value="22"><a href="#validatePhoneNumberByRegion">validatePhoneNumberByRegion</a>
+                                                    </li>
+                                                    <li value="23"><a href="#validatePostalCode">validatePostalCode</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <br class="clear" />
+                                            <footer>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jun 04 2018 11:52:37 GMT-0600 (Mountain Daylight Time)</footer>
+                                            <script>
+/*<![CDATA[*/
+ prettyPrint(); 
+/*]]>*/
+</script>
+                                            <script src="scripts/linenumber.js">
+/*<![CDATA[*/
+ 
+/*]]>*/
+</script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

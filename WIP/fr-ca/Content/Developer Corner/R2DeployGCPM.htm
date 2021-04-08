@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Principales étapes pour déployer GPSC 2.1</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor125"></a>
+                                                    <MadCap:concept term="ImplementGCPM" />Principales étapes pour déployer GPSC 2.1</h1>
+                                                <p>Le déploiement de GPSC a été mis à l'essai dan cet environnement (l'environnement de développement du &#160;GPSC)&#160;:</p>
+                                                <ul>
+                                                    <li value="1">Microsoft SQL Server 2016 (SP2-GDR) (KB4293802) - 13.0.5081.1 (X64) 20 juillet 2018 22:12:40 Copyright (c) Microsoft Corporation Developer Edition (64-bit)</li>
+                                                    <li value="2">Microsoft Dynamics 365 Version 1612 (9.0.2.3041) (DB 9.0.2.3041) sur le lieux</li>
+                                                    <li value="3">Module linguistique français de Microsoft Dynamics 365 </li>
+                                                </ul>
+                                                <h2>Remarque sur les scripts d'exécution</h2>
+                                                <p>Vous devez mettre à jour les scripts afin de se connecter dans différents environnements (sur les lieux ou en ligne). Par exemple&#160;:</p>
+                                                <ul>
+                                                    <li value="1">Exemple d'une fonction pour commencer le déploiement - sur les lieux<br /><code>Import-CrmMultiplePackagesAsync -OrgUrl '&lt;org name&gt;'  -ServerUrl ‘&lt;server url&gt;’ <span style="background-color: #ffff00;"> -IsCrmOnline $false</span> -path '&lt;path to release folder location&gt;' -CsvImportList '\SCRIPTS\package_list_v2.csv'</code></li>
+                                                    <li value="2">Exemple d'une fonction pour commencer le déploiement - en ligne<p><code>Import-CrmMultiplePackagesAsync -OrgUrl '&lt;org name&gt;'  -ServerUrl '&lt;server url&gt;’ <span style="background-color: #ffff00;">-IsCrmOnline $true</span> -path '&lt;path to release folder location&gt;’ -CsvImportList '\SCRIPTS\package_list_v2.csv'</code></p></li>
+                                                </ul>
+                                                <h2>Outils requis</h2>
+                                                <ul>
+                                                    <li value="1">Microsoft Dynamics 365 SDK 9.0. <br />Télécharger SDK <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-dynamics-365-sdk-v9">ici*</a></li>
+                                                    <li value="2">Module PowerShell de Microsoft Dynamics 365<p>Télécharger le module Powershell <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget">ici*</a> et lire la <a href="https://docs.microsoft.com/en-us/powershell/dynamics365/customer-engagement/overview?view=dynamics365ce-ps">documentation d'aide*</a> de PowerShell.</p></li>
+                                                </ul>
+                                                <ul>
+                                                    <li value="1">Déploiement de l’ensemble d'outillage Xrm de Microsoft Dynamics 365 &#160;SDK <p>Télécharger cet outil <a href="https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.Wpf/9.0.0.4">ici*</a> et lire la <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/deploy-packages-using-package-deployer-windows-powershell">documentation d'aide</a>.</p></li>
+                                                    <li value="2">
+                                                        <p>Module PowerShell pour le déploiement de l’ensemble d'outillage Xrm de Microsoft Dynamics 365&#160;SDK</p>
+                                                        <p>Télécharger cet outil <a href="https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment.PowerShell/9.0.2.12">ici*</a></p>
+                                                    </li>
+                                                </ul>
+                                                <h2>Structure des dossiers</h2>
+                                                <p>/GCPM</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />/FINAL_PACKAGE</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p style="text-indent: 0.5in;"><i>Ensemble de dossiers / liens de téléchargement direct qui sont lisible par l'outil PackageDeployer de SDK.</i>
+                                                        </p>
+                                                        <p style="text-indent: 0.5in;">Comme exemple&#160;:</p>
+                                                        <p style="text-indent: 0.5in;"><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../Resources/Images/Deploy/FinalPkg.png"><img class="MCPopupThumbnail img" data-mc-width="353" data-mc-height="203" src="../Resources/Images/Deploy/FinalPkg_thumb_0_48.png" tabindex="" /></a>
+                                                        </p>
+                                                        <p style="text-indent: 0.5in;"><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../Resources/Images/Deploy/FinalPkg2.png"><img class="MCPopupThumbnail img" data-mc-width="275" data-mc-height="93" src="../Resources/Images/Deploy/FinalPkg2_thumb_0_48.png" tabindex="" /></a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />/SCRIPTS</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <blockquote>
+                                                            <ul>
+                                                                <li value="1"><b>Org_Settings_ONLINE_ONPREM.ps1</b> - <i>fichier PowerShell qui établit les paramètres org .</i></li>
+                                                                <li value="2"><b>Load_Packages_ONLINE_ONPREM.ps1 - </b>f<i>ichier PowerShell qui exécute l’ensemble des fichiers de PackageDeployer à partir du dossier FINAL_PACKAGE</i></li>
+                                                                <li value="3"><b>package_list_v2.csv</b> - <i>Ordre d'exécution de différents projets PackageDeployer</i></li>
+                                                            </ul>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />/UTILITY</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <blockquote>
+                                                            <ul>
+                                                                <li value="1"><b>Enable_BusinessRules_ONPREM_ONLINE.ps1</b> et <b>businessrulelist.csv <i>Script PowerShell et fichier d'entrée avec une liste des règles d'entreprise qui ont besoin d'être désactivées après l'installation initiale du système de GPSC</i></b></li>
+                                                                <li style="font-style: italic;" value="2"><b>CleanUP-Views-ONPREM_ONLINE.ps1</b> et<b> viewlist.csv Script PowerShell script et fichier d'entrée avec une listes des aperçus prêt à l'emploi qui ont besoin d'être désactivées après l'installation initiale du système de GPSC</b></li>
+                                                                <li value="3"><b>Enable_Connections_ONPREM_ONLINE.ps1 </b>et <b>connectionrolelist.csv</b> <i>Script PowerShell et fichier d'entrée avec une liste des connections prêtes à l'emploi qui ont besoin d'être désactivées après l'installation initiale du système de GPSC</i></li>
+                                                                <li style="font-style: italic;" value="4"><b>Import-CRMUsers_ONPREM_ONLINE.ps1</b> et<b> users.csv</b> Script PowerShell et exemple de fichier d'entrée pour ajouter des utilisateurs.</li>
+                                                                <li value="5"><b>TeamToRole-ONPREM_ONLINE.ps1</b> et <b>teamroles.csv</b> <i>Script PowerShell et exemple de fichier d'entrée avec des relations N:N entre les rôles et les équipes qui ont besoin d'être activées après l'installation initiale du système de GPSC</i></li>
+                                                                <li value="6"><b>EntityMaps-ONPREM_ONLINE.ps1</b> et<b> mapping.csv</b> <i>Script PowerShell et exemple de fichier d'entrée avec des renseigneemtns de mise en correspondance pour les relations entre les différentes entités qui ont besoin d'être importées après l'installation initiale du système de GPSC</i></li>
+                                                            </ul>
+                                                        </blockquote>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />/LOG</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p><i>Dossier pour conserver les fichiers générés par l'outil PackageDeployer</i>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <h2>Principales étapes pour déployer la Version 2.0 de GPSC</h2>
+                                                <ol>
+                                                    <li value="1">Créer une organisation <br />Remarque&#160;: utilisez le <b>Dollar canadien </b>comme devise par défaut.</li>
+                                                    <li value="2">Configurer les paramètres de l'organisation en exécutant ce script:<p><code>Org_Setting_ONLINE_ONPREM.ps1 </code><br />OU</p></li>
+                                                    <li value="3">Mettre à jour manuellement les paramètres de l'organisation en utilisant l'interface de Dynamics 365.  Naviguer vers <br /><b>Paramètres &gt; Administration &gt; Langues ou Paramètres &gt; Administration &gt; Paramètres système</b><ul><li value="1">Activer le module linguistique français </li><li value="2">Activer le module linguistique</li><li value="3">Activer l'aide générale et établir l'URL vers le fichier d'aide</li><li value="4">Changer le format à Anglais canadien</li><li value="5">Désactiver le suivi</li><li value="6">Désactiver l'enregistrement automatique</li><li value="7">Désactiver les privilèges</li><li value="8">Désactiver l'intégration à la carte Bing</li></ul></li>
+                                                    <li value="4">Déployer les<b> Solutions et les Donnée</b>s en exécutant le fichier<code>Load_Packages_ONLINE_ONPREM.ps1 </code>. <br />Remarque: le déploiement de la solution de GPSC peut prendre un moment.</li>
+                                                    <li value="5">Configurer les Grilles Crowe. Naviguez vers <b>Paramètres &gt; Paramètres de la grille EditAble CRM </b> et cliquez sur <b>Demander une nouvelle licence</b>.<br />REMARQUE&#160;: une licence pour la grille Crowe n'est pas fournie. Vous devez vous procurer une licence pour votre organisation.</li>
+                                                    <li value="6">Exporter des Grilles Crowe: naviguez vers <b>Paramètres &gt; Grilles EditAble CRM</b> et cliquez sur <b>EXPORTER GRILLES&#160;EDITABLE</b>.<p>REMARQUE&#160;:&#160;la configuration des Grilles Crowe est stockée dans les ressources Web suivantes.  </p><p><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Resources/Images/Release 2 - Outline/RELEASE 2 OUTLINE_2.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="721" data-mc-height="153" src="../Resources/Images/Release 2 - Outline/RELEASE 2 OUTLINE_2_thumb_0_48.png" style="width: 624px;height: 132px;" tabindex="" /></a><br />Remarque&#160;: après l'importation de toutes les grilles Crowe, vous devriez avoir 100 enregistrements. <br /><a class="MCPopupThumbnailLink MCPopupThumbnailHover" href="../Resources/Images/Deploy/100Crowegrids.png"><img class="MCPopupThumbnail img" data-mc-width="319" data-mc-height="102" src="../Resources/Images/Deploy/100Crowegrids_thumb_0_48.png" tabindex="" /></a><br />Remarque&#160;: certaines des Grilles Crowe ne peuvent pas être publiées (voir aperçu ci-dessous). Veuillez supprimer ces enregistrements&#160;:<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Resources/Images/Deploy/DeleteCrowe.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="1063" data-mc-height="98" src="../Resources/Images/Deploy/DeleteCrowe_thumb_0_48.png" tabindex="" /></a><br />Voir l'aide sur les Grilles Crowe pour de plus amples renseignements.</p></li>
+                                                    <li value="7">S'assurer que tous les processus sont activés. Utiliser la Recherche avancée pour générer une listes des processus inactifs&#160;:<br />Remarque&#160;: les flux liés à la fonction d'aperçu a besoin d'être rouverte manuellement et réactivée.<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Resources/Images/Deploy/QueryInactiveProcesses.png"><img class="MCPopupThumbnail img imgLrg-img" data-mc-width="578" data-mc-height="208" src="../Resources/Images/Deploy/QueryInactiveProcesses_thumb_0_48.png" tabindex="" /></a></li>
+                                                    <li value="8">Exécuter les scripts PowerShell suivants&#160;:<br /><br /><ul><li value="1"><code>Enable_BusinessRules_ONPREM_ONLINE.ps1</code> </li><li style="list-style-type: disc;" value="2"><code>CleanUP-Views-ONPREM_ONLINE.ps1</code> </li><li style="list-style-type: disc;" value="3"><code>Enable_Connections_ONPREM_ONLINE.ps1</code> </li><li style="list-style-type: disc;" value="4"><code>TeamToRole-ONPREM_ONLINE.ps1</code></li></ul></li>
+                                                    <li value="9">Ajouter des utilisateurs. Le faire manuellement ou l'exécuter<code>Import-CRMUsers_ONPREM_ONLINE.ps1</code></li>
+                                                    <li value="10">Ajouter des utilisateurs aux équipes - cela doit être fait manuellement.</li>
+                                                    <li value="11">Configurer le gestionnaire des documents. <br />Voir <a href="../Tools/DocManager/Key steps Docmgr.htm" class="MCXref xref">Principales étapes pour la configuration du gestionnaire de documents</a><ul><li value="1">(si vous utilisez SharePoint) Reconfigurer la gestion des documents pour SharePoint&#160;: mettre à jour les liens dans CFG des Lieux de documents et dans les entités des lieux de documents afin qu'ils pointent vers votre site SharePoint et vos bibliothèques de documents. </li><li value="2">Remarque&#160;: GPSC a été configuré avec un échantillon de la configuration de SharePoint, afin d'offrir un exemple à L'équipe de déploiement. Ces exemples d'enregistrement de configuration sont situés dans (<b>CFG des Lieux de documents</b>,<b> CFG des Entités de documents </b>et <b>Lieux des documents</b>). Pour désactivé cet exemple de configuration&#160;:<ul><li value="1">Désactiver tous les enregistrements dans l'entité <b>CFG Document</b>. Utilisez cette requête dans la Recherche avancée pour localiser tous les flux qui génèrent des aperçus&#160;:<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Resources/Images/Deploy/AdvancedFindSnapshots.png"><img class="MCPopupThumbnail img imgLrg-img" data-mc-width="538" data-mc-height="204" src="../Resources/Images/Deploy/AdvancedFindSnapshots_thumb_0_48.png" tabindex="" /></a></li><li value="2">Désactiver tous les flux qui génèrent des aperçus. <br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../Resources/Images/Deploy/Snapshotworkflows.png"><img class="MCPopupThumbnail img imgLrg-img" data-mc-width="847" data-mc-height="403" src="../Resources/Images/Deploy/Snapshotworkflows_thumb_0_48.png" tabindex="" /></a></li></ul></li></ul></li>
+                                                    <li value="12">Établir une intégration financière <br />Si vous choisissez de configurer une intégration financière à un moment ultérieur, désactivez tous le flux dans la solution <b>GCPM_FI_AUTOMATION</b>.<br />Voir</li>
+                                                </ol>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="ImplementGCPM" href="javascript:void(0);" data-mc-topics="Aperçu de la mise en œuvre de GPSC|Implementing GCPM/1 ImplementationTopics.htm#aanchor269||Auto GCPM Installer|GCPM Tools/Auto GCPM Installer.htm#aanchor165||Champs de localisation|Implementing GCPM/Localising fields.htm#aanchor6||Conception de la demande|../ModuleConfig/Application/ApplicationDesign.htm#aanchor331||Localisation de la terminologie de l'interface et de l'aide à l'écran|Implementing GCPM/Localising interface.htm#aanchor378||Migration de données à la GPSC|Implementing GCPM/Migrating Data.htm#aanchor369||Principales caractéristiques du GPSC 2.1|../A_Welcome pages/KeyFeatures.htm#aanchor231||Principales étapes pour déployer GPSC 2.1|#aanchor125||Survol des guides de développement|Dev Guides/1DevGuideOverview.htm#aanchor98||Vue d'ensemble des modules de GPSC|../Modules/1Modules.htm#aanchor286"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

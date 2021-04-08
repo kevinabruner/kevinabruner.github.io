@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|[%=System.LinkedTitle%]|Deployment">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>SharePoint - portal site structure</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor156"></a>
+                                                    <MadCap:concept term="Portal" />SharePoint - portal site structure</h1>
+                                                <p>The portal is a SharePoint web application, and therefore all content in the portal is composed of SharePoint site collections (SPSite) or sites (SPWeb). Some of these sites are create automatically by portal services, and some of these sites are created by a SharePoint administrator at the time the portal is installed.</p>
+                                                <p>Note:&#160;</p>
+                                                <p>Two items in the property bag for a site that drives MasterPage functionality:</p>
+                                                <ul>
+                                                    <li value="1"><code>PortalScope</code> depends on the property bag for the current web it is being accessed in. Only one of these property values will exist for a given SPWeb.<ul><li value="1"><code>&lt;SPWeb&gt;.AllProperties[“egcs_PortalUserId”]</code> (Personal zone)</li><li value="2"><code>&lt;SPWeb&gt;.AllProperties[“egcs_AccountNumber”] </code>(Client zone)</li><li value="3"><code>&lt;SPWeb&gt;.AllProperties[“egcs_FCProfileID”] </code>(Project zone)</li></ul></li>
+                                                    <li value="2">
+                                                        <p>To determine header information:</p>
+                                                        <ul>
+                                                            <li value="1">
+                                                                <p><code>SPWeb&gt;.AllProperties["MasterPageHeaderScope"]</code> = ‘Welcome’, ‘Client’, or ‘Project’</p>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <p>The set of portal sites includes:</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Anonymous root</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Anonymous root portal site</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Item</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Purpose / contents</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Allow internet users to discover the portal.
+</li>
+                                                                            <li value="2">The splash page for the portal, where users initially arrive and select their language of choice.
+</li>
+                                                                            <li value="3">Help content for the portal.
+</li>
+                                                                            <li value="4">Pages to support login, Terms and Conditions, two-factor authentication, and user registration.
+</li>
+                                                                            <li value="5">Any other content on the portal which should be available to the general public without authentication.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Typical URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">/ </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Permissions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Anonymous access must be enabled – this is the only section of the portal which should permit Anonymous access
+</li>
+                                                                            <li value="2">“<b>Read</b>” access to the Everyone claim  <code>c:0(.s|true</code></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">SharePoint object</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Site collection (<code>SPSite</code>)</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">How is it created?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">By a SharePoint administrator when the portal is being installed and configured.</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Apps </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>spfx-terms-solution
+</code>
+                                                                            </li>
+                                                                            <li value="2"><code>spfx-portal-user-solution
+</code>
+                                                                            </li>
+                                                                            <li value="3"><code>egcs-portal-share-point-spfx-factor-auth</code><![CDATA[
+]]></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Pages and web parts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">URLs for the various pages are configured in <code>gccf.config</code>.
+</p>
+                                                                        <ul>
+                                                                            <li value="1">A page for Terms and Conditions which hosts the web part <br /><code>TermsandConditions</code>.
+<br />On the Integration Portal, this is <code>/Conditions.aspx
+</code></li>
+                                                                            <li value="2">A page for two-factor authentication with hosts the web part <br /><code>TwoFactorAuth</code>.
+<br />On the Integration Portal, this is <code>/2FA.aspx
+</code></li>
+                                                                            <li value="3">A page for registering a user profile which hosts the web part <br /><code>UserProfileInfo</code>.
+<br />On the Integration Portal, this is <code>/ManageAccount-GererCompte.aspx</code><![CDATA[
+]]></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Notes</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">A department may wish to create SharePoint variations sites under the anonymous root to host help, or other language-specific content. e.g.<br /><code>/en, /fr</code></li>
+                                                                            <li value="2">
+                                                                                <p>Static pages that report “<b>Error</b>”, “<b>Login Success</b>”, “<b>Logout failed</b>”, etc., may also be hosted in Variations sites. Those page URLs are configured in <code>gccf.config</code>.</p>
+                                                                            </li>
+                                                                            <li value="3">
+                                                                                <p>If the department wishes to implement their own Chooser page, it can be hosted under Variations sites.</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Welcome Centre</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Welcome centre portal site</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 166px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Item</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p>Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Purpose / contents</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Arrival point for authenticated users.
+</li>
+                                                                            <li value="2">Hosts a directory of clients a user has access to.
+</li>
+                                                                            <li value="3">Allows the user to edit their profile.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Typical URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">	/Welcome-Bienvenue</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Permissions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">“Read” access to the Everyone claim <code>c:0(.s|true</code> </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">SharePoint object</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Site collection (SPSite)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">How is it created?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">By a SharePoint administrator when the portal is being installed and configured.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Apps </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext"><code>spfx-portal-user-solution</code>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Pages and web parts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>default.aspx </code>page should host the web part<code> Welcome Centre Table of Contents </code>or something similar.</li>
+                                                                            <li value="2">A page for updating a user profile which hosts the web part <br />|<code>UserProfileInfo</code>.
+</li>
+                                                                            <li value="3">On the Integration Portal this is, <code>/Welcome-Bienvenue/manageaccount-gerercompte.aspx</code>.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Notes</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">The location of the Welcome Centre is configured in <code>EGCS.Portal</code> configuration – setting <code>UrlWelcome</code></li>
+                                                                            <li value="2">The Welcome Centre is a static site which hosts no user-specific content. It could be used to display messages to portal users from the RDA using additional web parts.
+</li>
+                                                                            <li value="3">Page names must match the Welcome scope definition in <code>GCCF.dbo.MasterPageTab </code><br />(where <code>PageUrlScope </code>= ‘Welcome’)
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search centre</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Search centre portal site</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Item</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Purpose / contents</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">Allow users to search portal contents</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Typical URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext"><code>/search-recherche</code>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Permissions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">“Read” access to the Everyone <code>claim c:0(.s|true</code></td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">SharePoint object</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">Site collection (<code>SPSite</code>)</li>
+                                                                            <li value="2">Should use the out-of-the-box “Enterprise Search Center” template <code>(SRCHCEN#0)</code></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">How is it created?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">By a SharePoint administrator when the portal is being installed and configured</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Apps </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Pages and web parts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">None</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Notes</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <p class="tabletext">Configure as desired to support the portal. Configuring the Search Centre is outside the scope of this documentation.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Client Zones</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Client Zone portal site</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Item</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Purpose / contents</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Represents a GC Client published to the portal from GCPM.
+</li>
+                                                                            <li value="2">View profile information about a GC Client.
+</li>
+                                                                            <li value="3">Submit applications for the client.
+</li>
+                                                                            <li value="4">Send and receive secure messages for the GC Client.
+</li>
+                                                                            <li value="5">Share documents with the RDA.
+</li>
+                                                                            <li value="6">Invite and manage other users’ access to the client.
+</li>
+                                                                            <li value="7">Contains all Project Zones for the client.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Typical URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"><code>/client/&lt;Account Number&gt;</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Permissions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Restricted to GCCF users who have been specifically invited to the client.
+</li>
+                                                                            <li value="2">The department may choose to automatically give access to groups of staff members (RDA users).
+</li>
+                                                                            <li value="3">Security is implemented via SharePoint security groups and roles.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">SharePoint object</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Site collection (SPSite)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">How is it created?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Automatically, by the site creation Windows service.
+</li>
+                                                                            <li value="2">When an RDA staff member chooses to publish a client to the portal, the portal is notified (via the portal web service).
+</li>
+                                                                            <li value="3">A row is added to <code>GCCF.dbo.SiteQueueAccount</code>. 
+</li>
+                                                                            <li value="4">The site creation service periodically creates any new GC Client sites in the queue.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Apps </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>egcs-portal-share-point-spfx-project-client
+</code>
+                                                                            </li>
+                                                                            <li value="2"><code>spfx-portal-user-solution
+</code>
+                                                                            </li>
+                                                                            <li value="3"><code>spfx-message-centre-solution
+</code>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Pages and web parts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>default.aspx </code>hosts <code>DraftSub </code>and <code>AppStatus </code>web parts. <br />Allows users to review draft submissions and applications which have been submitted.
+</li>
+                                                                            <li value="2"><code>message.aspx </code>hosts <code>SecureMessageCentre </code>web part. <br />secure messaging control.
+</li>
+                                                                            <li value="3"><code>members.aspx </code>hosts <code>UserManagement </code>web part. <br />Review users who have access to the Client. Users with admin privilege can change the role of other users, or remove them from the site.</li>
+                                                                            <li value="4"><code>invitation.aspx </code>hosts <code>siteInvitation </code>web part. <br />Invite new GCCF Users to the client.
+</li>
+                                                                            <li value="5"><code>profile-profil.aspx </code>hosts <code>ClientProfile </code>web part. <br />View profile information about the client.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Notes</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">The root location for client sites is configured in <code>EGCS.Portal</code> Configuration – <code>UrlClientSiteRoot </code><![CDATA[
+]]></li>
+                                                                            <li value="2">Pages names must match the client scope definition in <code>GCCF.dbo.MasterPageTab
+</code></li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Project Zones</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Project Zone portal site</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 166px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p>Item</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Purpose / contents</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Represents a project (FCProfile)&#160;published to the portal.
+</li>
+                                                                            <li value="2">View profile information about a project.
+</li>
+                                                                            <li value="3">Submit claims, advances and performance reports for a project.
+</li>
+                                                                            <li value="4">Send and receive secure messages for a project.
+</li>
+                                                                            <li value="5">Share documents with the RDA.
+</li>
+                                                                            <li value="6">View summary disbursement and budget information about a project.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Typical URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p><code>/client/&lt;Account Number&gt;/&lt;FCProfileID&gt;</code>
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Permissions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Inherited from the Client Zone.
+</li>
+                                                                            <li value="2">All project zones for a client share the client zone permissions (all users invited to a client have the same level of access to all Projects for the client). 
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">SharePoint object</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">Site (<code>SPWeb</code>)</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">How is it created?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Automatically, by the site creation Windows service.
+</li>
+                                                                            <li value="2">A new project zone is added to a client when a new project (FCProfile)&#160;is created in GCPM.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Apps </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>egcs-portal-share-point-spfx-project-client
+</code>
+                                                                            </li>
+                                                                            <li value="2"><code>spfx-message-centre-solution
+</code>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Pages and web parts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>default.aspx </code>hosts <code>DraftSub </code>web part. <br />Allows users to review draft submissions.
+</li>
+                                                                            <li value="2"><code>message.aspx </code>hosts <code>SecureMessageCentre </code>web part. <br />Secure messaging control.
+</li>
+                                                                            <li value="3"><code>summary-sommaire.aspx </code>hosts web parts <code>BudgetSummary</code>and <code>DisbursSummary</code>. Displays budget summary line items, and disbursement summary line items, respectively.</li>
+                                                                            <li value="4"><code>repaymentsched-calendrierderemb.aspx </code>hosts <code>Repayment Schedule</code>. <br />The repayment schedule for the project.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Notes</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <p class="tabletext">Pages names must match the project scope definition in <code>GCCF.dbo.MasterPageTab</code></p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Personal Zones</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Personal Zone portal site</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Item</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Purpose / contents</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">A user’s Personal Zone on the portal.
+</li>
+                                                                            <li value="2">Submit applications to the RDA.
+</li>
+                                                                            <li value="3">Send and receive secure messages for the project.
+</li>
+                                                                            <li value="4">Share documents with the RDA.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Typical URL</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"><code>/my-moi/&lt;Guid&gt;</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Permissions</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1"> Restricted to a single GCCF User.
+</li>
+                                                                            <li value="2">The department may choose to automatically give access to groups of staff members (RDA Users).</li>
+                                                                            <li value="3">Security is implemented via SharePoint security groups and roles.
+</li>
+                                                                            <li value="4">There is no ability to invite other GCCF users to this zone.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">SharePoint object</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Site (<code>SPWeb</code>)</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">How is it created?</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1">Automatically, by the site creation Windows service.
+</li>
+                                                                            <li value="2">The service will maintain a queue of unassigned Personal zones in the database table <code>GCCF.dbo.SiteQueueUser</code>.
+</li>
+                                                                            <li value="3">
+                                                                                <p>New Personal Zones will automatically be created as zones are removed from the queue.</p>
+                                                                            </li>
+                                                                            <li value="4">
+                                                                                <p>The size of the queue is set in <code>EGCS.Portal</code> Configuration – <code>SiteCreationUserSiteQueueSize</code>.</p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext">Apps </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>egcs-portal-share-point-spfx-project-client</code>
+                                                                            </li>
+                                                                            <li value="2"><code>spfx-message-centre-solution
+</code>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext">Pages and web parts</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <ul>
+                                                                            <li value="1"><code>default.aspx </code>hosts <code>DraftSub </code>and <code>AppStatus </code>web parts. <br />Allows users to review draft submissions and applications which have been submitted.
+</li>
+                                                                            <li value="2"><code>message.aspx</code> hosts <code>SecureMessageCentre </code>web part. <br />secure messaging control.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                        <p class="tabletext">Notes</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                        <ul>
+                                                                            <li value="1">The root location for personal sites is configured in <code>EGCS.Portal</code> Configuration –  <code>UrlUserSiteRoot</code><![CDATA[
+]]></li>
+                                                                            <li value="2">Pages names must match the Welcome scope definition in <code>GCCF.dbo.MasterPageTab</code> (where <code>PageUrlScope</code> = ‘<b>Personal</b>’)
+</li>
+                                                                            <li value="3"><code>&lt;Guid&gt;</code> for a Personal Zone is randomly chosen.
+</li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="About GCCF|GCCFAbout.htm#aanchor166||About the portal|AboutPortal.htm#aanchor395||About the portal|AboutPortal.htm#aanchor396||ADFS extensions web application|ADFSExtensionswebApp.htm#aanchor217||Alphinat SmartGuide documentation|SmartGuide/AlphinatDoc.htm#aanchor44||Authentication for GCCF users|GCCFAuthentication.htm#aanchor22||Authentication for RDA users|AuthenticationRDA.htm#aanchor214||Build and deploy SPFx apps|SPFxAppsBuildDeploy.htm#aanchor140||Configure forms for the portal|SmartGuide/ConfigureApplic on portal.htm#aanchor442||Create new forms|SmartGuide/CreateNewForms.htm#aanchor242||Data transfer from the portal to GCPM|DataTransfer.htm#aanchor256||Deploying forms for the portal with SmartGuide|SmartGuide/PortalFormDeploy.htm#aanchor0||Developing forms for the portal with SmartGuide|SmartGuide/PortalFormDev.htm#aanchor203||Developing portal forms - connections|SmartGuide/PortalFormDevConnections.htm#aanchor106||Developing SPFx Web Parts|SPFxAppsProjectFolders.htm#aanchor145||Documents on the portal |PortalDocs.htm#aanchor422||Dynamic portal forms|SmartGuide/PortalFormDynamic.htm#aanchor394||EGCS.Portal configuration|EGCSPortalConfig.htm#aanchor368||EGCS.Portal Visual Studio Solution|VSSolutionEGCSPortal.htm#aanchor321||FormManager web service overview|WebServicePortalFormMgr.htm#aanchor10||FormManager web service|WebServiceFormMgr.htm#aanchor127||GC.GCCF configuration|GCCFConfig.htm#aanchor388||GC.GCCF Visual Studio Solution|VSSolutionGCCF.htm#aanchor428||GCCF certificates|Cert-GCCF.htm#aanchor18||GCCF common domain web application|GCCFCommonDomainWebApp.htm#aanchor320||GCCF database|GCCFDatabase.htm#aanchor205||GCCF metadata|GCCFMetadata.htm#aanchor267||GCPM authentication|GCPMAuthentication.htm#aanchor8||GCPM&#160;Smartlet Structure |SmartGuide/PortalFormSmartletStructure.htm#aanchor213||Invite a GC&#160;Client to the portal|UsingPortal/InviteClient.htm#aanchor191||Navigate the portal|UsingPortal/NavigatePortal.htm#aanchor144||Portal - master page overview|PortalMasterPage.htm#aanchor25||Portal branding|PortalBranding.htm#aanchor261||Portal configuration - invitation email|PortalConfigInviteEmail.htm#aanchor227||Portal document integration with GCPM&#160;|PortalDocIntegGCPM.htm#aanchor231||Portal entity relationship diagram|../Modules/ERDs/ERD Portal.htm#aanchor131||Portal integration with GCPM|Portal-GCPMIntegration.htm#aanchor2||Portal release notes 1.0|PortalReleaseNotes1.0.htm#aanchor38||Portal security|PortalSecurity.htm#aanchor263||RDA web service and portal web service certificates|Cert-RDAWebService.htm#aanchor215||RDA web service|WebServiceRDA.htm#aanchor123||Reverse proxy server for the portal|PortalReverseProxy.htm#aanchor212||SharePoint - portal site structure|#aanchor156||SharePoint web service|WebserviceSharePoint.htm#aanchor313||SPFx apps for the portal|SPFxAppsPortal.htm#aanchor208||SSL certificate|Cert-SSL.htm#aanchor310||Submit forms on the portal|UsingPortal/SubmitForms.htm#aanchor357||Submit tabular data with a form|UsingPortal/SubmitFormTable.htm#aanchor162||Web services for portal integration|WebServicesPortal.htm#aanchor238||WebAPI&#160;web service|WebServiceWebAPI.htm#aanchor362||Windows service - document management|WindowsDocMgt.htm#aanchor184||Windows service - site creation|WindowsSiteCreation.htm#aanchor255"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

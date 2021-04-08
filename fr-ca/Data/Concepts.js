@@ -1,0 +1,1 @@
+define({'Business identity':[73,7,12,10,6,13,48,9,8],'Connections':[18,21,41,42,19],'Contacts':[40,20,4],'Legal states':[11],'Stakeholder - address':[16,38,15],});

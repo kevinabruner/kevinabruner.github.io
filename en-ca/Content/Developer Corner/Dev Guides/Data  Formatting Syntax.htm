@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers Corner|Dev Guides">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Data formatting syntax guide</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>All Files</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Change language">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Print">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Search is based on keyword.</p>
+                                                        <p><samp>Ex:&#160;"Procedures"</samp>
+                                                        </p>
+                                                        <p>Do not search with natural language</p>
+                                                        <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                        </div>
+                                        <div>
+                                            <h1>Data formatting syntax guide</h1>
+                                            <h2>Strings</h2>
+                                            <p>There really isn’t any formatting within a string, beyond its alignment. Alignment works for any argument being printed in a String.Format call.</p>
+                                            <p>Sample	Generates</p>
+                                            <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <thead>
+                                                    <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Sample</th>
+                                                        <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Generates</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">String.Format(“-&gt;{1,10}&lt;-“, “Hello”);	</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">-&gt; Hello&lt;-</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                        <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                            <p>String.Format(“-&gt;{1,-10}&lt;-“, “Hello”);	</p>
+                                                        </td>
+                                                        <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">-&gt;Hello &lt;-</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h2>Numbers</h2>
+                                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Standard Number Formatting</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Format</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Output (input 1.42)</th>
+                                                                <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Output (input -12400)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">C or c</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Currency</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:c}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">$1.42</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">-$12,400</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>D or d</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Decimal (whole number)</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:d}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">FormatException</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">-12400</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">E or e</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Scientific</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:e}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1.420000e+000	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">-1.240000e+004</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">F or f</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Fixed point</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:f}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">1.42	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">-12400.00</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">G or g</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">General</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:g}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1.42	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">-12400</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">N or n</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Commas for thousands</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:n}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">1.42	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">-12,400</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">R or r</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Round trip-able</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:r}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">	1.42	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">FormatException</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">X or x</td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Hexadecimal </td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">{0:x4}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">FormatException	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">cf90</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Custom Number Formatting</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Format</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Output (input 1.42)</th>
+                                                                <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Output (input -12400)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;"><span style="font-weight: normal;">0</span>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Zero placeholder</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:00.0000}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1500.4200	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Pads with zeroes.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p><b>#</b>
+                                                                    </p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Digit placeholder</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:(#).##}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">(1500).42	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Non-significant zeroes are removed.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows" style="height: 33px;">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><b>.</b>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Decimal point</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                    <p>{0:0.0}	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1500.4</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><b>,</b>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">,	Thousand separator	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:0,0}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">1,500	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Must be between two zeroes.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><b>,.</b>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Number scaling		</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:0,.}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">2</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Comma adjacent to Period scales by 1000.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"><b>%</b>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Percentage placeholder	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:0%}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">150042%	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Multiplies by 100, adds % sign.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><b>‰	</b>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Per mille placeholder	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:0.00‰}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1500000.42‰	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Multiplies by 1000, add ‰ sign.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">e</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>Exponent placeholder	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:00e+0}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">15e+2	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Many exponent formats available.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">\</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Escape character		</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:\###\#}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">#1500.42#</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Causes the next character to be a literal.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">‘string’ “string”</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>	String literal	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:# ‘deg.’}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">	1500.42 deg.	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">String is copied to result.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows"><b>;	</b>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Section separator	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">{0:Yes;0;No}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Yes (input is positive)	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Value for positive, negative, zero number.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <h2>Dates</h2>
+                                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Standard Date-Time Formatting</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <p>Note that date formatting is dependent on the system’s regional settings.</p>
+                                                    <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier	</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Type	</th>
+                                                                <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Example (input = DateTime.Now)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">d</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Short date	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">10/12/2002</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">f</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>Full date &amp; time	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">December 10, 2002 10:11 PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">F</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Full date &amp; time (long)	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">December 10, 2002 10:11:29 PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">g</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Default date &amp; time	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">10/12/2002 10:11 PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">G</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Default date &amp; time (long)</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">10/12/2002 10:11:29 PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">M or m</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Month day pattern</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">December 10</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">O or o</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Round trip date &amp; time pattern	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2002-12-10T10:11:29.0000000Z</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">R or r	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">RFC1123 date string	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Tue, 10 Dec 2002 22:11:29 GMT</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">s</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Sortable date string</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2002-12-10T22:11:29</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">t</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Short time</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">10:11 PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">T</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Long time</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">10:11:29 PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">u</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>Universal sortable, local time	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">2002-12-0 22:13:50Z</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">U</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Universal sortable, GMT	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">December 11, 2002 3:13:50 AM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Y or y</td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                    <p>Year month pattern	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">December, 2002</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Custom date and time formatting</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier	</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Type	</th>
+                                                                <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example </th>
+                                                                <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Example output</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">d</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Day of month (1 through 31)</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:d}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">	2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">dd</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Day of month (01 through 31)	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:dd}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">10</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ddd</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Short day of week name	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:ddd}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Tue</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">dddd	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Long day of week name	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:dddd}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Tuesday</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">f, ff, …	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Second fractions	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:fff}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">932</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">g or gg</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Period or era	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:gg}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">A.D.</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">h</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 digit hour, 1 to 12	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:h}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">hh</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>2 digit hour, 01 to 12	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:hh}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">10</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">H</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 digit hour, 0 to 23	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:H}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">HH</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2 digit hour, 00 to 23	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:HH}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">22</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">m</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 digit minute, 0 through 59	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:m}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">mm</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Minute 00 through 59	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:mm}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">38</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">M</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 digit month, 1 through 12	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:M}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">MM</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2 digit month, 01 through 12	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:MM}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">12</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">MMM</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Short month name	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:MMM}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Dec</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">MMMM</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Long month name	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:MMMM}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">December</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">s</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 digit seconds, 0 through 59</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">	{0:s}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">1</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">ss</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2 digit seconds, 00 through 59	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:ss}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">46</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">t</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">First letter of AM or PM	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">	{0:t}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">P</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">tt</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">AM or PM	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:tt}</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">PM</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">yy</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Year, 2 digits	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">{0:yy}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">02</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">yyyy</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Year	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:yyyy}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">2002</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">zz</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Time zone offset, 2 digits	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                    <p>{0:zz}	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">-05</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">zzz</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Full time zone offset	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:zzz}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">-05:00</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">:	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Separator	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                    <p>{0:hh:mm:ss}	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">10:43:20</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">/	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                    <p>Separator	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">{0:dd/MM/yyyy}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">10/12/2002</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                    <p>‘string’ “string”	</p>
+                                                                </td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">String literal	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">{0: ‘Time is ‘ hh:mm tt}	</td>
+                                                                <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Time is 10:30 PM</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <p>&#160;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers Corner|Dev Guides">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Calculation Syntax</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>All Files</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Change language">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Print">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Search is based on keyword.</p>
+                                                        <p><samp>Ex:&#160;"Procedures"</samp>
+                                                        </p>
+                                                        <p>Do not search with natural language</p>
+                                                        <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                        </div>
+                                        <div>
+                                            <h1>Calculation Syntax</h1>
+                                            <div>
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Strings</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Result</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;text-align: center;"><span style="font-weight: bold;">‘</span>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p>	Single quotes	
+
+</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">‘Hello’	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">String literals must be enclosed in hashes.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">DateTime
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Use</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;text-align: center;">#</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p>	Hash
+
+</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">#01/01/2017#	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Date literals must be enclosed in hashes..</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Booleans
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Use</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;">True</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p>True value</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">True</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">Used in comparisons</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;">False</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">False value</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">False</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">Used in comparisons</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Arithmetic Operators
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 200px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 204px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Use</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">+</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p>True value</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 + 1 </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">2</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">-</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">False value</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">1 - 1</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">0</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">*</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Multiplication</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 * 1</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">1</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">/</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Division</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">1 / 1</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">1</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">%</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Modulus</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 % 1</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">0</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows" style="font-weight: bold;text-align: center;">( and )</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">Parentheses</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">(4/2)/1</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">2</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Logic Operators
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Result</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">=	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p>Equal	1 = 1	</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 = 1 </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">&lt;&gt;	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Not Equal	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2 &lt;&gt; 1	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">True
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">&lt;</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Less Than	2 </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">&lt; 1	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">False</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">&lt;=	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+Less Than or Equal To	2	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows"> &lt;= 2</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">True</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">&gt;	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Greater Than	2</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"> &gt; 1	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">&gt;=</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">	Greater Than or Equal To	1 </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">&gt;= 2	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">False
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">
+AND	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Whether both conditions are true	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">1 &lt; 2 AND 2 &lt; 10	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">OR</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Whether at least one of the conditions is true.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">1 &lt; -1 AND -1 &lt; 10	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">True</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">NOT</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Makes a condition opposite.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">NOT 2 &lt; 1	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">IN</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Whether a value is in a set of values	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">2 IN (1, 3, 5, 7, 9)	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">False
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">LIKE</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">LIKE	Whether a string is like a pattern.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">‘John Doe’ LIKE ‘%John%’	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">IS NULL	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Whether a value is null or not.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">null IS NULL	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">True</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">BETWEEN</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Whether a value falls within a range	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">15 BETWEEN 10 AND 20</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">True</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">* or %	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Wildcards. Cannot be used in the middle of a string. Wildcard characters must be escaped by square brackets, same with square brackets.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">‘%[%][[]Hello[]][%]%’	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">&#160;</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;text-align: center;">( and )	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+Parentheses. Group comparisons together.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">(1 = 1 AND 1 = 2) OR 1 = 1	
+</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">True</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage">Functions
+</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 169px;" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1" style="height: 59px;">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Specifier</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Example</th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Result</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">LEN	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p>Gets length of string.		</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">LEN(‘Hello’)</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">5
+</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">ISNULL	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">If expression is null, use default value.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">ISNULL(null, 0)</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">0</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows" style="font-weight: bold;text-align: center;">IIF	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Gets one of two values depending on the result of a logical expression.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">IIF(true, 1, 0)	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">1</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows" style="font-weight: bold;text-align: center;">TRIM	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Removes all leading and trailing blank characters like \r, \n, \t, ' '.	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">TRIM(‘ Hello ‘)	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Hello</td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows" style="font-weight: bold;text-align: center;">SUBSTRING	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p>
+Gets a substring of a specified length. Starts from 1.	
+</p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">SUBSTRING(‘Hello World’, 7, 5)	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">World
+</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

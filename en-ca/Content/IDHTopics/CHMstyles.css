@@ -1,0 +1,501 @@
+/*<meta />*/
+
+p
+{
+	margin: 0px;
+	padding-top: 0pt;
+	padding-right: 0pt;
+	padding-bottom: 0pt;
+	padding-left: 0pt;
+	text-indent: 0pt;
+	text-align: left;
+	line-height: normal;
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: none;
+	text-decoration: none;
+}
+
+.ts0
+{
+	font-family: 'Segoe UI';
+}
+
+.ts1
+{
+	font-family: Calibri;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.ts2
+{
+	font-family: Calibri;
+	color: Black;
+}
+
+.ts3
+{
+	font-family: Calibri;
+}
+
+.ts4
+{
+	font-family: Calibri;
+}
+
+.ts5
+{
+	font-family: 'Segoe UI';
+	font-size: 14pt;
+	font-weight: bold;
+	color: White;
+}
+
+.ts6
+{
+	color: Black;
+}
+
+.ts7
+{
+	font-family: Calibri;
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+.ts8
+{
+	color: White;
+}
+
+.ts9
+{
+	font-weight: bold;
+	color: Black;
+}
+
+.ts10
+{
+	font-style: italic;
+	color: Black;
+}
+
+.ts11
+{
+	font-family: 'Times New Roman';
+	font-size: 12pt;
+}
+
+.ts12
+{
+	font-weight: bold;
+}
+
+.ts13
+{
+	font-family: Calibri;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.ts14
+{
+	text-decoration: underline;
+	color: Blue;
+}
+
+.ts15
+{
+	font-style: italic;
+}
+
+.ts16
+{
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.ts17
+{
+	font-weight: bold;
+}
+
+.ts18
+{
+	font-family: Calibri;
+	font-weight: bold;
+}
+
+.ts19
+{
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.ts20
+{
+	font-weight: bold;
+	font-style: italic;
+	color: Black;
+}
+
+.ts21
+{
+	text-decoration: underline;
+	color: White;
+}
+
+.ts22
+{
+	font-family: Calibri;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.ts23
+{
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.ts24
+{
+	color: Blue;
+}
+
+.ts25
+{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.hs0
+{
+	text-decoration: underline;
+	color: Blue;
+}
+
+.hs1
+{
+	font-family: Calibri;
+	text-decoration: underline;
+	color: Blue;
+}
+
+.hs2
+{
+	text-decoration: underline;
+	color: White;
+}
+
+.ps0
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.ps1
+{
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps2
+{
+	text-align: center;
+}
+
+.ps3
+{
+	text-align: center;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps4
+{
+	padding-bottom: 10pt;
+	line-height: 115%;
+}
+
+.ps5
+{
+	padding-bottom: 10pt;
+	padding-left: 0.5in;
+	text-indent: -0.251968503937008in;
+	line-height: 115%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps6
+{
+	padding-left: 0.5in;
+	text-indent: -0.251968503937008in;
+}
+
+.ps7
+{
+	padding-left: 0.5in;
+	text-indent: -0.251968503937008in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps8
+{
+	font-family: 'Segoe UI';
+	font-size: 10pt;
+}
+
+.ps9
+{
+	text-align: right;
+	font-family: 'Segoe UI';
+	font-size: 10pt;
+}
+
+.ps10
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+}
+
+.ps11
+{
+	padding-left: 0.5in;
+	text-indent: -0.251968503937008in;
+	line-height: 200%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps12
+{
+	font-family: 'Segoe UI';
+	font-size: 11pt;
+}
+
+.ps13
+{
+	padding-bottom: 10pt;
+	line-height: 115%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps14
+{
+	padding-bottom: 10pt;
+	padding-left: 0.25in;
+	line-height: 115%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps15
+{
+	padding-left: 0.25in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps16
+{
+	padding-left: 0.75in;
+	text-indent: -0.25in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps17
+{
+	padding-top: 10pt;
+	padding-bottom: 4pt;
+	line-height: 115%;
+}
+
+.ps18
+{
+	padding-bottom: 10pt;
+	padding-left: 36pt;
+	text-indent: -18pt;
+	line-height: 115%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps19
+{
+	padding-bottom: 10pt;
+	line-height: 115%;
+	font-family: Cambria;
+	font-size: 11pt;
+}
+
+.ps20
+{
+	padding-left: 0.5in;
+	text-indent: -0.251968503937008in;
+	line-height: 115%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps21
+{
+	padding-top: 10pt;
+	line-height: 115%;
+}
+
+.ps22
+{
+	padding-bottom: 10pt;
+	padding-left: 72pt;
+	line-height: 115%;
+}
+
+.ps23
+{
+	padding-bottom: 8pt;
+	line-height: 108%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps24
+{
+	padding-left: 36.75pt;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps25
+{
+	padding-left: 0.510416666666667in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps26
+{
+	padding-left: 1.02083333333333in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps27
+{
+	padding-left: 73.5pt;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps28
+{
+	padding-left: 1.53125in;
+	text-indent: -0.251968503937008in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps29
+{
+	padding-left: 1.02083333333333in;
+	text-indent: -0.251968503937008in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps30
+{
+	font-family: 'Courier New';
+	font-size: 10pt;
+}
+
+.ps31
+{
+	padding-left: 0.992125984251969in;
+	text-indent: -0.248031496062992in;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps32
+{
+	padding-bottom: 8pt;
+	padding-left: 36pt;
+	text-indent: -18pt;
+	line-height: 108%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.ps33
+{
+	padding-bottom: 8pt;
+	line-height: 108%;
+}
+
+.ps34
+{
+	padding-bottom: 8pt;
+	padding-left: 0.5in;
+	text-indent: -0.251968503937008in;
+	line-height: 108%;
+	font-family: Calibri;
+	font-size: 11pt;
+}
+
+.block0
+{
+	padding: 0pt 0pt 10pt 0pt;
+}
+
+.block1
+{
+	padding: 10pt 0pt 4pt 0pt;
+}
+
+.block2
+{
+	padding: 0pt 0pt 10pt 0.5in;
+}
+
+.block3
+{
+	padding: 10pt 0pt 0pt 0pt;
+}
+
+.hline0
+{
+	width: 100%;
+	height: 1px;
+	margin: 8px auto;
+	background-color: Silver;
+}
+
+.hline1
+{
+	width: 100%;
+	height: 1px;
+	margin: 8px 0;
+	background-color: Black;
+}
+
+.hline2
+{
+	width: 100%;
+	height: 0px;
+	margin: 8px auto;
+	border-top: 1px solid DimGray;
+	border-right: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	border-left: 1px solid DimGray;
+}
+

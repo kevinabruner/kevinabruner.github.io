@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="Author.Charles,TopicStatus.5 Translate" MadCap:onlyLocalStylesheets="False" xml:space="preserve">
+    <head><title>[%=Heading.Level1%]</title>
+        <link href="../Resources/TableStyles/PatternedRows.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><MadCap:concept term="Portal" />Service Windows - gestion de documents</h1>
+        <p>Les service Web de gestion des documents supervise la synchronisation des documents et protège les messages entre le portail et Solution d'entreprise pour les subventions et les contributions (SESC).</p>
+        <ul>
+            <li>Il s'agit d'un service Windows nommé <code>EGCS.Portal.Service.DocumentManagement</code>.</li>
+            <li style="list-style-type: disc;">Il est installé sur un serveur SharePoint.</li>
+            <li style="list-style-type: disc;">Le service fonctionne en permanence en arrière-plan sur le serveur.</li>
+            <li style="list-style-type: disc;">À l'interne, le service planifie et met en oeuvre différentes tâches pour synchroniser les documents et sécuriser les messages.</li>
+            <li style="list-style-type: disc;">Le service est connecté à la batterie SharePoint par l'intermédiaire du modèle d'objet SharePoint côté serveur.</li>
+            <li style="list-style-type: disc;">Le service se connecte à la base de données du GPSC.</li>
+            <li style="list-style-type: disc;">Le service se connecte au service Web de l'Agence de développement régional (ADR).</li>
+            <li style="list-style-type: disc;">Le service devrait être configuré pour fonctionner en tant que compte de service SharePoint.</li>
+        </ul>
+        <h2>Tâches de service</h2>
+        <p>The Document Management service runs a set of jobs, which are configured via settings in <code>EGCS.Portal</code>. The class <code>DocumentManagementDispatcher</code> oversees the scheduling and execution of all jobs. Les tâches sont exécutées à intervalles répétés pendant l'exécution du service.</p>
+        <p>De façon générale, les tâches viennent en paires : la première consiste à analyser ou  déceler les documents qui doivent être synchronisés, alors que la deuxième consiste à copier le document entre le portail et le GPSC. La désactivation de l'une ou d'autre des tâches de la paire va, en réalité, mettre fin à la synchronisation de ce type de document.</p>
+        <p>Les documents et les messages devant être copiés sont maintenus dans la base de données <code>GCCF</code>.</p>
+        <p>Le service de gestion des documents comprend les tâches suivantes :</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Analyse du document du portail</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="mc-table-style: url('../Resources/TableStyles/PatternedRows.css');width: 90%;" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Analyse du document du portail</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>PortalDocumentScanWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal </code>Paramètres</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementPortalDocumentScanEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementPortalDocumentScanIntervalSeconds</code>
+                                </p>
+                                <p><code>DocumentManagementPortalDocumentScanFetchLimit</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul style="list-style-type: disc;margin-left: 36pt;">
+                                    <li style="list-style-type: disc;">Il surveille le journal des modifications dans SharePoint relativement à toutes les bases de données de contenu sur le portail.</li>
+                                    <li style="list-style-type: disc;">Il recherche les nouveaux documents, les documents mis à jour et les documents supprimés dans la bibliothèque de documents partagés de l'un ou l'autre des zones. Il s'agit de documents pour lesquels <code>DocumentType == PortalDocument</code>.</li>
+                                    <li style="list-style-type: disc;">Les documents qui doivent être synchronisés sont enregistrés dans le tableau de la base de données <code>GCCF.dbo.Document</code>.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Copie du document du portail</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Copie du document du portail</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>SharePointDocumentQueueWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal Settings</code>
+                                </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementPortalDocumentCopyEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementPortalDocumentCopyIntervalSeconds</code>
+                                </p>
+                                <p><code>DocumentManagementPortalDocumentCopyWorkerCount</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul>
+                                    <li>Il surveille le tableau de la base de données <code>GCCF.dbo.Document </code>for documents which needs to be synchronized with GCPM where <code>DocumentType == PortalDocument</code>.</li>
+                                    <li style="list-style-type: disc;">Il appelle les méthodes <code>DocumentManager</code> methods <code>DocumentPut()</code> or <code>DocumentDelete()</code> du service Web de l'ADR  pour copier, ou supprimer, des documents du GPSC.</li>
+                                    <li style="list-style-type: disc;">La tâche peut copier de nombreux documents en parallèle. Les agents de la classe<code>SharePointDocumentCopyWorker </code> réalisent la copie réelle du document.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Analyse de enregistrement de l'ADR</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Analyse de enregistrement de l'ADR</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>RdaRecordScanWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal Settings</code>
+                                </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementNewSiteScanEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementNewSiteScanIntervalSeconds</code>
+                                    <br /><code>DocumentManagementRdaRecordScanEnabled</code>
+                                    <br /><code>DocumentManagementRdaRecordScanIntervalSeconds</code>
+                                </p>
+                                <p><code>DocumentManagementRdaRecordScanFetchLimit</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul>
+                                    <li>Deux tâches distinctes utilisant la même classe de base.</li>
+                                    <li style="list-style-type: disc;">Il surveille le GPSC à la recherche des nouveaux documents, des documents mis à jour et des documents supprimés de <code>DocumentType == RDARecord</code> qui doivent être copiés dans le portail.</li>
+                                    <li style="list-style-type: disc;">Il surveille le portail à la recherche de zones de clients ou des zones de projets ayant récemment été créées et dans lesquelles l’ensemble complet de <code>RDARecords</code> doit être transmis au portail.</li>
+                                    <li style="list-style-type: disc;">Les documents qui doivent être synchronisés sont enregistrés dans le tableau de la base de données <code>GCCF.dbo.Document</code>.</li>
+                                    <li style="list-style-type: disc;">Appelle les méthodes <code>DocumentManager </code>methods <code>DocumentListAll()</code>, <code>DocumentListUnsynced()</code>, and <code>DocumentAcknowledgeUnsynced()</code> du service Web de l'ADR .</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Copie de enregistrement de l'ADR</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Copie de enregistrement de l'ADR</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>RdaRecordQueueWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal Settings</code>
+                                </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementRdaRecordCopyEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementRdaRecordCopyIntervalSeconds</code>
+                                </p>
+                                <p><code>DocumentManagementRdaRecordCopyWorkerCount</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul>
+                                    <li>Monitors database table <code>GCCF.dbo.Document</code> for documents which needs to be synchronized with GCPM where <code>DocumentType == RDARecord.</code></li>
+                                    <li style="list-style-type: disc;">Il appelle les méthodes <code>DocumentManager</code> methods <code>DocumentPut()</code> or <code>DocumentDelete()</code> du service Web de l'ADR  pour copier, ou supprimer, des documents du GPSC.</li>
+                                    <li style="list-style-type: disc;">La tâche peut copier de nombreux documents en parallèle. Les agents de la classe <code>RdaRecordCopyWorker</code> réalisent la copie réelle du document.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Analyse du portail de soumission</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Analyse du portail de soumission</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>PortalSubmissionScanWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal </code>Paramètres</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementPortalSubmissionScanEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementPortalSubmissionScanIntervalSeconds</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul style="list-style-type: disc;margin-left: 36pt;">
+                                    <li style="list-style-type: disc;">Il surveille le tableau de la base de données <code>GCCF.dbo.Submission</code> à la recherche de nouvelles soumissions (formulaires) provenant du portail du GPSC.</li>
+                                    <li style="list-style-type: disc;">Il appelle la méthode <code>DocumentManager </code>method <code>SubmitForm()</code> du service Web de l'ADR  pour soumettre un formulaire XML ou une image instantanée en format PDF au GPSC à des fins de traitement.</li>
+                                    <li style="list-style-type: disc;">Les pièces jointes au formulaire de soumission sont enregistrés dans la base de données <code>GCCF.dbo.Document</code> en vue d'un traitement ultérieur.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Copie du portail de soumission</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Copie du portail de soumission</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>SharePointDocumentQueueWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal Settings</code>
+                                </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementPortalSubmissionCopyIntervalSeconds</code>
+                                </p>
+                                <p><code>DocumentManagementPortalSubmissionCopyEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementPortalDocumentCopyWorkerCount</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul>
+                                    <li>Il surveille le tableau de la base de données <code>GCCF.dbo.Document </code>for file submission attachments which needs to be synchronized with GCPM where <code>DocumentType == PortalSubmission</code>.</li>
+                                    <li style="list-style-type: disc;">Il appelle les méthodes <code>DocumentManager </code>methods <code>DocumentPut()</code> or <code>DocumentDelete()</code> du service Web de l'ADR  pour copier, ou supprimer, des documents du GPSC.</li>
+                                    <li style="list-style-type: disc;">La tâche peut copier de nombreux documents en parallèle. Les agents de la classe<code>SharePointDocumentCopyWorker</code> réalisent la copie réelle du document.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Protéger une copie du message</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <table style="width: 90%;mc-table-style: url('../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                    <caption>Protéger une copie du message</caption>
+                    <col class="TableStyle-PatternedRows-Column-Regular" style="width: 255px;" />
+                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1"> </th>
+                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1"> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                <p>Classe</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                <p><code>SecureMessageCopyWorker</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                <p><code>EGCS.Portal Settings</code>
+                                </p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                <p><code>DocumentManagementSecureMessageSyncEnabled</code>
+                                </p>
+                                <p><code>DocumentManagementSecureMessageSyncIntervalSeconds</code>
+                                </p>
+                                <p><code>SecureMessageSyncCount</code>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                <p>Notes</p>
+                            </td>
+                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                <ul>
+                                    <li>La tâche permet de réaliser quatre étapes : synchroniser les nouveaux messages entre le portail et l'ADR, synchroniser les messages à jour entre le portail et l'ADR, synchroniser les nouveaux messages entre l'ADR et le portail, synchroniser les messages à jour entre l'ADR et le portail.</li>
+                                    <li style="list-style-type: disc;">Calls methods on the RDA web service <code>SecureMessage</code>:  <code>GetNew()</code>, <code>GetUnsynced()</code>,<code>SetSynced()</code>, <code>Add()</code>, <code>Sync()</code></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="Heading2">Conditions préalables</h2>
+        <ul>
+            <li>A build of the <code>GC.GCCF </code>and <code>EGCS.Portal </code>solutions, which is assumed to be available in a <code>directory _Build</code>. The actual service comes from the <code>EGCS.Portal </code>solution, but <code>gccf.config </code>configuration is also required. <br /></li>
+            <li style="list-style-type: disc;">La base de données <code>GCCF </code> doit avoir été remplie.<br /></li>
+            <li style="list-style-type: disc;">Le compte de services doit avoir accès à la base de données <code>GCCF </code>database via the database role <code>GCCFUser</code>.<br /></li>
+        </ul>
+        <h2 class="Heading2">Installation</h2>
+        <p>Le service devrait être reconstruite et réinstallé lorsque le projet <code>EGCS.Portal</code> project is recompiled, or the <code>GC.GCCF</code> est recompilé. Il a des liens de dépendance par rapport aux bibliothèques de liens dynamiques de ces deux projets.</p>
+        <ol>
+            <li>Installez le service Gestion de documents de Windows .<p><code>.\_Build\Scripts\Install-DocumentManagementService.ps1 –Config .\_Build\Config\&lt;environment&gt;.egcs.config</code></p><p>This command will:</p><ul><li>Stop the service (if it is running).</li><li style="list-style-type: disc;">Install service files to path<br /><code>C:\Program Files\EGCS\EGCS.Portal.Service.DocumentManagement</code></li><li style="list-style-type: disc;">Register the service with Windows (if the service is not registered)<br />Service Name: <code>EGCS.Portal.Service.DocumentManagement</code></li><li style="list-style-type: disc;">redémarrera le service» (s'il était en mode exécution auparavant)</li></ul></li>
+            <li>Installer <code>EGCS.Portal</code> configuration (<code>egcs.config</code>)<br /><p><code>.\_Build\Scripts\Install-GccfCommonDomain.ps1</code><br /></p><p>Le fichier de configuration est copié au répertoire du service.</p><p>Le service s'arrêtera et redémarrera.</p></li>
+            <li>Installez Le fichier de configuration est copié dans le répertoire de services.</p><p>Le service s'arrêtera et redémarrera.</p></li>
+            <li>Au moment de l'installation initiale du service, un compte de service devra être attribué et lancé de façon manuelle. Cela ne devrait être effectué qu'une fois que les deux fichier de configuration auront été installés.<br /></li>
+        </ol>
+        <ul style="list-style-type: disc;margin-left: 36pt;">
+            <li style="list-style-type: disc;">Au moyen de la composante logiciel enfichable "Services", configurez un nom d'utilisateur et un mot de passe de compte de service pour <code>EGCS.Portal.Service.DocumentManagement</code>. Il devrait s'agir du compte de service dans SharePoint.</li>
+            <li style="list-style-type: disc;">Établissez le mode de démarrage du service à "Automatic” (Automatique) ou “Automatic (Delayed Start)” (Automatique (lancement retardé)).<br /></li>
+            <li style="list-style-type: disc;">Lancez le service au moyen de la composante logiciel enfichable "Services" ou de PowerShell.<p>Lancer service<code>EGCS.Portal.Service.DocumentManagement</code></p></li>
+        </ul>
+        <p>
+            <MadCap:conceptLink term="Portal" />
+        </p>
+    </body>
+</html>

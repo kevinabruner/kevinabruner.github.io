@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers Corner|GCPM data dictionary|Features data dictionary">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Performance metadata</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/MetadataTable.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>All Files</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Change language">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Print">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Search is based on keyword.</p>
+                                                        <p><samp>Ex:&#160;"Procedures"</samp>
+                                                        </p>
+                                                        <p>Do not search with natural language</p>
+                                                        <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                        </div>
+                                        <div>
+                                            <h1><a name="aanchor173"></a>
+                                                <MadCap:concept term="Performance" />Performance metadata</h1>
+                                            <p>The first table below identifies entities in the performance feature. The remaining tables display the egcs metadata for each of these entities. </p>
+                                            <p>This metadata was generated from Workspace 9 on January 15, 2019. </p>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Performance feature entities </a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Entity</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Logical Name</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project Indicator | A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Performance feature - A list of project indicators used at your organization</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">egcs_fc_indicator</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Project Result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Performance feature - Performance results associated to a project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">egcs_fc_projectresult</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Program Outcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Performance feature - A list of outcomes associated to priority programs</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">egcs_pp_outcome</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Priority Program | A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Performance feature - A list of priority programs for your organization</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">egcs_pp_program</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project Indicator | PJ</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Performance feature - a list of project indicators associated with a project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">egcs_ppfc_indicator</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Priority Program | PG</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Performance feature - a list of priority programs for a program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">egcs_pptp_program</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Project Result History</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-LightRows">Performance feature - History related to the results of an indicator for a project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-LightRows">egcs_projectresulthistory</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Performance" href="javascript:void(0);" data-mc-topics="About performance |../../Program Solution/Performance/AboutPerformance.htm#aanchor205||Key steps to configuring performance|../../Program Solution/Performance/Key steps performance.htm#aanchor143||Performance metadata|#aanchor173"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                            </p>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Project  Indicator | A (egcs_fc_indicator)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_description_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Description (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Memo</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Provide a description of the indicator (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 2000</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_description_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Description (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Memo</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Provide a description of the indicator (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 2000</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fc_indicatorid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project Indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_meansofverification_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Means of verification (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Describe how the indicator will be verified (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_meansofverificationfr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Means of verification (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Describe how the indicator will be verified (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the project indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the project indicator (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">The name of the project indicator (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Project Result (egcs_fc_projectresult)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_actualresultdate</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Actual result date</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">DateTime</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Date the latest result was entered in the record.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: DateOnly</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_amendmentlocked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows"><a href="javascript:void(0);" class="MCTextPopup MCTextPopupHotSpot MCTextPopup_Open MCTextPopupHotSpot_ #text">Amendment<span class="MCTextPopupBody popupBody"><span class="MCTextPopupArrow"></span>formal change to a contribution agreement, after assessment is approved.</span></a> locked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Boolean</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Indicates the record is locked for changes in the amendment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">True: Yes
+False: No
+Default Value: False</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_amendmentlockedname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_amendmentsource</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Amendment source</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_projectresult</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_amendmentsourcename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_baselinedate</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Baseline date</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">DateTime</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Provide the date the baseline value was established</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: DateOnly</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_baselinedecimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Baseline</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Decimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Provide a baseline value for the indicator (numeric)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Minimum value: -100000000000
+Maximum value: 100000000000
+Precision: 2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_baselinetext</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Baseline</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Provide a baseline value for the indicator (text)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_comment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Comment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Provide a comment related to the indicator (optional)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_descriptionen</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Description (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Memo</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Provide a description of the indicator (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 2000</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_descriptionfr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Description (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Memo</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Provide a description of the indicator (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 2000</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_expectedresultdate</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Expected result date</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">DateTime</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Provide a date when the expected result will be measured</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: DateOnly</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_expectedresultdecimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Expected result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Decimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Provide a value for the expected result of the indicator (numeric)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Minimum value: -100000000000
+Maximum value: 100000000000
+Precision: 2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_expectedresulttext</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Expected result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Provide a value for the expected result of the indicator (text)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fc_amendment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project amendment</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Indicates the last amendment done for the project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/Header</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_amendment</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_fc_amendmentname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_fc_projectresultid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project Result | Prj</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_locked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Locked</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Boolean</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Indicates that the record is locked from changes</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">True: Yes
+False: No
+Default Value: False</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_lockedname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_meansofverificationen</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Means of verification (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Describe how the indicator will be verified (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_meansofverificationfr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Means of verification (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Describe how the indicator will be verified (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_metnotmet</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Met / Not met</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Picklist</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Indicate if the expected result was met for the indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Options:
+701360000: Met
+701360001: Not met
+Default: N/A</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_metnotmetname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_portal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Portal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Boolean</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">True: Yes
+False: No
+Default Value: False</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_portalname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Virtual</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_projectindicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name of the indicator associated with the project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_indicator</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_projectindicatorname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_projectprofile</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the project associated with this result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/Header</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_profile</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_projectprofilename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_resultdecimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Decimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Enter the result (numeric) </td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Minimum value: -100000000000
+Maximum value: 100000000000
+Precision: 2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_resulttext</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Enter the result (text) </td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 500</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Program Outcome (egcs_pp_outcome)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the program outcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the program outcome (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the program outcome (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_pp_outcomeid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Program Outcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_priorityprogram</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Priority program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The priority program associated to the outcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_pp_program</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_priorityprogramname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Priority Program | A&#160;(egcs_pp_program)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the priority program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_name_en</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Name (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The name of the priority program (EN)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name_fr</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the priority program (FR)</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 223</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_pp_programid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Priority Program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Project Indicator |&#160;PJ&#160;(egcs_ppfc_indicator)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the project indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_ppfc_indicatorid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Project indicator | PO</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_programoutcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Program outcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Select the program outcome for this indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_pp_outcome</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_programoutcomename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_projectindicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Select the project indicator based on the the program outcome</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_fc_indicator</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_projectindicatorname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Priority Program |&#160;PG (egcs_pptp_program)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the priority program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_pptp_programid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Priority Program | PG</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_priorityprogram</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Priority program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Select the priority program for the priority identified.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_pp_program</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_priorityprogramname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_programprofile</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Program</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Select the program associated to the priority</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">EGCS Base/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Targets:
+egcs_tp_profile</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_programprofilename</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Project Result History (egcs_projectresulthistory)</a></span>
+                                                <div class="MCDropDownBody dropDownBody">
+                                                    <table cellspacing="0" class="TableStyle-MetadataTable" style="mc-table-style: url('../../Resources/TableStyles/MetadataTable.css');">
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <col class="TableStyle-MetadataTable-Column-Regular" />
+                                                        <thead>
+                                                            <tr class="TableStyle-MetadataTable-Head-Header1">
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Logical Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Display Name</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Type</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Description</th>
+                                                                <th class="TableStyle-MetadataTable-HeadE-Regular-Header1">Form location</th>
+                                                                <th class="TableStyle-MetadataTable-HeadD-Regular-Header1">Additional data</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_expectedresultdate</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Expected result date</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">DateTime</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Indicates the expected result date for the indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: DateOnly</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_expectedresultdecimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Expected result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Decimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Displays the expected result identified for the indicator</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Minimum value: -100000000000
+Maximum value: 100000000000
+Precision: 2</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Name</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">The name of the custom entity.</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: Text
+Max length: 450</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_projectresult</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Project result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Lookup</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">The project result associated with this record</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">Information/Header</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Targets:
+egcs_fc_projectresult</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_projectresulthistoryid</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Project Result History</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Uniqueidentifier</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Unique identifier for entity instances</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">&#160;</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">egcs_projectresultname</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">String</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">N/A</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-DarkerRows">&#160;</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-DarkerRows">Format: Text
+Max length: 100</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-LightRows">
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">egcs_resultdate</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Actual result date</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">DateTime</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Displays the date the result was entered</td>
+                                                                <td class="TableStyle-MetadataTable-BodyE-Regular-LightRows">Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyD-Regular-LightRows">Format: DateOnly</td>
+                                                            </tr>
+                                                            <tr class="TableStyle-MetadataTable-Body-DarkerRows">
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">egcs_resultdecimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Actual result</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Decimal</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Displays the result entered on the given date</td>
+                                                                <td class="TableStyle-MetadataTable-BodyB-Regular-DarkerRows">Information/General/General</td>
+                                                                <td class="TableStyle-MetadataTable-BodyA-Regular-DarkerRows">Minimum value: -100000000000
+Maximum value: 100000000000
+Precision: 2</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

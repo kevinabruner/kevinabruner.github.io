@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développeur|[%=System.LinkedTitle%]">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>À propos du module d'extension de calculs CFG </title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles-Dev.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Précédent" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Saisissez votre terme de recherche ici" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Rechercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Rechercher notre aide et documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>Tous les fichiers</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Rechercher">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Changer la langue">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Imprimer rubrique">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Sujet Précédent">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Sujet Suivant">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Supprimer mise en surbrillance ">
+                                                    <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="nocontent">
+                                            <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                                <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_1_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                </ul>
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" />Conseils  recherche</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>La recherche est basée sur le mot clé.</p>
+                                                        <p><samp>Ex:&#160;&lt;&lt;Procédures&gt;&gt;</samp>
+                                                        </p>
+                                                        <p>Ne cherchez pas avec le langage naturel</p>
+                                                        <p><samp>e.g.:&#160;&lt;&lt;Comment puis-je écrire une nouvelle procédure?&gt;&gt;</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/fr-ca/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                        </div>
+                                        <div>
+                                            <h1>À propos du module d'extension de calculs CFG </h1>
+                                            <p>La fonction du champ calculé prêt à l'emploi de Dynamics 365 est si limitée qu'il est nécessaire d'utiliser un plugin permettant de reproduire ses fonctions afin de contourner ses limites. Ces limites incluent&#160;:</p>
+                                            <ul>
+                                                <li value="1">Nombre maximal de champs calculés connexes établi à 5.</li>
+                                                <li value="2">Impossibilité de déclencher des flux de production ou des plugin dans les champs calculés.</li>
+                                                <li value="3">Impossibilité d'utiliser relativement aux règles de détection dédoublées</li>
+                                                <li value="4">Impossibilité de classer les champs calculés qui comportent un champ ou un enregistrement parent, un autre champ calculé ou un champ logique.</li>
+                                                <li value="5">Impossibilité de couvrir plus de deux entités</li>
+                                            </ul>
+                                            <p>Voir aussi&#160;:</p>
+                                            <ul>
+                                                <li value="1"><a href="../../R1 Configure/Entities/CFG entities/CFG Calculation.htm" class="MCXref xref">Configurer un champ calculé</a>
+                                                </li>
+                                            </ul>
+                                            <h2>Étapes du plugin</h2>
+                                            <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <thead>
+                                                    <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Message (Événement)</th>
+                                                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Étape</th>
+                                                        <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Image(s)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Créer</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Pré-opération</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">S.O.</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Mise à jour</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Pré-opération</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">Image pré-traitement</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                        <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Mise à jour</td>
+                                                        <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Asynchrone post-opération</td>
+                                                        <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">Image pré-traitement et post-traitement</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p>La mise à jour supplémentaire du mode de l'asynchrone post-opération vise à supporter les champs calculés qui font référence aux champs tirés de leurs enregistrements parents. Lorsqu'un enregistrement parent est mis à jour, il recalculera de manière asynchrone les champs enfants.</p>
+                                            <p>Le plugin créera également les étapes du plugin ci-dessus pour l'entité elle-même et pour chacun des entités auxquelles on fait référence si ces dernières n'ont pas déjà été crées dans le cadre d'une autre configuration du champ de calcul. Les étapes à jour ne se déclencheront que pour les attributs auxquels on fait référence dans la configuration du champ de calculé  </p>
+                                            <h3>Définir un champ calculé</h3>
+                                            <p>Définir un champ calculé</p>
+                                            <ol>
+                                                <li value="1">Dans la recherche avancée, ouvrir l'entité du <b>CFG&#160;calculated field</b> (champ calculé du CFG).</li>
+                                                <li value="2">Ajouter un enregistrement en utilisant le service d'aide à l'écran pour vous orienter. <br />Remarque&#160;:&#160;Les paramètres de la formule sont énumérés ci-dessous</li>
+                                            </ol>
+                                            <p><b>Paramètres de la formule</b>&#160;:&#160;Établir une liste d'attributs délimités par des virgules dont la valeur sera utilisée pour le formatage ou la concaténation des calculs ou du texte.  La syntaxe est la suivante&#160;:&#160;{ .∶ ; }</p><code>{ lookup.attribute : format ; default value }</code>
+                                            <ul>
+                                                <li value="1">Le nom de recherche n'est nécessaire que lorsque l'on fait référence aux attributs parents</li>
+                                                <li value="2">Les accolades ne sont nécessaires que lorsque l'on précise le format ou la valeur par défaut. </li>
+                                                <li value="3">Formater l'attribut dans le champ de la formule et non dans ce champ, sauf si la valeur doit être formatée deux fois (beta).</li>
+                                                <li value="4">Utiliser l'attribut <b>modifiedon</b> pour la date d'aujourd'hui.</li>
+                                                <li value="5">
+                                                    <p>Si un champ n'est pas associé à une valeur, on utilisera la valeur par défaut.  Si aucune valeur par défaut n'est précisée ou si le calcul est invalide, le champ ciblé sera effacé.</p>
+                                                </li>
+                                            </ul>
+                                            <p>Étant donné qu'il n'est possible de préciser une valeur temps (supposons que vous vouliez enlever ou ajouter des jours, des mois ou des années à une date), une syntaxe spéciale est fournie afin de saisir les valeurs temps. Les valeurs temps </p>
+                                            <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                <thead>
+                                                    <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Syntaxe</th>
+                                                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Description</th>
+                                                        <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">Exemple</th>
+                                                        <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">Résultat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">ff … fffffff (2 à 7 chiffres)</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Millisecondes</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">10fff</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">00.00:00:00.010</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">ss</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Secondes</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">10ss</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">00.00:00:10.000</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">mm</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">minutes</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">10mm</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">00.00:10:00.000</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">hh</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">heures</td>
+                                                        <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">10hh</td>
+                                                        <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">00.10:00:00.000</td>
+                                                    </tr>
+                                                    <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                        <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">jj</td>
+                                                        <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">jours</td>
+                                                        <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">10jj</td>
+                                                        <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">10.00:00:00.000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <h2>Formule</h2>
+                                            <p>Voici la formule de calculs ou la formule de formatage ou de concaténation de texte.</p>
+                                            <p>Ce champ met à profit les deux bibliothèques du cadre. NET&#160;afin d'analyser la formule et d'effectuer le formatage ou la concaténation des données ou des calculs. </p>
+                                            <ol>
+                                                <li value="1">La syntaxe en vue du formatage et de la concaténation des champs est identique à la méthode du String Format(String format, params object[] args) du cadre .NET, dans le cadre de laquelle le champ constitue le paramètre régissant le format de la chaîne et les paramètres de formule constituent le paramètre d'args des objets[]. <br /><p> Consultez les documents de Microsoft sur la méthode de format pour connaître la syntaxe de format de données valide. Un aide-mémoire est fourni à l'Annexe A – Syntaxe de formattage. La formule générale est :</p><p style="text-align: center;"><b> { valeur ,alignement ∶ format }</b></p></li>
+                                                <li value="2">
+                                                    <p>La syntaxe en vue des calculs utilise la classe <b>DataTable </b>du cadre de .NET, et plus particulièrement la propriété <b>DataColumn.Expression</b>. Les valeurs de calcul sont rassemblées, tout comme les champs du formatage ou de la concaténation, de façon à ce que toutes les valeurs puissent être formatées avant les calculés réels.  </p>
+                                                    <p>Consulter les documents de Microsoft sur la propriété <b>DataColumn.Expression</b> pour connaître la syntaxe de calculs valide. On utilise la même syntaxe que SQL. Un aide-mémoire est fourni.</p>
+                                                </li>
+                                                <li value="3">
+                                                    <p>Pour faire référence aux attributs des paramètres de la formule, respecter la convention d'espace réservé <b>String.Format&#160;</b>dans le cadre de laquelle<b> {0} </b>fait référence au premier attribut, <b>{1}</b> au deuxième attribut et ainsi de suite. Le nombre maximal doit être inférieur ou égal au nombre d'attributs énumérés dans les paramètres de la formule. Les espaces réservés pour les nombres peut être utilisé plus d'une fois dans la formule.</p>
+                                                </li>
+                                            </ol>
+                                            <h3>Condition</h3>
+                                            <p>Il s'agit de la condition en vertu de laquelle le formatage et la concaténation des calculs et des textes doivent être effectués. La valeur de ce champ est une chaîne de requête FetchXML. Il est possible d'utiliser les recherches avancées de CRM&#160;pour établir la chaîne de requête FetchXML. Dans le cas des requêtes plus complexes, il est possible d'utiliser un outil tiers appelé FetchXML Builder.</p>
+                                            <p style="font-weight: bold;">Avant de coller la chaîne de requête dans ce champ, il convient de s'assurer que toutes les accolades ont été supprimées, exception faite des espaces réservés.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

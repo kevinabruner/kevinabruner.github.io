@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-ca" xml:lang="en-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Developers corner|[%=System.LinkedTitle%]|Alphinat SmartGuide-Development, localization and branding">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Developing forms for the portal with SmartGuide</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>All Files</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Change language">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Print">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">You are here: </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Search Tips</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>Search is based on keyword.</p>
+                                                            <p><samp>Ex:&#160;"Procedures"</samp>
+                                                            </p>
+                                                            <p>Do not search with natural language</p>
+                                                            <p><samp>Ex:&#160;"How do I write a new procedure?"</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help
+									</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor203"></a>
+                                                    <MadCap:concept term="Portal" />Developing forms for the portal with SmartGuide</h1>
+                                                <p>The SmartGuide Designer is a software to design forms for the portal. Most of the documentation you may need for SmartGuide is included with the GCPM&#160;online help:&#160;<a href="AlphinatDoc.htm" class="MCXref xref">Alphinat SmartGuide documentation</a></p>
+                                                <p>Use the SmartGuide API to extend SmartGuide functionality. Some of the extensions used for the GCPM portal are described here.</p>
+                                                <h2>SmartGuide Designer</h2>
+                                                <p>The SmartGuide Designer is used to create forms by dragging and dropping fields onto pages – which can be further segregated into groups (groups can be repeatable – allowing a similar functionality to CROWE grids / table representation). There are two types of serialized fields on forms, input and metadata fields. They are categorized by the following criteria:</p>
+                                                <ul>
+                                                    <li value="1"><b>Input Fields</b>: Fields that the user enters data into that we want to capture in CRM and have a paired entity field. When the form is serialized these fields are grouped in XML, based on the entity they belong to. The naming convention for fields that represent an entity’s field from CRM is <b>entity_name.field_name</b> in the SmartGuide field’s internal name.<p><b>Repeat Groups</b>: Fields that are a part of an N:1 relationship that need to be captured (e.g. project costs in a project) use this naming convention: <b>entity_name.field_name </b>. In this case the ‘one’ entity followed by that entity’s relationship name to the <b>Many : N</b> entity.</p></li>
+                                                    <li value="2"><b>Metadata fields</b>: Fields included in the serialized XML but do not map to an entity field in CRM. Any field that is considered to be serializable but does not follow a naming convention of <code>entity_name.field_name</code> will be serialized as a child node to the  metadata node. These nodes can be used to store information between the portal and CRM to reduce the amount of back and forth queries, or information that needs to be saved between form sessions but does not map to any records in CRM.</li>
+                                                </ul>
+                                                <p>Fields are serialized based on the following:</p>
+                                                <ol>
+                                                    <li value="1">If they are marked as persistent, they are automatically serialized. For example, hidden fields may hold information such as identifiers that we want to send to CRM, or JSON we queried from CRM on the first form initialization.</li>
+                                                    <li value="2">If they are an input type (text, date, selection, etc.) they are serialized and grouped depending on their naming convention.</li>
+                                                </ol>
+                                                <p><b>Configuration</b> fields are not serialized in the XML. They are used to store information in the current form session and helps to provide context. <b>The following are common and necessary across all forms:</b></p>
+                                                <ul>
+                                                    <li value="1"><b>site</b>: a hidden field populated through a request parameter, is the web server relative URL of the current zone entity. In other words, denotes the current user, project, or client.</li>
+                                                    <li value="2"><b>referenceNumber</b>: a hidden field also populated through a request parameter, is a user friendly identifier for the current form instance.</li>
+                                                    <li value="3"><b>xml</b>: a hidden field which stores the serialized XML, used on both loading the XML into the form to be de-serialized and the serialized XML after parsing the form to save to SharePoint (or submit to CRM).</li>
+                                                    <li value="4"><b>debug</b>: a hidden field used to support pseudo logging, when forms run into issues this hidden field can be toggled to a text area to help in debugging.</li>
+                                                    <li value="5"><b>isSubmit</b>: a hidden boolean value passed to the <code>SaveDraft</code> web service call. When the <b>Submit</b> button is pressed, it is toggled from false to being true – denoting that this save is now a submit.</li>
+                                                    <li value="6"><b>userCanEdit</b>: a hidden Boolean value determining if the user has the appropriate permissions to save / submit the form. If set to false, the save and submit buttons are hidden.</li>
+                                                    <li value="7"><b>SubmissionPDF</b>: a hidden field that holds the base 64 encoded value of the PDF contents generated when form submission is triggered</li>
+                                                    <li value="8"><b>saveResult</b>: A boolean value representing the value returned when a save or submit is performed. Important: This field is actually a text field that uses CSS to hide it. The reasoning is that it needs to have a css class assigned to it (save-element) in order to properly trigger code in the Theme file to provide feedback to the user (success or failure). This field also has to exist on each page, with each copy having their default value set to the value of the original field (the original field is mapped to the result of the <code>saveDraft</code> web service call).</li>
+                                                    <li value="9"><b>Fc_Profile_ID</b>: On project level forms, is retrieved on form load and used for queries to CRM.</li>
+                                                </ul>
+                                                <p><b>Currency Fields</b>: Fields that are meant to reflect currency values need to have special configuration done in order to support proper rendering of the ‘$’ character for currency display. Three key pieces of configuration need to be used in order to support this:</p>
+                                                <ul>
+                                                    <li value="1">Have the currency field’s prefix in the fields ‘Appearance’ tab assigned to  ‘$’</li>
+                                                    <li value="2">
+                                                        <p>Have a CSS class ‘<code>amountnumeric</code>’ assigned in the ‘Appearance tab<br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/Portal/AppearanceTab.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="624" data-mc-height="355" src="../../Resources/Images/Portal/AppearanceTab_thumb_0_48.png" tabindex="" /></a></p>
+                                                    </li>
+                                                    <li value="3">In the translation document, have the French column have the $ as a <b>suffix</b><br /><a class="MCPopupThumbnailLink MCPopupThumbnailPopup" href="../../Resources/Images/Portal/Suffix.png"><img class="MCPopupThumbnail img imgthumbnail" data-mc-width="618" data-mc-height="94" src="../../Resources/Images/Portal/Suffix_thumb_0_48.png" tabindex="" /></a></li>
+                                                </ul>
+                                                <h2>Document attachment</h2>
+                                                <p>Each page has an <b>Attach / View Documents</b> button as part of the WET_THEME theme. This button opens a dialogue that allows users to upload documents (either through browsing or drag and drop functionality) to the form submission folder for the current draft form.</p>
+                                                <h2>GCPM Smartlet Structure</h2>
+                                                <p>SmartGuide forms (Smartlets) follow a general structure:</p>
+                                                <ul>
+                                                    <li value="1">One or multiple pages to gather use input. Apart from content to gather user input, each page also has buttons to:<ul><li value="1">Save - a configuration save field to store the result of a <code>SaveDraft</code> operation</li><li value="2">Previous and / or Next navigation</li><li value="3">Attach / View documents.</li></ul></li>
+                                                    <li value="2">Review page<p>Review Page consists of SmartGuide’s data recap tool, a submit button, a submit result configuration field to store the <code>SaveDraft</code> submit result, an Attach / View Documents button, and a Previous button. The data recap tool allows the form designer to easily include and exclude data that doesn’t need to be reflected to the user as part of their submission. The PDF generation is based off of this page / data recap tool. Upon hitting submit and successfully generating the PDF snapshot and sending the appropriate data over to CRM, the form advances to the Success page.</p></li>
+                                                    <li value="3">Success Page<p> Informs a user that the form has been submitted and displays a reference number. Users can access the <b>Attach / View Documents</b> button, but cannot make any changes as the submission documents (XML and PDF snapshot) and all corresponding attached files have been marked read only.</p></li>
+                                                </ul>
+                                                <h2>Connections</h2>
+                                                <p>Two types of connections have been configured – API extension functions and SharePoint web service calls.</p>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Extension functions</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>Extension functions</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p class="tabletext">Extension function</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p class="tabletext">Description</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p><code>SmartletSerializer</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">This function is called on form save or submit. </p>
+                                                                        <p class="tabletext">Iterates through the form and serializes the input fields and metadata. </p>
+                                                                        <p class="tabletext">The root node is named after the internal name of the Smartlet, with its children nodes being Metadata and any entities that exist on the form. </p>
+                                                                        <p class="tabletext">The Metadata children are fields that are indicated as being serializable but do not follow the <code>entity.field</code> naming convention. </p>
+                                                                        <p class="tabletext">The entity nodes have their fields as direct children. The serialized XML string is stored in the configuration field named ‘XML’.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p><code>GeneratePDF</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">This function is called on form Submit. </p>
+                                                                        <p class="tabletext">Generates the based64 encoded string of the pdf representation of the form and user input. </p>
+                                                                        <p class="tabletext">The contents of the pdf are determined by what is in the data recap field on the Review page. </p>
+                                                                        <p class="tabletext">To change this, in the GeneratePDF extension function you can change which page(s) are converted into the PDF snapshot by using the following convention when creating the byte array:
+</p>
+                                                                        <p class="tabletext"><code>
+byte[] bytes = smartlet.generateFile(Constants.FileType.PDF, $"P{page1Id}}:PrintOut |P{page2Id}:PrintOut");
+</code>
+                                                                        </p>
+                                                                        <p class="tabletext">
+Essentially, the naming convention is ‘P’ + IdOfPageToAdd + ‘:’ + ‘NameOfTemplate’. </p>
+                                                                        <p class="tabletext">Any additional pages follow the same naming convention, with a pipe ‘|’ character in between the template name and ‘P’ character.
+</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                        <p class="tabletext"><code>InitializeRequestParameters</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                        <p class="tabletext">This function pulls data from request parameters and sets their corresponding config fields. </p>
+                                                                        <p class="tabletext">Called on smartlet initialization.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                        <p class="tabletext"><code>InitSmartlet</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                        <p class="tabletext">This function is called on form load, calls the <code>LoadDraft </code>webservice and <code>SmartletDeserializer</code> extension function. </p>
+                                                                        <p class="tabletext">Other extension function and web service calls may be made that are more form dependent.</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                        <p class="tabletext"><code>ImportCsv</code>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                        <p class="tabletext">This function allows the user to download a provided template, populate it with data, and upload it to the form in order to create rows in a repeatable group. </p>
+                                                                        <p class="tabletext">Two parameters, the name of the SmartGuide upload field and repeatable group need to be provided. </p>
+                                                                        <p class="tabletext"><b>Important</b>: The user must upload a csv with headers that match the labels of the fields in the repeatable group. The form does not care if the template language matches the current SmartGuide language (can upload English template in French form context and vice versa). </p>
+                                                                        <p class="tabletext">However it assumes input will match the CSV language – meaning currencies will follow French currency formats in the French template if they use any currency formatting. Repeat groups that have dropdown / selection fields or calculated fields will also be ignored and not needed in the CSV template.</p>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SharePoint Connections</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>Contains all of the web service calls the form makes. Any web service call to CRM is made through a SharePoint web service. </p>
+                                                        <p>For more information, see<a href="../WebserviceSharePoint.htm" class="MCXref xref">SharePoint web service</a>. </p>
+                                                        <ul>
+                                                            <li value="1">When adding new web services, it is important to include the following headers along with their default values.</li>
+                                                            <li value="2">When adding the URL to the web service, an additional parameter, {Client-Site} should be pre-pended to the location the web service is stored. </li>
+                                                            <li value="3">When creating the service reference on the Smartlet, it should be set to the value of the configuration variable ‘site’.</li>
+                                                        </ul>
+                                                        <table style="mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                            <caption>SharePoint connections</caption>
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                            <thead>
+                                                                <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                                    <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                        <p>Header</p>
+                                                                    </th>
+                                                                    <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                        <p>Value</p>
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">Content-Type	</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows"><code>application/json;odata=verbose</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">Cookie</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows"><code>${requestHeader("Cookie")}$</code>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                                    <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">Referer</td>
+                                                                    <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows"><code>${"https://" + requestHeader("Host") + "/"}$</code>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <p>See <a href="PortalFormDynamic.htm" class="MCXref xref">Dynamic portal forms</a>. </p>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="Portal" href="javascript:void(0);" data-mc-topics="About GCCF|../GCCFAbout.htm#aanchor166||About the portal|../AboutPortal.htm#aanchor395||About the portal|../AboutPortal.htm#aanchor396||ADFS extensions web application|../ADFSExtensionswebApp.htm#aanchor217||Alphinat SmartGuide documentation|AlphinatDoc.htm#aanchor44||Authentication for GCCF users|../GCCFAuthentication.htm#aanchor22||Authentication for RDA users|../AuthenticationRDA.htm#aanchor214||Build and deploy SPFx apps|../SPFxAppsBuildDeploy.htm#aanchor140||Configure forms for the portal|ConfigureApplic on portal.htm#aanchor442||Create new forms|CreateNewForms.htm#aanchor242||Data transfer from the portal to GCPM|../DataTransfer.htm#aanchor256||Deploying forms for the portal with SmartGuide|PortalFormDeploy.htm#aanchor0||Developing forms for the portal with SmartGuide|#aanchor203||Developing portal forms - connections|PortalFormDevConnections.htm#aanchor106||Developing SPFx Web Parts|../SPFxAppsProjectFolders.htm#aanchor145||Documents on the portal |../PortalDocs.htm#aanchor422||Dynamic portal forms|PortalFormDynamic.htm#aanchor394||EGCS.Portal configuration|../EGCSPortalConfig.htm#aanchor368||EGCS.Portal Visual Studio Solution|../VSSolutionEGCSPortal.htm#aanchor321||FormManager web service overview|../WebServicePortalFormMgr.htm#aanchor10||FormManager web service|../WebServiceFormMgr.htm#aanchor127||GC.GCCF configuration|../GCCFConfig.htm#aanchor388||GC.GCCF Visual Studio Solution|../VSSolutionGCCF.htm#aanchor428||GCCF certificates|../Cert-GCCF.htm#aanchor18||GCCF common domain web application|../GCCFCommonDomainWebApp.htm#aanchor320||GCCF database|../GCCFDatabase.htm#aanchor205||GCCF metadata|../GCCFMetadata.htm#aanchor267||GCPM authentication|../GCPMAuthentication.htm#aanchor8||GCPM&#160;Smartlet Structure |PortalFormSmartletStructure.htm#aanchor213||Invite a GC&#160;Client to the portal|../UsingPortal/InviteClient.htm#aanchor191||Navigate the portal|../UsingPortal/NavigatePortal.htm#aanchor144||Portal - master page overview|../PortalMasterPage.htm#aanchor25||Portal branding|../PortalBranding.htm#aanchor261||Portal configuration - invitation email|../PortalConfigInviteEmail.htm#aanchor227||Portal document integration with GCPM&#160;|../PortalDocIntegGCPM.htm#aanchor231||Portal entity relationship diagram|../../Modules/ERDs/ERD Portal.htm#aanchor131||Portal integration with GCPM|../Portal-GCPMIntegration.htm#aanchor2||Portal release notes 1.0|../PortalReleaseNotes1.0.htm#aanchor38||Portal security|../PortalSecurity.htm#aanchor263||RDA web service and portal web service certificates|../Cert-RDAWebService.htm#aanchor215||RDA web service|../WebServiceRDA.htm#aanchor123||Reverse proxy server for the portal|../PortalReverseProxy.htm#aanchor212||SharePoint - portal site structure|../PortalSharepointSiteStructure.htm#aanchor156||SharePoint web service|../WebserviceSharePoint.htm#aanchor313||SPFx apps for the portal|../SPFxAppsPortal.htm#aanchor208||SSL certificate|../Cert-SSL.htm#aanchor310||Submit forms on the portal|../UsingPortal/SubmitForms.htm#aanchor357||Submit tabular data with a form|../UsingPortal/SubmitFormTable.htm#aanchor162||Web services for portal integration|../WebServicesPortal.htm#aanchor238||WebAPI&#160;web service|../WebServiceWebAPI.htm#aanchor362||Windows service - document management|../WindowsDocMgt.htm#aanchor184||Windows service - site creation|../WindowsSiteCreation.htm#aanchor255"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />See Also</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

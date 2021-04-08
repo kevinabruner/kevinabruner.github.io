@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>JSDoc: Source: egcs_common.js</title>
+        <link href="../../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.select-skin-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/select-skin.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="styles/prettify-tomorrow.css" rel="stylesheet" />
+        <link href="styles/jsdoc-default.css" rel="stylesheet" />
+        <script src="scripts/prettify/prettify.js">
+        </script>
+        <script src="scripts/prettify/lang-css.js">
+        </script>
+        <script src="../../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-left" id="offCanvas" data-off-canvas="" data-position="left" data-mc-ignore="true">
+                    <ul class="off-canvas-drilldown vertical menu off-canvas-list" data-drilldown="" data-mc-back-link="Précédent" data-mc-css-tree-node-expanded="is-drilldown-submenu-parent" data-mc-css-tree-node-collapsed="is-drilldown-submenu-parent" data-mc-css-sub-menu="vertical menu slide-in-left is-drilldown-submenu" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="True" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.drilldown" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Saisissez votre terme de recherche ici" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Rechercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container" data-mc-content-body="True">
+                                <div class="search-container">
+                                    <form class="search" action="#">
+                                        <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                            <input class="search-field needs-pie" type="search" placeholder="Rechercher notre aide et documentation" />
+                                            <div class="search-filter-wrapper">
+                                                <div class="search-filter">
+                                                    <div class="search-filter-content">
+                                                        <ul>
+                                                            <li>Tous les fichiers</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="search-submit-wrapper" dir="ltr">
+                                                <div class="search-submit" title="Rechercher">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row collapse">
+                                    <div class="top-bar">
+                                        <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                            <div class="button-group-container-left">
+                                                <button class="button needs-pie select-language-button" title="Changer la langue">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                </button>
+                                                <button class="button needs-pie select-skin-button" title="Select skin">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select skin" />
+                                                </button>
+                                                <button class="button needs-pie print-button" title="Imprimer rubrique">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                </button>
+                                                <button class="button needs-pie previous-topic-button" title="Sujet Précédent">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                </button>
+                                                <button class="button needs-pie next-topic-button" title="Sujet Suivant">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                </button>
+                                                <button class="button needs-pie remove-highlight-button" title="Supprimer mise en surbrillance ">
+                                                    <img src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                </button>
+                                            </div>
+                                        </div> </div>
+                                    <div class="topic-layout">
+                                        <div>
+                                            <div class="side-menu">
+                                            </div>
+                                            <div class="side-content">
+                                                <div class="MCDropDown MCDropDown_Open dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvrir" />Conseils  recherche</a></span>
+                                                    <div class="MCDropDownBody dropDownBody">
+                                                        <p>La recherche est basée sur le mot clé.</p>
+                                                        <p><samp>Ex:&#160;&lt;&lt;Procédures&gt;&gt;</samp>
+                                                        </p>
+                                                        <p>Ne cherchez pas avec le langage naturel</p>
+                                                        <p><samp>e.g.:&#160;&lt;&lt;Comment puis-je écrire une nouvelle procédure?&gt;&gt;</samp>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div><a class="cta" href="https://technet.microsoft.com/fr-ca/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                        </div>
+                                        <div>
+                                            <div id="main">
+                                                <h1 class="page-title">Source: egcs_common.js</h1>
+                                                <section>
+                                                    <article><pre class="prettyprint source linenums"><code>ï»¿ï»¿var egcs_common = window.egcs_common || { __namespace: true };
+(function () {
+    //var _host = Xrm.Page.context.getClientUrl();
+    //var _version = 8.2;
+    //var _webApiUrl = _host + "/api/data/v" + _version + '/';
+    //*****************************************************************************************************
+    /**
+    *      @function addOnChange
+    *      @summary  The function adds a onChange event on a field
+    *      @description The function adds a onChange event on a field
+    *      @author Unknown
+    *      @param {string} attrName: name of the field to be set
+    *      @param {string} callback: name of the fumction
+    *      @example addOnChange("egcs_provincialbusinessnumber", function (context) { var execContext = context; egcs_common.validateNumberString(execContext) });
+    *      @return {none}
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.addOnChange = function (attrName, callback) {
+        var attr_field = Xrm.Page.getAttribute(attrName);
+        if (attr_field != null) {
+            attr_field.addOnChange(callback);
+        }
+    }
+    //******************************************************************************************************
+    /**
+    *      @function fireEvent 
+    *      @summary  The function triggers onChange event 
+    *      @description The function triggers onChange event
+    *      @author Tetyana Ryabets-Zuk
+    *      @param {object} context: execution context
+    *      @param {string} inField: name of the field to trigger onChange event
+    *      @example fireEvent ("egcs_ay_country")
+    *      @return {none}
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.fireEvent = function(context, inField) {
+        var cntr = context.getFormContext().data.entity.attributes.getByName(inField);
+        if (cntr != null) {
+            cntr.fireOnChange();
+        }
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function getAttribute
+    *      @summary  The function gets the value of a field
+    *      @description The function gets the value of a field
+    *      @author Unknown
+    *      @param {string} attrName: name of the field to get the value
+    *      @example getAttribute("egcs_name")
+    *      @return Value of the attribute
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.getAttribute = function (name) {
+        var attr = Xrm.Page.getAttribute(name);
+        if (attr != null) {
+            attr = attr.getValue();
+        }
+        return attr;
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function getLookup
+    *      @summary  The function gets the value of a loookup
+    *      @description The function gets the value of a lookup
+    *      @author Unknown
+    *      @param {string} name: name of the field to get the lookup
+    *      @example getLookup("egcs_fcprofileid")
+    *      @return Value of the lookup
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.getLookup = function (name) {
+        var lookup = this.getAttribute(name);
+        if (lookup != null &amp;&amp; lookup.length &gt; 0) {
+            lookup = lookup[0];
+        }
+        else {
+            lookup = null;
+        }
+        return lookup;
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function Request
+    *      @summary  Build Request fo JSON string
+    *      @description Build Request fo JSON string
+    */
+    //******************************************************************************************************
+    this.Request = function (method, url, data, resolve, reject) {
+        var request = new XMLHttpRequest();
+        request.open(method, url);
+        // Required headers by CRM
+        request.setRequestHeader("Accept", "application/json");
+        request.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+        request.setRequestHeader("OData-MaxVersion", "4.0");
+        request.setRequestHeader("OData-Version", "4.0");
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                var response = null;
+                if (request.responseText != "") {
+                    response = window.JSON.parse(request.responseText);
+                }
+                switch (request.status) {
+                    case 200: // GET &amp; PATCH success
+                    case 201: // POST success
+                    case 204: // PUT success
+                        resolve(response);
+                        break;
+                    default:
+                        reject(response);
+                }
+            }
+        };
+        request.send(window.JSON.stringify(data));
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function Request_IFrame
+    *      @summary  Build Request fo JSON string
+    *      @description Build Request fo JSON string
+    */
+    //******************************************************************************************************
+    this.Request_IFrame = function (method, url, data, resolve, reject) {
+        var request = new XMLHttpRequest();
+        var org = window.location.href.substring(window.location.href.indexOf("/") + 2);
+        org = org.substring(0, org.indexOf("/"));
+        request.open(method, "https://" + org + "/api/data/v8.2/" + url, true);
+        // Required headers by CRM
+        request.setRequestHeader("Accept", "application/json");
+        request.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+        request.setRequestHeader("OData-MaxVersion", "4.0");
+        request.setRequestHeader("OData-Version", "4.0");
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                var response = null;
+                if (request.responseText !== "") {
+                    response = window.JSON.parse(request.responseText);
+                }
+                switch (request.status) {
+                    case 200: // GET &amp; PATCH success
+                    case 201: // POST success
+                    case 204: // PUT success
+                        resolve(response);
+                        break;
+                    default:
+                        reject(response);
+                }
+            }
+        };
+        return request.send(window.JSON.stringify(data));
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function removeBrackets
+    *      @summary  The function removes the barckets from an ID
+    *      @description The function removes the barckets from an ID
+    *      @author Unknown
+    *      @param {string} str: the string ID to remove the backets
+    *      @example removeBrackets(profileId)
+    *      @return Value of an ID without the brackets
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.removeBrackets = function (str) {
+        return str.length &gt; 1 ? str.substr(1).slice(0, -1) : str;
+    }
+    /**
+    * 	@function maskInputField 
+    * 	@summary  Set mask for field
+    * 	@author Vladimir Staka
+    * 	@param {string} fieldName - A String for the name of the field to apply mask to
+    * 	@param {string} formatFieldName - A String represending mask
+    * 	@param {boolean} toUpper - Boolean to define if upper case should be apply to masked field.  
+    * 	@example MaskInputField('egcs_ay_mydatetypefield','+1(NNN)NNN-NNNN',false)
+    * 	@return {none}
+    * 	@requires {@link jQueryMaskedInputPlugin}
+    */
+    this.maskInputField = function (fieldName, format) {
+        jQuery = parent.jQuery;
+        $ = parent.$;
+        var control = Xrm.Page.getControl(fieldName);
+        if (control != null &amp;&amp; control.getControlType() == 'standard') {
+            // control.setFocus();
+            if (Xrm.Page.getAttribute(fieldName).getAttributeType() == 'datetime') {
+                var input = $("#" + fieldName + "_i").find("input");
+                if (input != null)
+                    input.mask(format);
+            }
+            else {
+                $("#" + fieldName + "_i").mask(format, { placeholder: "" });
+            }
+        }
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function validateNumberString
+    *      @summary  The function validates the length of field
+    *      @description The function validates the length of field. The context will capture the field that triggerred the function
+    *      @author Unknown
+    *      @param context: CRM Context
+    *      @param {int} minLength: Minimal length of a string
+    *      @param {int} maxLength: Maximal length of a string
+    *      @example validateNumberString(context,0,10)
+    *      @return Boolean if the lenghth is respected
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+this.validateNumberString = function(context, minLength, maxLength, name, id) {
+    var field = context.getEventSource();
+    var control = field.controls.get(0);
+    var label = control.getLabel();
+    var value = field.getValue();
+    var lcid = context.getContext().getUserLcid();
+    var length = maxLength - minLength;
+    if (typeof name != 'undefined' &amp;&amp; typeof id != 'undefined') {
+        if (isNaN(value) || value.length != length) {
+            field.controls.forEach(function(control) {
+                if (lcid == 1036)
+                    control.setNotification(label + " doit avoir une longueur de  " + length + ".", id);
+                else
+                    control.setNotification(label + " must be " + length + " digits long.", id);
+            });
+        }
+        else {
+            field.controls.forEach(function(control) {
+                control.clearNotification(errorId);
+            });
+        }
+    }
+    else {
+        field.controls.forEach(function(control) {
+            control.clearNotification(errorId);
+        });
+    }
+    var errorId = "validateNumberString";
+    var lengthMsg = minLength == maxLength ? minLength : minLength + "-" + maxLength;
+    var errorMsg = label + " must be a " + lengthMsg + " digit number.";
+    var errorMsgFr = label + " doit Ãªtre un nombre de " + lengthMsg;
+    if (value != null) {
+        var isNumber = /^\d+$/.test(value);
+        var moreThanMin = !minLength || value.length &gt;= minLength;
+        var lessThanMax = !maxLength || value.length &lt;= maxLength;
+        if (!isNumber || !moreThanMin || !lessThanMax) {
+            field.controls.forEach(function(control) {
+                if (lcid == 1036)
+                    control.setNotification(errorMsgFr, errorId);
+                else
+                    control.setNotification(errorMsg, errorId);
+            });
+        }
+    }
+}
+    //*****************************************************************************************************
+    /**
+    *      @function validateNumberStringNoMax
+    *      @summary  The function validates the length of field
+    *      @description The function validates the length of field. The context will capture the field that triggerred the function
+    *      @author Unknown
+    *      @param context: CRM Context
+    *      @param {int} minLength: Minimal length of a string
+    *      @param {int} maxLength: Maximal length of a string
+    *      @example validateNumberString(context,0,10)
+    *      @return Boolean if the lenghth is respected
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+this.validateNumberStringNoMax = function(context, minLength, maxLength, name, id) {
+    var field = context.getEventSource();
+    var control = field.controls.get(0);
+    var label = control.getLabel();
+    var value = field.getValue();
+    var lcid = context.getContext().getUserLcid();
+    var length = 1;
+    if (typeof name != 'undefined' &amp;&amp; typeof id != 'undefined') {
+        if (isNaN(value) || value.length &lt; length) {
+            field.controls.forEach(function(control) {
+                if (lcid == 1036)
+                    control.setNotification(label + " doit avoir une longueur d'au moins  " + length + ".", id);
+                else
+                    control.setNotification(label + " must be at least " + length + " digits long.", id);
+            });
+        }
+        else {
+            field.controls.forEach(function(control) {
+                control.clearNotification(errorId);
+            });
+        }
+    }
+    else {
+        field.controls.forEach(function(control) {
+            control.clearNotification(errorId);
+        });
+    }
+    var errorId = "validateNumberString";
+    var lengthMsg = minLength == maxLength ? minLength : minLength + "-" + maxLength;
+    var errorMsg = label + " must be at least " + length+ " digit number.";
+    var errorMsgFr = label + " doit Ãªtre un nombre d'au moins " + length;
+    if (value != null) {
+        var isNumber = /^\d+$/.test(value);
+        var moreThanMin = !minLength || value.length &gt;= minLength;
+        var lessThanMax = !maxLength || value.length &lt;= maxLength;
+        if (!isNumber || !moreThanMin || !lessThanMax) {
+            field.controls.forEach(function(control) {
+                if (lcid == 1036)
+                    control.setNotification(errorMsgFr, errorId);
+                else
+                    control.setNotification(errorMsg, errorId);
+            });
+        }
+    }
+}
+    this.loadEmailValidation = function () {
+        for (var i = 0; i &lt; arguments.length; i++) {
+            this.addOnChange(arguments[i], validateEmail);
+        }
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function validateEmail
+    *      @summary  The function validates the email format
+    *      @description The function validates the email format
+    *      @author Unknown
+    *      @param context: CRM Context
+    *      @example validateEmail(context)
+    *      @return Boolean if the format is respected
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    function validateEmail(context) {
+        var attr = context.getEventSource();
+        var email = attr.getValue();
+        var lcid = context.getContext().getUserLcid();
+        if (email &amp;&amp; email != "") {
+            var isValidEmail = validate(email);
+            attr.controls.forEach(function (control, i) {
+                if (isValidEmail) {
+                    control.clearNotification();
+                }
+                else {
+                    if (lcid == 1036)
+                        control.setNotification("Courriel invalid.");
+                    else
+                        control.setNotification("Invalid email address.");
+                }
+            });
+        }
+    }
+    function validate(email) {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    }
+/**
+* Validates the user input phone number and formats it using the international format.
+* 
+* @param {object} context CRM Execution Context.
+* @param {*} fldCountry Country attribute name, used to extract region.
+*/
+this.validatePhoneNumberByRegion = function(context, fldCountry) {
+    var phoneAttribute = context.getEventSource();
+    var phoneField = phoneAttribute.controls;
+    var lcid = context.getContext().getUserLcid();
+    phoneField.forEach(function(control) {
+        control.clearNotifications();
+    });
+    var userInputNumber = phoneAttribute.getValue();
+    if (userInputNumber) {
+        var countryCode = "CA";
+        if (fldCountry) {
+            var countryFld = Xrm.Page.getAttribute(fldCountry).getValue();
+            if (countryFld) {
+                var country = countryFld[0].name;
+                // trim after the '|' symbol - if it exists
+                var ind = country.indexOf('|');
+                country = ind == -1 ? country : country.substring(0, ind);
+                // get country info, including country code
+                var ci = iso.findCountryByName(egcs_common.toProperCase(country.trim()));
+                if (ci != null) {
+                    countryCode = ci.value;
+                    //   Xrm.Page.getControl(fldCountry).clearNotification();
+                    phoneField.forEach(function(control) {
+                        control.clearNotification();
+                    });
+                }
+            }
+        }
+        // validate the number for Canada / USA Only
+        if (countryCode == "CA" || countryCode == "US") {
+            var phoneNumberUtil = libphonenumber.PhoneNumberUtil.getInstance();
+            var isValidNumber = false;
+            var rawPhoneNumber;
+            var formattedNumber;
+            try {
+                rawPhoneNumber = phoneNumberUtil.parseAndKeepRawInput(userInputNumber, countryCode);
+                isValidNumber = phoneNumberUtil.isPossibleNumber(rawPhoneNumber);
+            }
+            catch (e) {
+                isValidNumber = false;
+            }
+            finally {
+                if (isValidNumber) {
+                    formattedNumber = phoneNumberUtil.format(rawPhoneNumber, libphonenumber.PhoneNumberFormat.NATIONAL);
+                    phoneAttribute.setValue(formattedNumber);
+                }
+                else {
+                    phoneField.forEach(function(control) {
+                        if (lcid == 1036) {
+                            control.setNotification("NumÃ©ro de tÃ©lÃ©phone non valide entrÃ© pour le pays/la rÃ©gion sÃ©lectionnÃ©.");
+                        }
+                        else {
+                            control.setNotification("Invalid Phone Number entered for the selected Country/Region.");
+                        }
+                    });
+                }
+            }
+        }
+    }
+}
+    function validateSIN_BN(sin) {
+        var c = 0;
+        var bValid = false;
+        if (isNaN(sin) == false) {
+            // odd digits
+            for (var i = 1; i &lt;= 9; i += 2) {
+                c += Number(sin.charAt(i - 1));
+            }
+            // even digits
+            for (var i = 2; i &lt;= 8; i += 2) {
+                var digit = Number(sin.charAt(i - 1)) * 2;
+                if (digit &gt; 9) { digit = digit - 9 }
+                c += digit;
+            }
+            if ((c % 10) == 0) {
+                bValid = true;
+            }
+        }
+        return bValid;
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function onValidateCRANumberCheck
+    *      @summary  The function validates the CRA Number format
+    *      @description The function validates the CRA Number format
+    *      @author Tetyana Ryabets-Zuk
+    *      @param context: CRM Context
+    *      @example onValidateCRANumberCheck(context)
+    *      @return Boolean if the lenghth is respected
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+this.onValidateCRANumberCheck = function(context) {
+    var inField = context.getEventSource();
+    var craField = inField.controls;
+    var lcid = context.getContext().getUserLcid();
+    if (inField != null) {
+        var value = inField.getValue();
+        if (value != null) {
+            if (validateSIN_BN(value) == false) {
+                craField.forEach(function(control) {
+                    if (lcid == 1036)
+                        control.setNotification("Le numÃ©ro Ã&#160; 9 chiffres Ã©mis par l'Agence du revenu du Canada pour cette organisation");
+                    else
+                        control.setNotification('9-digit number issued by the Canada Revenue Agency for this organization');
+                });
+            }
+            else {
+                craField.forEach(function(control) {
+                    Xrm.Page.getControl(inField.getName()).clearNotification();
+                });
+            }
+        }
+        else {
+            craField.forEach(function(control) {
+                Xrm.Page.getControl(inField.getName()).clearNotification();
+            });
+        }
+    }
+}
+    /**
+     * Validates the user input postal code and formats it correctly if valid.
+     * 
+     * @param {object} context CRM Execution Context.
+     */
+    this.validatePostalCode = function (context, fldCountry) {
+        var postCodeAttribute = context.getEventSource();
+        var postCodeField = postCodeAttribute.controls;
+        var countryFld = "";
+        var country = "";
+        if (fldCountry) {
+             countryFld = Xrm.Page.getAttribute(fldCountry).getValue();
+            if (countryFld) {
+                 country = countryFld[0].name;
+                // trim after the '|' symbol - if it exists
+                var ind = country.indexOf('|');
+                country = ind == -1 ? country : country.substring(0, ind);
+            }
+        }
+        // TRZ - get language reference
+        var lcid = Xrm.Page.context.getUserLcid();
+        postCodeField.forEach(function (control) {
+            control.clearNotifications();
+        });
+        var userInputPostCode = postCodeAttribute.getValue();
+        if (userInputPostCode &amp;&amp; country.toUpperCase() == 'CANADA') {
+            userInputPostCode = userInputPostCode.trim().toUpperCase();
+            var postCodeRegex = /^[ABCEGHJ-NPRSTVXY][0-9][ABCEGHJ-NPRSTV-Z]\s?[0-9][ABCEGHJ-NPRSTV-Z][0-9]$/;
+            var isValidPostCode = userInputPostCode.match(postCodeRegex);
+            if (!isValidPostCode) {
+                postCodeField.forEach(function (control) {
+                    if (lcid == 1036)
+                        control.setNotification("Ce n'est pas un code postal canadien valide. Veuillez vous rÃ©fÃ©rer Ã&#160; Statistique Canada pour les codes postaux valides (format A1A 1A1)");
+                    else
+                        control.setNotification(
+                            "This is not a valid Canadian postal code. Please refer to StatsCan for valid postal codes (format A1A 1A1)");
+                });
+            }
+            else {
+                if (userInputPostCode.length == 6) {
+                    userInputPostCode = userInputPostCode.substr(0, 3) + " " + userInputPostCode.substr(3);
+                }
+                postCodeAttribute.setValue(userInputPostCode);
+            }
+        }
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function transferValue 
+    *      @summary  The function copies value between field on the form
+    *      @description The function copies value between field on the form
+    *      @author Vladimir Staka
+    *      @param {string} controlnameFROM: name of the FROM field 
+    *      @param {string} controlnameTO: name of the TO field
+    *      @example transferValue("address2_line1", "address1_line1");
+    *      @return {none}
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.transferValue = function (controlnameFROM, controlnameTO) {
+        ctlFrom = Xrm.Page.getAttribute(controlnameFROM);
+        ctlTo = Xrm.Page.getAttribute(controlnameTO);
+        if (ctlFrom !== null &amp;&amp; ctlTo != null)
+            ctlTo.setValue(ctlFrom.getValue());
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function sameAs 
+    *      @summary  The function copy values between fields on the form
+    *      @description The function copy values between fields on the form
+    *      @author Tetyana Ryabets-Zuk
+    *      @param {string} currentfield: name of the field that are checked
+    *      @param {array} inarraytoFromFields: two dimentional array of from and to fields.
+    *      @example sameAs("egcs_yesnosameasprimary", [["address2_line1", "address1_line1"], ["address2_city", "address1_city"], ["address2_stateorprovince", "address1_stateorprovince"], ["address2_line2", "address1_line2"], ["address2_line3", "address1_line3"], ["egcs_address2_city", "egcs_address1_city"], ["egcs_address2_province", "egcs_address1_province"], ["egcs_address2_country", "egcs_address1_country"], ["address2_postalcode", "address1_postalcode"]]);
+    *      @return {none}
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.sameAs = function (currentfield, inarrayToFromFields) {
+        var page = Xrm.Page;
+        if (page == null) return;
+        var obj = page.getAttribute(currentfield).getValue();
+        if (obj != null) {
+            if (obj == true) {
+                // for levels in down array - reset to NULL
+                for (var i in inarrayToFromFields) {
+                    var inArrayToFromField = inarrayToFromFields[i];
+                    //    page.getAttribute("" + array_fields[i] + "").setSubmitMode(""+submit_mode+"");
+                    egcs_common.transferValue(inArrayToFromField[1], inArrayToFromField[0]);
+                }
+            }
+        }
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function nullTransfer 
+    *      @summary  The function resets the check box to Unchecked.
+    *      @description The function resets the check box to Unchecked.
+    *      @author Tetyana Ryabets-Zuk
+    *      @param {string} currentfield: name of the field to be set
+    *      @example nullTransfer("egcs_sameasmailingaddress")
+    *      @return {none}
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.nullTransfer = function (currentfield) {
+        var page = Xrm.Page;
+        if (page == null) return;
+        var obj = page.getAttribute(currentfield);
+        if (obj != null) {
+            obj.setValue(false);
+        }
+    }
+    //*****************************************************************************************************
+    /**
+    *      @function setFieldToNull 
+    *      @summary  The function sets the value of the given field to null.
+    *      @description The function sets the value of the given field to null.
+    *      @author Carlos Casado
+    *      @param {string} fieldName: name of the field to be set
+    *      @example setFieldToNull("egcs_secondaryaccount")
+    *      @return {none}
+    *      @requires {none}
+    */
+    //******************************************************************************************************
+    this.setFieldToNull = function (fieldName) {
+        Xrm.Page.getAttribute(fieldName).setValue(null);
+    }
+    //******************************************************************************************************
+    /**
+    * 	@function SetDefaultDateTimeValue
+    * 	@summary  Set value for Date field
+    * 	@description Set value for Date field
+    * 	@author Tetyana Ryabets-Zuk
+    * 	@param {string} attributeName - Name of the date type field that are being changed
+    * 	@param {int} hour - int value for hour.  Acceptable values between 0 and 23
+    * 	@param {int} minute- int value for minutes.  Acceptable values between 0 and 59
+    * 	@param {boolean} reset_flag - Boolean to define if value of data type field should be reset.  If reset_flag=true, value of the data type field will be updated.
+    * 	@example SetDefaultDateTimeValue('egcs_ay_mydatetypefield',15,30,true)
+    * 	@return {none}
+    * 	@requires {none}
+    */
+    this.SetDefaultDateTimeValue = function (attributeName, hour, minute, reset_flag) {
+        var attribute = Xrm.Page.getAttribute(attributeName);
+        var currentTime = new Date();
+        currentTime.setHours(hour, minute, 0, 0);
+        if (reset_flag == true) {
+            attribute.setValue(currentTime);
+        }
+    }
+    //******************************************************************************************************
+    /**
+    * 	@function checkDateNotInFuture
+    * 	@summary  Check value for Date field
+    * 	@description Check value for Date field
+    * 	@author Tetyana Ryabets-Zuk
+    *   @param {object} context - Execution Context
+    * 	@param {string} attributeName - Name of the date type field that are being checked
+    * 	@example checkDateNotInFuture('egcs_ay_mydatetypefield')
+    * 	@return {none}
+    * 	@requires {none}
+    */
+    this.checkDateNotInFuture = function (context) {
+        var dateAttribute = context.getEventSource();
+        var dateField = dateAttribute.controls;
+        var currentDate = new Date();
+        currentDate.setHours(0, 0, 0, 0);
+        var inputDate = dateAttribute.getValue();
+        if (inputDate != null)
+            inputDate.setHours(0, 0, 0, 0);
+        // TRZ - get language reference
+        var lcid = Xrm.Page.context.getUserLcid();
+        if (inputDate != null &amp;&amp; inputDate &gt; currentDate) {
+            dateField.forEach(function(control) {
+                if (lcid == 1036)
+                    control.setNotification("Date ne peut pas Ãªtre Ã&#160; l'avenir.");
+                else
+                    control.setNotification(
+                            "Date cannot be in the future."
+                        );
+            });
+        }
+        else {
+            dateField.forEach(function(control) {
+                control.clearNotifications();
+            });
+        }
+    }
+    this.collapseBPF = function() {
+        try {
+            Xrm.Page.ui.process.setDisplayState("collapsed");
+        }
+        catch (err) { }
+    }
+    /**
+    *	 @function FieldOnLoadSetSubmitMode 
+    *	 @summary Set Submit Mode to field(s)
+    *	 @desciption Change submit mode for the selected field(s)
+    * 	@author Tetyana Ryabets-Zuk
+    *	 @example FieldOnLoadSetSubmitMode ('always',['egcs_level2','egcs_level3','egcs_mycustom_name'])
+    *	 @param {string} submit_mode - Submit mode value.  Possible values are NEVER, ALWAYS, DIRTY.
+    *	 @param {string[]} array_fields - Array of fields name to set Submit Mode.
+    *	 @return {none}
+    *	 @requires {none}
+    */
+    //****************************************************************************************************
+ this.FieldOnLoadSetSubmitMode=   function (submit_mode, array_fields) {
+        var page = Xrm.Page;
+        if (page == null) return;
+        // for levels in down array - reset to NULL
+        for (var i in array_fields) {
+            page.getAttribute("" + array_fields[i] + "").setSubmitMode("" + submit_mode + "");
+        }
+    }
+    //******************************************************************************************************
+    /**
+    * 	@function SetFieldValueForLookup
+    * 	@summary  Set value for Lookup Field
+    * 	@description Set value for Lookup Field
+    * 	@author Tetyana Ryabets-Zuk
+    * 	@param {string} field_name - Name of the lookup field that are being changed
+    * 	@param {GUILD} id - GUID of value to be assign to lookup field
+    * 	@param {string} entityType - Type of the entity for lookup field (schema name)
+    * 	@param {boolean} fire_on_change_flag - Boolean to set if OnChange event will be initiated
+    * 	@example SetFieldValueForLookup('egcs_ay_addresssubdivision','0000-0000-0000-0000',''egcs_AY_AddressSubDivision',true)
+    * 	@return {none}
+    */
+this.SetFieldValueForLookup=function (field_name, id, name, entityType, fire_on_change_flag) {
+        var page = Xrm.Page;
+        if (page == null) return;
+        if (id.indexOf('{') == -1)
+            id = '{' + id;
+        if (id.indexOf('}') == -1)
+            id = id + '}';
+        var newId = id;
+        newId = newId.toUpperCase();
+        // alert(newId);
+        page.getAttribute("" + field_name + "").setSubmitMode("always");
+        page.getAttribute("" + field_name + "").setValue([{ id: newId, name: name, entityType: entityType}]);
+        if (fire_on_change_flag == true) {
+            page.getAttribute("" + field_name + "").fireOnChange();
+        }
+        else {
+            //page.getAttribute(""+field_name"+"").setDisabled(true);
+        }
+    }
+    //******************************************************************************************************
+    /**
+    * 	@function LookupOnChangeSetLevelUp
+    * 	@summary  Set value for Lookup Field
+    * 	@description Set value for Lookup Field
+    * 	@author Tetyana Ryabets-Zuk
+    * 	@param {string} field_name - Name of the lookup field that are being changed
+    * 	@param {GUILD} id - GUID of value to be assign to lookup field
+    * 	@param {string} entityType - Type of the entity for lookup field
+    * 	@param {boolean} fire_on_change_flag - Boolean to set if OnChange event will be initiated
+    * 	@example LookupOnChangeSetLevelUp('egcs_ay_addresscity','egcs_ay_addresscities','egcs_ay_addresssubdivision','egcs_AY_AddressSubDivision','egcs_ay_addresssubdivisions','egcs_ay_addresssubdivisionid','egcs_name',true)
+    * 	@return {none}
+    * 	@requires {@link SetFieldValueForLookup}
+    *	@requires {@link retrieveRecord}
+    */
+this.LookupOnChangeSetLevelUp=function (current_field, current_field_entity_name_plural, lookup_field, lookup_field_schema_name, lookup_field_entity_plural, lookup_field_entity_column_id, lookup_field_entity_column_name, fire_on_chage_flag) {
+        var page = Xrm.Page;
+        if (page == null) return;
+        page.getAttribute("" + current_field + "").setSubmitMode("always");
+        // Getting the Lookup object from the CRM page
+        var obj = page.getAttribute("" + current_field + "").getValue();
+        var objID = "";
+        if (obj != null &amp;&amp; obj != "") {
+            // Getting the GUID for the record
+            objID = obj[0].id;
+            //Stripping out the curly brackets
+            objID = objID.replace('{', '').replace('}', '');
+        }
+        //***************************** 
+        //Checking if we have a GUID Value
+        if (objID != null &amp;&amp; objID != "") {
+            var query = "";
+            var filter = "";
+            var expand = lookup_field_schema_name;
+            var field_name = lookup_field;
+            var entityType = lookup_field_schema_name;
+          //          alert(current_field_entity_name_plural + '; ' + expand + ';' + field_name);
+            SDK.WEBAPI.retrieveRecord(objID, current_field_entity_name_plural, query, expand, function(result) {
+          //      alert("Success");
+                var newObj = result["" + lookup_field_schema_name + ""]; //for lookup text
+                // get values for lookup field
+                var id = newObj["" + lookup_field_entity_column_id + ""];
+                var name = newObj["" + lookup_field_entity_column_name + ""];
+                //       page.getAttribute("" + levels_up_array[j].toLowerCase() + "").setValue([{id: newObj['egcs_legalstatusid'], name:newObj['egcs_name'], entityType:  levels_up_att_array[j]}]);
+                // SetFieldValue( levels_up_array[j].toLowerCase() ,newObj.egcs_legalstatusid,newObj.egcs_name,levels_up_att_array[j]);
+                // set look up field
+               egcs_common.SetFieldValueForLookup(field_name, id, name, entityType, fire_on_chage_flag);
+            },
+ function() { alert("Error"); });
+        }
+    }    
+this.toProperCase = function (s)
+{
+  return s.toLowerCase().replace( /\b((m)(a?c))?(\w)/g,
+          function($1, $2, $3, $4, $5) { if($2){return $3.toUpperCase()+$4+$5.toUpperCase();} return $1.toUpperCase(); });
+}
+}).call(egcs_common);</code></pre>
+                                                    </article>
+                                                </section>
+                                            </div>
+                                            <nav>
+                                                <h2><a href="index.html">Home</a>
+                                                </h2>
+                                                <h3>Global</h3>
+                                                <ul>
+                                                    <li value="1"><a href="global.html#addOnChange">addOnChange</a>
+                                                    </li>
+                                                    <li value="2"><a href="global.html#checkDateNotInFuture">checkDateNotInFuture</a>
+                                                    </li>
+                                                    <li value="3"><a href="global.html#FieldOnLoadSetSubmitMode">FieldOnLoadSetSubmitMode</a>
+                                                    </li>
+                                                    <li value="4"><a href="global.html#fireEvent">fireEvent</a>
+                                                    </li>
+                                                    <li value="5"><a href="global.html#getAttribute">getAttribute</a>
+                                                    </li>
+                                                    <li value="6"><a href="global.html#getLookup">getLookup</a>
+                                                    </li>
+                                                    <li value="7"><a href="global.html#LookupOnChangeSetLevelUp">LookupOnChangeSetLevelUp</a>
+                                                    </li>
+                                                    <li value="8"><a href="global.html#maskInputField">maskInputField</a>
+                                                    </li>
+                                                    <li value="9"><a href="global.html#nullTransfer">nullTransfer</a>
+                                                    </li>
+                                                    <li value="10"><a href="global.html#onValidateCRANumberCheck">onValidateCRANumberCheck</a>
+                                                    </li>
+                                                    <li value="11"><a href="global.html#removeBrackets">removeBrackets</a>
+                                                    </li>
+                                                    <li value="12"><a href="global.html#Request">Request</a>
+                                                    </li>
+                                                    <li value="13"><a href="global.html#Request_IFrame">Request_IFrame</a>
+                                                    </li>
+                                                    <li value="14"><a href="global.html#sameAs">sameAs</a>
+                                                    </li>
+                                                    <li value="15"><a href="global.html#SetDefaultDateTimeValue">SetDefaultDateTimeValue</a>
+                                                    </li>
+                                                    <li value="16"><a href="global.html#setFieldToNull">setFieldToNull</a>
+                                                    </li>
+                                                    <li value="17"><a href="global.html#SetFieldValueForLookup">SetFieldValueForLookup</a>
+                                                    </li>
+                                                    <li value="18"><a href="global.html#transferValue">transferValue</a>
+                                                    </li>
+                                                    <li value="19"><a href="global.html#validateEmail">validateEmail</a>
+                                                    </li>
+                                                    <li value="20"><a href="global.html#validateNumberString">validateNumberString</a>
+                                                    </li>
+                                                    <li value="21"><a href="global.html#validateNumberStringNoMax">validateNumberStringNoMax</a>
+                                                    </li>
+                                                    <li value="22"><a href="global.html#validatePhoneNumberByRegion">validatePhoneNumberByRegion</a>
+                                                    </li>
+                                                    <li value="23"><a href="global.html#validatePostalCode">validatePostalCode</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <br class="clear" />
+                                            <footer>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Jun 04 2018 11:52:37 GMT-0600 (Mountain Daylight Time)</footer>
+                                            <script>
+/*<![CDATA[*/
+ prettyPrint(); 
+/*]]>*/
+</script>
+                                            <script src="scripts/linenumber.js">
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>

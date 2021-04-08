@@ -1,0 +1,1 @@
+define({data:[{code:'en-ca', full:'English (Canada)‎', target:'en-ca/Default.htm'},{code:'fr-ca', full:'Français (Canada)‎', target:'fr-ca/Default.htm'}]});

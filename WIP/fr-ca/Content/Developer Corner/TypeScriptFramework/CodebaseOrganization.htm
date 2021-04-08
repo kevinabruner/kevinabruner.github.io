@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="fr-ca" lang="fr-ca" class="_Skins_HTML5___Top_Navigation_Coronado" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-has-content-body="True" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Coin développer|Cadre TypeScript">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title>Organisation du code base</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/foundation.6.2.3.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Styles.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Tablet.css" rel="stylesheet" />
+        <link href="../../../Skins/Fluid/Stylesheets/Mobile.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/MainStyles.css" rel="stylesheet" />
+        <style>/*&lt;meta /&gt;*/
+
+.button.select-language-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/select-language.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.print-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/printer.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.previous-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-previous.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.next-topic-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/navigate-next.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.button.remove-highlight-button
+{
+	-pie-background: url('../../../Skins/Default/Stylesheets/Images/highlight.png') no-repeat center center, linear-gradient(#ffffff, #ececec);
+}
+
+.needs-pie
+{
+	behavior: url('../../../Resources/Scripts/PIE-no-motw.htc');
+}
+
+</style>
+        <link href="../../Resources/TableStyles/PatternedRows.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/sanitize-html.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.6.2.3_custom.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="foundation-wrap off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper="">
+                <aside class="off-canvas position-right" id="offCanvas" data-off-canvas="" data-position="right" data-mc-ignore="true">
+                    <ul class="off-canvas-accordion vertical menu off-canvas-list" data-accordion-menu="" data-mc-back-link="Back" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="True" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True">
+                    </ul>
+                </aside>
+                <div class="off-canvas-content inner-wrap" data-off-canvas-content="">
+                    <div data-sticky-container="" class="title-bar-container">
+                        <nav class="title-bar tab-bar sticky" data-sticky="" data-options="marginTop:0" style="width:100%" data-sticky-on="small" data-mc-ignore="true">
+                            <div class="middle title-bar-section outer-row clearfix">
+                                <div class="menu-icon-container relative clearfix">
+                                    <button class="menu-icon" data-toggle="offCanvas"><span></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="title-bar-layout outer-row">
+                                <div class="logo-wrapper"><a class="logo" href="../../A_Welcome pages/StartHere.htm" alt="Logo"></a>
+                                </div>
+                                <div class="navigation-wrapper nocontent">
+                                    <ul class="navigation clearfix" data-mc-css-tree-node-has-children="has-children" data-mc-css-sub-menu="sub-menu" data-mc-expand-event="mouseenter" data-mc-top-nav-menu="True" data-mc-max-depth="3" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                        <li class="placeholder" style="visibility:hidden"><a>placeholder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="nav-search-wrapper">
+                                    <div class="nav-search row">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie">
+                                                <input class="search-field needs-pie" type="search" placeholder="Search our help and documentation" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <section class="main-section">
+                        <div class="row outer-row sidenav-layout">
+                            <div class="sidenav-wrapper">
+                                <div class="sidenav-container">
+                                    <ul class="off-canvas-accordion vertical menu sidenav" data-accordion-menu="" data-mc-css-tree-node-expanded="is-accordion-submenu-parent" data-mc-css-tree-node-collapsed="is-accordion-submenu-parent" data-mc-css-sub-menu="vertical menu accordion-menu is-accordion-submenu nested" data-mc-include-indicator="False" data-mc-include-icon="False" data-mc-include-parent-link="False" data-mc-include-back="False" data-mc-defer-expand-event="True" data-mc-expand-event="click.zf.accordionMenu" data-mc-toc="True" data-mc-side-nav-menu="True">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="body-container">
+                                <div data-mc-content-body="True">
+                                    <div class="search-container">
+                                        <form class="search" action="#">
+                                            <div class="search-bar search-bar-container needs-pie _Skins_SearchTopics mc-component">
+                                                <input class="search-field needs-pie" type="search" placeholder="Chercher" />
+                                                <div class="search-filter-wrapper">
+                                                    <div class="search-filter">
+                                                        <div class="search-filter-content">
+                                                            <ul>
+                                                                <li>Tous les fichiers</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="search-submit-wrapper" dir="ltr">
+                                                    <div class="search-submit" title="Chercher">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row collapse">
+                                        <div class="top-bar">
+                                            <div class="buttons popup-container clearfix topicToolbarProxy _Skins_TopicToolbar mc-component nocontent" style="mc-topic-toolbar-items: ;">
+                                                <div class="button-group-container-left">
+                                                    <button class="button needs-pie select-language-button" title="Changer de langue">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="select language" />
+                                                    </button>
+                                                    <button class="button needs-pie print-button" title="Imprimer">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="print" />
+                                                    </button>
+                                                    <button class="button needs-pie previous-topic-button" title="Navigate previous">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="previous topic" />
+                                                    </button>
+                                                    <button class="button needs-pie next-topic-button" title="Navigate next">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="next topic" />
+                                                    </button>
+                                                    <button class="button needs-pie remove-highlight-button" title="Remove Highlights">
+                                                        <img src="../../../Skins/Default/Stylesheets/Images/transparent.gif" alt="remove highlight" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="nocontent">
+                                                <div class="MCBreadcrumbsBox_0 breadcrumbs" data-mc-breadcrumbs-divider=" &gt; " data-mc-breadcrumbs-count="3" data-mc-toc="True"><span class="MCBreadcrumbsPrefix">Vous êtes ici : </span>
+                                                </div>
+                                            </div> </div>
+                                        <div class="topic-layout">
+                                            <div>
+                                                <div class="side-menu">
+                                                    <ul class="nocontent menu _Skins_SideMenu mc-component" data-mc-is-context-sensitive="True" data-mc-linked-toc="Data/Tocs/Release_2_TOC.js" data-mc-side-menu="True" data-mc-max-depth="1" data-mc-include-icon="False" data-mc-include-indicator="False" data-mc-include-children="True" data-mc-include-siblings="True" data-mc-include-parent="True" data-mc-toc="True">
+                                                    </ul>
+                                                </div>
+                                                <div class="side-content">
+                                                    <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead dropDownHeadside-content"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Fermé" data-mc-alt2="Ouvert" />Conseils de recherche</a></span>
+                                                        <div class="MCDropDownBody dropDownBody">
+                                                            <p>La recherche est basée sur un mot clé.</p>
+                                                            <p><samp>Par exemple, procédures</samp>
+                                                            </p>
+                                                            <p>Ne cherchez pas avec le langage naturel</p>
+                                                            <p><samp>Par exemple, &lt; Comment puis-je écrire une nouvelle procédure? &gt;</samp>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div><a class="cta" href="https://technet.microsoft.com/en-us/library/mt812330.aspx"><div class="cta center"><p>Dynamics 365 Help</p></div></a>
+                                            </div>
+                                            <div>
+                                                <h1><a name="aanchor407"></a>
+                                                    <MadCap:concept term="TypeScript" />Organisation du code base</h1>
+                                                <h4>Structure</h4>
+                                                <p>La structure du cadre requiert que tous les noms de ressource Web sont du chemin du <code>egcs_</code> et comprennent l'extension.</p>
+                                                <p>Le dossier racine virtuel dans CRM est<code>egcs_</code></p>
+                                                <p><code>egcs_/actions</code> Contains early bound classes of CRM custom actions.</p>
+                                                <h4>egcs_/entities</h4>
+                                                <p>Contient des ressources Web particulières, p. ex. des scripts de formulaire, des scripts de ruban, des classes liées au préalable, etc.</p>
+                                                <p>La structure dans ce dossier est:</p>
+                                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Entité de ressource Web</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Commentaires</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows"><code>egcs_/entities/&lt;entity_name&gt;/forms</code>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext">Un script par formulaire</p>
+                                                                <p class="tabletext">Puisque la plupart des entités ont seulement un formulaire, la convention d'affectation des noms est<code>default.ts</code></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext"><code>egcs_/entities/&lt;entity_name&gt;/pages</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext">Entité des ressources Web HTML particulières</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-LightRows">
+                                                                <p class="tabletext"><code>egcs_/entities/&lt;entity_name&gt;/ribbon</code>
+                                                                </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-LightRows">
+                                                                <p class="tabletext">Puisque actuellement seulement un fichier est nécessaire pour l'entité des commandes de ruban, la convention d'affectation de noms est<code>commands.ts</code></p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h3 class="Heading3">egcs_/library</h3>
+                                                <p>Contient des bibliothèques de tiers partis, p. ex. bootstrap, jQuery, etc. La structure se réfère à la structure de la bibliothèque de tiers parti, s'il y en a une. Si c'est un type de fichier unique, la dernière version du dossier n'est pas nécessaire, simplement ajouter le numéro de la version au nom du fichier et laisser le numéro de la version pour la dernière version.</p>
+                                                <p>La structure dans ce dossier est:</p>
+                                                <ul style="list-style-type: circle;margin-left: 36pt;">
+                                                    <li style="list-style-type: circle;" value="1"><code>egcs_/library/&lt;name&gt;</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="2"><code>egcs_/library/&lt;name&gt;/latest</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="3"><code>egcs_/library/&lt;name&gt;/latest/&lt;structure&gt;</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="4"><code>egcs_/library/&lt;name&gt;/&lt;version&gt;</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="5"><code>egcs_/library/&lt;name&gt;/&lt;version&gt;/&lt;structure&gt;</code>
+                                                    </li>
+                                                </ul>
+                                                <h3 class="Heading3">egcs_/shared</h3>
+                                                <p>Contient des ressources Web générales et réutilisables, p. ex. CSS, JS, HTML, polices, images, données (XML et &#160;JSON), ressources (resx).</p>
+                                                <p>La structure dans ce dossier est:</p>
+                                                <ul style="list-style-type: circle;margin-left: 36pt;">
+                                                    <li style="list-style-type: circle;" value="1"><code>egcs_/shared/css</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="2"><code>egcs_/shared/data</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="3"><code>egcs_/shared/data/xml</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="4"><code>egcs_/shared/data/json</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="5"><code>egcs_/shared/fonts</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="6"><code>egcs_/shared/html</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="7"><code>egcs_/shared/images</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="8"><code>egcs_/shared/js</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="9"><code>egcs_/shared/resources</code>
+                                                    </li>
+                                                </ul>
+                                                <ul style="list-style-type: square;margin-left: 72pt;">
+                                                    <li style="list-style-type: square;" value="1">Ce sont des fichiers <code>.resx</code> (lesquels sont convertis en JSON pour la version CRM &lt;9)</li>
+                                                </ul>
+                                                <h3 class="Heading3">egcs_/html</h3>
+                                                <p>Contient des ressources Web &#160;HTML particulières et des ressources liées au Web, p. ex. CSS, JS, HTML.</p>
+                                                <p>La structure dans ce dossier est:</p>
+                                                <ul style="list-style-type: circle;margin-left: 36pt;">
+                                                    <li style="list-style-type: circle;" value="1"><code>egcs_/html/&lt;name&gt;/index.html </code> (s'il n'y en a seulement une)</li>
+                                                    <li style="list-style-type: circle;" value="2"><code>egcs_/html/&lt;name&gt;/css</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="3"><code>egcs_/html/&lt;name&gt;/css/styles.css</code> (s'il n'y en a seulement une)</li>
+                                                    <li style="list-style-type: circle;" value="4"><code>egcs_/html/&lt;name&gt;/data</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="5"><code>egcs_/html/&lt;name&gt;/fonts</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="6"><code>egcs_/html/&lt;name&gt;/images</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="7"><code>egcs_/html/&lt;name&gt;/js</code>
+                                                    </li>
+                                                    <li style="list-style-type: circle;" value="8"><code>egcs_/html/&lt;name&gt;/js/script.js</code> (s'il n'y en a seulement une)</li>
+                                                    <li style="list-style-type: circle;" value="9"><code>egcs_/html/&lt;name&gt;/resources</code>
+                                                    </li>
+                                                </ul>
+                                                <p>Cette structure s'applique aussi a :<code>egcs_/shared/html and egcs_/entities/&lt;entity&gt;/pages</code></p>
+                                                <p>Généralement, les ressources Web HTML sont autonomes avec leurs propres fichiers et suivent la structure egcs_/shared.</p>
+                                                <h2 class="Heading2">Contrôle des versions</h2>
+                                                <p>Le besoin de contrôler les versions se produit rarement, à l’exception des bibliothèques de tiers partis.</p>
+                                                <p>Pour des ressources Web personnalisées :</p>
+                                                <ul style="list-style-type: circle;margin-left: 36pt;">
+                                                    <li style="list-style-type: circle;" value="1">La dernière version qui est mise à jour ne devrait pas contenir un numéro de version dans le nom du fichier.</li>
+                                                    <li style="list-style-type: circle;" value="2">S'il y a un grand changement et que les deux versions ont besoin d'être soutenues, créez une copie de la ressource Web et ajoutez un numéro de version au nom du fichier, puis mettez à jour la dernière version.</li>
+                                                    <li style="list-style-type: circle;" value="3">Si c'est pour le contrôle des versions d'une ressources Web HTML et ses fichiers liés, créez un nouveau dossier pour le version mise à jour et un dossier des versions pour les versions précédentes.</li>
+                                                </ul>
+                                                <p>Pour les bibliothèques de tiers partis, nous utilisons&#160;:</p>
+                                                <ul style="list-style-type: circle;margin-left: 36pt;">
+                                                    <li style="list-style-type: circle;" value="1">Si elle contient un seul type de fichier, p. ex. seulement js ou CSS, suivez la règle ci-dessus.</li>
+                                                    <li style="list-style-type: circle;" value="2">Dans le cas contraire, suivez la règle ci-dessus pour le contrôle des version des ressources Web HTML.</li>
+                                                </ul>
+                                                <h2 class="Heading2">Outils</h2>
+                                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/PatternedRows.css');" class="TableStyle-PatternedRows" cellspacing="0">
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <col class="TableStyle-PatternedRows-Column-Regular" />
+                                                    <thead>
+                                                        <tr class="TableStyle-PatternedRows-Head-Header1">
+                                                            <th class="TableStyle-PatternedRows-HeadE-Regular-Header1">
+                                                                <p class="tabletext">Outil</p>
+                                                            </th>
+                                                            <th class="TableStyle-PatternedRows-HeadD-Regular-Header1">
+                                                                <p class="tabletext">Télécharger</p>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Extensions de Dynamics 365 Developer </p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext"><a href="https://marketplace.visualstudio.com/items?itemName=JLattimer.D365DeveloperExtensions" class="Hyperlink">https://marketplace.visualstudio.com/items?itemName=JLattimer.D365DeveloperExtensions</a>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-DarkerRows">
+                                                                <p class="tabletext">Programme d'installation pour l'ensemble</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-DarkerRows">
+                                                                <p class="tabletext"><a href="https://marketplace.visualstudio.com/items?itemName=MadsKristensen.PackageInstaller" class="Hyperlink">https://marketplace.visualstudio.com/items?itemName=MadsKristensen.PackageInstaller</a>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-LightRows">
+                                                            <td class="TableStyle-PatternedRows-BodyE-Regular-LightRows">
+                                                                <p class="tabletext">Fiddler (pour le débogage)</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyD-Regular-LightRows">
+                                                                <p class="tabletext"><a href="https://www.telerik.com/fiddler" class="Hyperlink">https://www.telerik.com/fiddler</a>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                                                            <td class="TableStyle-PatternedRows-BodyB-Regular-DarkerRows">
+                                                                <p class="tabletext">Chemin du ficher en bas de page</p>
+                                                            </td>
+                                                            <td class="TableStyle-PatternedRows-BodyA-Regular-DarkerRows">
+                                                                <p class="tabletext"><a href="https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter" class="Hyperlink">https://marketplace.visualstudio.com/items?itemName=ShemeerNS.FilePathOnFooter</a>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p><a class="MCHelpControl MCHelpControl-Concept conceptLink" data-mc-concepts="TypeScript" href="javascript:void(0);" data-mc-topics="Cadre (pour TypeScript)|TypeScriptFramework.htm#aanchor432||Débogage|Debugging.htm#aanchor397||JavaScript ES6|JavaScriptES6.htm#aanchor197||Organisation du code base|#aanchor407||TypeScript|TypeScript.htm#aanchor238"><span class="MCHelpControl-ConceptHotSpot_"><img class="MCHelpControl_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="16" width="16" alt="Concept Link Icon" />Voir aussi</span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><a data-close="true"></a>
+                </div>
+            </div>
+            <script>/* <![CDATA[ */$(document).foundation();/* ]]> */</script>
+        </div>
+    </body>
+</html>
